@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase registryId="cfb188fb-9ac8-4bc8-afd3-b20855be6deb" visibility="Internal">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" isTitleUpdated="true" name="StepGroup" testItemId="101" title="ConnectToSalesForce_&amp;_Extract_CaseId">
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">ConnecttoSalesForce_&amp;_Exctact_CaseId</value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="hidden" testItemId="7">
+          <steps>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="22" title="Salesforce Connect: Internal311Qa (Test)">
+              <arguments>
+                <argument id="connectionName">
+                  <value class="value" valueClass="string">SAT_Dev_Admin_311</value>
+                </argument>
+                <argument id="resultName">
+                  <value class="value" valueClass="string">Internal311Qa</value>
+                </argument>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Test</value>
+                </argument>
+                <argument id="uiApplicationName">
+                  <value class="value" valueClass="string">X311_Console</value>
+                </argument>
+                <argument id="quickUiLogin">
+                  <value class="value" valueClass="boolean">true</value>
+                </argument>
+                <argument id="closeAllPrimaryTabs">
+                  <value class="value" valueClass="boolean">true</value>
+                </argument>
+                <argument argId="9f5fef56-aaef-4bc4-841c-596d4b8bceee" id="reuseConnectionName">
+                  <value class="variable">
+                    <path element="reuseConnectionName"/>
+                  </value>
+                </argument>
+                <argument id="alreadyOpenBehaviour">
+                  <value class="value" valueClass="string">Fail</value>
+                </argument>
+                <argument id="privateBrowsingMode"/>
+                <argument id="enableObjectIdLogging">
+                  <value class="value" valueClass="boolean">true</value>
+                </argument>
+                <argument id="autoCleanup"/>
+                <argument id="cleanupConnectionName"/>
+                <argument id="logFileLocation"/>
+                <argument id="username"/>
+                <argument id="password"/>
+                <argument id="securityToken"/>
+                <argument id="environment"/>
+                <argument id="lightningMode">
+                  <value class="value" valueClass="string">default</value>
+                </argument>
+                <argument id="webBrowser"/>
+              </arguments>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexSoqlQuery" name="ApexSoqlQuery" testItemId="100" title="SOQL Query: select Id from Case where CaseNumber = '{CaseNumber}'=&gt;CaseId">
+              <arguments>
+                <argument id="soqlQuery">
+                  <value class="compound">
+                    <parts>
+                      <value valueClass="string">select Id from Case where CaseNumber = '</value>
+                      <variable>
+                        <path element="CaseNumber"/>
+                      </variable>
+                      <value valueClass="string">'</value>
+                    </parts>
+                  </value>
+                </argument>
+                <argument id="apexConnectionName">
+                  <value class="value" valueClass="string">Internal311Qa</value>
+                </argument>
+                <argument id="resultListName">
+                  <value class="value" valueClass="string">CaseId</value>
+                </argument>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Test</value>
+                </argument>
+              </arguments>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+  </steps>
+  <params>
+    <param linkedToUrl="provar:hasvalue:9f5fef56-aaef-4bc4-841c-596d4b8bceee" name="reuseConnectionName" title="Override Connection">
+      <summary>The name of an already opened connect to re-use.</summary>
+      <type>
+        <connectionType>
+          <constraints>
+            <valueConstraint name="variableName">true</valueConstraint>
+            <valueConstraint name="requiredCapabilities">sfSoapConnect</valueConstraint>
+          </constraints>
+        </connectionType>
+      </type>
+    </param>
+    <param name="CaseNumber" title="CaseNumber">
+      <summary/>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+            <valueConstraint name="regex"/>
+          </constraints>
+        </textType>
+      </type>
+    </param>
+  </params>
+  <outputParams>
+    <param name="CaseId" title="CaseId">
+      <summary>The name under which the returned rows will be stored.</summary>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+            <valueConstraint name="regex"/>
+          </constraints>
+        </textType>
+      </type>
+      <sourceValue class="variable">
+        <path element="CaseId"/>
+        <path element="Id"/>
+      </sourceValue>
+    </param>
+  </outputParams>
+  <args>
+    <argument id="reuseConnectionName"/>
+    <argument id="CaseNumber"/>
+  </args>
+  <outputArgs>
+    <outputArgument id="CaseId">
+      <name class="value" valueClass="string">CaseId</name>
+    </outputArgument>
+    <outputArgument id="CaseId1">
+      <name class="value" valueClass="string">CaseId1</name>
+    </outputArgument>
+  </outputArgs>
+</testCase>

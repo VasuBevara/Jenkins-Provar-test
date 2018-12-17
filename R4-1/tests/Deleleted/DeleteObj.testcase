@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="3" registryId="d8b043f9-ceac-43c1-b182-a73873cac220" visibility="Internal">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.WebConnect" name="WebConnect" testItemId="3" title="Web Connect: REST">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">REST</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">REST</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexDeleteObject" name="ApexDeleteObject" testItemId="2" title="Delete Object: 18-00021165">
+      <arguments>
+        <argument id="apexConnectionName">
+          <value class="value" valueClass="string">REST</value>
+        </argument>
+        <argument id="objectId">
+          <value class="value" valueClass="string">18-00021165</value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.RestRequest" name="RestRequest" testItemId="4" title="Web Request (HTTP/REST): ⇒RestResponse">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">REST</value>
+        </argument>
+        <argument id="targetValue">
+          <value class="restTarget" uri="rest:untyped?method=DELETE&amp;bodyStyle=JSON"/>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">RestResponse</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="statusResultName">
+          <value class="value" valueClass="string">RestResponseStatus</value>
+        </argument>
+        <argument id="restResourceUrl">
+          <value class="value" valueClass="string">https://incapsulate311-qa-dev-ed.my.salesforce.com</value>
+        </argument>
+        <argument id="restRequestHeader"/>
+      </arguments>
+      <generatedParameters>
+        <apiParam group="request" internal="true" name="restResourceUrl" title="Resource URL">
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+        <apiParam group="header" internal="true" name="restRequestHeader" title="Request Header">
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+      </generatedParameters>
+    </apiCall>
+  </steps>
+</testCase>

@@ -1,0 +1,1608 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="6">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="709" title="CreateFirstSRAndClose">
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">CreateFirstSRAndClose</value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="hidden" testItemId="710">
+          <steps>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="711" title="Salesforce Connect: QAConfig (Test)">
+              <arguments>
+                <argument id="connectionName">
+                  <value class="value" valueClass="string">SAT_Dev_Admin_311</value>
+                </argument>
+                <argument id="resultName">
+                  <value class="value" valueClass="string">QAConfig</value>
+                </argument>
+                <argument id="reuseConnectionName">
+                  <value class="value"/>
+                </argument>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Test</value>
+                </argument>
+                <argument id="alreadyOpenBehaviour">
+                  <value class="value" valueClass="string">Fail</value>
+                </argument>
+                <argument id="uiApplicationName">
+                  <value class="value" valueClass="string">Service_311_Configuration</value>
+                </argument>
+                <argument id="closeAllPrimaryTabs">
+                  <value class="value" valueClass="boolean">true</value>
+                </argument>
+                <argument id="quickUiLogin">
+                  <value class="value" valueClass="boolean">true</value>
+                </argument>
+                <argument id="privateBrowsingMode"/>
+                <argument id="enableObjectIdLogging">
+                  <value class="value" valueClass="boolean">true</value>
+                </argument>
+                <argument id="autoCleanup">
+                  <value class="value" valueClass="boolean">true</value>
+                </argument>
+                <argument id="cleanupConnectionName"/>
+                <argument id="logFileLocation"/>
+                <argument id="username"/>
+                <argument id="password"/>
+                <argument id="securityToken"/>
+                <argument id="environment"/>
+                <argument id="lightningMode">
+                  <value class="value" valueClass="string">default</value>
+                </argument>
+                <argument id="webBrowser"/>
+              </arguments>
+            </apiCall>
+            <caseCall testCaseId="eb5def30-1f53-4893-a567-3e2d83d11241" testCasePath="tests/ReusableTests/Config/CreateSRT.testcase" testItemId="1018">
+              <arguments>
+                <argument id="LocationRequiredFlag">
+                  <value class="value" valueClass="string">n</value>
+                </argument>
+                <argument id="reuseConnectionName">
+                  <value class="value" valueClass="string">QAConfig</value>
+                </argument>
+                <argument id="ContactStatusRequiredValue">
+                  <value class="value" valueClass="string">Available</value>
+                </argument>
+              </arguments>
+              <outputArguments>
+                <outputArgument id="SRTName">
+                  <name class="value" valueClass="string">SRTName</name>
+                </outputArgument>
+                <outputArgument id="SRTAlpha">
+                  <name class="value" valueClass="string">SRTAlpha</name>
+                </outputArgument>
+              </outputArguments>
+            </caseCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="1020" title="Set Values: SRTName">
+              <arguments>
+                <argument id="values">
+                  <value class="valueList" mutable="Mutable">
+                    <namedValues mutable="Mutable">
+                      <namedValue name="valuePath">
+                        <value class="value" valueClass="string">SRTName</value>
+                      </namedValue>
+                      <namedValue name="value">
+                        <value class="variable">
+                          <path element="SRTName"/>
+                        </value>
+                      </namedValue>
+                      <namedValue name="valueScope">
+                        <value class="value" valueClass="string">Test</value>
+                      </namedValue>
+                    </namedValues>
+                  </value>
+                </argument>
+              </arguments>
+            </apiCall>
+            <caseCall testCaseId="4aa0d5c2-29f1-461e-8188-ca94ed01079f" testCasePath="tests/ReusableTests/Config/FillSRTV.testcase" testItemId="1019">
+              <arguments>
+                <argument id="reuseConnectionName">
+                  <value class="value" valueClass="string">QAConfig</value>
+                </argument>
+                <argument id="SRTName">
+                  <value class="variable">
+                    <path element="SRTName"/>
+                  </value>
+                </argument>
+                <argument id="Version">
+                  <value class="value" valueClass="string">1</value>
+                </argument>
+                <argument id="DefaultPriority">
+                  <value class="value" valueClass="string">Standard</value>
+                </argument>
+                <argument id="DefaultStatus">
+                  <value class="value" valueClass="string">Open</value>
+                </argument>
+                <argument id="DefaultMethod">
+                  <value class="value" valueClass="string">Phone</value>
+                </argument>
+                <argument id="SLA">
+                  <value class="value" valueClass="string">10</value>
+                </argument>
+                <argument id="SLAType">
+                  <value class="value" valueClass="string">Business Days</value>
+                </argument>
+                <argument id="DuplicateDetectionMethod">
+                  <value class="value" valueClass="string">Standard</value>
+                </argument>
+                <argument id="DuplicateRedius">
+                  <value class="value" valueClass="string">300</value>
+                </argument>
+                <argument id="DuplicatePeriodDays">
+                  <value class="value" valueClass="string">10</value>
+                </argument>
+                <argument id="DuplicatePeriodHours"/>
+                <argument id="StartDate">
+                  <value class="value" valueClass="string">11/28/2017</value>
+                </argument>
+                <argument id="EndDate">
+                  <value class="value" valueClass="string">11/28/2099</value>
+                </argument>
+              </arguments>
+              <outputArguments>
+                <outputArgument id="SRTVName">
+                  <name class="value" valueClass="string">SRTVName</name>
+                </outputArgument>
+              </outputArguments>
+            </caseCall>
+            <caseCall testCaseId="addeec19-64a6-4af2-9199-4df3b5398dfa" testCasePath="tests/ReusableTests/Config/SaveSRTV.testcase" testItemId="1021">
+              <tags>
+                <string>disabled</string>
+              </tags>
+              <arguments>
+                <argument id="reuseConnectionName">
+                  <value class="value" valueClass="string">QAConfig</value>
+                </argument>
+              </arguments>
+              <outputArguments>
+                <outputArgument id="SRTVName">
+                  <name class="value" valueClass="string">SRTVName</name>
+                </outputArgument>
+              </outputArguments>
+            </caseCall>
+            <caseCall testCaseId="870f7a8a-e400-4a38-9813-48c12473d305" testCasePath="tests/ReusableTests/Config/MakeSRTVCurrentVersion.testcase" testItemId="1022">
+              <arguments>
+                <argument id="reuseConnectionName">
+                  <value class="value" valueClass="string">QAConfig</value>
+                </argument>
+                <argument id="SRTVName">
+                  <value class="variable">
+                    <path element="SRTVName"/>
+                  </value>
+                </argument>
+              </arguments>
+            </caseCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexSoqlQuery" name="ApexSoqlQuery" testItemId="1041" title="SOQL Query: select Id from Incap311__Service_Type_Version__c where Name = '{SRTVName}'=&gt;SRTVId">
+              <arguments>
+                <argument id="soqlQuery">
+                  <value class="compound">
+                    <parts>
+                      <value valueClass="string">select Id from Incap311__Service_Type_Version__c where Name = '</value>
+                      <variable>
+                        <path element="SRTVName"/>
+                      </variable>
+                      <value valueClass="string">'</value>
+                    </parts>
+                  </value>
+                </argument>
+                <argument id="apexConnectionName">
+                  <value class="value" valueClass="string">QAConfig</value>
+                </argument>
+                <argument id="resultListName">
+                  <value class="value" valueClass="string">SRTVId</value>
+                </argument>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Test</value>
+                </argument>
+              </arguments>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="1033" title="On SF Service Type Version View screen">
+              <arguments>
+                <argument id="uiConnectionName">
+                  <value class="value" valueClass="string">QAConfig</value>
+                </argument>
+                <argument id="target">
+                  <value class="uiTarget" uri="sf:ui:target?object=Incap311__Service_Type_Version__c&amp;action=View"/>
+                </argument>
+                <argument id="navigate">
+                  <value class="value" valueClass="string">Always</value>
+                </argument>
+                <argument id="targetDescription">
+                  <value class="value" valueClass="string">On SF Service Type Version View screen</value>
+                </argument>
+                <argument id="windowSelection">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="windowSize">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="closeWindow"/>
+                <argument id="captureBefore">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="sfUiTargetObjectId">
+                  <value class="variable">
+                    <path element="SRTVId"/>
+                    <path element="Id"/>
+                  </value>
+                </argument>
+              </arguments>
+              <clauses>
+                <clause name="substeps" testItemId="1026">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="1027" title="Click the Configure Duplicate Types button">
+                      <arguments>
+                        <argument id="locator">
+                          <value class="uiLocator" uri="ui:locator?name=Incap311__Configure_Duplicate_Types&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DIncap311__Service_Type_Version__c%26action%3DIncap311__Configure_Duplicate_Types"/>
+                        </argument>
+                        <argument id="interaction">
+                          <value class="uiInteraction" uri="ui:interaction?name=action"/>
+                        </argument>
+                        <argument id="hover">
+                          <value class="value" valueClass="boolean">true</value>
+                        </argument>
+                        <argument id="captureBefore">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="beforeWait">
+                          <value class="uiWait" uri="default"/>
+                        </argument>
+                        <argument id="afterWait">
+                          <value class="uiWait" uri="default"/>
+                        </argument>
+                        <argument id="interactionDescription">
+                          <value class="value" valueClass="string">Click the Configure Duplicate Types button</value>
+                        </argument>
+                        <argument id="autoRetry"/>
+                        <argument id="ieClickMethod">
+                          <value class="value" valueClass="string">Default</value>
+                        </argument>
+                      </arguments>
+                      <generatedParameters>
+                        <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
+                          <summary>Whether the mouse should hover over the field before it is clicked.</summary>
+                          <type>
+                            <booleanType/>
+                          </type>
+                        </apiParam>
+                        <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
+                          <summary>How the click should be executed for Internet Explorer.</summary>
+                          <type>
+                            <choiceType>
+                              <constraints>
+                                <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
+                                <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
+                              </constraints>
+                            </choiceType>
+                          </type>
+                        </apiParam>
+                      </generatedParameters>
+                    </apiCall>
+                  </steps>
+                </clause>
+              </clauses>
+              <generatedParameters>
+                <apiParam group="target" name="sfUiTargetObjectId" title="Object Id">
+                  <summary>The Id of the SF Object to be Viewed or Edited.</summary>
+                  <type>
+                    <textType/>
+                  </type>
+                </apiParam>
+              </generatedParameters>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="1034" title="On SF Incap311__Base311_DupeSTVConfig page with pageobject Incap 311__ Base 311_ Dupe STV Config">
+              <arguments>
+                <argument id="uiConnectionName">
+                  <value class="value" valueClass="string">QAConfig</value>
+                </argument>
+                <argument id="target">
+                  <value class="uiTarget" uri="sf:ui:target?pageObject=pageobjects.incap311__Base311_DupeSTVConfig&amp;page=Incap311__Base311_DupeSTVConfig"/>
+                </argument>
+                <argument id="navigate">
+                  <value class="value" valueClass="string">Dont</value>
+                </argument>
+                <argument id="targetDescription">
+                  <value class="value" valueClass="string">On SF Incap311__Base311_DupeSTVConfig page with pageobject Incap 311__ Base 311_ Dupe STV Config</value>
+                </argument>
+                <argument id="windowSelection">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="windowSize">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="closeWindow"/>
+                <argument id="captureBefore">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+              </arguments>
+              <clauses>
+                <clause name="substeps" testItemId="1029">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="1031" title="Double Click the Available Types Select Provar Regression RWH sfMultiSelect">
+                      <arguments>
+                        <argument id="locator">
+                          <value class="uiLocator" uri="ui:locator?name=availableTypesSelectProvarRegressionRWH"/>
+                        </argument>
+                        <argument id="interaction">
+                          <value class="uiInteraction" uri="ui:interaction?name=doubleClick"/>
+                        </argument>
+                        <argument id="captureBefore">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="beforeWait">
+                          <value class="uiWait" uri="default"/>
+                        </argument>
+                        <argument id="afterWait">
+                          <value class="uiWait" uri="default"/>
+                        </argument>
+                        <argument id="interactionDescription">
+                          <value class="value" valueClass="string">Double Click the Available Types Select Provar Regression RWH sfMultiSelect</value>
+                        </argument>
+                        <argument id="autoRetry"/>
+                        <argument id="value"/>
+                      </arguments>
+                      <generatedParameters>
+                        <apiParam group="value" name="value" title="Value">
+                          <summary>The value to be populated.</summary>
+                          <type>
+                            <choiceType>
+                              <constraints>
+                                <valueConstraint name="multiSelection">true</valueConstraint>
+                                <valueConstraint name="boundedValues">4tr5675765fryry75765765656576565675567565|Abandoned Bicycle|Abandoned Vehicles|Abandoned Vehicles Inspection|AETBB|AGKMF|AHNND|Aircraft Noise Disturbance|AJCJN|AJEQL|AKFOD|Alert Boston|Animal - Vaccination Investigation - DAS|Animal Found|Animal Generic Request|Animal Lost|ATSLM|aug_3_17|AWQPV|AXFGI|BCLB-Liquor License Complaint|BCPOP|Bed Bugs|Bicycle Issues|Big Buildings Work Order|Billing Complaint|Bird Infestation|BLMNE|BMZHJ|Boston Public Health Commission|BPHGV|Breathe Easy|Bridge Maintenance|BTPKY|Building Permit Inspection Request|Bulk by Requests|BWSC General Request|BYGSB|Capital Improvement Long Term|Catchbasin|CDBSI|CE Collection|CE Collection|Cemetery Maintenance Request|CGAWI|City Building Maintenance - EBS|CNXUS|Commercial Autobody Repair Shop|Configtesting|Contractor Complaints|Cross Metering - Sub-Metering|CUVJP|CYUVP|CZSAM|Dallas Tomorrow Fund - HOU|DBOKF|DBPLP|DDBCL|Dead Animal Pickup- SAN|Demo Service Type SM|Demotest|demo_test09|DHFZN|DHUMW|Disability General Request|DJLUY|DJYCR|DPRLO|DPYUJ|DSNQZ|Dumpster &amp; Loading Noise Disturbances|DXCET|EAAZH|EAWOK|EBKDN|EFTVZ|EIQBQ|EJMCD|Electrical Permit Inspection Request|Emergency|Emergency Notification|Empty Litter Basket|EOHAJ|Equipment Repair|Erictest|erictest2|ESLIS|EVBTK|EWIMG|EZDZD|EZNDW|EZPSE|Failure to Deliver Proper Service|FCCS-Refunds|FCJVS|FDCGM|FDLZN|FFGHV|FFKCL|Fire Department Request|Fire Hydrant|Fire in Food Establishment|FIYTI|FJEQI|FJPZM|FKKUB|Food Alert - Confirmed|Food Alert - Unconfirmed|FPRFA|FQTRA|FRYWZ|FTOJI|FUXLX|GAPRT|Gas - Weights &amp; Measures|GBCWI|GBPPP|GDJYU|GDMKE|GEEXI|General Building Complaint|General Comments For An Employee, Program or Policy|General Lighting Request|General Request|General School Request|General Transportation Issues|GKODW|GLQUH|GMBCD|GMLFY|GNJYI|GPCFD|GQKRW|Graffiti|Graffiti Removal|Ground Maintenance|GSKYF|GUZIM|GYBXS|GZNWT|harsha-test|HCD-Maintenance Structure|HCD-Systems|HDLJV|Heat - Excessive, Insufficient|HFUVT|HICTG|HIDVP|Highway Maintenance|HKTJT|HLRNI|HLTH-Animal Aggressive Animal|HLTH-Animal Attack Against Animal|HLTH-Animal Attack Against Human|HLTH-Animal Barking Dog|HLTH-Animal Bite Pickup|HLTH-Animal Dead Animal Pick Up, Death of a Pet (Tracking)|HLTH-Animal Domestic Animal Trap or Capture Request|HLTH-Animal Failure to Restrain Animal, Known Owner/Known Address|HLTH-Animal Healthy Unwanted Animals (Tracking)|HLTH-Animal In Danger/Injured/Abused/Neglected|HLTH-Animal Inspection/Follow-up|HLTH-Animal Police/Fire/Sheriff/City Work Crew Standby|HLTH-Animal Running At Large/Stray (Tracking)|HLTH-Animal Search and Seizure|HLTH-Animal Stray Held|HLTH-Animal Trapped In Vacant Building|HLTH-Animal Unsanitary Conditions|HLTH-Animal Wildlife Complaint|HLTH-Animal-Dead Animal Pickup-Wildlife or Stray|HLTH-EV Dust|HLTH-EV Dust-POC|HLTH-EV Dust-POC|HLTH-EV Dust-POC|HLTH-EV Dust-POC|HLTH-EV Dust-POC|HLTH-EV Dust-POC|HLTH-EV Dust-POC|HLTH-EV Dust-POC|HLTH-EV Dust-POC|HLTH-EV Dust-POC|HLTH-EV Dust-POC|HLTH-EV Dust-POC|HLTH-EV Dust-POC|HLTH-EV Dust-POC|HLTH-EV Dust-POC|HLTH-EV Dust-POC|HLTH-EV Dust-POC|HLTH-EV Dust-POC|HLTH-EV Dust-POC|HLTH-EV Emergency Sewer Investigation|HLTH-EV Institutional Food Facility|HLTH-EV Mosquito Surveillance|HLTH-EV Noise|HLTH-EV Odor|HLTH-EV Public Swimming Pool/Spa Complaint|HLTH-EV Report of Retail Sale of Illegal Synthetic Drugs|HLTH-EV Stagnant Water|HLTH-EV Tattoo Facility|HLTH-Food Borne Illness Alleged|HLTH-Food Facility Complaint|HOC test|HP Sign Removal|HP Sign Removal|HP Sign Repair|HP Sign Request|HQLZA|HVAPU|HWEUI|HWIJC|HZGPC|ICCPG|IDYIZ|IENER|IFOPG|IGFRU|IIZRW|Illegal Dumping|Illegal Dumping new|Illegal Posting of Signs|Illegal Vending|Improper Storage of Trash (Barrels)|Incap Generic|Incap inquiry|INMMQ|INPYV|Inquiry|Install New Lighting|IYATY|IYBAV|JBNGT|JDDBV|JQEWI|JRJTZ|JWOXV|JXFEF|JZAEY|KARJS|KAUBR|KDHLO|KFVVI|KHCRP|KKBAS|KMVAH|KOCWX|KULQE|KXTGC|KZXAS|LCCKD|Lead Paint|Litter Basket Maintenance|LIVKY|LKCNT|LQDKY|LSJQM|LSYKZ|LUODZ|LWAFH|LXBGC|LZWYX|LZYCY|Major System Failure|MBTA Request|MCQWE|Mechanical Permit Inspection Request|MGIEE|Misc. Snow Complaint|Missed Trash/Recycling/Yard Waste/Bulk Item|Missing/Damaged Sign Repair|MMQVX|MOPNZ|MQWUF|MRRTL|MUSRG|MVRWV|MWAFO|MXAQB|MXOZJ|MYGAK|MyServicename24|NAZFS|NCBOT|NDDExotic Pet|NDYUZ|Needle Removal Request|New Tree Requests|News Boxes|News Boxes|NMFGB|NMRXD|NMSSX|NMYMJ|No Utilities - Electricity|No Utilities - Flood|No Utilities - No Water|No Utilities - Sewer|No-Tow Complaint Confirmation|NSQCA|NUNCD|NXRDD|OCBKE|OCGFF|OFHTB|OFKIQ|OHGVZ|Oil Truck - Weights &amp; Measures|OJMKM|ONHCV|OOXZB|ORYAT|OSYCK|Other - Weights &amp; Measures|OTPEX|OTWVR|Overcrowding|Overgrown Vegetation|Park Carpentry|Park Graffiti|Park Horticulture Service|Park Improvement Requests|Park Painting|Park Painting Test|Park Plumbing|Park Welding|Parking Enforcement|Parking Meter Repairs|Parking on Front/Back Yards (Illegal Parking)|Parks General Request|Parks Lighting/Electrical Issues|Pavement Marking Inspection|Pavement Marking Maintenance|PEBYG|PEXID|PGRAS|PHLYH|PHSAW|PHUFD|PIBAF|Pick up Dead Animal|Pickup Clear Conduit|PJQOA|PJZBH|PNBKY|PONXN|Poor Ventilation|PPUKX|Price Issues - Weights &amp; Measures|PRO-SR-AZNJ9297|PRO-SR-BPFE9680|PRO-SR-BSHB8044|PRO-SR-BYGJ1375|PRO-SR-BYIV9237|PRO-SR-CXLI6978|PRO-SR-DFGW6615|PRO-SR-EHGT6368|PRO-SR-GGPR0279|PRO-SR-GMFA4611|PRO-SR-GUKN3634|PRO-SR-HDSU2960|PRO-SR-HYVO3098|PRO-SR-ISGS6063|PRO-SR-JJBA8223|PRO-SR-KOKE4538|PRO-SR-LZNA3696|PRO-SR-NBFA6932|PRO-SR-NIXO1819|PRO-SR-NLEW4169|PRO-SR-NQIZ0791|PRO-SR-NXIU2374|PRO-SR-OIQN0947|PRO-SR-PXUZ3685|PRO-SR-QDUL1123|PRO-SR-QTPE5704|PRO-SR-RLEJ4439|PRO-SR-RRGN8096|PRO-SR-SCHV1837|PRO-SR-SIQZ2900|PRO-SR-SKIC0400|PRO-SR-TCSA1788|PRO-SR-TMCD8351|PRO-SR-TYCO2297|PRO-SR-UEFD8639|PRO-SR-VHCR3868|PRO-SR-VHYU4449|PRO-SR-VOSU5288|PRO-SR-WDDJ0837|PRO-SR-WQDX6644|PRO-SR-WYRH4012|PRO-SR-XLHD6143|PRO-SR-XZKD9296|PRO-SR-YEOD0918|PRO-SR-YHFI1770|PRO-SR-YTCQ2966|Protection of Adjoining Property|Provar - Schedule - SR|Provar Reg Date Check|Provar Regression RWH|Provar Regression Test SR|Provar Regression with RH|Provar Regression WRH|Provar Regression WRWH|Provar System Gen|Provar-Bus-Hours|Provar-POC-1|Provar-POC-2|Provar-POC-3|Provar-POC-4|Provar-POC-5|Provar-Service-Question|PRQAI|PRYMB|PTUCC|Public Works General Request|QBCYG|QBMJN|QECTN|QEWKH|QHAHM|QPSSK|QVUTV|QWJNV|QXFER|Rat Bite|RBCWL|RDYKH|Recycling Cart Inquiry|Recycling Cart Inquiry new|Recycling Cart Return|Rental Unit Delivery Conditions|Request for Litter Basket Installation|Request for Pothole Repair|Request for Recycling Cart|Request for Snow Plowing|Request for Snow Plowing (Emergency Responder)|Requests for Street Cleaning|Reweigh/Short Measure - Weights &amp; Measures|RFEYZ|RKHMZ|RLUZU|RNOMD|RNRJT|Roadway Repair|Rodent Activity|Rooftop &amp; Mechanical Disturbances|RSKYZ|RWLJD|RZHDV|SajivTest-Aug-01|Scale - Weights &amp; Measures|Schedulable SR-Harsha|Schedulable-Item SR|Schedule a Bulk Item Pickup|School Administration|SEANTESTA|SEANTESTB|Service_Name|SHDKZ|Sideguard - Weights &amp; Measures|Sidewalk Cover / Manhole|Sidewalk Repair|Snow Buildup Removal (Emergency Agency)|Snow Removal|Space Savers|Squalid Living Conditions/Hoarding|SSFJE|Stagnant Water|STESTA02|Sticker Request|Street Light Knock Downs|Street Light Outage test|Street Light Outages|Street Light Poles Highway|SXCOW|SZEKJ|SZTBR|Taxi - Transportation Complaint - AVI|Taxi Meter - Weights &amp; Measures|Test|test|test|test|test 1234567|test 343|test 42|test 456|test 55|Test 564|test 765|test 7655|test 9876|Test for Transfers|Test Oct 2017|test recycling cart inquiry|Test Upgrade Existing Lighting|Test Version1|Test-03-20_1|Test-03-20_2|Test-May-07-01|TEST-PROVAR-JUL-POC-1|TEST-PROVAR-JUL-POC-1|TEST-PROVAR-JUL-POC-1|TEST-PROVAR-JUL-POC-1|TEST-PROVAR-JUL-POC-1|TEST-PROVAR-JUL-POC-1|Test-S-M-2017-03-01-01|Test-Service-Name-Jul-01|Test-Service-Type-J-28-01|TEST-ST-10-JUL-01|TEST-ST-10-JUL-02|test09|test1223|test129|test2|test234|test3|test433|test444|test521|test521|test6|test774|test89|test9182|TestServiceName|testTest _78|TestTree Emergency|test_0|test_1234|test_19|Test_21_3|test_432|test_654|test_654|test_87|test_98|test_98|test_demo|test_demo1|test_demo1 service name|THJBM|Traffic Signal Inspection|Traffic Signal Repair|Transportation General Request|Tree Emergencies|Tree Emergency|Tree Emergency new|Tree in Park|Tree Maintenance Requests|TSTVB|ULYFG|Unsafe Dangerous Conditions|Unsanitary Conditions - Camps|Unsanitary Conditions - Employees|Unsanitary Conditions - Establishment|Unsanitary Conditions - Food|Unsanitary Conditions - Pools|Unsanitary Trash Conditions|Unsatisfactory Living Conditions|Unshoveled Sidewalk|Upgrade Existing Lighting|Upgrade Existing Lighting|UQJQS|URUPP|Utility Casting Repair|UTJGI|UTLAA|UTPLW|UUHWC|UXKHA|Vacant Lot - Land Not Maintained|VHQRX|VJHHN|VNICA|VPEQY|VUXSB|WAOQB|WBAOT|WFOAI|WFYGO|WIUZO|WJJJT|WMGVC|WNZCP|WOODY|Work Hours-Loud Noise Complaints|WPFWS|WRPID|WUSMN|WVDQB|WW-Sewer Water In Basement|WW-Water Leak (Exterior)|WXUSG|XCAMR|XCZSN|XDNGA|XDVOC|XDWEG|XEKXW|XKZCS|XYGQF|YCDDY|YGSSK|YHDSO|YHQZK|YLJTO|YNQGZ|YNVGM|YOYFI|YPLTZ|YUJLP|YUQES|YWXNT|YYUDR|YZXVD|ZFTSG|ZGKLE|ZQGYM|ZRKKR|ZUGAZ|ZUJVE|ZWMAW|ZZKYD|ZZMUZ</valueConstraint>
+                              </constraints>
+                            </choiceType>
+                          </type>
+                        </apiParam>
+                      </generatedParameters>
+                    </apiCall>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="1042" title="Click the Btn Right button">
+                      <arguments>
+                        <argument id="locator">
+                          <value class="uiLocator" uri="ui:locator?name=btnRight"/>
+                        </argument>
+                        <argument id="interaction">
+                          <value class="uiInteraction" uri="ui:interaction?name=action"/>
+                        </argument>
+                        <argument id="hover">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureBefore">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="beforeWait">
+                          <value class="uiWait" uri="default"/>
+                        </argument>
+                        <argument id="afterWait">
+                          <value class="uiWait" uri="default"/>
+                        </argument>
+                        <argument id="interactionDescription">
+                          <value class="value" valueClass="string">Click the Btn Right button</value>
+                        </argument>
+                        <argument id="autoRetry"/>
+                        <argument id="ieClickMethod">
+                          <value class="value" valueClass="string">Default</value>
+                        </argument>
+                      </arguments>
+                      <generatedParameters>
+                        <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
+                          <summary>Whether the mouse should hover over the field before it is clicked.</summary>
+                          <type>
+                            <booleanType/>
+                          </type>
+                        </apiParam>
+                        <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
+                          <summary>How the click should be executed for Internet Explorer.</summary>
+                          <type>
+                            <choiceType>
+                              <constraints>
+                                <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
+                                <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
+                              </constraints>
+                            </choiceType>
+                          </type>
+                        </apiParam>
+                      </generatedParameters>
+                    </apiCall>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="1032" title="Click the Save button">
+                      <arguments>
+                        <argument id="locator">
+                          <value class="uiLocator" uri="ui:locator?name=save"/>
+                        </argument>
+                        <argument id="interaction">
+                          <value class="uiInteraction" uri="ui:interaction?name=action"/>
+                        </argument>
+                        <argument id="hover">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureBefore">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="beforeWait">
+                          <value class="uiWait" uri="default"/>
+                        </argument>
+                        <argument id="afterWait">
+                          <value class="uiWait" uri="default"/>
+                        </argument>
+                        <argument id="interactionDescription">
+                          <value class="value" valueClass="string">Click the Save button</value>
+                        </argument>
+                        <argument id="autoRetry"/>
+                        <argument id="ieClickMethod">
+                          <value class="value" valueClass="string">Default</value>
+                        </argument>
+                      </arguments>
+                      <generatedParameters>
+                        <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
+                          <summary>Whether the mouse should hover over the field before it is clicked.</summary>
+                          <type>
+                            <booleanType/>
+                          </type>
+                        </apiParam>
+                        <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
+                          <summary>How the click should be executed for Internet Explorer.</summary>
+                          <type>
+                            <choiceType>
+                              <constraints>
+                                <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
+                                <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
+                              </constraints>
+                            </choiceType>
+                          </type>
+                        </apiParam>
+                      </generatedParameters>
+                    </apiCall>
+                  </steps>
+                </clause>
+              </clauses>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="712" title="Set Values: FirstName">
+              <arguments>
+                <argument id="values">
+                  <value class="valueList" mutable="Mutable">
+                    <namedValues mutable="Mutable">
+                      <namedValue name="valuePath">
+                        <value class="value" valueClass="string">FirstName</value>
+                      </namedValue>
+                      <namedValue name="value">
+                        <value class="funcCall" id="UniqueId">
+                          <argument id="length">
+                            <value class="value" valueClass="decimal">4</value>
+                          </argument>
+                          <argument id="format">
+                            <value class="value" valueClass="string">ALPHA</value>
+                          </argument>
+                        </value>
+                      </namedValue>
+                      <namedValue name="valueScope">
+                        <value class="value" valueClass="string">Test</value>
+                      </namedValue>
+                    </namedValues>
+                  </value>
+                </argument>
+              </arguments>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="713" title="Set Values: LastName">
+              <arguments>
+                <argument id="values">
+                  <value class="valueList" mutable="Mutable">
+                    <namedValues mutable="Mutable">
+                      <namedValue name="valuePath">
+                        <value class="value" valueClass="string">LastName</value>
+                      </namedValue>
+                      <namedValue name="value">
+                        <value class="funcCall" id="UniqueId">
+                          <argument id="length">
+                            <value class="value" valueClass="decimal">4</value>
+                          </argument>
+                          <argument id="format">
+                            <value class="value" valueClass="string">ALPHA</value>
+                          </argument>
+                        </value>
+                      </namedValue>
+                      <namedValue name="valueScope">
+                        <value class="value" valueClass="string">Test</value>
+                      </namedValue>
+                    </namedValues>
+                  </value>
+                </argument>
+              </arguments>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="714" title="Set Values: Email">
+              <arguments>
+                <argument id="values">
+                  <value class="valueList" mutable="Mutable">
+                    <namedValues mutable="Mutable">
+                      <namedValue name="valuePath">
+                        <value class="value" valueClass="string">Email</value>
+                      </namedValue>
+                      <namedValue name="value">
+                        <value class="compound">
+                          <parts>
+                            <funcCall id="UniqueId">
+                              <argument id="length">
+                                <value class="value" valueClass="decimal">4</value>
+                              </argument>
+                              <argument id="format">
+                                <value class="value" valueClass="string">ALPHA</value>
+                              </argument>
+                            </funcCall>
+                            <value valueClass="string">@</value>
+                            <funcCall id="UniqueId">
+                              <argument id="length">
+                                <value class="value" valueClass="decimal">4</value>
+                              </argument>
+                              <argument id="format">
+                                <value class="value" valueClass="string">ALPHA</value>
+                              </argument>
+                            </funcCall>
+                            <value valueClass="string">.com</value>
+                          </parts>
+                        </value>
+                      </namedValue>
+                      <namedValue name="valueScope">
+                        <value class="value" valueClass="string">Test</value>
+                      </namedValue>
+                    </namedValues>
+                  </value>
+                </argument>
+              </arguments>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="715" title="Set Values: Phone">
+              <arguments>
+                <argument id="values">
+                  <value class="valueList" mutable="Mutable">
+                    <namedValues mutable="Mutable">
+                      <namedValue name="valuePath">
+                        <value class="value" valueClass="string">Phone</value>
+                      </namedValue>
+                      <namedValue name="value">
+                        <value class="funcCall" id="UniqueId">
+                          <argument id="length">
+                            <value class="value" valueClass="decimal">10</value>
+                          </argument>
+                          <argument id="format">
+                            <value class="value" valueClass="string">NUMERIC</value>
+                          </argument>
+                        </value>
+                      </namedValue>
+                      <namedValue name="valueScope">
+                        <value class="value" valueClass="string">Test</value>
+                      </namedValue>
+                    </namedValues>
+                  </value>
+                </argument>
+              </arguments>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="1050" title="create sr for provar regression test rwh">
+              <arguments>
+                <argument id="description">
+                  <value class="value" valueClass="string">create sr for provar regression test rwh</value>
+                </argument>
+              </arguments>
+              <clauses>
+                <clause name="hidden" testItemId="1051">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1052" title="Salesforce Connect: QA1 (Test)">
+                      <arguments>
+                        <argument id="connectionName">
+                          <value class="value" valueClass="string">SAT_Dev_Admin_311</value>
+                        </argument>
+                        <argument id="resultName">
+                          <value class="value" valueClass="string">QA1</value>
+                        </argument>
+                        <argument id="reuseConnectionName"/>
+                        <argument id="resultScope">
+                          <value class="value" valueClass="string">Test</value>
+                        </argument>
+                        <argument id="alreadyOpenBehaviour">
+                          <value class="value" valueClass="string">Fail</value>
+                        </argument>
+                        <argument id="uiApplicationName">
+                          <value class="value" valueClass="string">X311_Console</value>
+                        </argument>
+                        <argument id="closeAllPrimaryTabs">
+                          <value class="value" valueClass="boolean">true</value>
+                        </argument>
+                        <argument id="quickUiLogin">
+                          <value class="value" valueClass="boolean">true</value>
+                        </argument>
+                        <argument id="privateBrowsingMode"/>
+                        <argument id="enableObjectIdLogging">
+                          <value class="value" valueClass="boolean">true</value>
+                        </argument>
+                        <argument id="autoCleanup">
+                          <value class="value" valueClass="boolean">true</value>
+                        </argument>
+                        <argument id="cleanupConnectionName"/>
+                        <argument id="logFileLocation"/>
+                        <argument id="username"/>
+                        <argument id="password"/>
+                        <argument id="securityToken"/>
+                        <argument id="environment"/>
+                        <argument id="lightningMode">
+                          <value class="value" valueClass="string">default</value>
+                        </argument>
+                        <argument id="webBrowser"/>
+                      </arguments>
+                    </apiCall>
+                    <caseCall testCaseId="db96ad6a-ed0c-41ac-a489-712845ddc766" testCasePath="tests/ReusableTests/Console/FillSRFromXL.testcase" testItemId="1053">
+                      <arguments>
+                        <argument id="reuseConnectionName">
+                          <value class="value" valueClass="string">QA1</value>
+                        </argument>
+                        <argument id="XlFileNameAndRelativePath">
+                          <value class="value" valueClass="string">XLFileNameAndRelativePath</value>
+                        </argument>
+                        <argument id="XLValuesRange">
+                          <value class="value" valueClass="string">A1:D16</value>
+                        </argument>
+                        <argument id="XLFileNameAndRelativePath">
+                          <value class="value" valueClass="string">templates/Provar Regression RWH/Provar Regression RWH_Test1_Create2.xlsx</value>
+                        </argument>
+                        <argument id="InitialDuplicateSRId"/>
+                        <argument id="DuplicateSRIdOnUpdateAndTransfer"/>
+                        <argument id="ContactToBeSelectedOrUpdated">
+                          <value class="value" valueClass="string">ndanak@incapsulate.com</value>
+                        </argument>
+                      </arguments>
+                      <outputArguments>
+                        <outputArgument id="Numeric3">
+                          <name class="value" valueClass="string">Numeric3</name>
+                        </outputArgument>
+                        <outputArgument id="Numeric4">
+                          <name class="value" valueClass="string">Numeric4</name>
+                        </outputArgument>
+                        <outputArgument id="Char7">
+                          <name class="value" valueClass="string">Char7</name>
+                        </outputArgument>
+                      </outputArguments>
+                    </caseCall>
+                    <caseCall testCaseId="c27e079e-a1d8-40f3-8269-23aaf449c01f" testCasePath="tests/ReusableTests/Console/putLocationAndHandleDuplicates.testcase" testItemId="1054">
+                      <arguments>
+                        <argument id="reuseConnectionName">
+                          <value class="value" valueClass="string">QA1</value>
+                        </argument>
+                        <argument id="LocationOption">
+                          <value class="value" valueClass="string">SelectLocation</value>
+                        </argument>
+                        <argument id="LocationToBeSelected">
+                          <value class="value" valueClass="string">668 E 6th</value>
+                        </argument>
+                        <argument id="InitialDuplicatesDecisionOnUpdateAndTransfer"/>
+                        <argument id="InitialSRNumberToBeMarkedAsDuplicate"/>
+                        <argument id="DuplicateDecisionOnSelectionOrChangeOfAddress">
+                          <value class="value" valueClass="string">NewCase</value>
+                        </argument>
+                        <argument id="SRNumberToBeMarkedAsDuplicateOnSelectOrChangeOfAddress"/>
+                      </arguments>
+                    </caseCall>
+                    <caseCall testCaseId="06e35884-04e5-4b7b-a786-939d99642af3" testCasePath="tests/ReusableTests/Console/doContactOperations.testcase" testItemId="1055">
+                      <arguments>
+                        <argument id="OperationType">
+                          <value class="value" valueClass="string">SelectExisting</value>
+                        </argument>
+                        <argument id="reuseConnectionName">
+                          <value class="value" valueClass="string">QA1</value>
+                        </argument>
+                        <argument id="ContactToBeSelectedOrUpdated">
+                          <value class="value" valueClass="string">ndanak@incapsulate.com</value>
+                        </argument>
+                      </arguments>
+                      <outputArguments>
+                        <outputArgument id="Numeric3">
+                          <name class="value" valueClass="string">Numeric3</name>
+                        </outputArgument>
+                        <outputArgument id="Numeric4">
+                          <name class="value" valueClass="string">Numeric4</name>
+                        </outputArgument>
+                        <outputArgument id="Char7">
+                          <name class="value" valueClass="string">Char7</name>
+                        </outputArgument>
+                      </outputArguments>
+                    </caseCall>
+                    <caseCall testCaseId="ad6783f7-9072-4ecb-93ee-af8929c9b59d" testCasePath="tests/ReusableTests/Console/SubmitSR.testcase" testItemId="1056">
+                      <arguments>
+                        <argument id="reuseConnectionName">
+                          <value class="value" valueClass="string">QA1</value>
+                        </argument>
+                      </arguments>
+                      <outputArguments>
+                        <outputArgument id="SRCode">
+                          <name class="value" valueClass="string">SRCode</name>
+                        </outputArgument>
+                      </outputArguments>
+                    </caseCall>
+                  </steps>
+                </clause>
+              </clauses>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1024" title="Salesforce Connect: QA (Test)">
+              <arguments>
+                <argument id="connectionName">
+                  <value class="value" valueClass="string">QA</value>
+                </argument>
+                <argument id="resultName">
+                  <value class="value" valueClass="string">QA</value>
+                </argument>
+                <argument id="reuseConnectionName">
+                  <value class="value"/>
+                </argument>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Test</value>
+                </argument>
+                <argument id="alreadyOpenBehaviour">
+                  <value class="value" valueClass="string">Fail</value>
+                </argument>
+                <argument id="uiApplicationName">
+                  <value class="value" valueClass="string">X311_Console</value>
+                </argument>
+                <argument id="closeAllPrimaryTabs">
+                  <value class="value" valueClass="boolean">true</value>
+                </argument>
+                <argument id="quickUiLogin">
+                  <value class="value" valueClass="boolean">true</value>
+                </argument>
+                <argument id="privateBrowsingMode"/>
+                <argument id="enableObjectIdLogging">
+                  <value class="value" valueClass="boolean">true</value>
+                </argument>
+                <argument id="autoCleanup">
+                  <value class="value" valueClass="boolean">true</value>
+                </argument>
+                <argument id="cleanupConnectionName"/>
+                <argument id="logFileLocation"/>
+                <argument id="username"/>
+                <argument id="password"/>
+                <argument id="securityToken"/>
+                <argument id="environment"/>
+                <argument id="lightningMode">
+                  <value class="value" valueClass="string">default</value>
+                </argument>
+                <argument id="webBrowser"/>
+              </arguments>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="716" title="On SF New Service Request Creation tab (Close)">
+              <arguments>
+                <argument id="uiConnectionName">
+                  <value class="value" valueClass="string">QA</value>
+                </argument>
+                <argument id="target">
+                  <value class="uiTarget" uri="sf:ui:target?object=Case&amp;action=List&amp;tab=New_Service_Request_Creation&amp;application=Incap311Console__X311_Console&amp;listView=Close"/>
+                </argument>
+                <argument id="navigate">
+                  <value class="value" valueClass="string">Always</value>
+                </argument>
+                <argument id="targetDescription">
+                  <value class="value" valueClass="string">On SF New Service Request Creation tab (Close)</value>
+                </argument>
+                <argument id="windowSelection">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="windowSize">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="closeWindow"/>
+                <argument id="captureBefore">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="scTabType">
+                  <value class="value" valueClass="string">HomeTab</value>
+                </argument>
+              </arguments>
+              <clauses>
+                <clause name="substeps" testItemId="667">
+                  <steps/>
+                </clause>
+              </clauses>
+              <generatedParameters>
+                <apiParam group="target" name="scTabType" seq="1000" title="Tab Type">
+                  <summary>The tab type for Scaffolds</summary>
+                  <type>
+                    <choiceType>
+                      <constraints>
+                        <valueConstraint name="valuesSource">com.provar.plugins.sf.eclipse.ui:com.provar.plugins.forcedotcom.ui.valuesources.SfEnumChoiceListValuesSource</valueConstraint>
+                        <valueConstraint name="valuesSourceDependencies">com.provar.plugins.forcedotcom.core.ui.SfUiTargetUrl$ConsoleTabType</valueConstraint>
+                      </constraints>
+                    </choiceType>
+                  </type>
+                </apiParam>
+              </generatedParameters>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="717" title="On SF Incap311SC__AgentConsole page with pageobject Incap 311sc__ Agent Console_ Narayan">
+              <tags>
+                <string>disabled</string>
+              </tags>
+              <arguments>
+                <argument id="uiConnectionName">
+                  <value class="value" valueClass="string">QA</value>
+                </argument>
+                <argument id="target">
+                  <value class="uiTarget" uri="sf:ui:target?page=Incap311SC__AgentConsole&amp;pageObject=pageobjects.incap311sc__AgentConsole_Narayan"/>
+                </argument>
+                <argument id="navigate">
+                  <value class="value" valueClass="string">Always</value>
+                </argument>
+                <argument id="targetDescription">
+                  <value class="value" valueClass="string">On SF Incap311SC__AgentConsole page with pageobject Incap 311sc__ Agent Console_ Narayan</value>
+                </argument>
+                <argument id="windowSelection">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="windowSize">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="closeWindow"/>
+                <argument id="captureBefore">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="scTabType">
+                  <value class="value" valueClass="string">HomeTab</value>
+                </argument>
+              </arguments>
+              <clauses>
+                <clause name="substeps" testItemId="668">
+                  <steps/>
+                </clause>
+              </clauses>
+              <generatedParameters>
+                <apiParam group="target" name="scTabType" seq="1000" title="Tab Type">
+                  <summary>The tab type for Scaffolds</summary>
+                  <type>
+                    <choiceType>
+                      <constraints>
+                        <valueConstraint name="valuesSource">com.provar.plugins.sf.eclipse.ui:com.provar.plugins.forcedotcom.ui.valuesources.SfEnumChoiceListValuesSource</valueConstraint>
+                        <valueConstraint name="valuesSourceDependencies">com.provar.plugins.forcedotcom.core.ui.SfUiTargetUrl$ConsoleTabType</valueConstraint>
+                      </constraints>
+                    </choiceType>
+                  </type>
+                </apiParam>
+              </generatedParameters>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="718" title="On SF Incap311SC__AgentConsole page with pageobject Incap 311sc__ Agent Console_ Narayan">
+              <arguments>
+                <argument id="uiConnectionName">
+                  <value class="value" valueClass="string">QA</value>
+                </argument>
+                <argument id="target">
+                  <value class="uiTarget" uri="sf:ui:target?page=Incap311SC__AgentConsole&amp;pageObject=pageobjects.incap311sc__AgentConsole_Narayan"/>
+                </argument>
+                <argument id="navigate">
+                  <value class="value" valueClass="string">Dont</value>
+                </argument>
+                <argument id="targetDescription">
+                  <value class="value" valueClass="string">On SF Incap311SC__AgentConsole page with pageobject Incap 311sc__ Agent Console_ Narayan</value>
+                </argument>
+                <argument id="windowSelection">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="windowSize">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="closeWindow"/>
+                <argument id="captureBefore">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="scTabType">
+                  <value class="value" valueClass="string">CurrentTab</value>
+                </argument>
+                <argument id="scPrimaryTabName">
+                  <value class="value" valueClass="string">New Case Creation</value>
+                </argument>
+                <argument id="scSecondaryTabName"/>
+              </arguments>
+              <clauses>
+                <clause name="substeps" testItemId="669">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="670" title="Click the Link_submit Request button">
+                      <arguments>
+                        <argument id="locator">
+                          <value class="uiLocator" uri="ui:locator?name=Link_submitRequest"/>
+                        </argument>
+                        <argument id="interaction">
+                          <value class="uiInteraction" uri="ui:interaction?name=action"/>
+                        </argument>
+                        <argument id="hover">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureBefore">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="beforeWait">
+                          <value class="uiWait" uri="default"/>
+                        </argument>
+                        <argument id="afterWait">
+                          <value class="uiWait" uri="default"/>
+                        </argument>
+                        <argument id="interactionDescription">
+                          <value class="value" valueClass="string">Click the Link_submit Request button</value>
+                        </argument>
+                        <argument id="autoRetry"/>
+                        <argument id="ieClickMethod">
+                          <value class="value" valueClass="string">Default</value>
+                        </argument>
+                      </arguments>
+                      <generatedParameters>
+                        <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
+                          <summary>Whether the mouse should hover over the field before it is clicked.</summary>
+                          <type>
+                            <booleanType/>
+                          </type>
+                        </apiParam>
+                        <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
+                          <summary>How the click should be executed for Internet Explorer.</summary>
+                          <type>
+                            <choiceType>
+                              <constraints>
+                                <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
+                                <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
+                              </constraints>
+                            </choiceType>
+                          </type>
+                        </apiParam>
+                      </generatedParameters>
+                    </apiCall>
+                  </steps>
+                </clause>
+              </clauses>
+              <generatedParameters>
+                <apiParam group="target" name="scTabType" seq="1000" title="Tab Type">
+                  <summary>The tab type for Scaffolds</summary>
+                  <type>
+                    <choiceType>
+                      <constraints>
+                        <valueConstraint name="valuesSource">com.provar.plugins.sf.eclipse.ui:com.provar.plugins.forcedotcom.ui.valuesources.SfEnumChoiceListValuesSource</valueConstraint>
+                        <valueConstraint name="valuesSourceDependencies">com.provar.plugins.forcedotcom.core.ui.SfUiTargetUrl$ConsoleTabType</valueConstraint>
+                      </constraints>
+                    </choiceType>
+                  </type>
+                </apiParam>
+              </generatedParameters>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="1045" title="On SF Incap311SC__AgentConsole page with pageobject Incap 311sc__ Agent Console_ Narayan_ Service Type Tab">
+              <arguments>
+                <argument id="uiConnectionName">
+                  <value class="value" valueClass="string">QA</value>
+                </argument>
+                <argument id="target">
+                  <value class="uiTarget" uri="sf:ui:target?page=Incap311SC__AgentConsole&amp;pageObject=pageobjects.incap311sc__AgentConsole_Narayan_ServiceTypeTab"/>
+                </argument>
+                <argument id="navigate">
+                  <value class="value" valueClass="string">Dont</value>
+                </argument>
+                <argument id="targetDescription">
+                  <value class="value" valueClass="string">On SF Incap311SC__AgentConsole page with pageobject Incap 311sc__ Agent Console_ Narayan_ Service Type Tab</value>
+                </argument>
+                <argument id="windowSelection">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="windowSize">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="closeWindow"/>
+                <argument id="captureBefore">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="scTabType">
+                  <value class="value" valueClass="string">CurrentTab</value>
+                </argument>
+              </arguments>
+              <clauses>
+                <clause name="substeps" testItemId="1046">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="1047" title="Set the Text Box_search Service Type field to SRT">
+                      <arguments>
+                        <argument id="locator">
+                          <value class="uiLocator" uri="ui:locator?name=TextBox_searchServiceType"/>
+                        </argument>
+                        <argument id="interaction">
+                          <value class="uiInteraction" uri="ui:interaction?name=set"/>
+                        </argument>
+                        <argument id="value">
+                          <value class="value" valueClass="string">SRT</value>
+                        </argument>
+                        <argument id="blur">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="pressEnter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureBefore">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="beforeWait">
+                          <value class="uiWait" uri="default"/>
+                        </argument>
+                        <argument id="afterWait">
+                          <value class="uiWait" uri="default"/>
+                        </argument>
+                        <argument id="interactionDescription">
+                          <value class="value" valueClass="string">Set the Text Box_search Service Type field to SRT</value>
+                        </argument>
+                        <argument id="autoRetry"/>
+                      </arguments>
+                      <generatedParameters>
+                        <apiParam group="value" name="value" seq="10000" title="Value">
+                          <summary>The value to be populated.</summary>
+                          <type>
+                            <textType>
+                              <constraints>
+                                <valueConstraint name="mimeType">text/plain</valueConstraint>
+                              </constraints>
+                            </textType>
+                          </type>
+                        </apiParam>
+                        <apiParam group="value" name="blur" seq="10001" title="Tab off field">
+                          <summary>Whether the tab key should be pressed after the value is populated.</summary>
+                          <type>
+                            <booleanType/>
+                          </type>
+                        </apiParam>
+                        <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
+                          <summary>Whether the Enter key should be pressed after the value is populated.</summary>
+                          <type>
+                            <booleanType/>
+                          </type>
+                        </apiParam>
+                      </generatedParameters>
+                    </apiCall>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="1048" title="Call the selectSRType method">
+                      <arguments>
+                        <argument id="locator">
+                          <value class="uiLocator" uri="ui:pageobject:method?pageId=pageobjects.incap311sc__AgentConsole_Narayan_ServiceTypeTab&amp;operation=selectSRType"/>
+                        </argument>
+                        <argument id="interaction">
+                          <value class="uiInteraction" uri="ui:interaction?name=invoke"/>
+                        </argument>
+                        <argument id="interactionDescription">
+                          <value class="value" valueClass="string">Call the selectSRType method</value>
+                        </argument>
+                        <argument id="beforeWait"/>
+                        <argument id="afterWait"/>
+                        <argument id="autoRetry"/>
+                        <argument id="captureBefore">
+                          <value class="value" valueClass="string">false</value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="string">false</value>
+                        </argument>
+                        <argument id="param_arg0">
+                          <value class="variable">
+                            <path element="SRTAlpha"/>
+                          </value>
+                        </argument>
+                      </arguments>
+                      <generatedParameters>
+                        <apiParam group="value" name="param_arg0" title="SRTName">
+                          <type>
+                            <textType/>
+                          </type>
+                        </apiParam>
+                      </generatedParameters>
+                    </apiCall>
+                  </steps>
+                </clause>
+              </clauses>
+              <generatedParameters>
+                <apiParam group="target" name="scTabType" seq="1000" title="Tab Type">
+                  <summary>The tab type for Scaffolds</summary>
+                  <type>
+                    <choiceType>
+                      <constraints>
+                        <valueConstraint name="valuesSource">com.provar.plugins.sf.eclipse.ui:com.provar.plugins.forcedotcom.ui.valuesources.SfEnumChoiceListValuesSource</valueConstraint>
+                        <valueConstraint name="valuesSourceDependencies">com.provar.plugins.forcedotcom.core.ui.SfUiTargetUrl$ConsoleTabType</valueConstraint>
+                      </constraints>
+                    </choiceType>
+                  </type>
+                </apiParam>
+              </generatedParameters>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="721" title="On SF Incap311SC__AgentConsole page with pageobject Incap 311sc__ Agent Console_ Narayan_ Location Tab">
+              <arguments>
+                <argument id="uiConnectionName">
+                  <value class="value" valueClass="string">QA</value>
+                </argument>
+                <argument id="target">
+                  <value class="uiTarget" uri="sf:ui:target?page=Incap311SC__AgentConsole&amp;pageObject=pageobjects.incap311sc__AgentConsole_Narayan_LocationTab"/>
+                </argument>
+                <argument id="navigate">
+                  <value class="value" valueClass="string">Dont</value>
+                </argument>
+                <argument id="targetDescription">
+                  <value class="value" valueClass="string">On SF Incap311SC__AgentConsole page with pageobject Incap 311sc__ Agent Console_ Narayan_ Location Tab</value>
+                </argument>
+                <argument id="windowSelection">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="windowSize">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="closeWindow"/>
+                <argument id="captureBefore">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="scTabType">
+                  <value class="value" valueClass="string">CurrentTab</value>
+                </argument>
+              </arguments>
+              <clauses>
+                <clause name="substeps" testItemId="675">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="676" title="Click the Location Tab Link button">
+                      <arguments>
+                        <argument id="locator">
+                          <value class="uiLocator" uri="ui:locator?name=LocationTabLink"/>
+                        </argument>
+                        <argument id="interaction">
+                          <value class="uiInteraction" uri="ui:interaction?name=action"/>
+                        </argument>
+                        <argument id="hover">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureBefore">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="beforeWait">
+                          <value class="uiWait" uri="default"/>
+                        </argument>
+                        <argument id="afterWait">
+                          <value class="uiWait" uri="default"/>
+                        </argument>
+                        <argument id="interactionDescription">
+                          <value class="value" valueClass="string">Click the Location Tab Link button</value>
+                        </argument>
+                        <argument id="autoRetry"/>
+                        <argument id="ieClickMethod">
+                          <value class="value" valueClass="string">Default</value>
+                        </argument>
+                      </arguments>
+                      <generatedParameters>
+                        <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
+                          <summary>Whether the mouse should hover over the field before it is clicked.</summary>
+                          <type>
+                            <booleanType/>
+                          </type>
+                        </apiParam>
+                        <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
+                          <summary>How the click should be executed for Internet Explorer.</summary>
+                          <type>
+                            <choiceType>
+                              <constraints>
+                                <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
+                                <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
+                              </constraints>
+                            </choiceType>
+                          </type>
+                        </apiParam>
+                      </generatedParameters>
+                    </apiCall>
+                  </steps>
+                </clause>
+              </clauses>
+              <generatedParameters>
+                <apiParam group="target" name="scTabType" seq="1000" title="Tab Type">
+                  <summary>The tab type for Scaffolds</summary>
+                  <type>
+                    <choiceType>
+                      <constraints>
+                        <valueConstraint name="valuesSource">com.provar.plugins.sf.eclipse.ui:com.provar.plugins.forcedotcom.ui.valuesources.SfEnumChoiceListValuesSource</valueConstraint>
+                        <valueConstraint name="valuesSourceDependencies">com.provar.plugins.forcedotcom.core.ui.SfUiTargetUrl$ConsoleTabType</valueConstraint>
+                      </constraints>
+                    </choiceType>
+                  </type>
+                </apiParam>
+              </generatedParameters>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="722" title="On SF Incap311SC__AgentConsole page with pageobject Incap 311sc__ Agent Console_ Aadil_ Service Type Tab_ Contact Info">
+              <arguments>
+                <argument id="uiConnectionName">
+                  <value class="value" valueClass="string">QA</value>
+                </argument>
+                <argument id="target">
+                  <value class="uiTarget" uri="sf:ui:target?page=Incap311SC__AgentConsole&amp;pageObject=pageobjects.incap311sc__AgentConsole_Aadil_ServiceTypeTab_Location"/>
+                </argument>
+                <argument id="navigate">
+                  <value class="value" valueClass="string">Dont</value>
+                </argument>
+                <argument id="targetDescription">
+                  <value class="value" valueClass="string">On SF Incap311SC__AgentConsole page with pageobject Incap 311sc__ Agent Console_ Aadil_ Service Type Tab_ Contact Info</value>
+                </argument>
+                <argument id="windowSelection">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="windowSize">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="closeWindow"/>
+                <argument id="captureBefore">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="scTabType">
+                  <value class="value" valueClass="string">CurrentTab</value>
+                </argument>
+              </arguments>
+              <clauses>
+                <clause name="substeps" testItemId="677">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.bundled.apis.control.Sleep" name="Sleep" testItemId="678" title="Sleep for {10} seconds">
+                      <arguments>
+                        <argument id="sleepSecs">
+                          <value class="value" valueClass="decimal">10</value>
+                        </argument>
+                      </arguments>
+                    </apiCall>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="679" title="Click the Location Pop Up Icon Back field">
+                      <arguments>
+                        <argument id="locator">
+                          <value class="uiLocator" uri="ui:locator?name=LocationPopUpIconBack"/>
+                        </argument>
+                        <argument id="interaction">
+                          <value class="uiInteraction" uri="ui:interaction?name=action"/>
+                        </argument>
+                        <argument id="hover">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureBefore">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="beforeWait">
+                          <value class="uiWait" uri="default"/>
+                        </argument>
+                        <argument id="afterWait">
+                          <value class="uiWait" uri="default"/>
+                        </argument>
+                        <argument id="interactionDescription">
+                          <value class="value" valueClass="string">Click the Location Pop Up Icon Back field</value>
+                        </argument>
+                        <argument id="autoRetry"/>
+                        <argument id="ieClickMethod">
+                          <value class="value" valueClass="string">Default</value>
+                        </argument>
+                      </arguments>
+                      <generatedParameters>
+                        <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
+                          <summary>Whether the mouse should hover over the field before it is clicked.</summary>
+                          <type>
+                            <booleanType/>
+                          </type>
+                        </apiParam>
+                        <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
+                          <summary>How the click should be executed for Internet Explorer.</summary>
+                          <type>
+                            <choiceType>
+                              <constraints>
+                                <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
+                                <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
+                              </constraints>
+                            </choiceType>
+                          </type>
+                        </apiParam>
+                      </generatedParameters>
+                    </apiCall>
+                    <apiCall apiId="com.provar.plugins.bundled.apis.control.Sleep" name="Sleep" testItemId="680" title="Sleep for {5} seconds">
+                      <arguments>
+                        <argument id="sleepSecs">
+                          <value class="value" valueClass="decimal">5</value>
+                        </argument>
+                      </arguments>
+                    </apiCall>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="681" title="Set the Search For A Location field to 668 E 6th">
+                      <arguments>
+                        <argument id="locator">
+                          <value class="uiLocator" uri="ui:locator?name=searchForALocation"/>
+                        </argument>
+                        <argument id="interaction">
+                          <value class="uiInteraction" uri="ui:interaction?name=set"/>
+                        </argument>
+                        <argument id="value">
+                          <value class="value" valueClass="string">668 E 6th</value>
+                        </argument>
+                        <argument id="blur">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="pressEnter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureBefore">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="beforeWait">
+                          <value class="uiWait" uri="default"/>
+                        </argument>
+                        <argument id="afterWait">
+                          <value class="uiWait" uri="default"/>
+                        </argument>
+                        <argument id="interactionDescription">
+                          <value class="value" valueClass="string">Set the Search For A Location field to 668 E 6th</value>
+                        </argument>
+                        <argument id="autoRetry"/>
+                      </arguments>
+                      <generatedParameters>
+                        <apiParam group="value" name="value" seq="10000" title="Value">
+                          <summary>The value to be populated.</summary>
+                          <type>
+                            <textType>
+                              <constraints>
+                                <valueConstraint name="mimeType">text/plain</valueConstraint>
+                              </constraints>
+                            </textType>
+                          </type>
+                        </apiParam>
+                        <apiParam group="value" name="blur" seq="10001" title="Tab off field">
+                          <summary>Whether the tab key should be pressed after the value is populated.</summary>
+                          <type>
+                            <booleanType/>
+                          </type>
+                        </apiParam>
+                        <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
+                          <summary>Whether the Enter key should be pressed after the value is populated.</summary>
+                          <type>
+                            <booleanType/>
+                          </type>
+                        </apiParam>
+                      </generatedParameters>
+                    </apiCall>
+                    <apiCall apiId="com.provar.plugins.bundled.apis.control.Sleep" name="Sleep" testItemId="684" title="Sleep for {5} seconds">
+                      <arguments>
+                        <argument id="sleepSecs">
+                          <value class="value" valueClass="decimal">5</value>
+                        </argument>
+                      </arguments>
+                    </apiCall>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="1065" title="Click the Boston St button">
+                      <arguments>
+                        <argument id="locator">
+                          <value class="uiLocator" uri="ui:locator?name=bostonSt"/>
+                        </argument>
+                        <argument id="interaction">
+                          <value class="uiInteraction" uri="ui:interaction?name=action"/>
+                        </argument>
+                        <argument id="hover">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureBefore">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="beforeWait">
+                          <value class="uiWait" uri="default"/>
+                        </argument>
+                        <argument id="afterWait">
+                          <value class="uiWait" uri="default"/>
+                        </argument>
+                        <argument id="interactionDescription">
+                          <value class="value" valueClass="string">Click the Boston St button</value>
+                        </argument>
+                        <argument id="autoRetry"/>
+                        <argument id="ieClickMethod">
+                          <value class="value" valueClass="string">Default</value>
+                        </argument>
+                      </arguments>
+                      <generatedParameters>
+                        <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
+                          <summary>Whether the mouse should hover over the field before it is clicked.</summary>
+                          <type>
+                            <booleanType/>
+                          </type>
+                        </apiParam>
+                        <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
+                          <summary>How the click should be executed for Internet Explorer.</summary>
+                          <type>
+                            <choiceType>
+                              <constraints>
+                                <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
+                                <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
+                              </constraints>
+                            </choiceType>
+                          </type>
+                        </apiParam>
+                      </generatedParameters>
+                    </apiCall>
+                    <apiCall apiId="com.provar.plugins.bundled.apis.control.Sleep" name="Sleep" testItemId="1067" title="Sleep for {5} seconds">
+                      <arguments>
+                        <argument id="sleepSecs">
+                          <value class="value" valueClass="decimal">5</value>
+                        </argument>
+                      </arguments>
+                    </apiCall>
+                  </steps>
+                </clause>
+              </clauses>
+              <generatedParameters>
+                <apiParam group="target" name="scTabType" seq="1000" title="Tab Type">
+                  <summary>The tab type for Scaffolds</summary>
+                  <type>
+                    <choiceType>
+                      <constraints>
+                        <valueConstraint name="valuesSource">com.provar.plugins.sf.eclipse.ui:com.provar.plugins.forcedotcom.ui.valuesources.SfEnumChoiceListValuesSource</valueConstraint>
+                        <valueConstraint name="valuesSourceDependencies">com.provar.plugins.forcedotcom.core.ui.SfUiTargetUrl$ConsoleTabType</valueConstraint>
+                      </constraints>
+                    </choiceType>
+                  </type>
+                </apiParam>
+              </generatedParameters>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="1058" title="On SF Incap311SC__AgentConsole page with pageobject incap311sc__AgentConsole_Aadil_ServiceTypeTab_Location">
+              <arguments>
+                <argument id="uiConnectionName">
+                  <value class="value" valueClass="string">QA</value>
+                </argument>
+                <argument id="target">
+                  <value class="uiTarget" uri="sf:ui:target?page=Incap311SC__AgentConsole&amp;pageObject=pageobjects.incap311sc__AgentConsole_Aadil_ServiceTypeTab_Location"/>
+                </argument>
+                <argument id="navigate">
+                  <value class="value" valueClass="string">Dont</value>
+                </argument>
+                <argument id="targetDescription">
+                  <value class="value" valueClass="string">On SF Incap311SC__AgentConsole page with pageobject incap311sc__AgentConsole_Aadil_ServiceTypeTab_Location</value>
+                </argument>
+                <argument id="windowSelection">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="windowSize">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="closeWindow"/>
+                <argument id="captureBefore">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="scTabType">
+                  <value class="value" valueClass="string">CurrentTab</value>
+                </argument>
+              </arguments>
+              <clauses>
+                <clause name="substeps" testItemId="1059">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="1060" title="UI Assert">
+                      <arguments>
+                        <argument id="resultName">
+                          <value class="value" valueClass="string">Values</value>
+                        </argument>
+                        <argument id="resultScope">
+                          <value class="value" valueClass="string">Test</value>
+                        </argument>
+                        <argument id="fieldAssertions">
+                          <value class="valueList" mutable="Mutable">
+                            <uiFieldAssertion resultName="DuplicateDetectedInsideText">
+                              <fieldLocator uri="ui:locator?name=DuplicateDetectedInsideText"/>
+                              <attributeAssertions>
+                                <uiAttributeAssertion attributeName="value" comparisonType="None"/>
+                                <uiAttributeAssertion attributeName="message" comparisonType="None"/>
+                              </attributeAssertions>
+                            </uiFieldAssertion>
+                          </value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="columnAssertions">
+                          <value class="valueList" mutable="Mutable"/>
+                        </argument>
+                        <argument id="pageAssertions">
+                          <value class="valueList" mutable="Mutable"/>
+                        </argument>
+                        <argument id="beforeWait"/>
+                        <argument id="autoRetry"/>
+                      </arguments>
+                    </apiCall>
+                    <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="1061" title="Assert: {Values.fields.DuplicateDetectedInsideText.value} Contains {SRCode}">
+                      <arguments>
+                        <argument id="expectedValue">
+                          <value class="variable">
+                            <path element="Values"/>
+                            <path element="fields"/>
+                            <path element="DuplicateDetectedInsideText"/>
+                            <path element="value"/>
+                          </value>
+                        </argument>
+                        <argument id="actualValue">
+                          <value class="variable">
+                            <path element="SRCode"/>
+                          </value>
+                        </argument>
+                        <argument id="comparisonType">
+                          <value class="value" valueClass="string">Contains</value>
+                        </argument>
+                        <argument id="caseSensitive">
+                          <value class="value" valueClass="boolean">true</value>
+                        </argument>
+                        <argument id="numeric">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="retainDecimals">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="nullGreater">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="matchMultiLine">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="matchDotAll">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="failureMessage"/>
+                      </arguments>
+                    </apiCall>
+                  </steps>
+                </clause>
+              </clauses>
+              <generatedParameters>
+                <apiParam group="target" name="scTabType" seq="1000" title="Tab Type">
+                  <summary>The tab type for Scaffolds</summary>
+                  <type>
+                    <choiceType>
+                      <constraints>
+                        <valueConstraint name="valuesSource">com.provar.plugins.sf.eclipse.ui:com.provar.plugins.forcedotcom.ui.valuesources.SfEnumChoiceListValuesSource</valueConstraint>
+                        <valueConstraint name="valuesSourceDependencies">com.provar.plugins.forcedotcom.core.ui.SfUiTargetUrl$ConsoleTabType</valueConstraint>
+                      </constraints>
+                    </choiceType>
+                  </type>
+                </apiParam>
+              </generatedParameters>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+    </apiCall>
+  </steps>
+</testCase>

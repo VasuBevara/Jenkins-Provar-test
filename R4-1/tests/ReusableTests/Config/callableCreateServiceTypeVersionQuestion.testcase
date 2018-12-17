@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="2" registryId="fdb47db8-40b2-4a60-98a2-7e463a29c394" visibility="Internal">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="11" title="Salesforce Connect: InternalQA (Test)">
+      <tags>
+        <string>disabled</string>
+      </tags>
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">QA</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">InternalQA</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="uiApplicationName">
+          <value class="value" valueClass="string">Service_311_Configuration</value>
+        </argument>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument argId="443097f6-8107-4fe1-98b1-2c912ed3b5a2" id="reuseConnectionName">
+          <value class="variable">
+            <path element="reuseConnectionName"/>
+          </value>
+        </argument>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="privateBrowsingMode"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup"/>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="securityToken"/>
+        <argument id="environment"/>
+        <argument id="lightningMode">
+          <value class="value" valueClass="string">default</value>
+        </argument>
+        <argument id="webBrowser"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: InternalQA (Test)">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">SAT_Dev_Admin_311</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">InternalQA</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="uiApplicationName">
+          <value class="value" valueClass="string">Service_311_Configuration</value>
+        </argument>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument argId="443097f6-8107-4fe1-98b1-2c912ed3b5a2" id="reuseConnectionName">
+          <value class="variable">
+            <path element="reuseConnectionName"/>
+          </value>
+        </argument>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="privateBrowsingMode"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup"/>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="securityToken"/>
+        <argument id="environment"/>
+        <argument id="lightningMode">
+          <value class="value" valueClass="string">default</value>
+        </argument>
+        <argument id="webBrowser"/>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="2" title="Create Object: Incap311__Service_Type_Version_Question__c=&gt;srtvq">
+      <arguments>
+        <argument id="objectType">
+          <value class="value" valueClass="string">Incap311__Service_Type_Version_Question__c</value>
+        </argument>
+        <argument id="resultIdName">
+          <value class="value" valueClass="string">srtvq</value>
+        </argument>
+        <argument id="apexConnectionName">
+          <value class="value" valueClass="string">InternalQA</value>
+        </argument>
+        <argument id="assignmentRuleId"/>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument argId="51d9fbe9-786c-47df-b191-056cd1682c96" id="Incap311__Question__c">
+          <value class="variable">
+            <path element="Incap311__Question__c"/>
+          </value>
+        </argument>
+        <argument argId="e0bd8313-a934-40dc-a5a1-6b2dbdf0272e" id="Incap311__Service_Type_Version__c">
+          <value class="variable">
+            <path element="Incap311__Service_Type_Version__c"/>
+          </value>
+        </argument>
+      </arguments>
+      <expectedExceptions/>
+      <resultAssertions/>
+      <parameterGeneratorProperties>
+        <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.ConnectionName">InternalQA</propertyValue>
+        <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.CustomObjectName">Incap311__Service_Type_Version_Question__c</propertyValue>
+      </parameterGeneratorProperties>
+      <generatedParameters>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Incap311__Service_Type_Version_Question__c&amp;field=Incap311__Question__c" name="Incap311__Question__c" title="Incap311__Question__c"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Incap311__Service_Type_Version_Question__c&amp;field=Incap311__Service_Type_Version__c" name="Incap311__Service_Type_Version__c" title="Incap311__Service_Type_Version__c"/>
+      </generatedParameters>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexSoqlQuery" name="ApexSoqlQuery" testItemId="4" title="SOQL Query: select COUNT() from Incap311__Service_Type_Version_Question__c where Incap311__Service_Type_Version__c='{Incap311__Service_Type_Version__c}'=&gt;total_questions">
+      <arguments>
+        <argument id="soqlQuery">
+          <value class="compound">
+            <parts>
+              <value valueClass="string">select COUNT() from Incap311__Service_Type_Version_Question__c where Incap311__Service_Type_Version__c='</value>
+              <variable>
+                <path element="Incap311__Service_Type_Version__c"/>
+              </variable>
+              <value valueClass="string">'</value>
+            </parts>
+          </value>
+        </argument>
+        <argument id="apexConnectionName">
+          <value class="value" valueClass="string">InternalQA</value>
+        </argument>
+        <argument id="resultListName">
+          <value class="value" valueClass="string">total_questions</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="5" title="Set Values: count_questions">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">count_questions</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="variable">
+                  <path element="total_questions"/>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="10" title="Set Values: service_type_version_question_id">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">service_type_version_question_id</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="variable">
+                  <path element="srtvq"/>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexUpdateObject" name="ApexUpdateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.UpdateCustomObjectTestStepCommand" testItemId="7" title="Update Object: Incap311__Service_Type_Version_Question__c = {service_type_version_question_id}">
+      <tags/>
+      <arguments>
+        <argument id="objectType">
+          <value class="value" valueClass="string">Incap311__Service_Type_Version_Question__c</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">Incap311Updated</value>
+        </argument>
+        <argument id="apexConnectionName">
+          <value class="value" valueClass="string">InternalQA</value>
+        </argument>
+        <argument id="objectId">
+          <value class="variable">
+            <path element="service_type_version_question_id"/>
+          </value>
+        </argument>
+        <argument id="assignmentRuleId"/>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="Incap311__Override_Order__c">
+          <value class="add">
+            <lhs class="variable">
+              <path element="count_questions"/>
+            </lhs>
+            <rhs class="value" valueClass="decimal">1</rhs>
+          </value>
+        </argument>
+      </arguments>
+      <parameterGeneratorProperties>
+        <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.UpdateCustomObjectTestStepCommand.ConnectionName">InternalQA</propertyValue>
+        <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.UpdateCustomObjectTestStepCommand.CustomObjectName">Incap311__Service_Type_Version_Question__c</propertyValue>
+      </parameterGeneratorProperties>
+      <generatedParameters>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Incap311__Service_Type_Version_Question__c&amp;field=Incap311__Override_Order__c" name="Incap311__Override_Order__c" title="Incap311__Override_Order__c"/>
+      </generatedParameters>
+    </apiCall>
+  </steps>
+  <params>
+    <param linkedToUrl="provar:hasvalue:51d9fbe9-786c-47df-b191-056cd1682c96" modelBinding="sf:ui:binding:object?object=Incap311__Service_Type_Version_Question__c&amp;field=Incap311__Question__c" name="Incap311__Question__c" title="Flex Question Id">
+      <summary/>
+    </param>
+    <param linkedToUrl="provar:hasvalue:e0bd8313-a934-40dc-a5a1-6b2dbdf0272e" modelBinding="sf:ui:binding:object?object=Incap311__Service_Type_Version_Question__c&amp;field=Incap311__Service_Type_Version__c" name="Incap311__Service_Type_Version__c" title="Service Type Version Id">
+      <summary/>
+    </param>
+    <param linkedToUrl="provar:hasvalue:443097f6-8107-4fe1-98b1-2c912ed3b5a2" name="reuseConnectionName" title="Override Connection">
+      <summary>The name of an already opened connect to re-use.</summary>
+      <type>
+        <connectionType>
+          <constraints>
+            <valueConstraint name="variableName">true</valueConstraint>
+            <valueConstraint name="requiredCapabilities">sfSoapConnect</valueConstraint>
+          </constraints>
+        </connectionType>
+      </type>
+    </param>
+  </params>
+  <outputParams>
+    <param name="service_type_version_question_id" title="Service Type Version Question Id">
+      <summary>The name of the value to be set.  May contain sub-values, e.g. 'Value1.SubValue1'.</summary>
+      <type>
+        <textType>
+          <constraints>
+            <valueConstraint name="minLength">0</valueConstraint>
+            <valueConstraint name="maxLength">9999</valueConstraint>
+            <valueConstraint name="regex"/>
+          </constraints>
+        </textType>
+      </type>
+      <sourceValue class="variable">
+        <path element="service_type_version_question_id"/>
+      </sourceValue>
+    </param>
+  </outputParams>
+  <args>
+    <argument id="Incap311__Question__c"/>
+    <argument id="Incap311__Service_Type_Version__c"/>
+    <argument id="reuseConnectionName"/>
+  </args>
+  <outputArgs>
+    <outputArgument id="srtvq">
+      <name class="value" valueClass="string">srtvq</name>
+    </outputArgument>
+    <outputArgument id="service_type_version_question_id">
+      <name class="value" valueClass="string">service_type_version_question_id</name>
+    </outputArgument>
+  </outputArgs>
+</testCase>

@@ -1,0 +1,1530 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="4" registryId="4fd598b5-ee01-49e9-af21-1f37cd0ec2da" visibility="Internal">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: QA (Test)">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">SAT_Dev_Admin_311</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">QA</value>
+        </argument>
+        <argument id="reuseConnectionName"/>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="uiApplicationName">
+          <value class="value" valueClass="string">X311_Console</value>
+        </argument>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="privateBrowsingMode"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="securityToken"/>
+        <argument id="environment"/>
+        <argument id="lightningMode">
+          <value class="value" valueClass="string">default</value>
+        </argument>
+        <argument id="webBrowser"/>
+      </arguments>
+    </apiCall>
+    <caseCall testCaseId="db96ad6a-ed0c-41ac-a489-712845ddc766" testCasePath="tests/ReusableTests/Console/FillSRFromXL.testcase" testItemId="5">
+      <arguments>
+        <argument id="reuseConnectionName">
+          <value class="value" valueClass="string">QA</value>
+        </argument>
+        <argument id="XlFileNameAndRelativePath">
+          <value class="value" valueClass="string">XLFileNameAndRelativePath</value>
+        </argument>
+        <argument id="XLValuesRange">
+          <value class="value" valueClass="string">A1:D16</value>
+        </argument>
+        <argument id="XLFileNameAndRelativePath">
+          <value class="value" valueClass="string">templates/Provar Regression RWH/Provar Regression RWH_Test1_Create2.xlsx</value>
+        </argument>
+        <argument id="InitialDuplicateSRId"/>
+        <argument id="DuplicateSRIdOnUpdateAndTransfer"/>
+        <argument id="ContactToBeSelectedOrUpdated">
+          <value class="value" valueClass="string">ndanak@incapsulate.com</value>
+        </argument>
+      </arguments>
+      <outputArguments>
+        <outputArgument id="Numeric3">
+          <name class="value" valueClass="string">Numeric3</name>
+        </outputArgument>
+        <outputArgument id="Numeric4">
+          <name class="value" valueClass="string">Numeric4</name>
+        </outputArgument>
+        <outputArgument id="Char7">
+          <name class="value" valueClass="string">Char7</name>
+        </outputArgument>
+      </outputArguments>
+    </caseCall>
+    <caseCall testCaseId="c27e079e-a1d8-40f3-8269-23aaf449c01f" testCasePath="tests/ReusableTests/Console/putLocationAndHandleDuplicates.testcase" testItemId="22">
+      <arguments>
+        <argument id="reuseConnectionName">
+          <value class="value" valueClass="string">QA</value>
+        </argument>
+        <argument id="LocationOption">
+          <value class="value" valueClass="string">SelectLocation</value>
+        </argument>
+        <argument id="LocationToBeSelected">
+          <value class="value" valueClass="string">668 E 6th</value>
+        </argument>
+        <argument id="InitialDuplicatesDecisionOnUpdateAndTransfer"/>
+        <argument id="InitialSRNumberToBeMarkedAsDuplicate"/>
+        <argument id="DuplicateDecisionOnSelectionOrChangeOfAddress">
+          <value class="value" valueClass="string">NewCase</value>
+        </argument>
+        <argument id="SRNumberToBeMarkedAsDuplicateOnSelectOrChangeOfAddress"/>
+      </arguments>
+    </caseCall>
+    <caseCall testCaseId="06e35884-04e5-4b7b-a786-939d99642af3" testCasePath="tests/ReusableTests/Console/doContactOperations.testcase" testItemId="23">
+      <arguments>
+        <argument id="OperationType">
+          <value class="value" valueClass="string">SelectExisting</value>
+        </argument>
+        <argument id="reuseConnectionName">
+          <value class="value" valueClass="string">QA</value>
+        </argument>
+        <argument id="ContactToBeSelectedOrUpdated">
+          <value class="value" valueClass="string">ndanak@incapsulate.com</value>
+        </argument>
+      </arguments>
+      <outputArguments>
+        <outputArgument id="Numeric3">
+          <name class="value" valueClass="string">Numeric3</name>
+        </outputArgument>
+        <outputArgument id="Numeric4">
+          <name class="value" valueClass="string">Numeric4</name>
+        </outputArgument>
+        <outputArgument id="Char7">
+          <name class="value" valueClass="string">Char7</name>
+        </outputArgument>
+      </outputArguments>
+    </caseCall>
+    <caseCall testCaseId="06e35884-04e5-4b7b-a786-939d99642af3" testCasePath="tests/ReusableTests/Console/doContactOperations.testcase" testItemId="26">
+      <tags>
+        <string>disabled</string>
+      </tags>
+      <arguments>
+        <argument id="reuseConnectionName"/>
+        <argument id="OperationType">
+          <value class="value" valueClass="string">SelectExisting\nCreateNew\nUpdateExisting\nDoNotProvide\nRemoveSelected\nChangeSelected</value>
+        </argument>
+        <argument id="ContactToBeSelectedOrUpdated">
+          <value class="value" valueClass="string">ndanak@incapsulate.com</value>
+        </argument>
+      </arguments>
+      <outputArguments>
+        <outputArgument id="Numeric3">
+          <name class="value" valueClass="string">Numeric3</name>
+        </outputArgument>
+        <outputArgument id="Numeric4">
+          <name class="value" valueClass="string">Numeric4</name>
+        </outputArgument>
+        <outputArgument id="Char7">
+          <name class="value" valueClass="string">Char7</name>
+        </outputArgument>
+      </outputArguments>
+    </caseCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="7" title="One can do additional required steps here">
+      <arguments>
+        <argument id="description">
+          <value class="value" valueClass="string">One can do additional required steps here</value>
+        </argument>
+      </arguments>
+      <clauses>
+        <clause name="hidden" testItemId="8"/>
+      </clauses>
+    </apiCall>
+    <caseCall testCaseId="ad6783f7-9072-4ecb-93ee-af8929c9b59d" testCasePath="tests/ReusableTests/Console/SubmitSR.testcase" testItemId="6">
+      <arguments>
+        <argument id="reuseConnectionName">
+          <value class="value" valueClass="string">QA</value>
+        </argument>
+      </arguments>
+      <outputArguments>
+        <outputArgument id="SRCode">
+          <name class="value" valueClass="string">SRCode</name>
+        </outputArgument>
+      </outputArguments>
+    </caseCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="27" title="On SF Service Request View screen">
+      <arguments>
+        <argument id="uiConnectionName">
+          <value class="value" valueClass="string">QA</value>
+        </argument>
+        <argument id="target">
+          <value class="uiTarget" uri="sf:ui:target?object=Case&amp;action=View"/>
+        </argument>
+        <argument id="navigate">
+          <value class="value" valueClass="string">Always</value>
+        </argument>
+        <argument id="targetDescription">
+          <value class="value" valueClass="string">On SF Service Request View screen</value>
+        </argument>
+        <argument id="windowSelection">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="windowSize">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="closeWindow"/>
+        <argument id="captureBefore">
+          <value class="value" valueClass="string">false</value>
+        </argument>
+        <argument id="captureAfter">
+          <value class="value" valueClass="string">false</value>
+        </argument>
+        <argument id="scTabType">
+          <value class="value" valueClass="string">CurrentTab</value>
+        </argument>
+        <argument id="sfUiTargetObjectId"/>
+      </arguments>
+      <clauses>
+        <clause name="substeps" testItemId="33">
+          <steps>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="34" title="UI Assert">
+              <tags/>
+              <arguments>
+                <argument id="resultName">
+                  <value class="value" valueClass="string">Values</value>
+                </argument>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Test</value>
+                </argument>
+                <argument id="fieldAssertions">
+                  <value class="valueList" mutable="Mutable">
+                    <uiFieldAssertion resultName="ContactId">
+                      <fieldLocator uri="ui:locator?name=ContactId&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26field%3DContactId"/>
+                      <attributeAssertions>
+                        <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="EqualTo">
+                          <value class="value" valueClass="string">FPOWUNY FPOWUNY</value>
+                        </uiAttributeAssertion>
+                      </attributeAssertions>
+                    </uiFieldAssertion>
+                  </value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="columnAssertions">
+                  <value class="valueList" mutable="Mutable"/>
+                </argument>
+                <argument id="pageAssertions">
+                  <value class="valueList" mutable="Mutable"/>
+                </argument>
+                <argument id="beforeWait"/>
+                <argument id="autoRetry"/>
+              </arguments>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="35" title="UI Assert">
+              <arguments>
+                <argument id="resultName">
+                  <value class="value" valueClass="string">Values</value>
+                </argument>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Test</value>
+                </argument>
+                <argument id="fieldAssertions">
+                  <value class="valueList" mutable="Mutable">
+                    <uiFieldAssertion resultName="ContactEmail">
+                      <fieldLocator uri="ui:locator?name=ContactEmail&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26field%3DContactEmail"/>
+                      <attributeAssertions>
+                        <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="EqualTo">
+                          <value class="value" valueClass="string">ndanak@incapsulate.com</value>
+                        </uiAttributeAssertion>
+                      </attributeAssertions>
+                    </uiFieldAssertion>
+                  </value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="columnAssertions">
+                  <value class="valueList" mutable="Mutable"/>
+                </argument>
+                <argument id="pageAssertions">
+                  <value class="valueList" mutable="Mutable"/>
+                </argument>
+                <argument id="beforeWait"/>
+                <argument id="autoRetry"/>
+              </arguments>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="40" title="UI Assert">
+              <tags/>
+              <arguments>
+                <argument id="resultName">
+                  <value class="value" valueClass="string">Values</value>
+                </argument>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Test</value>
+                </argument>
+                <argument id="fieldAssertions">
+                  <value class="valueList" mutable="Mutable">
+                    <uiFieldAssertion resultName="ContactPhone">
+                      <fieldLocator uri="ui:locator?name=ContactPhone&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26field%3DContactPhone"/>
+                      <attributeAssertions>
+                        <uiAttributeAssertion attributeName="value" comparisonType="Contains">
+                          <value class="value" valueClass="string">025</value>
+                        </uiAttributeAssertion>
+                      </attributeAssertions>
+                    </uiFieldAssertion>
+                  </value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="columnAssertions">
+                  <value class="valueList" mutable="Mutable"/>
+                </argument>
+                <argument id="pageAssertions">
+                  <value class="valueList" mutable="Mutable"/>
+                </argument>
+                <argument id="beforeWait"/>
+                <argument id="autoRetry"/>
+              </arguments>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="36" title="UI Assert">
+              <tags/>
+              <arguments>
+                <argument id="resultName">
+                  <value class="value" valueClass="string">Values</value>
+                </argument>
+                <argument id="resultScope">
+                  <value class="value" valueClass="string">Test</value>
+                </argument>
+                <argument id="fieldAssertions">
+                  <value class="valueList" mutable="Mutable">
+                    <uiFieldAssertion resultName="ContactPhone">
+                      <fieldLocator uri="ui:locator?name=ContactPhone&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26field%3DContactPhone"/>
+                      <attributeAssertions>
+                        <uiAttributeAssertion attributeName="value" comparisonType="Contains">
+                          <value class="value" valueClass="string">0972</value>
+                        </uiAttributeAssertion>
+                      </attributeAssertions>
+                    </uiFieldAssertion>
+                  </value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="boolean">false</value>
+                </argument>
+                <argument id="columnAssertions">
+                  <value class="valueList" mutable="Mutable"/>
+                </argument>
+                <argument id="pageAssertions">
+                  <value class="valueList" mutable="Mutable"/>
+                </argument>
+                <argument id="beforeWait"/>
+                <argument id="autoRetry"/>
+              </arguments>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+      <generatedParameters>
+        <apiParam group="target" name="scTabType" seq="1000" title="Tab Type">
+          <summary>The tab type for Scaffolds</summary>
+          <type>
+            <choiceType>
+              <constraints>
+                <valueConstraint name="valuesSource">com.provar.plugins.sf.eclipse.ui:com.provar.plugins.forcedotcom.ui.valuesources.SfEnumChoiceListValuesSource</valueConstraint>
+                <valueConstraint name="valuesSourceDependencies">com.provar.plugins.forcedotcom.core.ui.SfUiTargetUrl$ConsoleTabType</valueConstraint>
+              </constraints>
+            </choiceType>
+          </type>
+        </apiParam>
+        <apiParam group="target" name="sfUiTargetObjectId" title="Object Id">
+          <summary>The Id of the SF Object to be Viewed or Edited.</summary>
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+      </generatedParameters>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="9" title="Set Values: SRCode">
+      <arguments>
+        <argument id="values">
+          <value class="valueList" mutable="Mutable">
+            <namedValues mutable="Mutable">
+              <namedValue name="valuePath">
+                <value class="value" valueClass="string">SRCode</value>
+              </namedValue>
+              <namedValue name="value">
+                <value class="variable">
+                  <path element="SRCode"/>
+                </value>
+              </namedValue>
+              <namedValue name="valueScope">
+                <value class="value" valueClass="string">Test</value>
+              </namedValue>
+            </namedValues>
+          </value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <caseCall testCaseId="268a012e-fdce-49ef-b05e-1d4e1b0a30b1" testCasePath="tests/ReusableTests/Console/UpdateSRFromXL.testcase" testItemId="20">
+      <arguments>
+        <argument id="reuseConnectionName">
+          <value class="value" valueClass="string">QA</value>
+        </argument>
+        <argument id="XLFileNameAndRelativePath">
+          <value class="value" valueClass="string">templates/Provar Regression RWH/Provar Regression RWH_Test1_Update1.xlsx</value>
+        </argument>
+        <argument id="XLValuesRange">
+          <value class="value" valueClass="string">A1:D16</value>
+        </argument>
+        <argument id="SRCode">
+          <value class="variable">
+            <path element="SRCode"/>
+          </value>
+        </argument>
+        <argument id="InitialSRNumberToBeMarkedAsDuplicate"/>
+        <argument id="InitialDuplicatesDecisionOnUpdateAndTransfer">
+          <value class="value" valueClass="string">NewCase</value>
+        </argument>
+      </arguments>
+    </caseCall>
+    <caseCall testCaseId="c27e079e-a1d8-40f3-8269-23aaf449c01f" testCasePath="tests/ReusableTests/Console/putLocationAndHandleDuplicates.testcase" testItemId="24">
+      <arguments>
+        <argument id="reuseConnectionName">
+          <value class="value" valueClass="string">QA</value>
+        </argument>
+        <argument id="LocationOption">
+          <value class="value" valueClass="string">ChangeLocation</value>
+        </argument>
+        <argument id="LocationToBeSelected">
+          <value class="value" valueClass="string">orne</value>
+        </argument>
+        <argument id="InitialDuplicatesDecisionOnUpdateAndTransfer">
+          <value class="value" valueClass="string">NewCase</value>
+        </argument>
+        <argument id="InitialSRNumberToBeMarkedAsDuplicate"/>
+        <argument id="DuplicateDecisionOnSelectionOrChangeOfAddress">
+          <value class="value" valueClass="string">NewCase</value>
+        </argument>
+        <argument id="SRNumberToBeMarkedAsDuplicateOnSelectOrChangeOfAddress"/>
+      </arguments>
+    </caseCall>
+    <caseCall testCaseId="06e35884-04e5-4b7b-a786-939d99642af3" testCasePath="tests/ReusableTests/Console/doContactOperations.testcase" testItemId="25">
+      <arguments>
+        <argument id="OperationType">
+          <value class="value" valueClass="string">RemoveSelected</value>
+        </argument>
+        <argument id="reuseConnectionName">
+          <value class="value" valueClass="string">QA</value>
+        </argument>
+        <argument id="ContactToBeSelectedOrUpdated"/>
+      </arguments>
+      <outputArguments>
+        <outputArgument id="Numeric3">
+          <name class="value" valueClass="string">Numeric3</name>
+        </outputArgument>
+        <outputArgument id="Numeric4">
+          <name class="value" valueClass="string">Numeric4</name>
+        </outputArgument>
+        <outputArgument id="Char7">
+          <name class="value" valueClass="string">Char7</name>
+        </outputArgument>
+      </outputArguments>
+    </caseCall>
+    <caseCall testCaseId="ad6783f7-9072-4ecb-93ee-af8929c9b59d" testCasePath="tests/ReusableTests/Console/SubmitSR.testcase" testItemId="18">
+      <arguments>
+        <argument id="reuseConnectionName">
+          <value class="value" valueClass="string">QA</value>
+        </argument>
+      </arguments>
+      <outputArguments>
+        <outputArgument id="SRCode">
+          <name class="value" valueClass="string">SRCode</name>
+        </outputArgument>
+      </outputArguments>
+    </caseCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="37" title="On SF Service Request View screen">
+      <arguments>
+        <argument id="uiConnectionName">
+          <value class="value" valueClass="string">QA</value>
+        </argument>
+        <argument id="target">
+          <value class="uiTarget" uri="sf:ui:target?object=Case&amp;action=View"/>
+        </argument>
+        <argument id="navigate">
+          <value class="value" valueClass="string">Always</value>
+        </argument>
+        <argument id="targetDescription">
+          <value class="value" valueClass="string">On SF Service Request View screen</value>
+        </argument>
+        <argument id="windowSelection">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="windowSize">
+          <value class="value" valueClass="string">Default</value>
+        </argument>
+        <argument id="closeWindow"/>
+        <argument id="captureBefore">
+          <value class="value" valueClass="string">false</value>
+        </argument>
+        <argument id="captureAfter">
+          <value class="value" valueClass="string">false</value>
+        </argument>
+        <argument id="scTabType">
+          <value class="value" valueClass="string">CurrentTab</value>
+        </argument>
+        <argument id="sfUiTargetObjectId"/>
+      </arguments>
+      <clauses>
+        <clause name="substeps" testItemId="38">
+          <steps>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="84" title="Read File">
+              <arguments>
+                <argument id="description">
+                  <value class="value" valueClass="string">Read File</value>
+                </argument>
+              </arguments>
+              <parameterValueSources>
+                <parameterValueSource variableName="ExcelData" variableScope="Test">
+                  <cacheToken>C:\\Users\\Sajiv\\Provar\\Regression_Suite_Sajiv\\311-Internal-QA\\templates\\Provar_Poc_3_Test Data.xlsx;1499939736000</cacheToken>
+                  <cachedParameters>
+                    <apiParam name="ServiceRequestTypeName"/>
+                    <apiParam name="StreetAddress"/>
+                    <apiParam name="Description"/>
+                    <apiParam name="FirstName"/>
+                    <apiParam name="LastName"/>
+                    <apiParam name="PreferredEmail"/>
+                    <apiParam name="Order"/>
+                    <apiParam name="QuestionCode"/>
+                    <apiParam name="FlexNoteQuestions"/>
+                    <apiParam name="DataType"/>
+                    <apiParam name="TestData"/>
+                    <apiParam name="IsControlling"/>
+                    <apiParam name="IsDependent"/>
+                  </cachedParameters>
+                  <sourceValue class="excelTarget" namesLocation="FirstRowOfRange" whereComparison="EqualTo">
+                    <workbookPath class="value" valueClass="string">templates/Provar Regression RWH/Provar Regression RWH_Test1_Update1.xlsx</workbookPath>
+                    <worksheetName class="value" valueClass="string">TestData</worksheetName>
+                    <valuesRange class="value" valueClass="string">A1:D16</valuesRange>
+                  </sourceValue>
+                </parameterValueSource>
+              </parameterValueSources>
+              <clauses>
+                <clause name="hidden" testItemId="85">
+                  <steps/>
+                </clause>
+              </clauses>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="88" title="Set Values: questionIndex">
+              <arguments>
+                <argument id="values">
+                  <value class="valueList" mutable="Mutable">
+                    <namedValues mutable="Mutable">
+                      <namedValue name="valuePath">
+                        <value class="value" valueClass="string">questionIndex</value>
+                      </namedValue>
+                      <namedValue name="value">
+                        <value class="value" valueClass="string">1</value>
+                      </namedValue>
+                      <namedValue name="valueScope">
+                        <value class="value" valueClass="string">Test</value>
+                      </namedValue>
+                    </namedValues>
+                  </value>
+                </argument>
+              </arguments>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.ForEach" name="ForEach" testItemId="86" title="For Each: {ExcelData}=&gt;ExcelRow">
+              <arguments>
+                <argument id="list">
+                  <value class="variable">
+                    <path element="ExcelData"/>
+                  </value>
+                </argument>
+                <argument id="fromItem">
+                  <value class="value" valueClass="decimal">1</value>
+                </argument>
+                <argument id="valueName">
+                  <value class="value" valueClass="string">ExcelRow</value>
+                </argument>
+                <argument id="continueOnFailure"/>
+              </arguments>
+              <clauses>
+                <clause name="substeps" testItemId="87">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithRow" name="UiWithRow" testItemId="89" title="With Incap311__Service_Questions__r rows {questionIndex}">
+                      <arguments>
+                        <argument id="uiConnectionName">
+                          <value class="value" valueClass="string">QA</value>
+                        </argument>
+                        <argument id="locator">
+                          <value class="uiLocator" uri="sf:ui:locator:row?table=View%2FIncap311__Service_Questions__r%2FIncap311__Service_Questions__rTable"/>
+                        </argument>
+                        <argument id="uiRowLocator">
+                          <value class="variable">
+                            <path element="questionIndex"/>
+                          </value>
+                        </argument>
+                        <argument id="locatorDescription">
+                          <value class="value" valueClass="string">With Incap311__Service_Questions__r rows {questionIndex}</value>
+                        </argument>
+                        <argument id="failIfNotFound">
+                          <value class="value" valueClass="boolean">true</value>
+                        </argument>
+                        <argument id="debugRowLocator"/>
+                        <argument id="resultName">
+                          <value class="value" valueClass="string">Row</value>
+                        </argument>
+                        <argument id="resultScope">
+                          <value class="value" valueClass="string">Local</value>
+                        </argument>
+                        <argument id="autoPaginate"/>
+                      </arguments>
+                      <clauses>
+                        <clause name="substeps" testItemId="90">
+                          <steps>
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="91" title="UI Assert">
+                              <arguments>
+                                <argument id="resultName">
+                                  <value class="value" valueClass="string">Values</value>
+                                </argument>
+                                <argument id="resultScope">
+                                  <value class="value" valueClass="string">Test</value>
+                                </argument>
+                                <argument id="fieldAssertions">
+                                  <value class="valueList" mutable="Mutable">
+                                    <uiFieldAssertion resultName="Incap311__Answer__c">
+                                      <fieldLocator uri="ui:locator?name=Incap311__Answer__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26field%3DIncap311__Answer__c%26relationship%3DIncap311__Service_Questions__r"/>
+                                      <attributeAssertions>
+                                        <uiAttributeAssertion attributeName="value" comparisonType="None"/>
+                                      </attributeAssertions>
+                                    </uiFieldAssertion>
+                                  </value>
+                                </argument>
+                                <argument id="captureAfter">
+                                  <value class="value" valueClass="boolean">false</value>
+                                </argument>
+                                <argument id="columnAssertions">
+                                  <value class="valueList" mutable="Mutable"/>
+                                </argument>
+                                <argument id="pageAssertions">
+                                  <value class="valueList" mutable="Mutable"/>
+                                </argument>
+                                <argument id="beforeWait"/>
+                                <argument id="autoRetry"/>
+                              </arguments>
+                            </apiCall>
+                            <apiCall apiId="com.provar.plugins.bundled.apis.If" name="If" testItemId="214" title="If: {ExcelRow.QuestionType = &quot;additionaldetails&quot; OR ExcelRow.QuestionType = &quot;additionalDetails&quot;}">
+                              <arguments>
+                                <argument id="condition">
+                                  <value class="or">
+                                    <lhs class="eq">
+                                      <lhs class="variable">
+                                        <path element="ExcelRow"/>
+                                        <path element="QuestionType"/>
+                                      </lhs>
+                                      <rhs class="value" valueClass="string">additionaldetails</rhs>
+                                    </lhs>
+                                    <rhs class="eq">
+                                      <lhs class="variable">
+                                        <path element="ExcelRow"/>
+                                        <path element="QuestionType"/>
+                                      </lhs>
+                                      <rhs class="value" valueClass="string">additionalDetails</rhs>
+                                    </rhs>
+                                  </value>
+                                </argument>
+                              </arguments>
+                              <clauses>
+                                <clause name="then" testItemId="215">
+                                  <steps>
+                                    <apiCall apiId="com.provar.plugins.bundled.apis.control.Break" name="Break" testItemId="216"/>
+                                  </steps>
+                                </clause>
+                              </clauses>
+                            </apiCall>
+                            <apiCall apiId="com.provar.plugins.bundled.apis.If" name="If" testItemId="204" title="If: {ExcelRow.QuestionType = &quot;informational\n&quot; OR ExcelRow.QuestionType = &quot;Informational\n&quot;}">
+                              <arguments>
+                                <argument id="condition">
+                                  <value class="or">
+                                    <lhs class="eq">
+                                      <lhs class="variable">
+                                        <path element="ExcelRow"/>
+                                        <path element="QuestionType"/>
+                                      </lhs>
+                                      <rhs class="value" valueClass="string">informational\n</rhs>
+                                    </lhs>
+                                    <rhs class="eq">
+                                      <lhs class="variable">
+                                        <path element="ExcelRow"/>
+                                        <path element="QuestionType"/>
+                                      </lhs>
+                                      <rhs class="value" valueClass="string">Informational\n</rhs>
+                                    </rhs>
+                                  </value>
+                                </argument>
+                              </arguments>
+                              <clauses>
+                                <clause name="then" testItemId="212">
+                                  <steps>
+                                    <apiCall apiId="com.provar.plugins.bundled.apis.control.Break" name="Break" testItemId="213"/>
+                                  </steps>
+                                </clause>
+                              </clauses>
+                            </apiCall>
+                            <apiCall apiId="com.provar.plugins.bundled.apis.If" name="If" testItemId="192" title="If: {ExcelRow.QuestionType = &quot;time&quot; OR ExcelRow.QuestionType = &quot;Time&quot;}">
+                              <tags/>
+                              <arguments>
+                                <argument id="condition">
+                                  <value class="or">
+                                    <lhs class="eq">
+                                      <lhs class="variable">
+                                        <path element="ExcelRow"/>
+                                        <path element="QuestionType"/>
+                                      </lhs>
+                                      <rhs class="value" valueClass="string">time</rhs>
+                                    </lhs>
+                                    <rhs class="eq">
+                                      <lhs class="variable">
+                                        <path element="ExcelRow"/>
+                                        <path element="QuestionType"/>
+                                      </lhs>
+                                      <rhs class="value" valueClass="string">Time</rhs>
+                                    </rhs>
+                                  </value>
+                                </argument>
+                              </arguments>
+                              <clauses>
+                                <clause name="then" testItemId="199">
+                                  <steps>
+                                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="200" title="On Service Request View Screen page">
+                                      <arguments>
+                                        <argument id="target">
+                                          <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.ServiceRequestViewScreen"/>
+                                        </argument>
+                                        <argument id="uiConnectionName">
+                                          <value class="value" valueClass="string">QA</value>
+                                        </argument>
+                                        <argument id="navigate">
+                                          <value class="value" valueClass="string">IfNeccessary</value>
+                                        </argument>
+                                        <argument id="targetDescription">
+                                          <value class="value" valueClass="string">On Service Request View Screen page</value>
+                                        </argument>
+                                        <argument id="windowSelection">
+                                          <value class="value" valueClass="string">Default</value>
+                                        </argument>
+                                        <argument id="windowSize">
+                                          <value class="value" valueClass="string">Default</value>
+                                        </argument>
+                                        <argument id="closeWindow"/>
+                                        <argument id="captureBefore">
+                                          <value class="value" valueClass="string">false</value>
+                                        </argument>
+                                        <argument id="captureAfter">
+                                          <value class="value" valueClass="string">false</value>
+                                        </argument>
+                                        <argument id="scTabType">
+                                          <value class="value" valueClass="string">CurrentTab</value>
+                                        </argument>
+                                        <argument id="uiTargetUrl"/>
+                                      </arguments>
+                                      <clauses>
+                                        <clause name="substeps" testItemId="201">
+                                          <steps>
+                                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="202" title="Call the assertTime method">
+                                              <arguments>
+                                                <argument id="locator">
+                                                  <value class="uiLocator" uri="ui:pageobject:method?operation=assertTime&amp;pageId=pageobjects.ServiceRequestViewScreen"/>
+                                                </argument>
+                                                <argument id="interaction">
+                                                  <value class="uiInteraction" uri="ui:interaction?name=invoke"/>
+                                                </argument>
+                                                <argument id="interactionDescription">
+                                                  <value class="value" valueClass="string">Call the assertTime method</value>
+                                                </argument>
+                                                <argument id="beforeWait"/>
+                                                <argument id="afterWait"/>
+                                                <argument id="autoRetry">
+                                                  <value class="uiWait" uri="ui:wait:autoRetry:timeout=10"/>
+                                                </argument>
+                                                <argument id="captureBefore">
+                                                  <value class="value" valueClass="string">false</value>
+                                                </argument>
+                                                <argument id="captureAfter">
+                                                  <value class="value" valueClass="string">false</value>
+                                                </argument>
+                                                <argument id="param_givenTimeFromExcel">
+                                                  <value class="variable">
+                                                    <path element="ExcelRow"/>
+                                                    <path element="Input"/>
+                                                  </value>
+                                                </argument>
+                                                <argument id="param_givenTimeFromSRDetails">
+                                                  <value class="variable">
+                                                    <path element="Values"/>
+                                                    <path element="fields"/>
+                                                    <path element="Incap311__Answer__c"/>
+                                                    <path element="value"/>
+                                                  </value>
+                                                </argument>
+                                                <argument id="param_arg2">
+                                                  <value class="variable">
+                                                    <path element="ExcelRow"/>
+                                                    <path element="Input"/>
+                                                  </value>
+                                                </argument>
+                                              </arguments>
+                                              <generatedParameters>
+                                                <apiParam group="value" name="param_givenTimeFromExcel" title="givenTimeFromExcel">
+                                                  <type>
+                                                    <textType/>
+                                                  </type>
+                                                </apiParam>
+                                                <apiParam group="value" name="param_givenTimeFromSRDetails" seq="1" title="givenTimeFromSRDetails">
+                                                  <type>
+                                                    <textType/>
+                                                  </type>
+                                                </apiParam>
+                                              </generatedParameters>
+                                            </apiCall>
+                                            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="218" title="Set Values: questionIndex">
+                                              <tags/>
+                                              <arguments>
+                                                <argument id="values">
+                                                  <value class="valueList" mutable="Mutable">
+                                                    <namedValues mutable="Mutable">
+                                                      <namedValue name="valuePath">
+                                                        <value class="value" valueClass="string">questionIndex</value>
+                                                      </namedValue>
+                                                      <namedValue name="value">
+                                                        <value class="add">
+                                                          <lhs class="variable">
+                                                            <path element="questionIndex"/>
+                                                          </lhs>
+                                                          <rhs class="value" valueClass="decimal">1</rhs>
+                                                        </value>
+                                                      </namedValue>
+                                                      <namedValue name="valueScope">
+                                                        <value class="value" valueClass="string">Test</value>
+                                                      </namedValue>
+                                                    </namedValues>
+                                                  </value>
+                                                </argument>
+                                              </arguments>
+                                            </apiCall>
+                                            <apiCall apiId="com.provar.plugins.bundled.apis.control.Break" name="Break" testItemId="203"/>
+                                            <apiCall apiId="com.provar.plugins.bundled.apis.control.Break" name="Break" testItemId="221"/>
+                                          </steps>
+                                        </clause>
+                                      </clauses>
+                                      <generatedParameters>
+                                        <apiParam group="target" name="scTabType" seq="1000" title="Tab Type">
+                                          <summary>The tab type for Scaffolds</summary>
+                                          <type>
+                                            <choiceType>
+                                              <constraints>
+                                                <valueConstraint name="valuesSource">com.provar.plugins.sf.eclipse.ui:com.provar.plugins.forcedotcom.ui.valuesources.SfEnumChoiceListValuesSource</valueConstraint>
+                                                <valueConstraint name="valuesSourceDependencies">com.provar.plugins.forcedotcom.core.ui.SfUiTargetUrl$ConsoleTabType</valueConstraint>
+                                              </constraints>
+                                            </choiceType>
+                                          </type>
+                                        </apiParam>
+                                        <apiParam group="target" name="uiTargetUrl" title="Web Page">
+                                          <type>
+                                            <textType/>
+                                          </type>
+                                        </apiParam>
+                                      </generatedParameters>
+                                    </apiCall>
+                                  </steps>
+                                </clause>
+                              </clauses>
+                            </apiCall>
+                            <apiCall apiId="com.provar.plugins.bundled.apis.If" name="If" testItemId="162" title="If: {ExcelRow.QuestionType = &quot;datetime&quot; OR ExcelRow.QuestionType = &quot;dateTime&quot;}">
+                              <arguments>
+                                <argument id="condition">
+                                  <value class="or">
+                                    <lhs class="eq">
+                                      <lhs class="variable">
+                                        <path element="ExcelRow"/>
+                                        <path element="QuestionType"/>
+                                      </lhs>
+                                      <rhs class="value" valueClass="string">datetime</rhs>
+                                    </lhs>
+                                    <rhs class="eq">
+                                      <lhs class="variable">
+                                        <path element="ExcelRow"/>
+                                        <path element="QuestionType"/>
+                                      </lhs>
+                                      <rhs class="value" valueClass="string">dateTime</rhs>
+                                    </rhs>
+                                  </value>
+                                </argument>
+                              </arguments>
+                              <clauses>
+                                <clause name="then" testItemId="187">
+                                  <steps>
+                                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="188" title="On Service Request View Screen page">
+                                      <arguments>
+                                        <argument id="target">
+                                          <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.ServiceRequestViewScreen"/>
+                                        </argument>
+                                        <argument id="uiConnectionName">
+                                          <value class="value" valueClass="string">QA</value>
+                                        </argument>
+                                        <argument id="navigate">
+                                          <value class="value" valueClass="string">IfNeccessary</value>
+                                        </argument>
+                                        <argument id="targetDescription">
+                                          <value class="value" valueClass="string">On Service Request View Screen page</value>
+                                        </argument>
+                                        <argument id="windowSelection">
+                                          <value class="value" valueClass="string">Default</value>
+                                        </argument>
+                                        <argument id="windowSize">
+                                          <value class="value" valueClass="string">Default</value>
+                                        </argument>
+                                        <argument id="closeWindow"/>
+                                        <argument id="captureBefore">
+                                          <value class="value" valueClass="string">false</value>
+                                        </argument>
+                                        <argument id="captureAfter">
+                                          <value class="value" valueClass="string">false</value>
+                                        </argument>
+                                        <argument id="scTabType">
+                                          <value class="value" valueClass="string">CurrentTab</value>
+                                        </argument>
+                                        <argument id="uiTargetUrl"/>
+                                      </arguments>
+                                      <clauses>
+                                        <clause name="substeps" testItemId="189">
+                                          <steps>
+                                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="190" title="Call the assertDateAndTime method">
+                                              <arguments>
+                                                <argument id="locator">
+                                                  <value class="uiLocator" uri="ui:pageobject:method?pageId=pageobjects.ServiceRequestViewScreen&amp;operation=assertDateAndTime"/>
+                                                </argument>
+                                                <argument id="interaction">
+                                                  <value class="uiInteraction" uri="ui:interaction?name=invoke"/>
+                                                </argument>
+                                                <argument id="interactionDescription">
+                                                  <value class="value" valueClass="string">Call the assertDateAndTime method</value>
+                                                </argument>
+                                                <argument id="beforeWait"/>
+                                                <argument id="afterWait"/>
+                                                <argument id="autoRetry">
+                                                  <value class="uiWait" uri="ui:wait:autoRetry:timeout=10"/>
+                                                </argument>
+                                                <argument id="captureBefore">
+                                                  <value class="value" valueClass="string">false</value>
+                                                </argument>
+                                                <argument id="captureAfter">
+                                                  <value class="value" valueClass="string">false</value>
+                                                </argument>
+                                                <argument id="param_givenDateTimeFromExcel">
+                                                  <value class="variable">
+                                                    <path element="ExcelRow"/>
+                                                    <path element="Input"/>
+                                                  </value>
+                                                </argument>
+                                                <argument id="param_givenDateTimeFromSRDetails">
+                                                  <value class="variable">
+                                                    <path element="Values"/>
+                                                    <path element="fields"/>
+                                                    <path element="Incap311__Answer__c"/>
+                                                    <path element="value"/>
+                                                  </value>
+                                                </argument>
+                                                <argument id="param_arg2">
+                                                  <value class="variable">
+                                                    <path element="ExcelRow"/>
+                                                    <path element="Input"/>
+                                                  </value>
+                                                </argument>
+                                              </arguments>
+                                              <generatedParameters>
+                                                <apiParam group="value" name="param_givenDateTimeFromExcel" title="givenDateTimeFromExcel">
+                                                  <type>
+                                                    <textType/>
+                                                  </type>
+                                                </apiParam>
+                                                <apiParam group="value" name="param_givenDateTimeFromSRDetails" seq="1" title="givenDateTimeFromSRDetails">
+                                                  <type>
+                                                    <textType/>
+                                                  </type>
+                                                </apiParam>
+                                              </generatedParameters>
+                                            </apiCall>
+                                            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="217" title="Set Values: questionIndex">
+                                              <tags/>
+                                              <arguments>
+                                                <argument id="values">
+                                                  <value class="valueList" mutable="Mutable">
+                                                    <namedValues mutable="Mutable">
+                                                      <namedValue name="valuePath">
+                                                        <value class="value" valueClass="string">questionIndex</value>
+                                                      </namedValue>
+                                                      <namedValue name="value">
+                                                        <value class="add">
+                                                          <lhs class="variable">
+                                                            <path element="questionIndex"/>
+                                                          </lhs>
+                                                          <rhs class="value" valueClass="decimal">1</rhs>
+                                                        </value>
+                                                      </namedValue>
+                                                      <namedValue name="valueScope">
+                                                        <value class="value" valueClass="string">Test</value>
+                                                      </namedValue>
+                                                    </namedValues>
+                                                  </value>
+                                                </argument>
+                                              </arguments>
+                                            </apiCall>
+                                            <apiCall apiId="com.provar.plugins.bundled.apis.control.Break" name="Break" testItemId="238"/>
+                                            <apiCall apiId="com.provar.plugins.bundled.apis.control.Break" name="Break" testItemId="220"/>
+                                          </steps>
+                                        </clause>
+                                      </clauses>
+                                      <generatedParameters>
+                                        <apiParam group="target" name="scTabType" seq="1000" title="Tab Type">
+                                          <summary>The tab type for Scaffolds</summary>
+                                          <type>
+                                            <choiceType>
+                                              <constraints>
+                                                <valueConstraint name="valuesSource">com.provar.plugins.sf.eclipse.ui:com.provar.plugins.forcedotcom.ui.valuesources.SfEnumChoiceListValuesSource</valueConstraint>
+                                                <valueConstraint name="valuesSourceDependencies">com.provar.plugins.forcedotcom.core.ui.SfUiTargetUrl$ConsoleTabType</valueConstraint>
+                                              </constraints>
+                                            </choiceType>
+                                          </type>
+                                        </apiParam>
+                                        <apiParam group="target" name="uiTargetUrl" title="Web Page">
+                                          <type>
+                                            <textType/>
+                                          </type>
+                                        </apiParam>
+                                      </generatedParameters>
+                                    </apiCall>
+                                  </steps>
+                                </clause>
+                              </clauses>
+                            </apiCall>
+                            <apiCall apiId="com.provar.plugins.bundled.apis.If" name="If" testItemId="151" title="If: {ExcelRow.QuestionType = &quot;boolean&quot;}">
+                              <arguments>
+                                <argument id="condition">
+                                  <value class="eq">
+                                    <lhs class="variable">
+                                      <path element="ExcelRow"/>
+                                      <path element="QuestionType"/>
+                                    </lhs>
+                                    <rhs class="value" valueClass="string">boolean</rhs>
+                                  </value>
+                                </argument>
+                              </arguments>
+                              <clauses>
+                                <clause name="then" testItemId="152">
+                                  <steps>
+                                    <apiCall apiId="com.provar.plugins.bundled.apis.If" name="If" testItemId="153" title="If: {ExcelRow.Input = &quot;true&quot;}">
+                                      <arguments>
+                                        <argument id="condition">
+                                          <value class="eq">
+                                            <lhs class="variable">
+                                              <path element="ExcelRow"/>
+                                              <path element="Input"/>
+                                            </lhs>
+                                            <rhs class="value" valueClass="string">true</rhs>
+                                          </value>
+                                        </argument>
+                                      </arguments>
+                                      <clauses>
+                                        <clause name="then" testItemId="154">
+                                          <steps>
+                                            <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="155" title="Assert: true EqualTo {Values.fields.Incap311__Answer__c.value}">
+                                              <arguments>
+                                                <argument id="expectedValue">
+                                                  <value class="value" valueClass="string">true</value>
+                                                </argument>
+                                                <argument id="actualValue">
+                                                  <value class="variable">
+                                                    <path element="Values"/>
+                                                    <path element="fields"/>
+                                                    <path element="Incap311__Answer__c"/>
+                                                    <path element="value"/>
+                                                  </value>
+                                                </argument>
+                                                <argument id="comparisonType">
+                                                  <value class="value" valueClass="string">EqualTo</value>
+                                                </argument>
+                                                <argument id="caseSensitive">
+                                                  <value class="value" valueClass="boolean">true</value>
+                                                </argument>
+                                                <argument id="numeric">
+                                                  <value class="value" valueClass="boolean">false</value>
+                                                </argument>
+                                                <argument id="retainDecimals">
+                                                  <value class="value" valueClass="boolean">false</value>
+                                                </argument>
+                                                <argument id="nullGreater">
+                                                  <value class="value" valueClass="boolean">false</value>
+                                                </argument>
+                                                <argument id="matchMultiLine">
+                                                  <value class="value" valueClass="boolean">false</value>
+                                                </argument>
+                                                <argument id="matchDotAll">
+                                                  <value class="value" valueClass="boolean">false</value>
+                                                </argument>
+                                                <argument id="failureMessage"/>
+                                              </arguments>
+                                            </apiCall>
+                                            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="156" title="Set Values: questionIndex">
+                                              <tags/>
+                                              <arguments>
+                                                <argument id="values">
+                                                  <value class="valueList" mutable="Mutable">
+                                                    <namedValues mutable="Mutable">
+                                                      <namedValue name="valuePath">
+                                                        <value class="value" valueClass="string">questionIndex</value>
+                                                      </namedValue>
+                                                      <namedValue name="value">
+                                                        <value class="add">
+                                                          <lhs class="variable">
+                                                            <path element="questionIndex"/>
+                                                          </lhs>
+                                                          <rhs class="value" valueClass="decimal">1</rhs>
+                                                        </value>
+                                                      </namedValue>
+                                                      <namedValue name="valueScope">
+                                                        <value class="value" valueClass="string">Test</value>
+                                                      </namedValue>
+                                                    </namedValues>
+                                                  </value>
+                                                </argument>
+                                              </arguments>
+                                            </apiCall>
+                                            <apiCall apiId="com.provar.plugins.bundled.apis.control.Break" name="Break" testItemId="157"/>
+                                          </steps>
+                                        </clause>
+                                      </clauses>
+                                    </apiCall>
+                                  </steps>
+                                </clause>
+                              </clauses>
+                            </apiCall>
+                            <apiCall apiId="com.provar.plugins.bundled.apis.If" name="If" testItemId="132" title="If: {ExcelRow.QuestionType = &quot;boolean&quot;}">
+                              <arguments>
+                                <argument id="condition">
+                                  <value class="eq">
+                                    <lhs class="variable">
+                                      <path element="ExcelRow"/>
+                                      <path element="QuestionType"/>
+                                    </lhs>
+                                    <rhs class="value" valueClass="string">boolean</rhs>
+                                  </value>
+                                </argument>
+                              </arguments>
+                              <clauses>
+                                <clause name="then" testItemId="145">
+                                  <steps>
+                                    <apiCall apiId="com.provar.plugins.bundled.apis.If" name="If" testItemId="146" title="If: {ExcelRow.Input = &quot;false&quot;}">
+                                      <arguments>
+                                        <argument id="condition">
+                                          <value class="eq">
+                                            <lhs class="variable">
+                                              <path element="ExcelRow"/>
+                                              <path element="Input"/>
+                                            </lhs>
+                                            <rhs class="value" valueClass="string">false</rhs>
+                                          </value>
+                                        </argument>
+                                      </arguments>
+                                      <clauses>
+                                        <clause name="then" testItemId="147">
+                                          <steps>
+                                            <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="148" title="Assert:   EqualTo {Values.fields.Incap311__Answer__c.value}">
+                                              <arguments>
+                                                <argument id="expectedValue">
+                                                  <value class="value" valueClass="string"> </value>
+                                                </argument>
+                                                <argument id="actualValue">
+                                                  <value class="variable">
+                                                    <path element="Values"/>
+                                                    <path element="fields"/>
+                                                    <path element="Incap311__Answer__c"/>
+                                                    <path element="value"/>
+                                                  </value>
+                                                </argument>
+                                                <argument id="comparisonType">
+                                                  <value class="value" valueClass="string">EqualTo</value>
+                                                </argument>
+                                                <argument id="caseSensitive">
+                                                  <value class="value" valueClass="boolean">true</value>
+                                                </argument>
+                                                <argument id="numeric">
+                                                  <value class="value" valueClass="boolean">false</value>
+                                                </argument>
+                                                <argument id="retainDecimals">
+                                                  <value class="value" valueClass="boolean">false</value>
+                                                </argument>
+                                                <argument id="nullGreater">
+                                                  <value class="value" valueClass="boolean">false</value>
+                                                </argument>
+                                                <argument id="matchMultiLine">
+                                                  <value class="value" valueClass="boolean">false</value>
+                                                </argument>
+                                                <argument id="matchDotAll">
+                                                  <value class="value" valueClass="boolean">false</value>
+                                                </argument>
+                                                <argument id="failureMessage"/>
+                                              </arguments>
+                                            </apiCall>
+                                            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="149" title="Set Values: questionIndex">
+                                              <tags/>
+                                              <arguments>
+                                                <argument id="values">
+                                                  <value class="valueList" mutable="Mutable">
+                                                    <namedValues mutable="Mutable">
+                                                      <namedValue name="valuePath">
+                                                        <value class="value" valueClass="string">questionIndex</value>
+                                                      </namedValue>
+                                                      <namedValue name="value">
+                                                        <value class="add">
+                                                          <lhs class="variable">
+                                                            <path element="questionIndex"/>
+                                                          </lhs>
+                                                          <rhs class="value" valueClass="decimal">1</rhs>
+                                                        </value>
+                                                      </namedValue>
+                                                      <namedValue name="valueScope">
+                                                        <value class="value" valueClass="string">Test</value>
+                                                      </namedValue>
+                                                    </namedValues>
+                                                  </value>
+                                                </argument>
+                                              </arguments>
+                                            </apiCall>
+                                            <apiCall apiId="com.provar.plugins.bundled.apis.control.Break" name="Break" testItemId="150"/>
+                                          </steps>
+                                        </clause>
+                                      </clauses>
+                                    </apiCall>
+                                    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="158" title="Set Values: questionIndex">
+                                      <tags>
+                                        <string>disabled</string>
+                                      </tags>
+                                      <arguments>
+                                        <argument id="values">
+                                          <value class="valueList" mutable="Mutable">
+                                            <namedValues mutable="Mutable">
+                                              <namedValue name="valuePath">
+                                                <value class="value" valueClass="string">questionIndex</value>
+                                              </namedValue>
+                                              <namedValue name="value">
+                                                <value class="add">
+                                                  <lhs class="variable">
+                                                    <path element="questionIndex"/>
+                                                  </lhs>
+                                                  <rhs class="value" valueClass="decimal">1</rhs>
+                                                </value>
+                                              </namedValue>
+                                              <namedValue name="valueScope">
+                                                <value class="value" valueClass="string">Test</value>
+                                              </namedValue>
+                                            </namedValues>
+                                          </value>
+                                        </argument>
+                                      </arguments>
+                                    </apiCall>
+                                  </steps>
+                                </clause>
+                              </clauses>
+                            </apiCall>
+                            <apiCall apiId="com.provar.plugins.bundled.apis.If" name="If" testItemId="114" title="If: {ExcelRow.Input = &quot;unselect&quot;}">
+                              <arguments>
+                                <argument id="condition">
+                                  <value class="eq">
+                                    <lhs class="variable">
+                                      <path element="ExcelRow"/>
+                                      <path element="Input"/>
+                                    </lhs>
+                                    <rhs class="value" valueClass="string">unselect</rhs>
+                                  </value>
+                                </argument>
+                              </arguments>
+                              <clauses>
+                                <clause name="then" testItemId="115">
+                                  <steps>
+                                    <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="118" title="Assert:   EqualTo {Values.fields.Incap311__Answer__c.value}">
+                                      <arguments>
+                                        <argument id="expectedValue">
+                                          <value class="value" valueClass="string"> </value>
+                                        </argument>
+                                        <argument id="actualValue">
+                                          <value class="variable">
+                                            <path element="Values"/>
+                                            <path element="fields"/>
+                                            <path element="Incap311__Answer__c"/>
+                                            <path element="value"/>
+                                          </value>
+                                        </argument>
+                                        <argument id="comparisonType">
+                                          <value class="value" valueClass="string">EqualTo</value>
+                                        </argument>
+                                        <argument id="caseSensitive">
+                                          <value class="value" valueClass="boolean">true</value>
+                                        </argument>
+                                        <argument id="numeric">
+                                          <value class="value" valueClass="boolean">false</value>
+                                        </argument>
+                                        <argument id="retainDecimals">
+                                          <value class="value" valueClass="boolean">false</value>
+                                        </argument>
+                                        <argument id="nullGreater">
+                                          <value class="value" valueClass="boolean">false</value>
+                                        </argument>
+                                        <argument id="matchMultiLine">
+                                          <value class="value" valueClass="boolean">false</value>
+                                        </argument>
+                                        <argument id="matchDotAll">
+                                          <value class="value" valueClass="boolean">false</value>
+                                        </argument>
+                                        <argument id="failureMessage"/>
+                                      </arguments>
+                                    </apiCall>
+                                    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="120" title="Set Values: questionIndex">
+                                      <arguments>
+                                        <argument id="values">
+                                          <value class="valueList" mutable="Mutable">
+                                            <namedValues mutable="Mutable">
+                                              <namedValue name="valuePath">
+                                                <value class="value" valueClass="string">questionIndex</value>
+                                              </namedValue>
+                                              <namedValue name="value">
+                                                <value class="add">
+                                                  <lhs class="variable">
+                                                    <path element="questionIndex"/>
+                                                  </lhs>
+                                                  <rhs class="value" valueClass="decimal">1</rhs>
+                                                </value>
+                                              </namedValue>
+                                              <namedValue name="valueScope">
+                                                <value class="value" valueClass="string">Test</value>
+                                              </namedValue>
+                                            </namedValues>
+                                          </value>
+                                        </argument>
+                                      </arguments>
+                                    </apiCall>
+                                    <apiCall apiId="com.provar.plugins.bundled.apis.control.Break" name="Break" testItemId="119"/>
+                                  </steps>
+                                </clause>
+                              </clauses>
+                            </apiCall>
+                            <apiCall apiId="com.provar.plugins.bundled.apis.If" name="If" testItemId="122" title="If: {ExcelRow.QuestionType = &quot;currency&quot;}">
+                              <arguments>
+                                <argument id="condition">
+                                  <value class="eq">
+                                    <lhs class="variable">
+                                      <path element="ExcelRow"/>
+                                      <path element="QuestionType"/>
+                                    </lhs>
+                                    <rhs class="value" valueClass="string">currency</rhs>
+                                  </value>
+                                </argument>
+                              </arguments>
+                              <clauses>
+                                <clause name="then" testItemId="133">
+                                  <steps>
+                                    <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="134" title="Assert: ${ExcelRow.Input} EqualTo {Values.fields.Incap311__Answer__c.value}">
+                                      <arguments>
+                                        <argument id="expectedValue">
+                                          <value class="compound">
+                                            <parts>
+                                              <value valueClass="string">$</value>
+                                              <variable>
+                                                <path element="ExcelRow"/>
+                                                <path element="Input"/>
+                                              </variable>
+                                            </parts>
+                                          </value>
+                                        </argument>
+                                        <argument id="actualValue">
+                                          <value class="variable">
+                                            <path element="Values"/>
+                                            <path element="fields"/>
+                                            <path element="Incap311__Answer__c"/>
+                                            <path element="value"/>
+                                          </value>
+                                        </argument>
+                                        <argument id="comparisonType">
+                                          <value class="value" valueClass="string">EqualTo</value>
+                                        </argument>
+                                        <argument id="caseSensitive">
+                                          <value class="value" valueClass="boolean">true</value>
+                                        </argument>
+                                        <argument id="numeric">
+                                          <value class="value" valueClass="boolean">false</value>
+                                        </argument>
+                                        <argument id="retainDecimals">
+                                          <value class="value" valueClass="boolean">false</value>
+                                        </argument>
+                                        <argument id="nullGreater">
+                                          <value class="value" valueClass="boolean">false</value>
+                                        </argument>
+                                        <argument id="matchMultiLine">
+                                          <value class="value" valueClass="boolean">false</value>
+                                        </argument>
+                                        <argument id="matchDotAll">
+                                          <value class="value" valueClass="boolean">false</value>
+                                        </argument>
+                                        <argument id="failureMessage"/>
+                                      </arguments>
+                                    </apiCall>
+                                    <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="135" title="Set Values: questionIndex">
+                                      <arguments>
+                                        <argument id="values">
+                                          <value class="valueList" mutable="Mutable">
+                                            <namedValues mutable="Mutable">
+                                              <namedValue name="valuePath">
+                                                <value class="value" valueClass="string">questionIndex</value>
+                                              </namedValue>
+                                              <namedValue name="value">
+                                                <value class="add">
+                                                  <lhs class="variable">
+                                                    <path element="questionIndex"/>
+                                                  </lhs>
+                                                  <rhs class="value" valueClass="decimal">1</rhs>
+                                                </value>
+                                              </namedValue>
+                                              <namedValue name="valueScope">
+                                                <value class="value" valueClass="string">Test</value>
+                                              </namedValue>
+                                            </namedValues>
+                                          </value>
+                                        </argument>
+                                      </arguments>
+                                    </apiCall>
+                                    <apiCall apiId="com.provar.plugins.bundled.apis.control.Break" name="Break" testItemId="136"/>
+                                  </steps>
+                                </clause>
+                              </clauses>
+                            </apiCall>
+                            <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="117" title="Assert: {Values.fields.Incap311__Answer__c.value} Contains {ExcelRow.Input}">
+                              <arguments>
+                                <argument id="expectedValue">
+                                  <value class="variable">
+                                    <path element="Values"/>
+                                    <path element="fields"/>
+                                    <path element="Incap311__Answer__c"/>
+                                    <path element="value"/>
+                                  </value>
+                                </argument>
+                                <argument id="actualValue">
+                                  <value class="variable">
+                                    <path element="ExcelRow"/>
+                                    <path element="Input"/>
+                                  </value>
+                                </argument>
+                                <argument id="comparisonType">
+                                  <value class="value" valueClass="string">Contains</value>
+                                </argument>
+                                <argument id="caseSensitive">
+                                  <value class="value" valueClass="boolean">true</value>
+                                </argument>
+                                <argument id="numeric">
+                                  <value class="value" valueClass="boolean">false</value>
+                                </argument>
+                                <argument id="retainDecimals">
+                                  <value class="value" valueClass="boolean">false</value>
+                                </argument>
+                                <argument id="nullGreater">
+                                  <value class="value" valueClass="boolean">false</value>
+                                </argument>
+                                <argument id="matchMultiLine">
+                                  <value class="value" valueClass="boolean">false</value>
+                                </argument>
+                                <argument id="matchDotAll">
+                                  <value class="value" valueClass="boolean">false</value>
+                                </argument>
+                                <argument id="failureMessage"/>
+                              </arguments>
+                            </apiCall>
+                            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="93" title="Set Values: questionIndex">
+                              <arguments>
+                                <argument id="values">
+                                  <value class="valueList" mutable="Mutable">
+                                    <namedValues mutable="Mutable">
+                                      <namedValue name="valuePath">
+                                        <value class="value" valueClass="string">questionIndex</value>
+                                      </namedValue>
+                                      <namedValue name="value">
+                                        <value class="add">
+                                          <lhs class="variable">
+                                            <path element="questionIndex"/>
+                                          </lhs>
+                                          <rhs class="value" valueClass="decimal">1</rhs>
+                                        </value>
+                                      </namedValue>
+                                      <namedValue name="valueScope">
+                                        <value class="value" valueClass="string">Test</value>
+                                      </namedValue>
+                                    </namedValues>
+                                  </value>
+                                </argument>
+                              </arguments>
+                            </apiCall>
+                          </steps>
+                        </clause>
+                      </clauses>
+                      <generatedParameters>
+                        <apiParam group="options" name="autoPaginate" title="Auto Paginate">
+                          <summary>Whether Show More/Next is clicked till the match condition succeeds.</summary>
+                          <type>
+                            <booleanType/>
+                          </type>
+                        </apiParam>
+                      </generatedParameters>
+                    </apiCall>
+                  </steps>
+                </clause>
+              </clauses>
+            </apiCall>
+          </steps>
+        </clause>
+      </clauses>
+      <generatedParameters>
+        <apiParam group="target" name="scTabType" seq="1000" title="Tab Type">
+          <summary>The tab type for Scaffolds</summary>
+          <type>
+            <choiceType>
+              <constraints>
+                <valueConstraint name="valuesSource">com.provar.plugins.sf.eclipse.ui:com.provar.plugins.forcedotcom.ui.valuesources.SfEnumChoiceListValuesSource</valueConstraint>
+                <valueConstraint name="valuesSourceDependencies">com.provar.plugins.forcedotcom.core.ui.SfUiTargetUrl$ConsoleTabType</valueConstraint>
+              </constraints>
+            </choiceType>
+          </type>
+        </apiParam>
+        <apiParam group="target" name="sfUiTargetObjectId" title="Object Id">
+          <summary>The Id of the SF Object to be Viewed or Edited.</summary>
+          <type>
+            <textType/>
+          </type>
+        </apiParam>
+      </generatedParameters>
+    </apiCall>
+  </steps>
+</testCase>
