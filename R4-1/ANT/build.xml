@@ -31,10 +31,9 @@
 				secretsPassword="${secrets.password}"
 				testEnvironmentSecretsPassword="${testenvironment.secretspassword}"
 				invokeTestRunMonitor="true"
-				licensePath="C:\Users\Incapsulate\Provar\.licenses"
 				>
 		
-			<fileset dir="../tests/ESRI"><include name="c1489(1)StreetAddressLocationCanBeSearchedAsAnAddress.testcase"/></fileset><fileset dir="../tests/ESRI"><include name="c1489(2)PlaceNameCommonLocationCanBeSearchedAsAnAddress.testcase"/></fileset>
+			<fileset dir="../tests/ESRI"><include name="c1489(1)StreetAddressLocationCanBeSearchedAsAnAddress.testcase"/></fileset>
 
 			<emailProperties sendEmail="true" primaryRecipients="vbevara@incapsulate.com" ccRecipients="" bccRecipients="" emailSubject="Provar test run report" attachExecutionReport="true" attachZip="false"/>
 			<attachmentProperties includeOnlyFailures="false" includeOnlyBdd="false" includeSkipped="false" includeTestCaseDescription="true" includeScreenshots="true" includeWarningMessages="false" includeInfoMessages="false" includeDebugMessages="false" includeTestStepTime="true" includeTestStepPathHierarchy="true" includeFullScreenShot="false"/>
