@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="3" registryId="4c95b117-28fe-4a38-9802-2747300568e6">
+<testCase id="13" registryId="4c95b117-28fe-4a38-9802-2747300568e6">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="16" title="Salesforce Connect: Internal311Qa (Test)">
       <arguments>
         <argument id="connectionName">
-          <value class="value" valueClass="string">QA</value>
+          <value class="value" valueClass="string">SAT_Dev_Admin_311</value>
         </argument>
         <argument id="resultName">
           <value class="value" valueClass="string">Internal311Qa</value>
@@ -153,6 +153,9 @@
         <argument id="ContactStatusRequiredValue">
           <value class="value" valueClass="string">Available</value>
         </argument>
+        <argument id="ContactStatus">
+          <value class="value" valueClass="string">Available</value>
+        </argument>
       </arguments>
       <outputArguments>
         <outputArgument id="SRTName">
@@ -215,6 +218,9 @@
       </outputArguments>
     </caseCall>
     <caseCall testCaseId="addeec19-64a6-4af2-9199-4df3b5398dfa" testCasePath="tests/ReusableTests/Config/SaveSRTV.testcase" testItemId="6">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="reuseConnectionName">
           <value class="value" valueClass="string">Internal311Qa</value>
@@ -345,19 +351,19 @@
                 <argument id="webBrowser"/>
               </arguments>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="230" title="On SF Service Request Schedule Home screen">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="1115" title="On SF Cases tab (Code Compliance Administration)">
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">QA</value>
                 </argument>
                 <argument id="target">
-                  <value class="uiTarget" uri="sf:ui:target?object=Incap311__Service_Request_Schedule__c&amp;action=ObjectHome"/>
+                  <value class="uiTarget" uri="sf:ui:target?object=Case&amp;action=List&amp;tab=standard-Case&amp;application=X311_Console&amp;listView=Code_Compliance_Administration_Case"/>
                 </argument>
                 <argument id="navigate">
-                  <value class="value" valueClass="string">Always</value>
+                  <value class="value" valueClass="string">Dont</value>
                 </argument>
                 <argument id="targetDescription">
-                  <value class="value" valueClass="string">On SF Service Request Schedule Home screen</value>
+                  <value class="value" valueClass="string">On SF Cases tab (Code Compliance Administration)</value>
                 </argument>
                 <argument id="windowSelection">
                   <value class="value" valueClass="string">Default</value>
@@ -377,8 +383,60 @@
                 </argument>
               </arguments>
               <clauses>
-                <clause name="substeps" testItemId="231">
-                  <steps/>
+                <clause name="substeps" testItemId="1116">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="1117" title="Click the New Case button">
+                      <arguments>
+                        <argument id="locator">
+                          <value class="uiLocator" uri="ui:locator?name=NewCase&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26action%3DNewCase"/>
+                        </argument>
+                        <argument id="interaction">
+                          <value class="uiInteraction" uri="ui:interaction?name=action"/>
+                        </argument>
+                        <argument id="hover">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureBefore">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="beforeWait">
+                          <value class="uiWait" uri="default"/>
+                        </argument>
+                        <argument id="afterWait">
+                          <value class="uiWait" uri="default"/>
+                        </argument>
+                        <argument id="interactionDescription">
+                          <value class="value" valueClass="string">Click the New Case button</value>
+                        </argument>
+                        <argument id="autoRetry"/>
+                        <argument id="ieClickMethod">
+                          <value class="value" valueClass="string">Default</value>
+                        </argument>
+                      </arguments>
+                      <generatedParameters>
+                        <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
+                          <summary>Whether the mouse should hover over the field before it is clicked.</summary>
+                          <type>
+                            <booleanType/>
+                          </type>
+                        </apiParam>
+                        <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
+                          <summary>How the click should be executed for Internet Explorer.</summary>
+                          <type>
+                            <choiceType>
+                              <constraints>
+                                <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
+                                <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
+                              </constraints>
+                            </choiceType>
+                          </type>
+                        </apiParam>
+                      </generatedParameters>
+                    </apiCall>
+                  </steps>
                 </clause>
               </clauses>
               <generatedParameters>
@@ -395,7 +453,7 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="232" title="On SF Incap311SC__AgentConsole page with pageobject Incap 311sc__ Agent Console_ Narayan">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="1118" title="On SF Incap311SC__AgentConsole page with pageobject Incap 311sc__ Agent Console_ Narayan">
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">QA</value>
@@ -431,9 +489,9 @@
                 <argument id="scSecondaryTabName"/>
               </arguments>
               <clauses>
-                <clause name="substeps" testItemId="233">
+                <clause name="substeps" testItemId="1119">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="234" title="Click the Link_submit Request button">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="1120" title="Click the Link_submit Request button">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=Link_submitRequest"/>
@@ -654,7 +712,7 @@
                   <value class="value" valueClass="string">SelectLocation</value>
                 </argument>
                 <argument id="LocationToBeSelected">
-                  <value class="value" valueClass="string">49 W 2nd St, South Boston, 02127</value>
+                  <value class="value" valueClass="string">505 MAIN ST</value>
                 </argument>
                 <argument id="DuplicateDecisionOnSelectionOrChangeOfAddress">
                   <value class="value" valueClass="string">NewCase</value>

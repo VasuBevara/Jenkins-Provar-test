@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="7">
+<testCase id="20">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="17" title="Salesforce Connect: InternalQA (Test)">
@@ -55,19 +55,19 @@
       <clauses>
         <clause name="hidden" testItemId="420">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="421" title="On SF Case Home screen">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="445" title="On SF Cases tab (Code Compliance Administration)">
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">InternalQA</value>
                 </argument>
                 <argument id="target">
-                  <value class="uiTarget" uri="sf:ui:target?object=Case&amp;action=ObjectHome"/>
+                  <value class="uiTarget" uri="sf:ui:target?object=Case&amp;action=List&amp;application=X311_Console&amp;tab=standard-Case&amp;listView=Code_Compliance_Administration_Case"/>
                 </argument>
                 <argument id="navigate">
-                  <value class="value" valueClass="string">Always</value>
+                  <value class="value" valueClass="string">Dont</value>
                 </argument>
                 <argument id="targetDescription">
-                  <value class="value" valueClass="string">On SF Case Home screen</value>
+                  <value class="value" valueClass="string">On SF Cases tab (Code Compliance Administration)</value>
                 </argument>
                 <argument id="windowSelection">
                   <value class="value" valueClass="string">Default</value>
@@ -87,8 +87,60 @@
                 </argument>
               </arguments>
               <clauses>
-                <clause name="substeps" testItemId="422">
-                  <steps/>
+                <clause name="substeps" testItemId="130">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="131" title="Click the New Case button">
+                      <arguments>
+                        <argument id="locator">
+                          <value class="uiLocator" uri="ui:locator?name=NewCase&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26action%3DNewCase"/>
+                        </argument>
+                        <argument id="interaction">
+                          <value class="uiInteraction" uri="ui:interaction?name=action"/>
+                        </argument>
+                        <argument id="hover">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureBefore">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="beforeWait">
+                          <value class="uiWait" uri="default"/>
+                        </argument>
+                        <argument id="afterWait">
+                          <value class="uiWait" uri="default"/>
+                        </argument>
+                        <argument id="interactionDescription">
+                          <value class="value" valueClass="string">Click the New Case button</value>
+                        </argument>
+                        <argument id="autoRetry"/>
+                        <argument id="ieClickMethod">
+                          <value class="value" valueClass="string">Default</value>
+                        </argument>
+                      </arguments>
+                      <generatedParameters>
+                        <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
+                          <summary>Whether the mouse should hover over the field before it is clicked.</summary>
+                          <type>
+                            <booleanType/>
+                          </type>
+                        </apiParam>
+                        <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
+                          <summary>How the click should be executed for Internet Explorer.</summary>
+                          <type>
+                            <choiceType>
+                              <constraints>
+                                <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
+                                <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
+                              </constraints>
+                            </choiceType>
+                          </type>
+                        </apiParam>
+                      </generatedParameters>
+                    </apiCall>
+                  </steps>
                 </clause>
               </clauses>
               <generatedParameters>
@@ -376,7 +428,7 @@
                           <value class="value" valueClass="string">false</value>
                         </argument>
                         <argument id="param_SRTName">
-                          <value class="value" valueClass="string">Provar-POC-5</value>
+                          <value class="value" valueClass="string">Provar-POC-3</value>
                         </argument>
                       </arguments>
                       <generatedParameters>
@@ -877,6 +929,66 @@
                         <argument id="beforeWait"/>
                         <argument id="autoRetry"/>
                       </arguments>
+                    </apiCall>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="454" title="Set the Case Origin picklist to Phone">
+                      <arguments>
+                        <argument id="locator">
+                          <value class="uiLocator" uri="ui:locator?name=Origin&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26field%3DOrigin"/>
+                        </argument>
+                        <argument id="interaction">
+                          <value class="uiInteraction" uri="ui:interaction?name=set"/>
+                        </argument>
+                        <argument id="value">
+                          <value class="value" valueClass="string">Phone</value>
+                        </argument>
+                        <argument id="blur">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="pressEnter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureBefore">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="beforeWait">
+                          <value class="uiWait" uri="default"/>
+                        </argument>
+                        <argument id="afterWait">
+                          <value class="uiWait" uri="default"/>
+                        </argument>
+                        <argument id="interactionDescription">
+                          <value class="value" valueClass="string">Set the Case Origin picklist to Phone</value>
+                        </argument>
+                        <argument id="autoRetry"/>
+                      </arguments>
+                      <generatedParameters>
+                        <apiParam group="value" modelBinding="sf:ui:binding:object?object=Case&amp;field=Origin" name="value" seq="10000" title="Value">
+                          <summary>The value to be populated.</summary>
+                          <type>
+                            <choiceType>
+                              <constraints>
+                                <valueConstraint name="boundedValues">Phone:Phone|Email:Email|Web:Web|311-App:311-App|Internal Transfer:Internal Transfer|Internal:Internal|API:API|Mail:Mail|Proactive:Proactive|Social:Social</valueConstraint>
+                                <valueConstraint name="unrestricted">true</valueConstraint>
+                              </constraints>
+                            </choiceType>
+                          </type>
+                        </apiParam>
+                        <apiParam group="value" name="blur" seq="10001" title="Tab off field">
+                          <summary>Whether the tab key should be pressed after the value is populated.</summary>
+                          <type>
+                            <booleanType/>
+                          </type>
+                        </apiParam>
+                        <apiParam group="value" name="pressEnter" seq="10002" title="Press Enter">
+                          <summary>Whether the Enter key should be pressed after the value is populated.</summary>
+                          <type>
+                            <booleanType/>
+                          </type>
+                        </apiParam>
+                      </generatedParameters>
                     </apiCall>
                   </steps>
                 </clause>
@@ -2488,7 +2600,7 @@
               <clauses>
                 <clause name="substeps" testItemId="340">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="347" title="Set the Service Request Status picklist to Hold">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="347" title="Set the Case Status picklist to Pending">
                       <tags/>
                       <arguments>
                         <argument id="locator">
@@ -2498,7 +2610,7 @@
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="value">
-                          <value class="value" valueClass="string">Hold</value>
+                          <value class="value" valueClass="string">Pending</value>
                         </argument>
                         <argument id="blur">
                           <value class="value" valueClass="boolean">false</value>
@@ -2519,7 +2631,7 @@
                           <value class="uiWait" uri="default"/>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Service Request Status picklist to Hold</value>
+                          <value class="value" valueClass="string">Set the Case Status picklist to Pending</value>
                         </argument>
                         <argument id="autoRetry"/>
                       </arguments>
@@ -2529,7 +2641,7 @@
                           <type>
                             <choiceType>
                               <constraints>
-                                <valueConstraint name="boundedValues">New:New|Working:Working|Escalated:Escalated|Closed:Closed|Hold:Hold|Open:Open</valueConstraint>
+                                <valueConstraint name="boundedValues">New:New|Working:Working|Escalated:Escalated|Closed:Closed|Pending:Pending|Open:Open|Closed (Transferred):Closed (Transferred)|Closed (Duplicate):Closed (Duplicate)</valueConstraint>
                                 <valueConstraint name="unrestricted">true</valueConstraint>
                               </constraints>
                             </choiceType>
@@ -2564,7 +2676,7 @@
                               <fieldLocator uri="ui:locator?name=Status&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26field%3DStatus"/>
                               <attributeAssertions>
                                 <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
-                                  <value class="value" valueClass="string">Hold</value>
+                                  <value class="value" valueClass="string">Pending</value>
                                 </uiAttributeAssertion>
                               </attributeAssertions>
                             </uiFieldAssertion>
@@ -2724,7 +2836,7 @@
                         </argument>
                       </arguments>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.bundled.apis.If" name="If" testItemId="356" title="If: {CaseStatus.Status != &quot;Hold&quot;}">
+                    <apiCall apiId="com.provar.plugins.bundled.apis.If" name="If" testItemId="356" title="If: {CaseStatus.Status != &quot;Pending&quot;}">
                       <tags/>
                       <arguments>
                         <argument id="condition">
@@ -2733,7 +2845,7 @@
                               <path element="CaseStatus"/>
                               <path element="Status"/>
                             </lhs>
-                            <rhs class="value" valueClass="string">Hold</rhs>
+                            <rhs class="value" valueClass="string">Pending</rhs>
                           </value>
                         </argument>
                       </arguments>
@@ -2842,7 +2954,7 @@
                         <argument id="autoRetry"/>
                       </arguments>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="401" title="Assert: {Values.fields.Status.value} EqualTo Hold">
+                    <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="401" title="Assert: {Values.fields.Status.value} EqualTo Pending">
                       <arguments>
                         <argument id="expectedValue">
                           <value class="variable">
@@ -2853,7 +2965,7 @@
                           </value>
                         </argument>
                         <argument id="actualValue">
-                          <value class="value" valueClass="string">Hold</value>
+                          <value class="value" valueClass="string">Pending</value>
                         </argument>
                         <argument id="comparisonType">
                           <value class="value" valueClass="string">EqualTo</value>

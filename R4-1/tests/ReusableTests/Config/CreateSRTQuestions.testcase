@@ -1432,6 +1432,9 @@
               </clauses>
             </apiCall>
             <apiCall apiId="com.provar.plugins.bundled.apis.If" name="If" testItemId="33" title="If: {CheckReadOnly != &quot;n&quot;}">
+              <tags>
+                <string>disabled</string>
+              </tags>
               <arguments>
                 <argument id="condition">
                   <value class="ne">
