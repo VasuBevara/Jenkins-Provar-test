@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="1">
+<testCase id="90">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="82" title="Salesforce Connect: QA (Test)">
@@ -45,10 +45,10 @@
         <argument id="webBrowser"/>
       </arguments>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexSoqlQuery" name="ApexSoqlQuery" testItemId="19" title="SOQL Query: select Id from Incap311__Service_Type_Version__c where Incap311__Service_Name__c ='Provar-Reg-Date-Check'=&gt;Incap311Rows">
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexSoqlQuery" name="ApexSoqlQuery" testItemId="19" title="SOQL Query: select Id from Incap311__Service_Type_Version__c where Incap311__Service_Name__c ='Provar-POC-3'=&gt;Incap311Rows">
       <arguments>
         <argument id="soqlQuery">
-          <value class="value" valueClass="string">select Id from Incap311__Service_Type_Version__c where Incap311__Service_Name__c ='Provar-Reg-Date-Check'</value>
+          <value class="value" valueClass="string">select Id from Incap311__Service_Type_Version__c where Incap311__Service_Name__c ='Provar-POC-3'</value>
         </argument>
         <argument id="apexConnectionName">
           <value class="value" valueClass="string">QA</value>
@@ -83,7 +83,7 @@
           <value class="value" valueClass="string">Test</value>
         </argument>
         <argument id="Incap311__Start__c">
-          <value class="value" valueClass="date">1504224000000</value>
+          <value class="value" valueClass="date">1545177600000</value>
         </argument>
         <argument id="Incap311__Stop__c">
           <value class="funcCall" id="DateAdd">
@@ -167,6 +167,9 @@
               </generatedParameters>
             </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="47" title="On SF Session Permission Set Activation ? screen">
+              <tags>
+                <string>disabled</string>
+              </tags>
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">QA</value>
@@ -277,12 +280,26 @@
                           <value class="value" valueClass="string">Click the New Case button</value>
                         </argument>
                         <argument id="autoRetry"/>
+                        <argument id="ieClickMethod">
+                          <value class="value" valueClass="string">Default</value>
+                        </argument>
                       </arguments>
                       <generatedParameters>
-                        <apiParam group="value" name="hover" title="Hover before Clicking">
+                        <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
                           <summary>Whether the mouse should hover over the field before it is clicked.</summary>
                           <type>
                             <booleanType/>
+                          </type>
+                        </apiParam>
+                        <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
+                          <summary>How the click should be executed for Internet Explorer.</summary>
+                          <type>
+                            <choiceType>
+                              <constraints>
+                                <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
+                                <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
+                              </constraints>
+                            </choiceType>
                           </type>
                         </apiParam>
                       </generatedParameters>
@@ -444,7 +461,7 @@
               <clauses>
                 <clause name="substeps" testItemId="17">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="18" title="Set the Text Box_search Service Type field to check">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="18" title="Set the Text Box_search Service Type field to Provar POC 3">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=TextBox_searchServiceType"/>
@@ -453,7 +470,7 @@
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="value">
-                          <value class="value" valueClass="string">check</value>
+                          <value class="value" valueClass="string">Provar POC 3</value>
                         </argument>
                         <argument id="blur">
                           <value class="value" valueClass="boolean">false</value>
@@ -474,7 +491,7 @@
                           <value class="uiWait" uri="default"/>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Text Box_search Service Type field to check</value>
+                          <value class="value" valueClass="string">Set the Text Box_search Service Type field to Provar POC 3</value>
                         </argument>
                         <argument id="autoRetry"/>
                       </arguments>
@@ -555,7 +572,42 @@
               <clauses>
                 <clause name="substeps" testItemId="6">
                   <steps>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="162" title="Call the selectSRType method">
+                      <arguments>
+                        <argument id="locator">
+                          <value class="uiLocator" uri="ui:pageobject:method?pageId=pageobjects.incap311sc__AgentConsole_Narayan_ServiceTypeTab&amp;operation=selectSRType"/>
+                        </argument>
+                        <argument id="interaction">
+                          <value class="uiInteraction" uri="ui:interaction?name=invoke"/>
+                        </argument>
+                        <argument id="interactionDescription">
+                          <value class="value" valueClass="string">Call the selectSRType method</value>
+                        </argument>
+                        <argument id="beforeWait"/>
+                        <argument id="afterWait"/>
+                        <argument id="autoRetry"/>
+                        <argument id="captureBefore">
+                          <value class="value" valueClass="string">false</value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="string">false</value>
+                        </argument>
+                        <argument id="param_SRTName">
+                          <value class="value" valueClass="string">Provar-POC-3</value>
+                        </argument>
+                      </arguments>
+                      <generatedParameters>
+                        <apiParam group="value" name="param_SRTName" title="SRTName">
+                          <type>
+                            <textType/>
+                          </type>
+                        </apiParam>
+                      </generatedParameters>
+                    </apiCall>
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="7" title="Click the Button_ Select SR Type field">
+                      <tags>
+                        <string>disabled</string>
+                      </tags>
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=Button_SelectSRType"/>
@@ -688,7 +740,7 @@
                         <argument id="autoRetry"/>
                       </arguments>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="63" title="Assert: {Values.fields.ServiceTypeNameOnServiceTypeTab.value} Contains Provar-Reg-Date-Check">
+                    <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="63" title="Assert: {Values.fields.ServiceTypeNameOnServiceTypeTab.value} Contains Provar-POC-3">
                       <arguments>
                         <argument id="expectedValue">
                           <value class="variable">
@@ -699,7 +751,7 @@
                           </value>
                         </argument>
                         <argument id="actualValue">
-                          <value class="value" valueClass="string">Provar-Reg-Date-Check</value>
+                          <value class="value" valueClass="string">Provar-POC-3</value>
                         </argument>
                         <argument id="comparisonType">
                           <value class="value" valueClass="string">Contains</value>
@@ -813,7 +865,7 @@
             <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="86" title="Salesforce Connect: QA1 (Test)">
               <arguments>
                 <argument id="connectionName">
-                  <value class="value" valueClass="string">QA</value>
+                  <value class="value" valueClass="string">SAT_Dev_Admin_311</value>
                 </argument>
                 <argument id="resultName">
                   <value class="value" valueClass="string">QA1</value>
@@ -904,6 +956,9 @@
               </generatedParameters>
             </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="152" title="On SF Cases tab (Code Compliance Administration)">
+              <tags>
+                <string>disabled</string>
+              </tags>
               <arguments>
                 <argument id="uiConnectionName">
                   <value class="value" valueClass="string">QA</value>
@@ -938,6 +993,94 @@
                 <clause name="substeps" testItemId="153">
                   <steps>
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="154" title="Click the New Case button">
+                      <arguments>
+                        <argument id="locator">
+                          <value class="uiLocator" uri="ui:locator?name=NewCase&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26action%3DNewCase"/>
+                        </argument>
+                        <argument id="interaction">
+                          <value class="uiInteraction" uri="ui:interaction?name=action"/>
+                        </argument>
+                        <argument id="hover">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureBefore">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="boolean">false</value>
+                        </argument>
+                        <argument id="beforeWait">
+                          <value class="uiWait" uri="default"/>
+                        </argument>
+                        <argument id="afterWait">
+                          <value class="uiWait" uri="default"/>
+                        </argument>
+                        <argument id="interactionDescription">
+                          <value class="value" valueClass="string">Click the New Case button</value>
+                        </argument>
+                        <argument id="autoRetry"/>
+                      </arguments>
+                      <generatedParameters>
+                        <apiParam group="value" name="hover" title="Hover before Clicking">
+                          <summary>Whether the mouse should hover over the field before it is clicked.</summary>
+                          <type>
+                            <booleanType/>
+                          </type>
+                        </apiParam>
+                      </generatedParameters>
+                    </apiCall>
+                  </steps>
+                </clause>
+              </clauses>
+              <generatedParameters>
+                <apiParam group="target" name="scTabType" seq="1000" title="Tab Type">
+                  <summary>The tab type for Scaffolds</summary>
+                  <type>
+                    <choiceType>
+                      <constraints>
+                        <valueConstraint name="valuesSource">com.provar.plugins.sf.eclipse.ui:com.provar.plugins.forcedotcom.ui.valuesources.SfEnumChoiceListValuesSource</valueConstraint>
+                        <valueConstraint name="valuesSourceDependencies">com.provar.plugins.forcedotcom.core.ui.SfUiTargetUrl$ConsoleTabType</valueConstraint>
+                      </constraints>
+                    </choiceType>
+                  </type>
+                </apiParam>
+              </generatedParameters>
+            </apiCall>
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="163" title="On SF Cases tab (Code Compliance Administration)">
+              <arguments>
+                <argument id="uiConnectionName">
+                  <value class="value" valueClass="string">QA1</value>
+                </argument>
+                <argument id="target">
+                  <value class="uiTarget" uri="sf:ui:target?object=Case&amp;action=List&amp;tab=standard-Case&amp;application=X311_Console&amp;listView=Code_Compliance_Administration_Case"/>
+                </argument>
+                <argument id="navigate">
+                  <value class="value" valueClass="string">Dont</value>
+                </argument>
+                <argument id="targetDescription">
+                  <value class="value" valueClass="string">On SF Cases tab (Code Compliance Administration)</value>
+                </argument>
+                <argument id="windowSelection">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="windowSize">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
+                <argument id="closeWindow"/>
+                <argument id="captureBefore">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="captureAfter">
+                  <value class="value" valueClass="string">false</value>
+                </argument>
+                <argument id="scTabType">
+                  <value class="value" valueClass="string">HomeTab</value>
+                </argument>
+              </arguments>
+              <clauses>
+                <clause name="substeps" testItemId="164">
+                  <steps>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="165" title="Click the New Case button">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=NewCase&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26action%3DNewCase"/>
@@ -1131,7 +1274,7 @@
               <clauses>
                 <clause name="substeps" testItemId="76">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="77" title="Set the Text Box_search Service Type field to check">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="77" title="Set the Text Box_search Service Type field to Provar POC 3">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=TextBox_searchServiceType"/>
@@ -1140,7 +1283,7 @@
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="value">
-                          <value class="value" valueClass="string">check</value>
+                          <value class="value" valueClass="string">Provar POC 3</value>
                         </argument>
                         <argument id="blur">
                           <value class="value" valueClass="boolean">false</value>
@@ -1161,7 +1304,7 @@
                           <value class="uiWait" uri="default"/>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Text Box_search Service Type field to check</value>
+                          <value class="value" valueClass="string">Set the Text Box_search Service Type field to Provar POC 3</value>
                         </argument>
                         <argument id="autoRetry"/>
                       </arguments>

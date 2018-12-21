@@ -108,7 +108,7 @@
       <clauses>
         <clause name="substeps" testItemId="56">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="67" title="Activate inline edit the Is Draft field">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="72" title="Activate inline edit the Is Draft field">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=Incap311__Is_Draft__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DIncap311__Service_Type_Version__c%26field%3DIncap311__Is_Draft__c"/>
@@ -270,7 +270,7 @@
                   <value class="value" valueClass="boolean">false</value>
                 </argument>
                 <argument id="beforeWait">
-                  <value class="uiWait" uri="default"/>
+                  <value class="uiWait" uri="ui:wait:pageload?timeout=60"/>
                 </argument>
                 <argument id="afterWait">
                   <value class="uiWait" uri="ui:wait:alert:timeout=60"/>
