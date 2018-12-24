@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="7">
+<testCase id="41">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="2" title="Salesforce Connect: QAConfig (Test)">
+      <tags/>
       <arguments>
         <argument id="connectionName">
           <value class="value" valueClass="string">SAT_Dev_Admin_311</value>

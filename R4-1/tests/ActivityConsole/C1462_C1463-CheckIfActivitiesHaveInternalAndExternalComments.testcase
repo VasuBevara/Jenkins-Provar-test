@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="21">
+<testCase id="46">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="656" title="Set Values: FirstName">
@@ -121,6 +121,7 @@
       </arguments>
     </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="648" title="Salesforce Connect: QA (Test)">
+      <tags/>
       <arguments>
         <argument id="connectionName">
           <value class="value" valueClass="string">SAT_Dev_Admin_311</value>
@@ -3528,7 +3529,9 @@
       </arguments>
     </caseCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="695" title="On SF Service Request View screen">
-      <tags/>
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">QA</value>
@@ -3900,6 +3903,9 @@
       </generatedParameters>
     </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="788" title="On Service Request View Screen page">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">QA</value>
@@ -3947,8 +3953,8 @@
                     <uiFieldAssertion resultName="Case_Comments">
                       <fieldLocator uri="ui:pageobject:field?field=Case_Comments&amp;pageId=pageobjects.ServiceRequestViewScreen"/>
                       <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" comparisonType="EqualTo" normalize="true">
-                          <value class="value" valueClass="string">Created By: Vasu Bevara (12/24/2018 4:00 AM)ACT-10-JUl-01 : Rings</value>
+                        <uiAttributeAssertion attributeName="value" comparisonType="Contains" normalize="true">
+                          <value class="value" valueClass="string">Rings</value>
                         </uiAttributeAssertion>
                       </attributeAssertions>
                     </uiFieldAssertion>

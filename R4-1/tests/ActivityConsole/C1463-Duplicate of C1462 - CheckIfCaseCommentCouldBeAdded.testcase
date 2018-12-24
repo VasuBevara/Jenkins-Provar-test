@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="12" registryId="e6ae5ecd-fa3d-4a38-9678-11070f7ed548" visibility="Internal">
+<testCase id="47" registryId="e6ae5ecd-fa3d-4a38-9678-11070f7ed548" visibility="Internal">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="656" title="Set Values: FirstName">
@@ -121,6 +121,7 @@
       </arguments>
     </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="648" title="Salesforce Connect: QA (Test)">
+      <tags/>
       <arguments>
         <argument id="connectionName">
           <value class="value" valueClass="string">SAT_Dev_Admin_311</value>
@@ -4009,6 +4010,9 @@
       </arguments>
     </caseCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="681" title="On SF Service Request View screen">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">QA</value>
@@ -4082,10 +4086,12 @@
                         </argument>
                         <argument id="fieldAssertions">
                           <value class="valueList" mutable="Mutable">
-                            <uiFieldAssertion resultName="IsPublished">
-                              <fieldLocator uri="ui:locator?name=IsPublished&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26field%3DIsPublished%26relationship%3DCaseComments"/>
+                            <uiFieldAssertion resultName="CommentBody">
+                              <fieldLocator uri="ui:locator?name=CommentBody&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26field%3DCommentBody%26relationship%3DCaseComments"/>
                               <attributeAssertions>
                                 <uiAttributeAssertion attributeName="value" comparisonType="None"/>
+                                <uiAttributeAssertion attributeName="message" comparisonType="None"/>
+                                <uiAttributeAssertion attributeName="label" comparisonType="None"/>
                               </attributeAssertions>
                             </uiFieldAssertion>
                           </value>
