@@ -102,5 +102,11 @@ public class ServiceRequestViewScreen {
 	@LinkType()
 	@FindBy(linkText = "Test Queue")
 	public WebElement testQueue;
+	@TextType()
+	@FindBy(xpath = "//fieldset[contains(@class, \"picklist\")]/div[1]/label//span")
+	public WebElement BackOffice_Godfather;
+	@TextType()
+	@FindBy(xpath = "//*[@id=\"500f200001L7itJ_RelatedCommentsList_body\"]/table/tbody/tr[2]//td[2]")
+	public WebElement Case_Comments;
 
 }
