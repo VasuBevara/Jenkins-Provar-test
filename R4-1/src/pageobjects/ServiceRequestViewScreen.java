@@ -108,5 +108,8 @@ public class ServiceRequestViewScreen {
 	@TextType()
 	@FindBy(xpath = "//*[@id=\"500f200001L7itJ_RelatedCommentsList_body\"]/table/tbody/tr[2]//td[2]")
 	public WebElement Case_Comments;
+	@LinkType()
+	@FindBy(linkText = "Details")
+	public WebElement details;
 
 }

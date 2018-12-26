@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="90">
+<testCase id="62">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="82" title="Salesforce Connect: QA (Test)">
@@ -904,56 +904,6 @@
                 </argument>
                 <argument id="webBrowser"/>
               </arguments>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="158" title="On SF New Service Request Creation tab (Close)">
-              <arguments>
-                <argument id="uiConnectionName">
-                  <value class="value" valueClass="string">QA1</value>
-                </argument>
-                <argument id="target">
-                  <value class="uiTarget" uri="sf:ui:target?object=Case&amp;action=List&amp;tab=New_Service_Request_Creation&amp;application=Incap311Console__X311_Console&amp;listView=Close"/>
-                </argument>
-                <argument id="navigate">
-                  <value class="value" valueClass="string">Always</value>
-                </argument>
-                <argument id="targetDescription">
-                  <value class="value" valueClass="string">On SF New Service Request Creation tab (Close)</value>
-                </argument>
-                <argument id="windowSelection">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-                <argument id="windowSize">
-                  <value class="value" valueClass="string">Default</value>
-                </argument>
-                <argument id="closeWindow"/>
-                <argument id="captureBefore">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="string">false</value>
-                </argument>
-                <argument id="scTabType">
-                  <value class="value" valueClass="string">HomeTab</value>
-                </argument>
-              </arguments>
-              <clauses>
-                <clause name="substeps" testItemId="159">
-                  <steps/>
-                </clause>
-              </clauses>
-              <generatedParameters>
-                <apiParam group="target" name="scTabType" seq="1000" title="Tab Type">
-                  <summary>The tab type for Scaffolds</summary>
-                  <type>
-                    <choiceType>
-                      <constraints>
-                        <valueConstraint name="valuesSource">com.provar.plugins.sf.eclipse.ui:com.provar.plugins.forcedotcom.ui.valuesources.SfEnumChoiceListValuesSource</valueConstraint>
-                        <valueConstraint name="valuesSourceDependencies">com.provar.plugins.forcedotcom.core.ui.SfUiTargetUrl$ConsoleTabType</valueConstraint>
-                      </constraints>
-                    </choiceType>
-                  </type>
-                </apiParam>
-              </generatedParameters>
             </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="152" title="On SF Cases tab (Code Compliance Administration)">
               <tags>

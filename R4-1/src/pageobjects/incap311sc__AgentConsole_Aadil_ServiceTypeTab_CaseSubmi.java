@@ -25,6 +25,7 @@ public class incap311sc__AgentConsole_Aadil_ServiceTypeTab_CaseSubmi {
 	@ButtonType()
 	@FindByLabel(label = "Submit")
 	public WebElement submit1;
+	@PageWait.Field(timeoutSeconds = 10)
 	@ButtonType()
 	@FindByLabel(label = "Continue without duplicate")
 	public WebElement continueWithoutDuplicate;
