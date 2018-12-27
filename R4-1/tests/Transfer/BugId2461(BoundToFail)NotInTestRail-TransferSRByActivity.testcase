@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="35">
+<testCase id="36">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: QA (Test)">
@@ -163,20 +163,19 @@
         </argument>
       </arguments>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="640" title="On SF Create Service Request tab (Code_Compliance_Administration_Case)">
-      <tags/>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="654" title="On SF Cases tab (Code Compliance Administration)">
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">QA</value>
         </argument>
         <argument id="target">
-          <value class="uiTarget" uri="sf:ui:target?action=List&amp;tab=Create_Service_Request&amp;application=X311_Console&amp;listView=Code_Compliance_Administration_Case"/>
+          <value class="uiTarget" uri="sf:ui:target?object=Case&amp;action=List&amp;tab=standard-Case&amp;listView=Code_Compliance_Administration_Case&amp;application=X311_Console"/>
         </argument>
         <argument id="navigate">
-          <value class="value" valueClass="string">Always</value>
+          <value class="value" valueClass="string">Dont</value>
         </argument>
         <argument id="targetDescription">
-          <value class="value" valueClass="string">On SF Create Service Request tab (Code_Compliance_Administration_Case)</value>
+          <value class="value" valueClass="string">On SF Cases tab (Code Compliance Administration)</value>
         </argument>
         <argument id="windowSelection">
           <value class="value" valueClass="string">Default</value>
@@ -196,9 +195,9 @@
         </argument>
       </arguments>
       <clauses>
-        <clause name="substeps" testItemId="6">
+        <clause name="substeps" testItemId="145">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="7" title="Click the New Case button">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="146" title="Click the New Case button">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=NewCase&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26action%3DNewCase"/>
@@ -225,12 +224,26 @@
                   <value class="value" valueClass="string">Click the New Case button</value>
                 </argument>
                 <argument id="autoRetry"/>
+                <argument id="ieClickMethod">
+                  <value class="value" valueClass="string">Default</value>
+                </argument>
               </arguments>
               <generatedParameters>
-                <apiParam group="value" name="hover" title="Hover before Clicking">
+                <apiParam group="value" name="hover" seq="10000" title="Hover before Clicking">
                   <summary>Whether the mouse should hover over the field before it is clicked.</summary>
                   <type>
                     <booleanType/>
+                  </type>
+                </apiParam>
+                <apiParam group="value" name="ieClickMethod" seq="10001" title="IE Click Method">
+                  <summary>How the click should be executed for Internet Explorer.</summary>
+                  <type>
+                    <choiceType>
+                      <constraints>
+                        <valueConstraint name="valuesSource">com.provar.core.model.base.java.EnumChoiceListValuesSource</valueConstraint>
+                        <valueConstraint name="valuesSourceDependencies">com.provar.core.model.ui.api.ClickMethod</valueConstraint>
+                      </constraints>
+                    </choiceType>
                   </type>
                 </apiParam>
               </generatedParameters>
