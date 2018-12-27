@@ -1,0 +1,23 @@
+<apex:page showHeader="false" sidebar="false" >
+    <apex:includeLightning />
+    <div id="LcDisplayId"></div> 
+    
+ <script>
+      
+    $Lightning.use("INRF:RuleCriteriaEvaluatorApp", function() {
+        
+    $Lightning.createComponent("INRF:RuleCriteriaEvaluator",
+    { 
+      
+        sObjectType : '{!$CurrentPage.parameters.sObjectType}',
+        fieldApiName : '{!$CurrentPage.parameters.fieldApiName}',
+        operator : '{!$CurrentPage.parameters.operator}',
+        value : '{!$CurrentPage.parameters.value}'
+ 	},
+   "LcDisplayId",
+    function(component) {
+        // component.set("v.accId" , '{!$CurrentPage.parameters.recId}');
+    });
+ });
+ </script>
+</apex:page>

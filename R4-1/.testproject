@@ -42,6 +42,22 @@
         </connection>
       </connections>
     </connectionClass>
+    <connectionClass name="google">
+      <connections>
+        <connection name="Gmail">
+          <summary>\t</summary>
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="c4dbfcec-6f86-4ca0-be16-0976c71befaa" url="google:user=vasu.b009@gmail.com;password={password};accessToken={accessToken};refreshToken={refreshToken};expiry=1545832692000"/>
+          </connectionUrls>
+        </connection>
+        <connection name="Gmail_Incapsulate">
+          <summary>\t</summary>
+          <connectionUrls>
+            <connectionUrl secureStorageNodeId="59962045-3db6-42a1-861f-5612bfcf0037" url="google:user=vbevara@incapsulate.com;accessToken={accessToken};refreshToken={refreshToken};expiry=1545832840000"/>
+          </connectionUrls>
+        </connection>
+      </connections>
+    </connectionClass>
   </connectionClasses>
   <browserConfigurations>
     <browserConfiguration adjustBrowserWidthForChromeIde="true" browserHeight="0" browserWidth="0" name="Full Screen">

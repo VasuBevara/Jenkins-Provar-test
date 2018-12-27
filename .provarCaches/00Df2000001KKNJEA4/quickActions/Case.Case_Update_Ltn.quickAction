@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><QuickAction xmlns="http://soap.sforce.com/2006/04/metadata"
+   >
+ <fullName>Case.Case_Update_Ltn</fullName>
+    <height>250</height>
+  <isProtected>false</isProtected>
+ <label>Update</label>
+ <lightningComponent>CaseUpdateLtnBtn</lightningComponent>
+ <optionsCreateFeedItem>false</optionsCreateFeedItem>
+         <type>LightningComponent</type>
+ <width>-100</width>
+</QuickAction>

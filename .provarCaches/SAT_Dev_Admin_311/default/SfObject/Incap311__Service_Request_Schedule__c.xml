@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfObject creatable="true" deleteable="true" keyPrefix="a0a" label="Service Request Schedule" labelPlural="Service Request Schedules" layoutable="true" metadataLabel="Service Request Schedule" n="Incap311__Service_Request_Schedule__c" queryable="true" retrieveable="true" s="" searchLayoutable="true" t="Service Request Schedule (a0a)" updatable="true" urlDetail="https://incapsulate311-sat-dev-ed.my.salesforce.com/{ID}" urlEdit="https://incapsulate311-sat-dev-ed.my.salesforce.com/{ID}/e" urlNew="https://incapsulate311-sat-dev-ed.my.salesforce.com/a0a/e">
+  <fields>
+    <sfField createable="false" editPermission="false" length="18" n="Id" t="Record ID" type="id" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="IsDeleted" t="Deleted" type="_boolean" updateable="false"/>
+    <sfField autoNumberField="true" createable="false" editPermission="false" length="80" n="Name" nameField="true" t="Service Request Schedule Name" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="CreatedDate" t="Created Date" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" length="18" n="CreatedById" relationshipName="CreatedBy" t="Created By ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" n="LastModifiedDate" t="Last Modified Date" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" length="18" n="LastModifiedById" relationshipName="LastModifiedBy" t="Last Modified By ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" n="SystemModstamp" t="System Modstamp" type="datetime" updateable="false"/>
+    <sfField length="18" n="Incap311__Service_Request__c" relationshipLabel="Service Request Schedules" relationshipName="Incap311__Service_Request__r" required="true" t="Service Request" type="reference" updateable="false">
+      <referenceTos>
+        <string>Case</string>
+      </referenceTos>
+    </sfField>
+    <sfField length="18" n="Incap311__Schedule__c" relationshipLabel="Service Request Schedules" relationshipName="Incap311__Schedule__r" required="true" t="Schedule" type="reference" updateable="false">
+      <referenceTos>
+        <string>Incap311__Schedule__c</string>
+      </referenceTos>
+    </sfField>
+    <sfField extraTypeInfo="plaintextarea" length="255" n="Incap311__Cancel_Reason__c" t="Cancel Reason" type="textarea"/>
+    <sfField n="Incap311__Is_Cancelled__c" t="Is Cancelled?" type="_boolean"/>
+    <sfField n="Incap311__Number_Of_Items__c" precision="10" t="Number Of Items" type="_double"/>
+  </fields>
+  <childRelationships>
+    <sfObjectRelationship alias="RelatedFileList" childName="AttachedContentDocument" field="LinkedEntityId" n="AttachedContentDocuments" relationshipName="AttachedContentDocuments" s="2-" t="AttachedContentDocument"/>
+    <sfObjectRelationship alias="RelatedContentNoteList" childName="AttachedContentNote" field="LinkedEntityId" n="AttachedContentNotes" relationshipName="AttachedContentNotes" s="2-" t="AttachedContentNote"/>
+    <sfObjectRelationship alias="RelatedActivityAttachmentList" childName="Attachment" field="ParentId" n="Attachments" relationshipName="Attachments" s="2-" t="Attachment"/>
+    <sfObjectRelationship alias="RelatedNoteList" childName="CombinedAttachment" field="ParentId" n="CombinedAttachments" relationshipName="CombinedAttachments" s="2-" t="CombinedAttachment"/>
+    <sfObjectRelationship childName="ContentDocumentLink" field="LinkedEntityId" n="ContentDocumentLinks" relationshipName="ContentDocumentLinks" s="2-" t="ContentDocumentLink"/>
+    <sfObjectRelationship childName="DuplicateRecordItem" field="RecordId" n="DuplicateRecordItems" relationshipName="DuplicateRecordItems" s="2-" t="DuplicateRecordItem"/>
+    <sfObjectRelationship childName="EmailMessage" field="RelatedToId" n="Emails" relationshipName="Emails" s="2-" t="EmailMessage"/>
+    <sfObjectRelationship childName="EntitySubscription" field="ParentId" n="FeedSubscriptionsForEntity" relationshipName="FeedSubscriptionsForEntity" s="2-" t="EntitySubscription"/>
+    <sfObjectRelationship alias="RelatedEntityHistoryList" childName="Incap311__Service_Request_Schedule__History" field="ParentId" n="Histories" relationshipName="Histories" s="2-" t="Incap311__Service_Request_Schedule__History"/>
+    <sfObjectRelationship childName="NetworkActivityAudit" field="ParentEntityId" n="ParentEntities" relationshipName="ParentEntities" s="2-" t="NetworkActivityAudit"/>
+    <sfObjectRelationship childName="NetworkUserHistoryRecent" field="RecordId" n="NetworkUserHistoryRecentToRecord" relationshipName="NetworkUserHistoryRecentToRecord" s="2-" t="NetworkUserHistoryRecent"/>
+    <sfObjectRelationship childName="Note" field="ParentId" n="Notes" relationshipName="Notes" s="2-" t="Note"/>
+    <sfObjectRelationship childName="NoteAndAttachment" field="ParentId" n="NotesAndAttachments" relationshipName="NotesAndAttachments" s="2-" t="NoteAndAttachment"/>
+    <sfObjectRelationship alias="RelatedProcessInstanceHistory" childName="ProcessInstance" field="TargetObjectId" n="ProcessInstances" relationshipName="ProcessInstances" s="2-" t="ProcessInstance"/>
+    <sfObjectRelationship alias="RelatedProcessHistoryList" childName="ProcessInstanceHistory" field="TargetObjectId" n="ProcessSteps" relationshipName="ProcessSteps" s="2-" t="ProcessInstanceHistory"/>
+    <sfObjectRelationship childName="RecordAction" field="RecordId" n="RecordActions" relationshipName="RecordActions" s="2-" t="RecordAction"/>
+    <sfObjectRelationship childName="TopicAssignment" field="EntityId" n="TopicAssignments" relationshipName="TopicAssignments" s="2-" t="TopicAssignment"/>
+  </childRelationships>
+  <recordTypes>
+    <sfRecordType n="&lt;default&gt;" t="Web Record Type Mapping">
+      <children>
+        <sfLayout layoutFileName="Incap311__Service_Request_Schedule__c-Incap311__Service Request Schedule Layout" n="Primary" profileLayout="false" s="" t="Page Layout">
+          <layoutTypes>
+            <sfLayoutType layoutType="Edit" n="Edit" t="Web Layout Type">
+              <children>
+                <sfLayoutSection customLabel="false" detailHeading="false" n="Information" s="" seqNum="0" style="TwoColumnsTopToBottom" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Service Request Schedule Name" n="Service Request Schedule Name" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Name" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI label="Service Request" n="Service Request" required="true" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Service_Request__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                      <children>
+                        <sfLI label="Schedule" n="Schedule" required="true" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Schedule__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="3">
+                      <children>
+                        <sfLI label="Is Cancelled?" n="Is Cancelled?" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Is_Cancelled__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="4">
+                      <children>
+                        <sfLI label="Cancel Reason" n="Cancel Reason" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Cancel_Reason__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="5">
+                      <children>
+                        <sfLI label="Number Of Items" n="Number Of Items" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Number_Of_Items__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+              </children>
+            </sfLayoutType>
+            <sfLayoutType layoutType="Detail" n="Detail" s="2-" t="Web Layout Type">
+              <children>
+                <sfLayoutSection customLabel="false" detailHeading="false" editHeading="false" n="Information" s="" seqNum="0" style="TwoColumnsTopToBottom" t="Web Layout Section - false">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Service Request Schedule Name" n="Service Request Schedule Name" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Name" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI label="Service Request" n="Service Request" required="true" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Service_Request__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                      <children>
+                        <sfLI label="Schedule" n="Schedule" required="true" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Schedule__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="3">
+                      <children>
+                        <sfLI label="Is Cancelled?" n="Is Cancelled?" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Is_Cancelled__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="4">
+                      <children>
+                        <sfLI label="Cancel Reason" n="Cancel Reason" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Cancel_Reason__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="5">
+                      <children>
+                        <sfLI label="Number Of Items" n="Number Of Items" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Number_Of_Items__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="false" detailHeading="false" editHeading="false" n="System Information" s="" seqNum="1" style="TwoColumnsTopToBottom" t="Web Layout Section - false">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Created By ID" n="Created By ID" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="CreatedById" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Last Modified By ID" n="Last Modified By ID" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="LastModifiedById" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+              </children>
+            </sfLayoutType>
+          </layoutTypes>
+          <relatedLists/>
+          <actionLinks>
+            <sfActionLink n="Incap311__Cancel_Schedule" s=""/>
+          </actionLinks>
+          <excludeButtons>
+            <string>Submit</string>
+          </excludeButtons>
+          <customTags/>
+          <quickActionNames/>
+          <consoleComponents/>
+          <platformActionNames/>
+        </sfLayout>
+      </children>
+    </sfRecordType>
+  </recordTypes>
+  <standardActions>
+    <sfActionLink n="Accept" s=""/>
+    <sfActionLink modes="View" n="CancelEdit"/>
+    <sfActionLink modes="View" n="Clone" requiresRow="true"/>
+    <sfActionLink modes="View Incap311__Service_Request_Schedules__r" n="Delete" requiresRow="true" s="3"/>
+    <sfActionLink modes="View Incap311__Service_Request_Schedules__r" n="Edit" requiresRow="true" s="2"/>
+    <sfActionLink modes="ObjectHome" n="List" requiresRow="true"/>
+    <sfActionLink modes="ObjectHome List Incap311__Service_Request_Schedules__r" n="New"/>
+    <sfActionLink afterWaitUrl="ui:wait:timed?seconds=10" modes="View" n="SaveEdit"/>
+    <sfActionLink n="Tab" s=""/>
+    <sfActionLink modes="ObjectHome" n="View" requiresRow="true"/>
+    <sfActionLink buttonName="Incap311__Cancel_Schedule" n="Incap311__Cancel_Schedule" s="" t="Cancel Schedule"/>
+    <sfActionLink modes="View Submit" n="Submit" requiresRow="true"/>
+    <sfActionLink modes="View Remove" n="Remove"/>
+    <sfActionLink modes="View Unlock" n="Unlock" t="Unlock Record"/>
+    <sfActionLink modes="Edit New Clone" n="save" requiresRow="true" t="Save"/>
+    <sfActionLink modes="Edit New Clone" n="save_new" requiresRow="true" t="Save and New"/>
+    <sfActionLink modes="Edit New Clone" n="cancel" requiresRow="true" t="Cancel"/>
+    <sfActionLink massAction="true" modes="View List all_related_lists" n="ChangeOwnerOne" t="Change Owner"/>
+    <sfActionLink massAction="true" modes="View List" n="ChangeRecordType" t="Change Record Type"/>
+    <sfActionLink modes="View" n="email" t="Send an Email"/>
+    <sfActionLink modes="View" n="Share"/>
+    <sfActionLink modes="QuickAction" n="publishersharebutton" t="Create"/>
+    <sfActionLink modes="ObjectHome List" n="Sort"/>
+    <sfActionLink modes="ObjectHome List" n="Filter"/>
+    <sfActionLink modes="ObjectHome View" n="Search"/>
+    <sfActionLink modes="ObjectHome List" n="Import"/>
+    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
+    <sfActionLink modes="View Incap311__Service_Request_Schedules__r" n="ShowMore" t="Show More"/>
+    <sfActionLink modes="View Incap311__Service_Request_Schedules__r" n="GoToList" t="Go To List"/>
+    <sfActionLink modes="RelatedList" n="PrevPage" t="Previous Page"/>
+    <sfActionLink modes="RelatedList" n="NextPage" t="Next Page"/>
+  </standardActions>
+  <homeListColumns>
+    <string>INCAP311__SERVICE_REQUEST_SCHEDULE__C.NAME</string>
+  </homeListColumns>
+  <lookupColumns>
+    <string>INCAP311__SERVICE_REQUEST_SCHEDULE__C.NAME</string>
+  </lookupColumns>
+  <weblinks/>
+  <searchResultColumns>
+    <string>INCAP311__SERVICE_REQUEST_SCHEDULE__C.NAME</string>
+  </searchResultColumns>
+  <listViewActions/>
+</sfObject>

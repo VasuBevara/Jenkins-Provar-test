@@ -1,0 +1,1111 @@
+<apex:page standardController="Incapfs__Report__c" standardstylesheets="false" sidebar="false" showheader="false" docType="html-5.0" extensions="Incapfs.GenerateReportController" applyHtmlTag="false">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/parsley.js/2.0.7/parsley.js" type="text/javascript"></script> 
+    <apex:includescript value="{!URLFOR($Resource.Incapfs__BootStrap, 'EEC_Bootstrap/js/jquery-1.11.2.min.js')}" />
+    <apex:includescript value="https://code.jquery.com/ui/1.12.1/jquery-ui.js" />
+    <apex:includeScript value="{! $Resource.MomentJS }"/>
+    <apex:includeScript value="/support/console/40.0/integration.js"/>
+    <apex:includescript value="{!URLFOR($Resource.Incapfs__BootStrap, 'EEC_Bootstrap/js/bootstrap.min.js')}" />
+    <apex:includescript value="{!URLFOR($Resource.Incapfs__jQueryDateRangePicker, 'jquery-date-range-picker-master/dist/jquery.daterangepicker.min.js')}" />
+    <apex:includescript value="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtFRx5bE3zgystjqBb5YnDc5teloiioeM&&libraries=places"/>
+    <apex:stylesheet value="{!URLFOR($Resource.Incapfs__TableSorter, 'docs/css/jq.css')}"/>  
+    <apex:stylesheet value="{!URLFOR($Resource.Incapfs__TableSorter, 'themes/blue/style.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.Incapfs__BootStrap, 'dist/css/search-utility-bootstrap-modal.css')}"/>
+    <apex:stylesheet value="{!URLFOR($Resource.Incapfs__jQueryDateRangePicker, 'jquery-date-range-picker-master/dist/daterangepicker.min.css')}"/>
+    <apex:stylesheet value="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+    <head>
+      <apex:slds /> 
+    <style>
+        progress, progress[role] {
+            -webkit-appearance: none;        
+            -moz-appearance: none;         
+            appearance: none;        
+            border: none;        
+            background-size: auto;        
+            height: 15px;        
+            width: 100%;        
+        }
+        .btn{
+            all: none;
+        }
+        .skill-list {        
+            list-style: none;        
+            margin: 0;        
+            padding: 1em;        
+        }
+        
+        .skill {        
+            margin-bottom: 1em;        
+            position: relative;        
+        }
+        
+        .skill h3 {        
+            color: #fff;        
+            left: 1em;        
+            line-height: 1;        
+            position: absolute;        
+            top: 1em;        
+        }
+        
+        .skill ::-webkit-progress-value {        
+            -webkit-animation: bar-fill 2s;        
+            width: 0px;        
+        }
+        
+        .skill-1::-webkit-progress-value {        
+            background: #ff0000;        
+        }
+        
+        .skill-1::-webkit-progress-bar {        
+            background: #ccc;        
+        }
+        
+        .skill-2::-webkit-progress-value {        
+            background: #00ff00;        
+        }
+        
+        .skill-2::-webkit-progress-bar {        
+            background: #ccc;        
+        }
+        
+        .skill-3::-webkit-progress-value {        
+            background: #FFA500;        
+        }
+        
+        .skill-3::-webkit-progress-bar {        
+            background: #ccc;        
+        }
+        
+        @-webkit-keyframes bar-fill {        
+            0% {        
+                width: 0;        
+            }        
+        }
+        
+        @keyframes bar-fill {        
+            0% {        
+                width: 0;        
+            }        
+        }
+        
+        .accelerator [hidden], .accelerator template {
+            display: block;
+        }
+        
+        .apexp .bPageBlock.apexDefaultPageBlock .pbBody .pbSubheader{
+            background-color:#eee;
+            color:black;
+        }
+        
+        html input[type=button]:hover, input[type=reset]:hover, input[type=submit]:hover, a.arrow:hover {
+            background-color: #efefef;
+            text-decoration: none;
+        }
+        
+        html input[type=button], input[type=reset], input[type=submit], a.arrow {
+            all: initial;
+            * {
+                all: unset;
+            }
+            
+            text-align: center;
+            vertical-align: middle;
+            border: 1px solid #d8dde6;
+            position: relative;
+            background-color: #fff;
+            display: inline-block;
+            background-clip: border-box;
+            border-radius: .25rem;
+            font-size: .75rem;
+            line-height: 1.875rem;
+            color: #0070d2;
+            -webkit-appearance: none;
+            white-space: normal;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            transition: color 50ms linear,background-color 50ms linear;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            font-weight: bold;
+            font-family: 'trebuchet ms', verdana, arial;
+            text-decoration: none;
+        }
+        .slds-text-title--caps 
+        {
+          background: #e7edf4;
+          padding: 10px !important;
+          margin: 0;
+          margin-bottom:15px !important;
+        }
+        .loading-spinner 
+        {
+            display: none;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 100%;
+            height: 100%;
+            background: rgba(22, 50, 92, 0.6);
+            z-index: 9000;
+        }
+        .loading-spinner-inner 
+        {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            align-content: center;
+            height: 100%;
+            color: #ffffff;
+            text-transform: uppercase;
+		 }
+		.loading-spinner img 
+        {
+          max-width: 185px;
+        }
+    	#results-table tr:hover 
+        {
+    		cursor: pointer;
+		}
+    	#selected-results-table tr:hover 
+        {
+    		cursor: pointer;
+		}
+    </style>
+  </head>
+    <script>
+    	
+        var MAX_RESULT_SIZE ;
+        var MAX_RESULT_SIZE_EXCEEDS_MSG;
+        jQuery( document ).ready(function() 
+        {
+	    	MAX_RESULT_SIZE	=	document.getElementById('max_result_size').value;
+	        MAX_RESULT_SIZE_EXCEEDS_MSG	=	document.getElementById('max_result_size_exceeds').value + ' ' + MAX_RESULT_SIZE;
+    	});
+    	
+        function getFields(el) {
+        	jQuery('#selectedObject').val(el.options[el.selectedIndex].value);
+        	
+        	//Show loading icon
+        	toggleLoadingIcon('show');
+        	
+            updateSelectedObject(el.options[el.selectedIndex].value);
+        }
+        
+        function updateSelectedObjectCompleteHandler()
+        {
+            //Hide loading icon
+            toggleLoadingIcon('hide');
+        }
+        /**
+         * Used to handle oncomplete event of action buttons
+         * If the action is to open a VF Page then open the URL in new tab (If User is in 311 Console then open a subtab in console instead of a new tab)
+         * In case action is Invocable Apex then don't do anything
+        **/
+        function handleCallAction()
+        { 
+        	var actionType	=	document.getElementById('act').value;
+        	var vfPageUrl	=	document.getElementById('pageUrl').value;
+        	//console.log(actionType);
+        	//console.log(vfPageUrl);
+        	if(actionType!='' && actionType == 'VF_PAGE')
+        	{
+        		if (sforce.console.isInConsole()) 
+        		{
+        			sforce.console.openPrimaryTab(null,vfPageUrl,true);
+        		}
+        		else
+        		{ 
+        			window.open(vfPageUrl, '_blank'); 
+        		}
+        	}
+        }
+    
+        //Expand/Collapse a section 
+    	function toggleCollapse(element)
+    	{
+            //console.log(jQuery(element).children('span#caret-ico-down').hide());
+            if(jQuery(element).parent().parent().hasClass('slds-is-open'))
+            {
+                jQuery(element).parent().parent().removeClass('slds-is-open');
+                jQuery(element).children('span#caret-ico-down').hide();
+                jQuery(element).children('span#caret-ico-back').show();
+            }
+            else
+            {
+                jQuery(element).parent().parent().addClass('slds-is-open');
+                jQuery(element).children('span#caret-ico-down').show();
+                jQuery(element).children('span#caret-ico-back').hide();
+            }
+           
+            return false;
+        }
+    
+    	jQuery( document ).ready(function() 
+        {
+            //Show only search results and selected results action if its a saved report
+            var strReportId		=	document.getElementById('reportId').value;
+            if(strReportId!='')
+            {
+                //jQuery("#object-select,#record-filter,#filter-logic,#fields-to-display,#user-actions").removeClass('slds-is-open');
+                
+                //initialize daterangepickers and location autosuggest
+            	operatorListonChangeCompleteHandler();
+            }
+        });
+    
+    	function doSearchCompleteHandler()
+    	{
+            handleResultTableRowClick();
+            
+            //If actual matching record count is more than 10000 then we need to alert msg
+            var intTotal	=	jQuery('#actual_record_count').val();
+            
+            if(intTotal != '')
+            {
+            	intTotal	=	parseInt(intTotal);
+                
+            	if(intTotal>MAX_RESULT_SIZE)
+            	{
+            		document.getElementById("{!$Component.idForm.resultTables}").style.display='none';
+            		alert(MAX_RESULT_SIZE_EXCEEDS_MSG);
+            	}
+            }
+            
+            toggleLoadingIcon('hide');
+        }
+    	function doChangePageSizeCompleteHandler()
+    	{
+            handleResultTableRowClick();
+            
+            //hide loading icon
+            toggleLoadingIcon('hide');
+        }
+    	function getFirstPageOfRecordCompleteHandler()
+    	{
+            handleResultTableRowClick();
+            
+            //hide loading icon
+            toggleLoadingIcon('hide');
+        }
+    	function getPreviousSetOfRecordCompleteHandler()
+    	{
+            handleResultTableRowClick();
+            
+            //hide loading icon
+            toggleLoadingIcon('hide');
+        }
+    	function getNextSetOfRecordCompleteHandler()
+    	{
+            handleResultTableRowClick();
+            
+            //hide loading icon
+            toggleLoadingIcon('hide');
+        }
+    	function getLastPageOfRecordCompleteHandler()
+    	{
+            handleResultTableRowClick();
+            
+            //hide loading icon
+            toggleLoadingIcon('hide');
+        }
+    	function selectRecordCompleteHandler()
+    	{
+            handleResultTableRowClick();
+            handleSelectedResultTableRowClick();
+            
+            //hide loading icon
+            toggleLoadingIcon('hide');
+        }
+    	function deSelectRecordCompleteHandler()
+    	{
+            handleResultTableRowClick();
+            handleSelectedResultTableRowClick();
+            
+            //hide loading icon
+            toggleLoadingIcon('hide');
+        }
+    	function handleResultTableRowClick()
+    	{
+            jQuery('#results-table tbody > tr').click(function(e){
+                
+                var strTargetType	=	e.target.type;
+                console.log(strTargetType);
+                if(strTargetType!='checkbox')
+                {
+        			var strRecordId	=	jQuery(this).attr('id');
+                    if(strRecordId!='')
+                    {
+                		window.open('/'+strRecordId, '_blank'); 
+                    }
+                }
+    		});
+        }
+    
+    	function handleSelectedResultTableRowClick()
+    	{
+            jQuery('#selected-results-table tbody > tr').click(function(e){
+                
+                var strTargetType	=	e.target.type;
+                console.log(strTargetType);
+                if(strTargetType!='image')
+                {
+        			var strRecordId	=	jQuery(this).attr('id');
+                    
+                    if(strRecordId!='')
+                    {
+                		window.open('/'+strRecordId, '_blank'); 
+                    }
+                
+                }
+    		});
+        }
+        
+        function operatorListonChangeCompleteHandler()
+        {
+        	if(jQuery(".daterangepicker")[0])
+        	{
+	        	//allow textbox to select datetime range
+	        	var objConfig	=	{
+										startOfWeek: 'monday',
+										separator : ' - ',
+										format: 'YYYY-MM-DD HH:mm:ss',
+										autoClose: false,
+										time: {
+											enabled: true
+										}
+									};
+									
+				jQuery(".daterangepicker").each(function(){
+				    var elementName = jQuery(this).attr('name');
+				    jQuery('[name="'+elementName+'"]').dateRangePicker(objConfig);
+				});
+		    	
+		   	}
+	    	
+	    	//add autosuggest for address textboxes
+	    	if(jQuery(".address")[0])
+        	{
+        		jQuery(".address").each(function(){
+				    var id = jQuery(this).attr('id');
+				    var input = document.getElementById(id);
+				    var autocomplete = new google.maps.places.Autocomplete(input);
+				});
+        	}
+        	
+        	//Need to re-initialize the autosuggest since it gets vanished upon change event of operator dropdown
+        	initAutosuggest();
+        	
+            //hide loading icon
+            toggleLoadingIcon('hide');
+        }
+        
+        function filterListonChangeCompleteHandler(filter,filterRowNum)
+        {
+        	initAutosuggest();
+        	
+        	//set the value of filter field to empty
+        	var htmlId	=	filter.value + '_' + filterRowNum;
+        	var field	=	htmlId.replace(".", "\\.");
+        	console.log(jQuery('[data-id=' + field +']').val());
+            jQuery('[data-id=' + field +']').val('');
+            
+            
+            //hide loading icon
+            toggleLoadingIcon('hide');
+        } 
+        
+        /**
+         * Fire an AJAX Call to Apex controller and fetch top 200 unique values for the field
+        **/
+        function initAutosuggest()
+        {
+        	//Get selected object name
+        	var obj	=	jQuery('#selectedObject').val();
+        	
+        	var arrObject	=	obj.split(',');
+			var objName		=	arrObject[1];
+	        	
+        	var arrFiltersFields	=	document.getElementsByName('fields[]');
+        	var arrFiltersTypes		=	document.getElementsByName('types[]');
+        	var arrFiltersShowPicklist	=	document.getElementsByName('showPicklist[]');
+        	
+        	var filterFieldsLen		=	arrFiltersFields.length;
+        	
+        	for(var i=0;i<filterFieldsLen;i++)
+        	{
+        		var fieldName	=	arrFiltersFields[i].value;
+        		var fieldId		=	arrFiltersFields[i].id;
+        		
+        		var fieldType	=	arrFiltersTypes[i].value;
+        		var fieldShowPicklist	=	arrFiltersShowPicklist[i].value;
+        		
+        		//cast string to boolean and initialize autosuggest for the field only if isShowPicklist set to true
+        		var isShowPicklist = (fieldShowPicklist == 'true');
+        		
+        		if(isShowPicklist && fieldName!='')
+        		{
+        			//Fire Ajax Call
+			        Visualforce.remoting.Manager.invokeAction(
+			            '{!$RemoteAction.GenerateReportController.getAutosuggestValues}',
+			            objName,fieldName, 
+			            initAutosuggestHandler,  
+			            {escape: true,buffer:true}
+			        );
+        		}
+        	}
+        	
+        }
+        
+        
+        /**
+         * Callback function for JS Remoting for Autosuggest
+         * In order to identify the target field for callback we are adding the field name as an element in the list in the response from controller side
+        **/
+        function initAutosuggestHandler(result,event)
+        {
+        	console.log(result);
+        	//console.log(event);
+        	
+        	if (event.type === 'exception') 
+        	{
+        		console.log('autosuggest error '+event.message);
+        	}
+        	else
+        	{
+               	if(result!=null)
+        		{
+      				//Result len should be more than 1 since first element of the list would be the field name for which initAutosuggestHandler is executed
+        			if(result.length > 1)
+        			{
+        				//Get target field for which the callback is executed
+	        			var field	=	result[0];
+	        			
+	        			//remove the first element
+	        			result.splice(0, 1);
+	        			
+                        //escape the dot in the field (e.g. Account.Name would be Account\.Name. Otherwise jQuery won't be able to identify element
+                        var fieldClass	=	field.replace(".", "\\.");
+                        
+                        console.log('Initializing autosuggest for:'+fieldClass);
+                        
+	        			//init autosuggest
+			        	jQuery('.'+fieldClass).autocomplete({
+					      source: result
+					    });
+					}
+        		}
+        	}
+        }
+        
+        function toggleLoadingIcon(act)
+        {
+            if(act == 'show')
+            {
+                jQuery('.loading-spinner').css('display','block');
+            }
+            else
+            {
+                jQuery('.loading-spinner').css('display','none');
+            }
+        }
+        
+        function saveReportCompleteHandler()
+        {
+        	var btnSave	=	document.getElementById("{!$Component.idForm.btn_save_report}");
+        	btnSave.disabled	=	false;
+        	jQuery('#reportModal').modal('hide');
+        	
+        }
+        
+        function saveReportInit()
+        {
+        	//disable submit button
+        	 var btnSave	=	document.getElementById("{!$Component.idForm.btn_save_report}");
+        	 btnSave.disabled	=	true;
+        }
+    
+    	function selectAllRecordsCompleteHandler()
+    	{
+            //hide loading icon
+            toggleLoadingIcon('hide');
+        }
+    
+    	function deSelectAllRecordCompleteHandler()
+    	{
+            //hide loading icon
+            toggleLoadingIcon('hide');
+        }
+        
+    </script>
+    <body>
+       <!--<apex:pageMessage severity="Error" summary="First Error message on page" strength="1"></apex:pageMessage>-->
+        <div class="loading-spinner" data-attempts="0" style="display:none;">
+            <div class="loading-spinner-inner">
+                <img src="{!URLFOR($Asset.SLDS, 'assets/images/spinners/slds_spinner.gif')}"/>
+                <p class="loading-text">Processing Request...</p>
+            </div>
+        </div>
+        
+        <div class="slds-scope">
+        <apex:form id="idForm" style="padding: 10px;">
+        	<input type="hidden" name="selectedObject" id="selectedObject" value="{!selectedObjectName}"/>
+        	<input type="hidden" name="reportId" id="reportId" value="{!reportId}"/>
+        	<input type="hidden" name="max_result_size" id="max_result_size" value="{!reportGenerationSettings.Max_Result_Size__c}"/>
+        	<input type="hidden" name="max_result_size_exceeds" id="max_result_size_exceeds" value="{!reportGenerationSettings.Max_Result_Size_Exceeded__c}"/>
+            <!-- START Page Header-->
+             <div class="slds-page-header"> 
+                  <div class="slds-grid">
+                    <div class="slds-col slds-has-flexi-truncate">
+                      <div class="slds-media slds-no-space slds-grow">
+                        <div class="slds-media__figure">
+                         <span class="slds-icon_container slds-icon slds-icon-standard-report" title="Report Standard Icon">
+                            <img src="{!URLFOR($Asset.SLDS, 'assets/icons/standard/report_120.png')}" alt="Report Standard Icon" />
+                        </span>
+                        </div>
+                        <div class="slds-media__body">
+                          <p class="slds-text-title_caps slds-line-height_reset">{!reportGenerationSettings.Page_Type__c}</p>
+                          <h1 class="slds-page-header__title slds-m-right_small slds-align-middle slds-truncate" title="this should match the Record Title">{!reportGenerationSettings.PageTitle__c}</h1>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            <!-- END Page Header-->
+            
+            <!-- START Error block-->
+            <apex:outputPanel id="idErrorMsg">
+                <apex:messages style="color: red !important;" />
+            </apex:outputPanel>
+            <!-- END Error block-->
+            
+            <!-- START Panel for storing hidden variables-->
+            <apex:outputPanel id="actionType">
+               <input type="hidden" name="act" id="act" value="{!actionType}"/>
+               <input type="hidden" name="pageUrl" id="pageUrl" value="{!vfPageUrl}"/>
+            </apex:outputPanel>
+            <!-- END Panel for storing hidden variables-->
+            
+            
+            <div class="slds-panel slds-grid slds-grid--vertical slds-nowrap"> 
+                
+                <!-- START Object Selection Block-->
+                <div class="slds-section slds-is-open" id="object-select">
+                  <h4 class="slds-section__title">
+                    <button aria-controls="expando-unique-id" aria-expanded="true" class="slds-button slds-section__title-action" onclick="return toggleCollapse(this);">
+                      <span class="slds-icon_container" style="width: calc(100% - 14px);display: block;" >
+                          <img src="{!URLFOR($Asset.SLDS, 'assets/icons/utility/standard_objects_60.png')}" aria-hidden="true" class="slds-icon slds-icon_xx-small svg" />
+                          &nbsp;&nbsp;{!reportGenerationSettings.SelectObjectTitle__c}
+                      </span>
+                      
+                     <span class="slds-icon_container" style="display:block;width:14px;" id="caret-ico-down">
+                          <img src="{!URLFOR($Asset.SLDS, 'assets/icons/utility/chevrondown_60.png')}" aria-hidden="true" class="slds-icon slds-icon_xx-small svg" />
+                      </span>
+                        
+                      <span class="slds-icon_container" style="display:none;width:14px;" id="caret-ico-back">
+                          <img src="{!URLFOR($Asset.SLDS, 'assets/icons/utility/chevronleft_60.png')}" aria-hidden="true" class="slds-icon slds-icon_xx-small svg" />
+                      </span>
+                        
+                    </button>
+                  </h4>
+                  <div aria-hidden="false" class="slds-section__content" id="expando-unique-id">
+                    <apex:selectList id="objectValue" value="{!selectedObjectName}" size="1" multiselect="false" onchange="getFields(this);" styleClass="slds-input slds-is-required" >
+                            <apex:selectOptions value="{!listOrgObjects}"></apex:selectOptions>
+                    </apex:selectList>
+                  </div>
+                </div>
+                <!-- END Object Selection Block-->
+                
+                <!-- START Search Filters Block-->
+                <div class="slds-section slds-is-open" id="record-filter">
+                  <h4 class="slds-section__title">
+                    <button aria-controls="expando-unique-id" aria-expanded="true" class="slds-button slds-section__title-action" onclick="return toggleCollapse(this);" >
+                     <span class="slds-icon_container" style="width: calc(100% - 14px);display: block;">
+                                    <img src="{!URLFOR($Asset.SLDS, 'assets/icons/utility/filterList_60.png')}" aria-hidden="true" class="slds-icon slds-icon_xx-small svg" />
+                         			&nbsp;&nbsp;{!reportGenerationSettings.FilterDataTitle__c}
+                        </span>
+                        
+                        
+                      <span class="slds-icon_container" style="display:block;width:14px;" id="caret-ico-down">
+                          <img src="{!URLFOR($Asset.SLDS, 'assets/icons/utility/chevrondown_60.png')}" aria-hidden="true" class="slds-icon slds-icon_xx-small svg" />
+                      </span>
+                        
+                      <span class="slds-icon_container" style="display:none;width:14px;" id="caret-ico-back">
+                          <img src="{!URLFOR($Asset.SLDS, 'assets/icons/utility/chevronleft_60.png')}" aria-hidden="true" class="slds-icon slds-icon_xx-small svg" />
+                      </span>
+                        
+                    </button>
+                  </h4>
+                  <div aria-hidden="false" class="slds-section__content" id="expando-unique-id">
+                   <apex:outputPanel id="filters">                            
+                    <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                        <thead>
+                            <tr class="slds-text-title_caps">
+                                <th scope="col">
+                                    <div class="slds-truncate" title="#">#</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate" title="Field">Field</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate" title="Operator">Operator</div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate" title="Value">Value</div>
+                                </th>
+                                <th scope="col">
+                                    <!--<div class="slds-truncate" title="Value">Additional Param</div>-->
+                                </th>
+                                 <th scope="col">
+                                    <!--<div class="slds-truncate" title="Value">Additional Param</div>-->
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate" title="Action">Action</div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody> 
+                            <apex:variable value="{!0}" var="rowNumber" />                            
+                            <apex:repeat var="filter" value="{!searchFilterList}">
+                                <tr>
+                                	
+                                    <td data-label="#">
+                                    
+                                    	<!-- Setting hidden fields for entire search list -->
+	                            		<input type="hidden" name="fields[]" id="search_field_{!rowNumber}" value="{!filter.field}"/>
+	                            		<input type="hidden" name="types[]" id="search_field_type_{!rowNumber}" value="{!filter.type}"/>  
+	                            		
+                            		
+                            		
+                                        <apex:variable var="rowNumber" value="{!rowNumber+1}"/>                                        
+                                        <div class="slds-truncate" title="{!rowNumber}">{!rowNumber}</div>
+                                    </td>
+                                    <td data-label="Field">
+                                        <div class="slds-truncate" title="Field">
+                                            <apex:selectList styleClass="slds-input" value="{!filter.field}" size="1">
+                                                <apex:selectOptions value="{!listFields}"/>
+                                                <apex:actionSupport event="onchange" reRender="filters" oncomplete="filterListonChangeCompleteHandler(this,{!rowNumber});" onsubmit="toggleLoadingIcon('show');"/>
+                                            </apex:selectList> 
+                                        </div>
+                                    </td>
+                                    <td data-label="Operator">
+                                        <div class="slds-truncate" title="Operator">
+                                            <apex:selectList styleClass="slds-input" value="{!filter.operator}" size="1">
+                                                <apex:selectOptions value="{!filter.operators}"/>
+                                                <apex:actionSupport event="onchange" reRender="filters" oncomplete="operatorListonChangeCompleteHandler();" onsubmit="toggleLoadingIcon('show');" />
+                                            </apex:selectList>
+                                            
+                                            <!-- Populating showPicklist after fetching operators as per the controller logic -->
+                                            <input type="hidden" name="showPicklist[]" id="search_field_picklist_{!rowNumber}" value="{!filter.showPicklist}"/> 
+                                        </div>
+                                    </td> 
+                                    <td data-label="Value">
+                                        <div class="slds-truncate" title="Value">
+                                            <apex:inputText styleClass="slds-input {!IF(filter.operator == 'between', 'daterangepicker','')} {!filter.field}" value="{!filter.value}" rendered="{!IF(AND(filter.operator != 'nearby',NOT(filter.isPicklist)), true,false)}" html-data-id="{!filter.field}_{!rowNumber}"/>
+                                            <apex:inputText styleClass="slds-input address" value="{!filter.value}" rendered="{!IF(filter.operator == 'nearby', true,false)}" id="address" html-data-id="{!filter.field}_{!rowNumber}"/>
+                                            <!-- <apex:inputText styleClass="slds-input {!IF(filter.operator == 'between', 'daterangepicker','')}" value="{!filter.value}" rendered="{!NOT(filter.isPicklist)}"/>-->
+                                            <apex:selectList styleClass="slds-input" value="{!filter.value}" size="1" rendered="{!filter.isPicklist}" html-data-id="{!filter.field}_{!rowNumber}">
+                                                <apex:selectOptions value="{!filter.values}"/>  
+                                            </apex:selectList>
+                                        </div>
+                                    </td> 
+                                    <td data-label="Additional Value">
+                                        <div class="slds-truncate" title="Additional Value">
+                                            <apex:inputText styleClass="slds-input" value="{!filter.additionalVal}" rendered="{!IF(filter.operator == 'nearby', true,false)}" html-placeholder="Distance"/>
+                                            <!--<apex:selectList styleClass="slds-input" value="{!filter.value}" size="1" rendered="{!filter.isPicklist}">
+                                                <apex:selectOptions value="{!filter.values}"/>
+                                            </apex:selectList>-->
+                                        </div>
+                                    </td> 
+                                    <td data-label="Additional Filter">
+                                        <div class="slds-truncate" title="Additional Filter">
+                                            <apex:selectList styleClass="slds-input" value="{!filter.distanceUnit}" size="1" rendered="{!IF(filter.operator == 'nearby', true,false)}">
+                                                <apex:selectOptions value="{!filter.DistanceUnits}"/>
+                                            </apex:selectList>
+                                        </div>
+                                    </td> 
+                                    <td data-label="Delete">
+                                        <div class="slds-truncate" title="Delete">
+                                            <apex:commandButton action="{!removeFilter}" value="Delete"  rerender="filters">
+                                                <apex:param name="rowIndex" value="{!rowNumber}" />
+                                            </apex:commandButton>
+                                        </div>
+                                    </td>  
+                                </tr>                                  
+                            </apex:repeat>                                
+                        </tbody>
+                    </table>
+                </apex:outputPanel>
+                    
+                    <apex:outputPanel >
+                        <div class="slds-button-group" role="group">
+                            <apex:commandButton value="Add Criteria" action="{!addFilter}" rerender="filters" status="filterStatus" styleClass="slds-button_neutral" />  
+                            <apex:commandButton action="{!clearFilters}" title="clearFilters" value="Clear" reRender="filters" status="filterStatus" styleClass="slds-button_neutral"/>
+                        </div>
+                    </apex:outputPanel>
+                	</div>
+                </div>
+                <!-- END Search Filters Block-->
+                
+                <!-- START Filter Logic Operators Block-->
+                <div class="slds-section slds-is-open" id="filter-logic">
+                  <h4 class="slds-section__title">
+                    <button aria-controls="expando-unique-id" aria-expanded="true" class="slds-button slds-section__title-action" onclick="return toggleCollapse(this);">
+                      <span class="slds-icon_container" style="width: calc(100% - 14px);display: block;">
+                          <img src="{!URLFOR($Asset.SLDS, 'assets/icons/utility/rating_60.png')}" aria-hidden="true" class="slds-icon slds-icon_xx-small svg" />
+                          &nbsp;&nbsp;Filter Logic
+                       </span>
+                        <span class="slds-icon_container" style="display:block;width:14px;" id="caret-ico-down">
+                          <img src="{!URLFOR($Asset.SLDS, 'assets/icons/utility/chevrondown_60.png')}" aria-hidden="true" class="slds-icon slds-icon_xx-small svg" />
+                      </span>
+                        
+                      <span class="slds-icon_container" style="display:none;width:14px;" id="caret-ico-back">
+                          <img src="{!URLFOR($Asset.SLDS, 'assets/icons/utility/chevronleft_60.png')}" aria-hidden="true" class="slds-icon slds-icon_xx-small svg" />
+                      </span>
+                    </button>
+                      
+                   
+                  </h4>
+                  <div aria-hidden="false" class="slds-section__content" id="expando-unique-id">
+                    <apex:inputText styleClass="slds-input" value="{!filterLogic}"/>
+                  </div>
+                </div>
+                <!-- END Filter Logic Operators Block-->
+                
+                <!-- START Field Selection Block-->
+                
+                <div class="slds-section slds-is-open" id="fields-to-display">
+                        <h4 class="slds-section__title">
+                        <button aria-controls="expando-unique-id" aria-expanded="true" class="slds-button slds-section__title-action" onclick="return toggleCollapse(this);">
+                             <span class="slds-icon_container" style="width: calc(100% - 14px);display: block;">
+                                        <img src="{!URLFOR($Asset.SLDS, 'assets/icons/utility/overflow_60.png')}" aria-hidden="true" class="slds-icon slds-icon_xx-small svg" />
+                                 &nbsp;&nbsp;{!reportGenerationSettings.SearchFieldTitle__c}
+                             </span>
+                            
+                            
+                             <span class="slds-icon_container" style="display:block;width:14px;" id="caret-ico-down">
+                              <img src="{!URLFOR($Asset.SLDS, 'assets/icons/utility/chevrondown_60.png')}" aria-hidden="true" class="slds-icon slds-icon_xx-small svg" />
+                          </span>
+                            
+                          <span class="slds-icon_container" style="display:none;width:14px;" id="caret-ico-back">
+                              <img src="{!URLFOR($Asset.SLDS, 'assets/icons/utility/chevronleft_60.png')}" aria-hidden="true" class="slds-icon slds-icon_xx-small svg" />
+                          </span>
+                        </button>
+                      </h4>
+                        <div aria-hidden="false" class="slds-section__content" id="expando-unique-id">
+                        <apex:outputpanel id="searchfields">
+                        <c:MultiselectPicklist leftLabel="Available Fields"
+                                               leftOption="{!listAllFields}"
+                                               rightLabel="Selected Fields"
+                                               rightOption="{!listSelectedFields}"
+                                               size="14"
+                                               width="Auto"/>
+                        </apex:outputpanel>
+                        <apex:commandButton value="Search" action="{!doSearch}"  oncomplete="doSearchCompleteHandler();" styleClass="slds-button slds-button_neutral" rerender="resultTables,idErrorMsg,selectionTables,selectionTable,actions" status="filterStatus" onclick="toggleLoadingIcon('show');"/>
+                        <button id="idSave" onClick="jQuery('#reportModal').modal('show');return false;" type="button" class="slds-button slds-button_neutral" style="font-weight:bold;">Save Report</button>
+                        <div class="slds accelerator">
+                        <apex:actionFunction action="{!doSelectObject}" name="updateSelectedObject" reRender="filters,searchfields,section4" oncomplete="updateSelectedObjectCompleteHandler();">
+                            <apex:param name="selectedObject" assignTo="{!selectedObjectName}" value=""/>
+                        </apex:actionFunction>
+                       
+                    </div>
+            
+                    </div>
+                </div>
+                <!-- END Field Selection Block-->
+                
+                <!-- START Results Block-->
+            	<div class="slds-section slds-is-open" id="search-result">    
+                		<h4 class="slds-section__title">
+                            <button aria-controls="expando-unique-id" aria-expanded="true" class="slds-button slds-section__title-action" onclick="return toggleCollapse(this);">
+                              <span class="slds-icon_container" style="width: calc(100% - 14px);display: block;">
+                                    <img src="{!URLFOR($Asset.SLDS, 'assets/icons/utility/snippet_60.png')}" aria-hidden="true" class="slds-icon slds-icon_xx-small svg" />
+                                  	&nbsp;&nbsp;Search Results
+                           	  </span>
+                               <span class="slds-icon_container" style="display:block;width:14px;" id="caret-ico-down">
+                              <img src="{!URLFOR($Asset.SLDS, 'assets/icons/utility/chevrondown_60.png')}" aria-hidden="true" class="slds-icon slds-icon_xx-small svg" />
+                              </span>
+                                
+                              <span class="slds-icon_container" style="display:none;width:14px;" id="caret-ico-back">
+                                  <img src="{!URLFOR($Asset.SLDS, 'assets/icons/utility/chevronleft_60.png')}" aria-hidden="true" class="slds-icon slds-icon_xx-small svg" />
+                              </span>
+                            </button>
+                  	    </h4>
+                        <div aria-hidden="false" class="slds-section__content" id="expando-unique-id">
+                         <apex:outputPanel id="resultTables">
+                         <input type="hidden" name="actual_record_count" id="actual_record_count" value="{!totalRecords}"/>
+                    <apex:outputPanel id="resultTable" rendered="{!allResultsList != null && allResultsList.size > 0 && totalRecords<=reportGenerationSettings.Incapfs__Max_Result_Size__c}">
+                        <table class="slds-table slds-table_bordered slds-table_cell-buffer" id="results-table">
+                            <thead class="slds-text-title_caps">
+                                <th scope="col" class="slds-text-align_right" style="width:3.25rem;">
+                                    <apex:inputCheckbox value="{!selectall}">
+                                        <apex:actionSupport event="onchange"
+                                                                    action="{!selectAllRecords}" rerender="resultTables,selectionTables,idErrorMsg,results,actions,actions-inner,PaginationSection" onsubmit="toggleLoadingIcon('show');" oncomplete="selectAllRecordsCompleteHandler();">
+                                        </apex:actionSupport>                            
+                                    </apex:inputCheckbox>
+                                </th>
+                                <apex:repeat value="{!listSelectedFields}" var="header">
+                                    <th scope="col">
+                                        <!--<div class="slds-truncate" title="{!header.label}">{!header.label}</div>-->
+                                        <apex:commandLink styleClass="slds-truncate" value="{!header.label}" action="{!sortByColumn}" rerender="resultTables,idErrorMsg">
+                                            <span class="slds-icon_container">
+		                                        <img src="{!URLFOR($Asset.SLDS, 'assets/icons/utility/arrowup_60.png')}" aria-hidden="true" class="slds-icon slds-icon_xx-small svg" style="{!IF(sortField == header.value && sortOrder == 'ASC', 'display:block','display:none;')}" />
+		                                        <img src="{!URLFOR($Asset.SLDS, 'assets/icons/utility/arrowdown_60.png')}" aria-hidden="true" class="slds-icon slds-icon_xx-small svg" style="{!IF(sortField == header.value && sortOrder == 'DESC', 'display:block','display:none;')}" /> 
+		                                    </span>
+                                        	<apex:param assignTo="{!sortField}" value="{!header.value}" name="sortField"/>
+                                        </apex:commandLink>
+                                    </th>
+                                </apex:repeat>
+                            </thead>
+                            <tbody>
+                                <apex:variable var="count" value="{!0}"   /> 
+                                <apex:repeat value="{!allResultsList}" var="result">
+                                    <tr id="{!result.result}">
+                                        <td role="gridcell" class="slds-text-align_right" style="width:3.25rem;">
+                                            <apex:inputCheckbox value="{!result.isSelected}">
+                                                <apex:actionSupport event="onchange"
+                                                                    action="{!selectRecord}" rerender="resultTables,selectionTables,idErrorMsg,results,actions,actions-inner,PaginationSection" oncomplete="selectRecordCompleteHandler();" onsubmit="toggleLoadingIcon('show');">
+                                                    <apex:param id="selectedIndex" name="selectedIndex" value="{!count}"
+                                                                assignTo="{!selectedIndex}"/>
+                                                </apex:actionSupport>
+                                            </apex:inputCheckbox>
+                                            <apex:variable var="count" value="{!count+1}"/>
+                                        </td>
+                                        <apex:repeat value="{!listSelectedFields}" var="resultField">
+                                            <td role="gridcell">
+                                                <div class="slds-truncate" title="{!result.result[resultField.value]}">
+                                                    <apex:outputField value="{!result.result[resultField.value]}" rendered="{!result.result[resultField.value] != null}"/>
+                                                     <!-- <apex:outputText value="{!IF(result.result[resultField.value] == null,'',result.result[resultField.value])}"/>  -->
+                                                </div>
+                                            </td>
+                                        </apex:repeat>
+                                    </tr>
+                                </apex:repeat>
+                            </tbody>
+                        </table> 
+                        
+                        <apex:outputPanel id="PaginationSection">
+                            <table width="100%">
+                                <tr>
+                                    <td>
+                                        <apex:outputText value="Show" styleClass="slds-form-element__label"/>
+                                        <apex:selectList size="1" value="{!pageSize}"  styleClass="slds-input" style="width:100px;margin-right:25px">
+                                            <apex:actionSupport event="onchange" action="{!doChangePageSize}" reRender="resultTables" status="pageSizeStatus" oncomplete="doChangePageSizeCompleteHandler();" onsubmit="toggleLoadingIcon('show');"/>
+                                            
+                                            <apex:selectOption itemValue="10" itemLabel="10"/>
+                                            <apex:selectOption itemValue="25" itemLabel="25"/>
+                                            <apex:selectOption itemValue="50" itemLabel="50"/>
+                                            <apex:selectOption itemValue="100" itemLabel="100"/>
+                                            <apex:selectOption itemValue="200" itemLabel="200"/>
+                                        </apex:selectList> 
+                                        
+                                        <apex:outputText value="Page: {!RecordCurrentPage} of {!RecordTotalPages}" styleClass="slds-form-element__label" />
+                                        
+                                    </td>
+                                    <td align="center">
+                                        
+                                        <apex:outputText value="◄◄" rendered="{!IF(RecordCurrentPage != 1, false, true)}" style="margin: 0 10px 0 0;color:#A8A8A8" />
+                                        <apex:commandButton styleClass="slds-button slds-button_neutral" action="{!getFirstPageOfRecord}" value="◄◄" rendered="{!IF(RecordCurrentPage == 1, false, true)}" rerender="resultTables" style="margin: 0 10px 0 0;text-decoration:none;" oncomplete="getFirstPageOfRecordCompleteHandler();" onclick="toggleLoadingIcon('show');" />
+                                        <apex:outputText value="◄ Previous" rendered="{!NOT(RecordHasPrevious)}" style="margin: 0 5px 0 0;color:#A8A8A8" />
+                                        <apex:commandButton styleClass="slds-button slds-button_neutral" action="{!getPreviousSetOfRecord}" value="◄ Previous" rendered="{!RecordHasPrevious}" rerender="resultTables" style="margin: 0 5px 0 0;text-decoration:none;" oncomplete="getPreviousSetOfRecordCompleteHandler();" onclick="toggleLoadingIcon('show');" />
+                                        
+                                        <apex:commandButton styleClass="slds-button slds-button_neutral" action="{!getNextSetOfRecord}" value="Next ►" rendered="{!RecordHasNext}" rerender="resultTables" style="margin: 0 0 0 5px;text-decoration:none;" oncomplete="getNextSetOfRecordCompleteHandler();" onclick="toggleLoadingIcon('show');" />
+                                        <apex:outputText value="Next ►" rendered="{!NOT(RecordHasNext)}" style="margin: 0 0 0 5px;color:#A8A8A8" />
+                                        <apex:outputText value="►►" rendered="{!IF(RecordCurrentPage >= RecordTotalPages, true, false)}" style="margin: 0 0 0 10px;color:#A8A8A8" />
+                                        <apex:commandButton styleClass="slds-button slds-button_neutral" action="{!getLastPageOfRecord}" value="►►" rendered="{!IF(RecordCurrentPage < RecordTotalPages, true, false)}" rerender="resultTables" style="margin: 0 0 0 10px;text-decoration:none;" oncomplete="getLastPageOfRecordCompleteHandler();" onclick="toggleLoadingIcon('show');" />
+                                        
+                                    </td>
+                                    <td align="right" style="text-align:right">                                        
+                                        <apex:outputText value="Total Records: {!RecordCount}" styleClass="slds-form-element__label"/>                                        
+                                    </td>
+                                </tr>                                
+                            </table>
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+                </apex:outputPanel>
+             
+              </div>
+            </div>
+            <!-- END Results Block--> 
+             
+            <!-- START Actions(e.g. Close Case,Generate PDF) Block-->
+                <apex:outputPanel id="actions">
+                   <apex:outputPanel id="actions-inner" rendered="{!listSelectedResult != null && listSelectedResult.size > 0}">
+                       
+                       <div class="slds-section slds-is-open" id="user-actions">    
+                			<h4 class="slds-section__title">
+                                <button aria-controls="expando-unique-id" aria-expanded="true" class="slds-button slds-section__title-action" onclick="return toggleCollapse(this);">
+                                  <span class="slds-icon_container" style="width: calc(100% - 14px);display: block;">
+                                            <img src="{!URLFOR($Asset.SLDS, 'assets/icons/utility/touch_action_60.png')}" aria-hidden="true" class="slds-icon slds-icon_xx-small svg" />
+                                      		&nbsp;&nbsp;Actions
+                                   </span>
+                                   
+                                    <span class="slds-icon_container" style="display:block;width:14px;" id="caret-ico-down">
+                                      <img src="{!URLFOR($Asset.SLDS, 'assets/icons/utility/chevrondown_60.png')}" aria-hidden="true" class="slds-icon slds-icon_xx-small svg" />
+                                  </span>
+                                    
+                                  <span class="slds-icon_container" style="display:none;width:14px;" id="caret-ico-back">
+                                      <img src="{!URLFOR($Asset.SLDS, 'assets/icons/utility/chevronleft_60.png')}" aria-hidden="true" class="slds-icon slds-icon_xx-small svg" />
+                                  </span>
+                                </button>
+                  	    	</h4>
+                           <div aria-hidden="false" class="slds-section__content" id="expando-unique-id">
+                                    <apex:repeat value="{!listActionSetting}" var="actionSetting">
+                                        <apex:commandLink styleClass="slds-button slds-button_brand"  value="{!actionSetting.MasterLabel}" action="{!callAction}" rerender="idErrorMsg,actionType" oncomplete="handleCallAction();" html-layout-padding="true" html-flex-order-sm="1" html-flex-order-md="1" html-md-button="true">
+                                            <apex:param name="actionId" value="{!actionSetting.Id}" assignTo="{!actionId}"/>
+                                        </apex:commandLink>
+                                    </apex:repeat>
+                                
+                            </div>
+                        </div>
+                       
+                   </apex:outputPanel>
+                </apex:outputPanel>
+               <!-- END Actions(e.g. Close Case,Generate PDF) Block-->
+              
+           
+            <!-- START Selected Results Block-->
+            <div class="slds-section slds-is-open" id="selected-records">    
+                     <h4 class="slds-section__title">
+                         <button aria-controls="expando-unique-id" aria-expanded="true" class="slds-button slds-section__title-action" onclick="return toggleCollapse(this);">
+                              <span class="slds-icon_container" style="width: calc(100% - 14px);display: block;">
+                                    <img src="{!URLFOR($Asset.SLDS, 'assets/icons/utility/mark_all_as_read_60.png')}" aria-hidden="true" class="slds-icon slds-icon_xx-small svg" />
+                                     &nbsp;&nbsp;Selected Results
+                        	  </span>
+                             <span class="slds-icon_container" style="display:block;width:14px;" id="caret-ico-down">
+                                      <img src="{!URLFOR($Asset.SLDS, 'assets/icons/utility/chevrondown_60.png')}" aria-hidden="true" class="slds-icon slds-icon_xx-small svg" />
+                                  </span>
+                                    
+                                  <span class="slds-icon_container" style="display:none;width:14px;" id="caret-ico-back">
+                                      <img src="{!URLFOR($Asset.SLDS, 'assets/icons/utility/chevronleft_60.png')}" aria-hidden="true" class="slds-icon slds-icon_xx-small svg" />
+                                  </span>
+                         </button>
+                     </h4>
+                     <div aria-hidden="false" class="slds-section__content" id="expando-unique-id">
+                    <apex:outputPanel id="selectionTables">
+                        <apex:outputPanel id="selectionTable" rendered="{!listSelectedResult != null && listSelectedResult.size > 0}">
+                            <table class="slds-table slds-table_bordered slds-table_cell-buffer" id="selected-results-table">
+                                <thead class="slds-text-title_caps">
+                                    <th scope="col" class="slds-text-align_right">
+                                        <!--<div class="slds-truncate" title="#"></div>-->
+                                        <div class="slds-truncate" title="#">
+                                        	<apex:commandButton reRender="resultTables,selectionTables,actions,actions-inner" title="Remove All Records" styleClass="slds-button slds-button_icon" action="{!deSelectAllRecord}" image="{!URLFOR($Asset.SLDS, 'assets/icons/utility/close_60.png')}" style="height:15px;width:15px;" oncomplete="deSelectAllRecordCompleteHandler();" onclick="toggleLoadingIcon('show');" ></apex:commandButton>
+                                        </div>  
+                                    </th>
+                                    <apex:repeat value="{!listSelectedFields}" var="header">
+                                        <th scope="col">
+                                            <div class="slds-truncate" title="{!header.label}">{!header.label}</div>
+                                        </th>
+                                    </apex:repeat>
+                                </thead>
+                                <tbody>
+                                    <apex:variable var="count" value="{!0}"   /> 
+                                    <apex:repeat value="{!listSelectedResultToShow}" var="result">
+                                        <tr id="{!result.result}">
+                                            <td role="gridcell" class="slds-text-align_right" style="width:3.25rem;">
+                                                <!--<apex:inputCheckbox value="{!result.isSelected}">
+                                                    <apex:actionSupport event="onchange"
+                                                                        action="{!deSelectRecord}" rerender="resultTables,selectionTables">
+                                                        <apex:param id="selectedIndex" name="selectedIndex" value="{!count}"
+                                                                    assignTo="{!selectedIndex}"/>
+                                                    </apex:actionSupport>
+                                                </apex:inputCheckbox>-->
+                                                
+                                                <apex:commandButton reRender="resultTables,selectionTables,actions,actions-inner" title="Remove Record" styleClass="slds-button slds-button_icon" action="{!deSelectRecord}" image="{!URLFOR($Asset.SLDS, 'assets/icons/utility/close_60.png')}" style="height:15px;width:15px;" oncomplete="deSelectRecordCompleteHandler();" onclick="toggleLoadingIcon('show');" >
+                                                    
+                                                        <apex:param id="selectedIndex" name="selectedIndex" value="{!count}"
+                                                                    assignTo="{!selectedIndex}"/>
+                                                        <!--<span class="slds-icon_container">
+                                                            <img src="{!URLFOR($Asset.SLDS, 'assets/icons/utility/close_60.png')}" aria-hidden="true" class="slds-icon slds-icon_xx-small svg" />
+                                                        </span>-->
+                                                   
+                                                </apex:commandButton>
+                                               
+                                                <apex:variable var="count" value="{!count+1}"/>
+                                            </td>
+                                            <apex:repeat value="{!listSelectedFields}" var="resultField">
+                                                <td role="gridcell">
+                                                    <div class="slds-truncate" title="{!result.result[resultField.value]}">
+                                                        <apex:outputField value="{!result.result[resultField.value]}" rendered="{!result.result[resultField.value] != null}"/>  
+                                                        <!-- <apex:outputText value="{!IF(result.result[resultField.value] == null,'',result.result[resultField.value])}"/>-->
+                                                    </div>
+                                                </td>
+                                            </apex:repeat>
+                                        </tr>
+                                    </apex:repeat>
+                                </tbody>
+                            </table>
+                            
+                            <apex:outputPanel >
+	                            <table width="100%" align="center" style="margin-top:15px;">
+	                                <tr>
+	                                    <td align="center">
+	                                        <apex:outputText value="◄ Previous" rendered="{!NOT(SelectedResultsHasPrevious)}" style="margin: 0 5px 0 0;color:#A8A8A8" />
+	                                        <apex:commandButton styleClass="slds-button slds-button_neutral" action="{!getSelectedResultsPreviousPage}" value="◄ Previous" rendered="{!SelectedResultsHasPrevious}" rerender="selectionTables,selectionTable" style="margin: 0 5px 0 0;text-decoration:none;" oncomplete="getPreviousSetOfRecordCompleteHandler();" onclick="toggleLoadingIcon('show');" />
+	                                        
+	                                        <apex:commandButton styleClass="slds-button slds-button_neutral" action="{!getSelectedResultsNextPage}" value="Next ►" rendered="{!SelectedResultsHasNext}" rerender="selectionTables,selectionTable" style="margin: 0 0 0 5px;text-decoration:none;" oncomplete="getNextSetOfRecordCompleteHandler();" onclick="toggleLoadingIcon('show');" />
+	                                        <apex:outputText value="Next ►" rendered="{!NOT(SelectedResultsHasNext)}" style="margin: 0 0 0 5px;color:#A8A8A8" />
+	                                        	                                        
+	                                    </td>
+	                                    <td align="right" style="text-align:right">                                        
+	                                        <apex:outputText value="Total Records: {!totalSelectedRecords}" styleClass="slds-form-element__label"/>                                        
+	                                    </td>
+	                                    
+	                                   
+	                                </tr>                                
+	                            </table>
+                        </apex:outputPanel>
+                        
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+                </div>
+                </div>
+                <!-- END Selected Results Block-->
+                
+              
+                
+            </div>
+                   
+            <apex:outputPanel id="idReportModal" >
+                
+                <!-- START Save Report Modal-->
+                <div class="demo-only" id="reportModal" style="height:640px;display:none">
+                    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                        <div class="slds-modal__container">
+                            <header class="slds-modal__header">                            
+                                 <h1 id="id-of-modalheader-h2" class="slds-page-header__title slds-truncate slds-align-middle">Save Report</h1>
+                            </header>
+                            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                                <apex:outputText value="Report Name: " style="slds-form-element__label"/>                                                            
+                                <apex:inputText value="{!reportName}" styleClass="slds-input" id="idReportName"/>
+                                
+                                <apex:outputText value="Comments: " style="slds-form-element__label"/>     
+                                <apex:inputText styleClass="slds-input" value="{!comments}" id="idComments"/>
+                            </div>
+                            <footer class="slds-modal__footer">
+                                <apex:commandButton styleClass="slds-button slds-button_brand"  value="Save" action="{!saveReport}" html-layout-padding="true" html-flex-order-sm="1" html-flex-order-md="1" html-md-button="true" oncomplete="saveReportCompleteHandler();" onclick="saveReportInit();" id="btn_save_report" />
+                                <button aria-label="Back" onClick="jQuery('#reportModal').modal('hide');" class="slds-button slds-button_neutral" data-dismiss="modal" type="button" >Cancel </button>  
+                            </footer>
+                        </div>
+                    </section>
+                    <div class="slds-backdrop slds-backdrop_open"></div>
+                </div>
+                <!-- END Save Report Modal-->
+                
+            </apex:outputPanel>
+            
+            <script>
+            $j = jQuery.noConflict();
+            </script>
+        </apex:form>
+        </div>
+    </body>
+    <script>
+</script>
+    </html>
+</apex:page>

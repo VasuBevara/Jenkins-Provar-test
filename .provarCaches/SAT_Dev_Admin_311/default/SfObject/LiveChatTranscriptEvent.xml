@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfObject creatable="true" deleteable="true" detailsLoaded="false" editPermission="false" keyPrefix="0DZ" label="Live Chat Transcript Event" labelPlural="Live Chat Transcript Events" n="LiveChatTranscriptEvent" queryable="true" readPermission="false" retrieveable="true" s="" t="Live Chat Transcript Event (0DZ)" updatable="true">
+  <standardActions>
+    <sfActionLink modes="ObjectHome LiveChatTranscriptEvents" n="New"/>
+    <sfActionLink modes="View LiveChatTranscriptEvents" n="Edit" requiresRow="true" s="2"/>
+    <sfActionLink modes="View LiveChatTranscriptEvents" n="Delete" requiresRow="true" s="3"/>
+    <sfActionLink massAction="true" modes="View List all_related_lists" n="ChangeOwnerOne" t="Change Owner"/>
+    <sfActionLink modes="View LiveChatTranscriptEvents" n="ShowMore" t="Show More"/>
+    <sfActionLink modes="View LiveChatTranscriptEvents" n="GoToList" t="Go To List"/>
+    <sfActionLink modes="RelatedList" n="PrevPage" t="Previous Page"/>
+    <sfActionLink modes="RelatedList" n="NextPage" t="Next Page"/>
+  </standardActions>
+</sfObject>

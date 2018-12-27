@@ -1,0 +1,88 @@
+<apex:page showHeader="false"
+              sidebar="false"
+              standardStylesheets="false"
+              applyHtmlTag="false"
+              applyBodyTag="false">
+              <head>
+                
+                  
+                    <apex:stylesheet value="{! URLFOR($Resource.talkBack, 'main.1a658df85b59596cdfb0.css') }" />
+                  
+                
+                
+                  
+                    <meta name="viewport" content="width=device-width, initial-scale=1" />
+                  
+                
+              </head>
+              <body>
+                
+                  <apex:remoteObjects jsNamespace="IncapTalkBack"
+                      
+                    >
+                    
+                      
+                      
+                      
+                      <apex:remoteObjectModel name="IncapTalkBack__Survey_Response__c" fields="IncapTalkBack__Answer__c,IncapTalkBack__Survey_Question__c,IncapTalkBack__Survey_Intake__c" />
+                    
+                      
+                      
+                      
+                      <apex:remoteObjectModel name="IncapTalkBack__Survey_Intake__c" fields="IncapTalkBack__Survey__c,IncapTalkBack__Contact__c,IncapTalkBack__Case__c" />
+                    
+                      
+                      
+                      
+                      <apex:remoteObjectModel name="IncapTalkBack__Survey__c" fields="Id,IncapTalkBack__UUID__c,IncapTalkBack__Show_Landing_Page__c,IncapTalkBack__Title__c,IncapTalkBack__Welcome_Message__c,IncapTalkBack__Logo_URL__c,IncapTalkBack__Show_Survey_Header__c,IncapTalkBack__Show_Progress_Bar__c,IncapTalkBack__Questions_Per_Page__c,IncapTalkBack__Show_Survey_Summary__c,IncapTalkBack__Header_Color__c,IncapTalkBack__Submit_Success_Body__c,IncapTalkBack__Submit_Success_Title__c,IncapTalkBack__Show_Case_Information__c,IncapTalkBack__Show_Contact_Information__c,IncapTalkBack__Restrict_Intake_Case__c,IncapTalkBack__Restrict_Intake_Contact__c" />
+                    
+                      
+                      
+                      
+                      <apex:remoteObjectModel name="IncapTalkBack__Survey_Question__c" fields="Id,IncapTalkBack__Question__c,IncapTalkBack__Question_Data_Type__c,IncapTalkBack__Question_Label__c,IncapTalkBack__Survey__c,IncapTalkBack__Survey_Title__c,IncapTalkBack__Order__c,IncapTalkBack__Question_Is_Required__c,IncapTalkBack__Active__c" />
+                    
+                      
+                      
+                      
+                      <apex:remoteObjectModel name="IncapTalkBack__Question__c" fields="Id,IncapTalkBack__Data_Type__c,IncapTalkBack__Is_Required__c,IncapTalkBack__Label__c,IncapTalkBack__Picklist_Values__c" />
+                    
+                      
+                      
+                      
+                      <apex:remoteObjectModel name="Case" fields="Id,Description,CaseNumber" />
+                    
+                      
+                      
+                      
+                      <apex:remoteObjectModel name="Contact" fields="Id,Name,Email" />
+                    
+                  </apex:remoteObjects>
+                
+                
+                  <div id="app"></div>
+                
+                <script>
+                  window['__STATIC_RESOURCE_ZIP'] = '{! URLFOR($Resource.talkBack) }';
+                  window['__ACCESS_TOKEN'] = '{!$Api.Session_ID}';
+                  window['USER_INFO'] = {
+                    display_name: '{! $User.FirstName } {! $User.LastName }',
+                    first_name: '{! $User.FirstName }',
+                    last_name: '{! $User.LastName }',
+                    nick_name: '{! $User.CommunityNickname }',
+                    addr_country: '{! $User.Country }',
+                    email: '{! $User.Email }',
+                    mobile_phone: '{! $User.MobilePhone }',
+                    user_id: '{! $User.Id }'
+                  };
+                  
+                </script>
+                
+                  
+                    <script src="{! URLFOR($Resource.talkBack, 'vendor.js') }"></script>
+                  
+                    <script src="{! URLFOR($Resource.talkBack, 'main.js') }"></script>
+                  
+                
+                
+              </body>
+            </apex:page>

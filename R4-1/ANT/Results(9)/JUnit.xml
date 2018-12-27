@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="R4-1/tests" tests="7" failures="1" skipped="0" hostname="DESKTOP-FH6FHVE" time="1679.179" timestamp="Thu Dec 27 11:47:39 IST 2018">
+	<properties>
+		<property name="excludeCallableTestCases" value="true"/>
+		<property name="testEnvironment" value=""/>
+		<property name="pluginOutputLevel" value="WARNING"/>
+		<property name="projectPath" value=".."/>
+		<property name="salesforceMetadataCache" value="Reuse"/>
+		<property name="resultsPathDisposition" value="Increment"/>
+		<property name="testOutputLevel" value="WARNING"/>
+		<property name="webBrowserType" value="Google Chrome"/>
+		<property name="resultsPath" value="../ANT/Results"/>
+		<property name="webBrowserConfiguration" value="Full Screen"/>
+		<property name="projectCachePath" value="C:\Users\Incapsulate\git\Jenkins-Provar-test\R4-1\ANT\..\..\.provarCaches"/>
+	</properties>
+	<testcase classname="tests/ActivityConsole\C1410_C1450-AbleToAssociateOutcomeWithActivity.testcase" name="C1410_C1450-AbleToAssociateOutcomeWithActivity.testcase" time="447.85">
+	</testcase>
+	<testcase classname="tests/ActivityConsole\C1448-CheckIfOutcomeReasonSelectionIsDisplayedOutcomeSelection.testcase" name="C1448-CheckIfOutcomeReasonSelectionIsDisplayedOutcomeSelection.testcase" time="190.782">
+	</testcase>
+	<testcase classname="tests/ActivityConsole\C1449-OutcomeReasonCommentSectionIsDisplayedAndOutcomeIsSavedOnlyWhenCommentsAreSuppliedANDSaveIsNotClickableTillAllmedatoryOutcomeQuestionsAreNotAnswered1.testcase" name="C1449-OutcomeReasonCommentSectionIsDisplayedAndOutcomeIsSavedOnlyWhenCommentsAreSuppliedANDSaveIsNotClickableTillAllmedatoryOutcomeQuestionsAreNotAnswered1.testcase" time="171.74">
+	</testcase>
+	<testcase classname="tests/ActivityConsole\C1458-CheckIfFinishDateIsPopulatedAndSavedOnOutomeSelection.testcase" name="C1458-CheckIfFinishDateIsPopulatedAndSavedOnOutomeSelection.testcase" time="180.156">
+		<failure message="Execution failed"><![CDATA[Assertion failed.  (expected) 12/28/2018 12:03 AM contains 12/27/2018 (actual)]]></failure>
+	</testcase>
+	<testcase classname="tests/ActivityConsole\C1459-CheckIfActivitiesHasStatusBasedOnOutCome.testcase" name="C1459-CheckIfActivitiesHasStatusBasedOnOutCome.testcase" time="237.887">
+	</testcase>
+	<testcase classname="tests/ActivityConsole\C1462_C1463-CheckIfActivitiesHaveInternalAndExternalComments.testcase" name="C1462_C1463-CheckIfActivitiesHaveInternalAndExternalComments.testcase" time="209.931">
+	</testcase>
+	<testcase classname="tests/ActivityConsole\C1468_C1461-CheckIfProvidingFinishDateEarlierThanCreatedIsNotAccepted.testcase" name="C1468_C1461-CheckIfProvidingFinishDateEarlierThanCreatedIsNotAccepted.testcase" time="191.538">
+	</testcase>
+</testsuite>

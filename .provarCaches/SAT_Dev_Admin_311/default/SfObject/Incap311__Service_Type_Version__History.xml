@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfObject label="History: Service Type Version" labelPlural="History: Service Type Version" n="Incap311__Service_Type_Version__History" queryable="true" retrieveable="true" s="" t="History: Service Type Version">
+  <fields>
+    <sfField createable="false" editPermission="false" length="18" n="Id" t="Entity History ID" type="id" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="IsDeleted" t="Deleted" type="_boolean" updateable="false"/>
+    <sfField createable="false" editPermission="false" length="18" n="ParentId" relationshipName="Parent" required="true" t="Parent ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>Incap311__Service_Type_Version__c</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" length="18" n="CreatedById" relationshipName="CreatedBy" t="Created By ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" n="CreatedDate" t="Created Date" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" length="255" n="Field" required="true" restrictedPicklist="true" t="Changed Field" type="picklist" updateable="false">
+      <picklistEntryIds>1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84</picklistEntryIds>
+      <picklistEntries>
+        <sfPLE id="1" n="Incap311__Alert_Validations__c" s="" t="Alert Validations"/>
+        <sfPLE id="2" n="Incap311__Allow_Citizen_Web_Intake__c" s="" t="Allow Citizen Web Intake"/>
+        <sfPLE id="3" n="AutorabitExtId__c" s=""/>
+        <sfPLE id="4" n="created" s="" t="Created."/>
+        <sfPLE id="5" n="Incap311__Days_Of_Week__c" s="" t="Days Of Week"/>
+        <sfPLE id="6" n="Incap311__Default_Layers__c" s="" t="Default Layers"/>
+        <sfPLE id="7" n="Incap311__Default_Method__c" s="" t="Default Method"/>
+        <sfPLE id="8" n="Incap311__Default_Priority__c" s="" t="Default Priority"/>
+        <sfPLE id="9" n="Incap311__Default_Status__c" s="" t="Default Status"/>
+        <sfPLE id="10" n="Incap311__Dependencies__c" s="" t="Dependencies"/>
+        <sfPLE id="11" n="Incap311__Email_Body_Close__c" s="" t="DEPRECATED - Email Body (Close)"/>
+        <sfPLE id="12" n="Incap311__Email_Body_Create__c" s="" t="DEPRECATED - Email Body (Create)"/>
+        <sfPLE id="13" n="Incap311__Email_Closing_Close__c" s="" t="DEPRECATED - Email Closing (Close)"/>
+        <sfPLE id="14" n="Incap311__Email_Closing_Create__c" s="" t="DEPRECATED - Email Closing (Create)"/>
+        <sfPLE id="15" n="Incap311__Email_Intro_Close__c" s="" t="DEPRECATED - Email Intro (Close)"/>
+        <sfPLE id="16" n="Incap311__Email_Intro_Create__c" s="" t="DEPRECATED - Email Intro (Create)"/>
+        <sfPLE id="17" n="Incap311__Distribute_On__c" s="" t="Distribute On"/>
+        <sfPLE id="18" n="Incap311__Distribution_Matching_del__c" s="" t="Distribution Matching"/>
+        <sfPLE id="19" n="Incap311__Duplicate_Detection_Method__c" s="" t="Duplicate Detection Method"/>
+        <sfPLE id="20" n="Incap311__Duplicate_Layers_JSON__c" s="" t="Duplicate Layers JSON"/>
+        <sfPLE id="21" n="Incap311__Duplicate_Match_Street__c" s="" t="Duplicate Match Street"/>
+        <sfPLE id="22" n="Incap311__Duplicate_Oldest_Index__c" s="" t="Duplicate Oldest Index"/>
+        <sfPLE id="23" n="Incap311__Duplicate_Radius_feet__c" s="" t="Duplicate Radius (feet)"/>
+        <sfPLE id="24" n="Incap311__Duplicate_Statuses__c" s="" t="Duplicate Statuses"/>
+        <sfPLE id="25" n="Incap311__Duplicate_Threshold_Period_days__c" s="" t="Duplicate Threshold Period (days)"/>
+        <sfPLE id="26" n="Incap311__Duplicate_Threshold_Period_hours__c" s="" t="Duplicate Threshold Period (hours)"/>
+        <sfPLE id="27" n="Incap311__Email_Template_Id_for_Close__c" s="" t="Email Template Id for Close"/>
+        <sfPLE id="28" n="Incap311__Email_Template_Id_for_Create__c" s="" t="Email Template Id for Create"/>
+        <sfPLE id="29" n="Incap311__Email_Template_Id_for_Update__c" s="" t="Email Template Id for Update"/>
+        <sfPLE id="30" n="Incap311__Enable_Business_Hours__c" s="" t="Enable Business Hours"/>
+        <sfPLE id="31" n="Incap311__Enable_Distribution_del__c" s="" t="Enable Distribution"/>
+        <sfPLE id="32" n="Incap311__Enable_Distribution_Updates__c" s="" t="Enable Distribution Updates"/>
+        <sfPLE id="33" n="Incap311__Enable_Operational_SLA__c" s="" t="Enable Operational SLA"/>
+        <sfPLE id="34" n="Incap311__Enable_Sub_Units__c" s="" t="Enable Sub Units"/>
+        <sfPLE id="35" n="feedEvent" s="" t="Feed event"/>
+        <sfPLE id="36" n="Incap311__Generate_All_Questions__c" s="" t="Generate All Questions"/>
+        <sfPLE id="37" n="Incap311__Geo_Validations__c" s="" t="Geo Validations"/>
+        <sfPLE id="38" n="Incap311__Group__c" s="" t="Group"/>
+        <sfPLE id="39" n="Incap311__Hide_Contact__c" s="" t="Hide Contact"/>
+        <sfPLE id="40" n="Incap311__Hide_Location__c" s="" t="Hide Location"/>
+        <sfPLE id="41" n="Incap311__Include_System_Defaults_del__c" s="" t="Include System Defaults"/>
+        <sfPLE id="42" n="Incap311__Is_Contact_Or_Account_Required__c" s="" t="Is Contact Or Account Required"/>
+        <sfPLE id="43" n="Incap311__Is_Draft__c" s="" t="Is Draft"/>
+        <sfPLE id="44" n="Incap311__Keywords__c" s="" t="Keywords"/>
+        <sfPLE id="45" n="Incap311__Layer_Information__c" s="" t="Layer Information"/>
+        <sfPLE id="46" n="Incap311__Map_Marker_Icon__c" s="" t="Map Marker Icon"/>
+        <sfPLE id="47" n="Incap311__Midnight_SLA__c" s="" t="Midnight SLA"/>
+        <sfPLE id="48" n="Incap311__Object__c" s="" t="Object"/>
+        <sfPLE id="49" n="Incap311__Override_Contact_Status__c" s="" t="Override Contact Status"/>
+        <sfPLE id="50" n="ownerAccepted" s="" t="Owner (Accepted)"/>
+        <sfPLE id="51" n="ownerAssignment" s="" t="Owner (Assignment)"/>
+        <sfPLE id="52" n="Incap311__Private_Attachments__c" s="" t="Private Attachments"/>
+        <sfPLE id="53" n="Incap311__Recommended_Types__c" s="" t="Recommended Types"/>
+        <sfPLE id="54" n="locked" s="" t="Record locked."/>
+        <sfPLE id="55" n="unlocked" s="" t="Record unlocked."/>
+        <sfPLE id="56" n="Incap311__Resolution_Type__c" s="" t="Resolution Type"/>
+        <sfPLE id="57" n="Incap311__Rich_Email_Body_Close__c" s="" t="Rich Email Body (Close)"/>
+        <sfPLE id="58" n="Incap311__Rich_Email_Body_Create__c" s="" t="Rich Email Body (Create)"/>
+        <sfPLE id="59" n="Incap311__Rich_Email_Closing_Close__c" s="" t="Rich Email Closing (Close)"/>
+        <sfPLE id="60" n="Incap311__Rich_Email_Closing_Create__c" s="" t="Rich Email Closing (Create)"/>
+        <sfPLE id="61" n="Incap311__Rich_Email_Intro_Close__c" s="" t="Rich Email Intro (Close)"/>
+        <sfPLE id="62" n="Incap311__Rich_Email_Intro_Create__c" s="" t="Rich Email Intro (Create)"/>
+        <sfPLE id="63" n="Incap311__Send_Email_On_SR_Closed__c" s="" t="Send Email On SR Closed"/>
+        <sfPLE id="64" n="Incap311__Send_Email_On_SR_Creation__c" s="" t="Send Email On SR Creation"/>
+        <sfPLE id="65" n="Incap311__Service_Icon__c" s="" t="Service Icon"/>
+        <sfPLE id="66" n="Incap311__Service_Location_Required__c" s="" t="Service Location Required"/>
+        <sfPLE id="67" n="Incap311__Service_Name__c" s="" t="Service Name"/>
+        <sfPLE id="68" n="Incap311__Service_Notice__c" s="" t="Service Notice"/>
+        <sfPLE id="69" n="Incap311__Service_Type__c" s="" t="Service Type"/>
+        <sfPLE id="70" n="Name" s="" t="Service Type Version Id"/>
+        <sfPLE id="71" n="Incap311__SLA__c" s="" t="SLA"/>
+        <sfPLE id="72" n="Incap311__Start_Date__c" s="" t="SLA: Start Date"/>
+        <sfPLE id="73" n="Incap311__Stop_Date__c" s="" t="SLA: Stop Date"/>
+        <sfPLE id="74" n="Incap311__SLA_Type__c" s="" t="SLA Type"/>
+        <sfPLE id="75" n="Incap311__SR_Alert_Message__c" s="" t="SR Alert Message"/>
+        <sfPLE id="76" n="Incap311__Start__c" s="" t="Start Date"/>
+        <sfPLE id="77" n="Incap311__Stop__c" s="" t="Stop Date"/>
+        <sfPLE id="78" n="Incap311__Track_SR_Closure_Email__c" s="" t="Track SR Closure Email"/>
+        <sfPLE id="79" n="Incap311__Track_SR_Creation_Email__c" s="" t="Track SR Creation Email"/>
+        <sfPLE id="80" n="Incap311__Validations__c" s="" t="Validations"/>
+        <sfPLE id="81" n="Incap311__Version_Code__c" s="" t="Version Code"/>
+        <sfPLE id="82" n="Incap311__Version_Name__c" s="" t="Version Name"/>
+        <sfPLE id="83" n="Incap311__Version_Number__c" s="" t="Version Number"/>
+        <sfPLE id="84" n="Incap311__Visible_Layers__c" s="" t="Visible Layers"/>
+      </picklistEntries>
+    </sfField>
+    <sfField createable="false" editPermission="false" filterable="false" length="255" n="OldValue" t="Old Value" type="anyType" updateable="false"/>
+    <sfField createable="false" editPermission="false" filterable="false" length="255" n="NewValue" t="New Value" type="anyType" updateable="false"/>
+  </fields>
+  <childRelationships/>
+  <recordTypes/>
+  <standardActions>
+    <sfActionLink modes="ObjectHome Histories List" n="New"/>
+    <sfActionLink modes="View Histories" n="Edit" requiresRow="true" s="2"/>
+    <sfActionLink modes="View Histories" n="Delete" requiresRow="true" s="3"/>
+    <sfActionLink massAction="true" modes="View List all_related_lists" n="ChangeOwnerOne" t="Change Owner"/>
+    <sfActionLink modes="View Histories" n="ShowMore" t="Show More"/>
+    <sfActionLink modes="View Histories" n="GoToList" t="Go To List"/>
+    <sfActionLink modes="RelatedList" n="PrevPage" t="Previous Page"/>
+    <sfActionLink modes="RelatedList" n="NextPage" t="Next Page"/>
+    <sfActionLink modes="ObjectHome" n="List" requiresRow="true"/>
+    <sfActionLink modes="Edit New Clone" n="save" requiresRow="true" t="Save"/>
+    <sfActionLink modes="Edit New Clone" n="save_new" requiresRow="true" t="Save and New"/>
+    <sfActionLink modes="Edit New Clone" n="cancel" requiresRow="true" t="Cancel"/>
+    <sfActionLink afterWaitUrl="ui:wait:timed?seconds=10" modes="View" n="SaveEdit" t="Save"/>
+    <sfActionLink modes="View" n="CancelEdit" t="Cancel"/>
+    <sfActionLink massAction="true" modes="View List" n="ChangeRecordType" t="Change Record Type"/>
+    <sfActionLink modes="View" n="email" t="Send an Email"/>
+    <sfActionLink modes="View" n="Share"/>
+    <sfActionLink modes="QuickAction" n="publishersharebutton" t="Create"/>
+    <sfActionLink modes="ObjectHome List" n="Sort"/>
+    <sfActionLink modes="ObjectHome List" n="Filter"/>
+    <sfActionLink modes="ObjectHome View" n="Search"/>
+    <sfActionLink modes="ObjectHome List" n="Import"/>
+    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
+  </standardActions>
+  <weblinks/>
+</sfObject>

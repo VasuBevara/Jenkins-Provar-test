@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Criteria definitions to match for Rules in RuleForce.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>INRF__Aggregate_Function__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Aggregate Function</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>SUM</fullName>
+                    <default>false</default>
+                    <label>SUM</label>
+                </value>
+                <value>
+                    <fullName>COUNT</fullName>
+                    <default>false</default>
+                    <label>COUNT</label>
+                </value>
+                <value>
+                    <fullName>MIN</fullName>
+                    <default>false</default>
+                    <label>MIN</label>
+                </value>
+                <value>
+                    <fullName>MAX</fullName>
+                    <default>false</default>
+                    <label>MAX</label>
+                </value>
+                <value>
+                    <fullName>AVG</fullName>
+                    <default>false</default>
+                    <label>AVG</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>INRF__Child_Relationship_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Child Relationship Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>INRF__Criteria_Object__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Criteria Object</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>INRF__Evaluate_Child_Criteria_Using__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Evaluate Child Criteria Using</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>AND</fullName>
+                    <default>false</default>
+                    <label>AND</label>
+                </value>
+                <value>
+                    <fullName>OR</fullName>
+                    <default>false</default>
+                    <label>OR</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>INRF__Field_API_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This is the metadata of the field API name which is belongs to sObject or evaluation criteria.</description>
+        <externalId>false</externalId>
+        <label>Field API Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>INRF__Field_Apex_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Field Apex Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>STRING</fullName>
+                    <default>true</default>
+                    <label>STRING</label>
+                </value>
+                <value>
+                    <fullName>EMAIL</fullName>
+                    <default>false</default>
+                    <label>EMAIL</label>
+                </value>
+                <value>
+                    <fullName>PICKLIST</fullName>
+                    <default>false</default>
+                    <label>PICKLIST</label>
+                </value>
+                <value>
+                    <fullName>TEXTAREA</fullName>
+                    <default>false</default>
+                    <label>TEXTAREA</label>
+                </value>
+                <value>
+                    <fullName>PHONE</fullName>
+                    <default>false</default>
+                    <label>PHONE</label>
+                </value>
+                <value>
+                    <fullName>BOOLEAN</fullName>
+                    <default>false</default>
+                    <label>BOOLEAN</label>
+                </value>
+                <value>
+                    <fullName>DATE</fullName>
+                    <default>false</default>
+                    <label>DATE</label>
+                </value>
+                <value>
+                    <fullName>DATETIME</fullName>
+                    <default>false</default>
+                    <label>DATETIME</label>
+                </value>
+                <value>
+                    <fullName>CURRENCY</fullName>
+                    <default>false</default>
+                    <label>CURRENCY</label>
+                </value>
+                <value>
+                    <fullName>DOUBLE</fullName>
+                    <default>false</default>
+                    <label>DOUBLE</label>
+                </value>
+                <value>
+                    <fullName>REFERENCEID</fullName>
+                    <default>false</default>
+                    <label>REFERENCEID</label>
+                </value>
+                <value>
+                    <fullName>ID</fullName>
+                    <default>false</default>
+                    <label>ID</label>
+                </value>
+                <value>
+                    <fullName>ADDRESS</fullName>
+                    <default>false</default>
+                    <label>ADDRESS</label>
+                </value>
+                <value>
+                    <fullName>BASE64</fullName>
+                    <default>false</default>
+                    <label>BASE64</label>
+                </value>
+                <value>
+                    <fullName>INTEGER</fullName>
+                    <default>false</default>
+                    <label>INTEGER</label>
+                </value>
+                <value>
+                    <fullName>LONG</fullName>
+                    <default>false</default>
+                    <label>LONG</label>
+                </value>
+                <value>
+                    <fullName>MULTIPICKLIST</fullName>
+                    <default>false</default>
+                    <label>MULTIPICKLIST</label>
+                </value>
+                <value>
+                    <fullName>PERCENT</fullName>
+                    <default>false</default>
+                    <label>PERCENT</label>
+                </value>
+                <value>
+                    <fullName>URL</fullName>
+                    <default>false</default>
+                    <label>URL</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>INRF__Field_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Field Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>INRF__Field_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Field Type</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Number</fullName>
+                    <default>false</default>
+                    <label>Number</label>
+                </value>
+                <value>
+                    <fullName>Percentage</fullName>
+                    <default>false</default>
+                    <label>Percentage</label>
+                </value>
+                <value>
+                    <fullName>Multi-Picklist</fullName>
+                    <default>false</default>
+                    <label>Multi-Picklist</label>
+                </value>
+                <value>
+                    <fullName>Text</fullName>
+                    <default>true</default>
+                    <label>Text</label>
+                </value>
+                <value>
+                    <fullName>Checkbox</fullName>
+                    <default>false</default>
+                    <label>Checkbox</label>
+                </value>
+                <value>
+                    <fullName>Date</fullName>
+                    <default>false</default>
+                    <label>Date</label>
+                </value>
+                <value>
+                    <fullName>DateTime</fullName>
+                    <default>false</default>
+                    <label>DateTime</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>INRF__Global_Variable__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Global Variable</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>INRF__Maximum_Value__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Maximum Value</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>INRF__Minimum_Value__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Minimum Value</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>INRF__Operator__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Operator</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Equals</fullName>
+                    <default>false</default>
+                    <label>Equals</label>
+                </value>
+                <value>
+                    <fullName>Not Equal To</fullName>
+                    <default>false</default>
+                    <label>Not Equal To</label>
+                </value>
+                <value>
+                    <fullName>Contains</fullName>
+                    <default>false</default>
+                    <label>Contains</label>
+                </value>
+                <value>
+                    <fullName>Does Not Contain</fullName>
+                    <default>false</default>
+                    <label>Does Not Contain</label>
+                </value>
+                <value>
+                    <fullName>Starts With</fullName>
+                    <default>false</default>
+                    <label>Starts With</label>
+                </value>
+                <value>
+                    <fullName>Ends With</fullName>
+                    <default>false</default>
+                    <label>Ends With</label>
+                </value>
+                <value>
+                    <fullName>Greater Than</fullName>
+                    <default>false</default>
+                    <label>Greater Than</label>
+                </value>
+                <value>
+                    <fullName>Greater Or Equal</fullName>
+                    <default>false</default>
+                    <label>Greater Or Equal</label>
+                </value>
+                <value>
+                    <fullName>Less Than</fullName>
+                    <default>false</default>
+                    <label>Less Than</label>
+                </value>
+                <value>
+                    <fullName>Less Or Equal</fullName>
+                    <default>false</default>
+                    <label>Less Or Equal</label>
+                </value>
+                <value>
+                    <fullName>Includes</fullName>
+                    <default>false</default>
+                    <label>Includes</label>
+                </value>
+                <value>
+                    <fullName>Excludes</fullName>
+                    <default>false</default>
+                    <label>Excludes</label>
+                </value>
+                <value>
+                    <fullName>Between</fullName>
+                    <default>false</default>
+                    <label>Between</label>
+                </value>
+                <value>
+                    <fullName>Blank</fullName>
+                    <default>false</default>
+                    <label>Blank</label>
+                </value>
+                <value>
+                    <fullName>Not Blank</fullName>
+                    <default>false</default>
+                    <label>Not Blank</label>
+                </value>
+                <value>
+                    <fullName>Does Not Start With</fullName>
+                    <default>false</default>
+                    <label>Does Not Start With</label>
+                </value>
+                <value>
+                    <fullName>Does Not End With</fullName>
+                    <default>false</default>
+                    <label>Does Not End With</label>
+                </value>
+                <value>
+                    <fullName>Regular Expression</fullName>
+                    <default>false</default>
+                    <label>Regular Expression</label>
+                </value>
+                <value>
+                    <fullName>Not Between</fullName>
+                    <default>false</default>
+                    <label>Not Between</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>INRF__Rule_Object__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>INRF__Rule_Set__r.INRF__Object__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Rule Object</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>INRF__Rule_Set__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Rule Set</label>
+        <referenceTo>INRF__Rule_Set__c</referenceTo>
+        <relationshipLabel>Rule Criterias</relationshipLabel>
+        <relationshipName>Rule_Criterias</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>INRF__Sequence__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Criteria which needs to execute in which sequence.</description>
+        <externalId>false</externalId>
+        <label>Sequence</label>
+        <precision>2</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>INRF__Value_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This will store Value Type. As Field Type is required for Data Type</description>
+        <externalId>false</externalId>
+        <label>Value Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Enter Value</fullName>
+                    <default>true</default>
+                    <label>Enter Value</label>
+                </value>
+                <value>
+                    <fullName>Field Reference</fullName>
+                    <default>false</default>
+                    <label>Field Reference</label>
+                </value>
+                <value>
+                    <fullName>Formula</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Formula</label>
+                </value>
+                <value>
+                    <fullName>Global Value</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Global Value</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>INRF__Value__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Value which need to evaluate.</description>
+        <externalId>false</externalId>
+        <label>Value</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <label>Rule Criteria</label>
+    <listViews>
+        <fullName>INRF__All</fullName>
+        <columns>NAME</columns>
+        <columns>INRF__Criteria_Object__c</columns>
+        <columns>INRF__Field_API_Name__c</columns>
+        <columns>INRF__Value__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>RC-{0000}</displayFormat>
+        <label>Rule Criteria Name</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Rule Criterias</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

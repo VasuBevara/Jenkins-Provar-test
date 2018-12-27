@@ -1,0 +1,26 @@
+<apex:page standardController="Case" lightningStylesheets="true">
+    <apex:includeScript value="/support/console/43.0/integration.js" />
+    
+    <script type="text/javascript">
+        var redirectUrl = '/apex/Incap311SC__AgentConsole#/services?parent={!Case.Incap311__Service_Request_Number__c}&isLightning=true';
+        
+        if (sforce.console.isInConsole()) {
+            sforce.console.getEnclosingTabId(function (enclosingResult) {
+                sforce.console.getEnclosingPrimaryTabId(function (primaryResult) {
+        
+                    sforce.console.refreshSubtabByNameAndPrimaryTabId('Linked-{!Case.Incap311__Service_Request_Number__c}', primaryResult.id, true,
+                        function (result) {
+                            if (result.success != true) {
+                                sforce.console.openSubtab(primaryResult.id, (redirectUrl + "&subTabId=" + enclosingResult.id), true,
+                                    'Linked: #{!Case.Incap311__Service_Request_Number__c}', null, undefined, 'Linked-{!Case.Incap311__Service_Request_Number__c}');
+                            }
+                        }, true)
+                });
+            });
+        } else {
+            window.open(redirectUrl, "_top");
+            //window.location.href = redirectUrl;
+        } 
+    </script>
+    
+</apex:page>

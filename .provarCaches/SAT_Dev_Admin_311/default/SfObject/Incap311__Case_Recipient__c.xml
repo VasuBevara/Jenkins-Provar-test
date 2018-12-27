@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfObject creatable="true" deleteable="true" detailsLoaded="false" editPermission="false" keyPrefix="a0A" label="Case Recipient" labelPlural="Case Recipients" layoutable="true" n="Incap311__Case_Recipient__c" queryable="true" readPermission="false" retrieveable="true" s="" t="Case Recipient (a0A)" updatable="true">
+  <standardActions>
+    <sfActionLink modes="ObjectHome Incap311__Case_Recipients__r" n="New"/>
+    <sfActionLink modes="View Incap311__Case_Recipients__r" n="Edit" requiresRow="true" s="2"/>
+    <sfActionLink modes="View Incap311__Case_Recipients__r" n="Delete" requiresRow="true" s="3"/>
+    <sfActionLink massAction="true" modes="View List all_related_lists" n="ChangeOwnerOne" t="Change Owner"/>
+    <sfActionLink modes="View Incap311__Case_Recipients__r" n="ShowMore" t="Show More"/>
+    <sfActionLink modes="View Incap311__Case_Recipients__r" n="GoToList" t="Go To List"/>
+    <sfActionLink modes="RelatedList" n="PrevPage" t="Previous Page"/>
+    <sfActionLink modes="RelatedList" n="NextPage" t="Next Page"/>
+  </standardActions>
+</sfObject>

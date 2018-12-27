@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<retrieveStates class="list">
+  <retrieveState endUtc="1545823784822">
+    <problem message="Salesforce returned a null result for metadata read.  Type: QuickAction, Full name: LiveText__Case.Send_Text_Message" remedy="RELOAD_ORG_INDEX"/>
+  </retrieveState>
+</retrieveStates>

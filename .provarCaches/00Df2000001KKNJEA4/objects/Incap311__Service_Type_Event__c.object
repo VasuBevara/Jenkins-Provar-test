@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>false</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Incap311__Activity_Outcome_Response__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Activity Outcome Response</label>
+        <referenceTo>Incap311__Activity_Outcome_Response__c</referenceTo>
+        <relationshipLabel>Service Type Event</relationshipLabel>
+        <relationshipName>Service_Type_Event</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Activity_Outcome__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Activity Outcome</label>
+        <referenceTo>Incap311__Activity_Outcome__c</referenceTo>
+        <relationshipLabel>Service Type Event</relationshipLabel>
+        <relationshipName>Service_Type_Event</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Event_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Event Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Create</fullName>
+                    <default>false</default>
+                    <label>Create</label>
+                </value>
+                <value>
+                    <fullName>Update</fullName>
+                    <default>false</default>
+                    <label>Update</label>
+                </value>
+                <value>
+                    <fullName>Delete</fullName>
+                    <default>false</default>
+                    <label>Delete</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Incap311__Flex_Question__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Flex Question</label>
+        <referenceTo>Incap311__Question__c</referenceTo>
+        <relationshipLabel>Service Type Event</relationshipLabel>
+        <relationshipName>Service_Type_Event</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Outcome_Question__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Outcome Question</label>
+        <referenceTo>Incap311__Outcome_Question__c</referenceTo>
+        <relationshipLabel>Service Type Event</relationshipLabel>
+        <relationshipName>Service_Type_Event</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Service_Category__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Service Category</label>
+        <referenceTo>Incap311__Service_Category__c</referenceTo>
+        <relationshipLabel>Service Type Event</relationshipLabel>
+        <relationshipName>Service_Type_Event</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Service_Department__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Service Department</label>
+        <referenceTo>Incap311__Service_Department__c</referenceTo>
+        <relationshipLabel>Service Type Event</relationshipLabel>
+        <relationshipName>Service_Type_Event</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Service_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Incap311__Service_Type__r.Incap311__Service_Name__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Service Name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Incap311__Service_Type_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Incap311__Service_Type__r.Incap311__Service_Type_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Service Type Code</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Incap311__Service_Type_Version_Activity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Service Type Version Activity</label>
+        <referenceTo>Incap311__Service_Type_Version_Activity__c</referenceTo>
+        <relationshipLabel>Service Type Event</relationshipLabel>
+        <relationshipName>Service_Type_Event</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Service_Type_Version_Question__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Service Type Version Question</label>
+        <referenceTo>Incap311__Service_Type_Version_Question__c</referenceTo>
+        <relationshipLabel>Service Type Event</relationshipLabel>
+        <relationshipName>Service_Type_Event</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Service_Type_Version__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Service Type Version</label>
+        <referenceTo>Incap311__Service_Type_Version__c</referenceTo>
+        <relationshipLabel>Service Type Event</relationshipLabel>
+        <relationshipName>Service_Type_Event</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Service_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Service Type</label>
+        <referenceTo>Incap311__Service_Type__c</referenceTo>
+        <relationshipLabel>Service Type Event</relationshipLabel>
+        <relationshipName>Service_Type_Event</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Incap311__Sub_Event__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Sub-Event</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Create</fullName>
+                    <default>false</default>
+                    <label>Create</label>
+                </value>
+                <value>
+                    <fullName>Update</fullName>
+                    <default>false</default>
+                    <label>Update</label>
+                </value>
+                <value>
+                    <fullName>Delete</fullName>
+                    <default>false</default>
+                    <label>Delete</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Incap311__Sub_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Sub-Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Activity Outcomes</fullName>
+                    <default>false</default>
+                    <label>Activity Outcomes</label>
+                </value>
+                <value>
+                    <fullName>Flex Questions</fullName>
+                    <default>false</default>
+                    <label>Flex Questions</label>
+                </value>
+                <value>
+                    <fullName>Outcome Questions</fullName>
+                    <default>false</default>
+                    <label>Outcome Questions</label>
+                </value>
+                <value>
+                    <fullName>Outcome Responses</fullName>
+                    <default>false</default>
+                    <label>Outcome Responses</label>
+                </value>
+                <value>
+                    <fullName>Reallocation Queues</fullName>
+                    <default>false</default>
+                    <label>Reallocation Queues</label>
+                </value>
+                <value>
+                    <fullName>Service Categories</fullName>
+                    <default>false</default>
+                    <label>Service Categories</label>
+                </value>
+                <value>
+                    <fullName>Service Departments</fullName>
+                    <default>false</default>
+                    <label>Service Departments</label>
+                </value>
+                <value>
+                    <fullName>Service Type</fullName>
+                    <default>false</default>
+                    <label>Service Type</label>
+                </value>
+                <value>
+                    <fullName>Service Type Version</fullName>
+                    <default>false</default>
+                    <label>Service Type Version</label>
+                </value>
+                <value>
+                    <fullName>Service Type Version Activities</fullName>
+                    <default>false</default>
+                    <label>Service Type Version Activities</label>
+                </value>
+                <value>
+                    <fullName>Service Type Version Questions</fullName>
+                    <default>false</default>
+                    <label>Service Type Version Questions</label>
+                </value>
+                <value>
+                    <fullName>Transfer Type</fullName>
+                    <default>false</default>
+                    <label>Transfer Type</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Incap311__Transfer_Service_Request_Type__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Transfer Service Request Type</label>
+        <referenceTo>Incap311__Transfer_Service_Request_Type__c</referenceTo>
+        <relationshipLabel>Service Type Event</relationshipLabel>
+        <relationshipName>Service_Type_Event</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Service Type Event</label>
+    <nameField>
+        <displayFormat>STE-{00000000}</displayFormat>
+        <label>Service Type Event Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Service Type Event</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

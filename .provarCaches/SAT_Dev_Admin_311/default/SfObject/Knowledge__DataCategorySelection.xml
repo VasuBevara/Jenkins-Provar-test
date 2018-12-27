@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfObject creatable="true" deleteable="true" detailsLoaded="false" editPermission="false" label="Data Category Selection: Knowledge" labelPlural="Data Category Selection: Knowledge" n="Knowledge__DataCategorySelection" queryable="true" readPermission="false" retrieveable="true" s="" t="Data Category Selection: Knowledge">
+  <standardActions>
+    <sfActionLink modes="ObjectHome DataCategorySelections" n="New"/>
+    <sfActionLink modes="View DataCategorySelections" n="Edit" requiresRow="true" s="2"/>
+    <sfActionLink modes="View DataCategorySelections" n="Delete" requiresRow="true" s="3"/>
+    <sfActionLink massAction="true" modes="View List all_related_lists" n="ChangeOwnerOne" t="Change Owner"/>
+    <sfActionLink modes="View DataCategorySelections" n="ShowMore" t="Show More"/>
+    <sfActionLink modes="View DataCategorySelections" n="GoToList" t="Go To List"/>
+    <sfActionLink modes="RelatedList" n="PrevPage" t="Previous Page"/>
+    <sfActionLink modes="RelatedList" n="NextPage" t="Next Page"/>
+  </standardActions>
+</sfObject>

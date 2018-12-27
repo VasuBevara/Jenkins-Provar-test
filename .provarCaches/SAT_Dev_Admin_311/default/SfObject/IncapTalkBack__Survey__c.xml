@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfObject creatable="true" defaultCompactLayoutId="IncapTalkBack__Survey__c.SYSTEM" deleteable="true" keyPrefix="a0u" label="Survey" labelPlural="Surveys" layoutable="true" metadataLabel="Survey" n="IncapTalkBack__Survey__c" queryable="true" retrieveable="true" s="" searchLayoutable="true" t="Survey (a0u)" updatable="true" urlDetail="/{ID}" urlEdit="/{ID}/e" urlNew="/a0u/e">
+  <fields>
+    <sfField createable="false" editPermission="false" length="18" n="Id" t="Record ID" type="id" updateable="false"/>
+    <sfField length="18" n="OwnerId" relationshipName="Owner" t="Owner ID" type="reference">
+      <referenceTos>
+        <string>Group</string>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" n="IsDeleted" t="Deleted" type="_boolean" updateable="false"/>
+    <sfField autoNumberField="true" createable="false" editPermission="false" length="80" n="Name" nameField="true" t="Survey Name" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="CreatedDate" t="Created Date" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" length="18" n="CreatedById" relationshipName="CreatedBy" t="Created By ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" n="LastModifiedDate" t="Last Modified Date" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" length="18" n="LastModifiedById" relationshipName="LastModifiedBy" t="Last Modified By ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" n="SystemModstamp" t="System Modstamp" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="LastViewedDate" t="Last Viewed Date" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="LastReferencedDate" t="Last Referenced Date" type="datetime" updateable="false"/>
+    <sfField length="7" n="IncapTalkBack__Header_Color__c" t="Header Color"/>
+    <sfField length="255" n="IncapTalkBack__Logo_URL__c" t="Logo URL"/>
+    <sfField n="IncapTalkBack__Questions_Per_Page__c" precision="18" t="Questions Per Page" type="_double"/>
+    <sfField n="IncapTalkBack__Restrict_Intake_Case__c" t="Restrict Intake (Case)" type="_boolean"/>
+    <sfField n="IncapTalkBack__Restrict_Intake_Contact__c" t="Restrict Intake (Contact)" type="_boolean"/>
+    <sfField n="IncapTalkBack__Show_Case_Information__c" t="Show Case Information" type="_boolean"/>
+    <sfField n="IncapTalkBack__Show_Contact_Information__c" t="Show Contact Information" type="_boolean"/>
+    <sfField n="IncapTalkBack__Show_Landing_Page__c" t="Show Landing Page" type="_boolean"/>
+    <sfField n="IncapTalkBack__Show_Progress_Bar__c" t="Show Progress Bar" type="_boolean"/>
+    <sfField n="IncapTalkBack__Show_Survey_Header__c" t="Show Survey Header" type="_boolean"/>
+    <sfField n="IncapTalkBack__Show_Survey_Summary__c" t="Show Survey Summary" type="_boolean"/>
+    <sfField extraTypeInfo="richtextarea" filterable="false" length="131072" n="IncapTalkBack__Submit_Success_Body__c" t="Submit Success Body" type="textarea"/>
+    <sfField extraTypeInfo="plaintextarea" length="255" n="IncapTalkBack__Submit_Success_Title__c" t="Submit Success Title" type="textarea"/>
+    <sfField length="255" n="IncapTalkBack__Title__c" required="true" t="Title"/>
+    <sfField length="36" n="IncapTalkBack__UUID__c" t="Public ID"/>
+    <sfField extraTypeInfo="richtextarea" filterable="false" length="32768" n="IncapTalkBack__Welcome_Message__c" t="Welcome Message" type="textarea"/>
+  </fields>
+  <childRelationships>
+    <sfObjectRelationship childName="EntityHistory" field="ParentId" n="EntityHistories" relationshipName="EntityHistories" s="2-" t="EntityHistory"/>
+    <sfObjectRelationship alias="RelatedActivityAttachmentList" childName="Attachment" field="ParentId" n="Attachments" relationshipName="Attachments" s="2-" t="Attachment"/>
+    <sfObjectRelationship childName="ContentDocumentLink" field="LinkedEntityId" n="ContentDocumentLinks" relationshipName="ContentDocumentLinks" s="2-" t="ContentDocumentLink"/>
+    <sfObjectRelationship alias="RelatedFileList" childName="AttachedContentDocument" field="LinkedEntityId" n="AttachedContentDocuments" relationshipName="AttachedContentDocuments" s="2-" t="AttachedContentDocument"/>
+    <sfObjectRelationship alias="RelatedNoteList" childName="CombinedAttachment" field="ParentId" n="CombinedAttachments" relationshipName="CombinedAttachments" s="2-" t="CombinedAttachment"/>
+    <sfObjectRelationship childName="Note" field="ParentId" n="Notes" relationshipName="Notes" s="2-" t="Note"/>
+    <sfObjectRelationship childName="NoteAndAttachment" field="ParentId" n="NotesAndAttachments" relationshipName="NotesAndAttachments" s="2-" t="NoteAndAttachment"/>
+    <sfObjectRelationship childName="EntitySubscription" field="ParentId" n="FeedSubscriptionsForEntity" relationshipName="FeedSubscriptionsForEntity" s="2-" t="EntitySubscription"/>
+    <sfObjectRelationship alias="RelatedProcessInstanceHistory" childName="ProcessInstance" field="TargetObjectId" n="ProcessInstances" relationshipName="ProcessInstances" s="2-" t="ProcessInstance"/>
+    <sfObjectRelationship alias="RelatedProcessHistoryList" childName="ProcessInstanceHistory" field="TargetObjectId" n="ProcessSteps" relationshipName="ProcessSteps" s="2-" t="ProcessInstanceHistory"/>
+    <sfObjectRelationship childName="TaskRelation" field="RelationId" n="TaskRelations" relationshipName="TaskRelations" s="2-" t="TaskRelation"/>
+    <sfObjectRelationship childName="TopicAssignment" field="EntityId" n="TopicAssignments" relationshipName="TopicAssignments" s="2-" t="TopicAssignment"/>
+    <sfObjectRelationship alias="RelatedContentNoteList" childName="AttachedContentNote" field="LinkedEntityId" n="AttachedContentNotes" relationshipName="AttachedContentNotes" s="2-" t="AttachedContentNote"/>
+    <sfObjectRelationship childName="EmailMessage" field="RelatedToId" n="Emails" relationshipName="Emails" s="2-" t="EmailMessage"/>
+    <sfObjectRelationship childName="NetworkActivityAudit" field="ParentEntityId" n="ParentEntities" relationshipName="ParentEntities" s="2-" t="NetworkActivityAudit"/>
+    <sfObjectRelationship childName="DuplicateErrorLog" field="RecordId" n="DuplicateErrorLogs" relationshipName="DuplicateErrorLogs" s="2-" t="DuplicateErrorLog"/>
+    <sfObjectRelationship childName="DuplicateRecordItem" field="RecordId" n="DuplicateRecordItems" relationshipName="DuplicateRecordItems" s="2-" t="DuplicateRecordItem"/>
+    <sfObjectRelationship childName="NetworkUserHistoryRecent" field="RecordId" n="NetworkUserHistoryRecentToRecord" relationshipName="NetworkUserHistoryRecentToRecord" s="2-" t="NetworkUserHistoryRecent"/>
+    <sfObjectRelationship childName="RecordAction" field="RecordId" n="RecordActions" relationshipName="RecordActions" s="2-" t="RecordAction"/>
+    <sfObjectRelationship childName="RecordActionHistory" field="ParentRecordId" n="RecordActionHistories" relationshipName="RecordActionHistories" s="2-" t="RecordActionHistory"/>
+    <sfObjectRelationship childName="IncapTalkBack__Survey_Intake__c" field="IncapTalkBack__Survey__c" n="IncapTalkBack__Survey_Intakes__r" relationshipName="IncapTalkBack__Survey_Intakes__r" s="2-" t="01If2000001Ciuq"/>
+    <sfObjectRelationship childName="IncapTalkBack__Survey_Question__c" field="IncapTalkBack__Survey__c" n="IncapTalkBack__Survey_Questions__r" relationshipName="IncapTalkBack__Survey_Questions__r" s="2-" t="01If2000001Ciur"/>
+  </childRelationships>
+  <recordTypes>
+    <sfRecordType layoutsLoaded="false" n="&lt;default&gt;" t="Web Record Type Mapping"/>
+  </recordTypes>
+  <standardActions>
+    <sfActionLink n="Tab" s="" t="Surveys Tab"/>
+    <sfActionLink modes="ObjectHome" n="List" requiresRow="true"/>
+    <sfActionLink modes="View" n="Edit" requiresRow="true" s="2"/>
+    <sfActionLink modes="View" n="Delete" requiresRow="true" s="3"/>
+    <sfActionLink modes="View" n="Clone" requiresRow="true"/>
+    <sfActionLink modes="ObjectHome List" n="New"/>
+    <sfActionLink n="Accept" s=""/>
+    <sfActionLink modes="ObjectHome" n="View" requiresRow="true"/>
+    <sfActionLink buttonName="IncapTalkBack__Start_Survey" n="IncapTalkBack__Start_Survey" s="" t="Start Survey"/>
+    <sfActionLink modes="View Submit" n="Submit" requiresRow="true"/>
+    <sfActionLink modes="View Remove" n="Remove"/>
+    <sfActionLink modes="View Unlock" n="Unlock" t="Unlock Record"/>
+    <sfActionLink modes="Edit New Clone" n="save" requiresRow="true" t="Save"/>
+    <sfActionLink modes="Edit New Clone" n="save_new" requiresRow="true" t="Save and New"/>
+    <sfActionLink modes="Edit New Clone" n="cancel" requiresRow="true" t="Cancel"/>
+    <sfActionLink afterWaitUrl="ui:wait:timed?seconds=10" modes="View" n="SaveEdit" t="Save"/>
+    <sfActionLink modes="View" n="CancelEdit" t="Cancel"/>
+    <sfActionLink massAction="true" modes="View List" n="ChangeOwnerOne" t="Change Owner"/>
+    <sfActionLink massAction="true" modes="View List" n="ChangeRecordType" t="Change Record Type"/>
+    <sfActionLink modes="View" n="email" t="Send an Email"/>
+    <sfActionLink modes="View" n="Share"/>
+    <sfActionLink modes="QuickAction" n="publishersharebutton" t="Create"/>
+    <sfActionLink modes="ObjectHome List" n="Sort"/>
+    <sfActionLink modes="ObjectHome List" n="Filter"/>
+    <sfActionLink modes="ObjectHome View" n="Search"/>
+    <sfActionLink modes="ObjectHome List" n="Import"/>
+    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
+  </standardActions>
+  <homeListColumns>
+    <string>INCAPTALKBACK__SURVEY__C.NAME</string>
+    <string>IncapTalkBack__Title__c</string>
+    <string>IncapTalkBack__UUID__c</string>
+  </homeListColumns>
+  <lookupColumns>
+    <string>INCAPTALKBACK__SURVEY__C.NAME</string>
+    <string>IncapTalkBack__Title__c</string>
+    <string>IncapTalkBack__UUID__c</string>
+  </lookupColumns>
+  <weblinks/>
+  <searchResultColumns>
+    <string>INCAPTALKBACK__SURVEY__C.NAME</string>
+    <string>IncapTalkBack__Title__c</string>
+    <string>IncapTalkBack__UUID__c</string>
+  </searchResultColumns>
+  <compactLayoutFields>
+    <string>Name</string>
+  </compactLayoutFields>
+  <listViewActions/>
+</sfObject>

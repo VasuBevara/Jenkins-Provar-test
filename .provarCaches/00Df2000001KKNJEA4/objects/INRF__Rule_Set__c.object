@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Set of Rule definitions for matching defined criteria and performing related actions.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>INRF__Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If rule set is active  than use the rule define for this rule set, if rule set is not active do not use the rule in evaluation.</description>
+        <externalId>false</externalId>
+        <label>Active</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>INRF__Effective_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Effective Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>INRF__Evaluation_Rule__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Evaluation Rule name to identify by name.</description>
+        <externalId>false</externalId>
+        <label>Evaluation Rule</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Record is created</fullName>
+                    <default>false</default>
+                    <label>Record is created</label>
+                </value>
+                <value>
+                    <fullName>Record is edited</fullName>
+                    <default>false</default>
+                    <label>Record is edited</label>
+                </value>
+                <value>
+                    <fullName>Record is created or edited</fullName>
+                    <default>false</default>
+                    <label>Record is created or edited</label>
+                </value>
+                <value>
+                    <fullName>Record is created or edited and did not previously meet the rule criteria</fullName>
+                    <default>false</default>
+                    <label>Record is created or edited and did not previously meet the rule criteria</label>
+                </value>
+                <value>
+                    <fullName>On Click Event</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>On Click Event</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>INRF__Expiration_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Expiration Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>INRF__Filter_Logic__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Filter Logic</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>INRF__Object__c</fullName>
+        <deprecated>false</deprecated>
+        <description>This field will capture the sObject information, which will identify the on which sObject the evaluation will get fired.</description>
+        <externalId>false</externalId>
+        <label>Object</label>
+        <length>50</length>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>INRF__Order__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Order</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>INRF__Related_Rule_Set__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Related Rule Set</label>
+        <referenceTo>INRF__Rule_Set__c</referenceTo>
+        <relationshipLabel>Rule Sets</relationshipLabel>
+        <relationshipName>Rule_Sets</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Rule Set</label>
+    <listViews>
+        <fullName>INRF__All</fullName>
+        <columns>NAME</columns>
+        <columns>INRF__Object__c</columns>
+        <columns>INRF__Active__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>INRF__Case</fullName>
+        <columns>NAME</columns>
+        <columns>INRF__Active__c</columns>
+        <columns>INRF__Evaluation_Rule__c</columns>
+        <columns>INRF__Expiration_Date__c</columns>
+        <columns>INRF__Effective_Date__c</columns>
+        <columns>INRF__Filter_Logic__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>INRF__Object__c</field>
+            <operation>equals</operation>
+            <value>Case</value>
+        </filters>
+        <label>Case</label>
+    </listViews>
+    <listViews>
+        <fullName>INRF__My_RuleSet</fullName>
+        <columns>NAME</columns>
+        <columns>INRF__Object__c</columns>
+        <columns>INRF__Order__c</columns>
+        <columns>INRF__Active__c</columns>
+        <filterScope>Mine</filterScope>
+        <label>My RuleSet</label>
+    </listViews>
+    <listViews>
+        <fullName>INRF__Opportunity</fullName>
+        <columns>NAME</columns>
+        <columns>INRF__Active__c</columns>
+        <columns>INRF__Order__c</columns>
+        <columns>INRF__Evaluation_Rule__c</columns>
+        <columns>INRF__Effective_Date__c</columns>
+        <columns>INRF__Expiration_Date__c</columns>
+        <columns>INRF__Filter_Logic__c</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>INRF__Object__c</field>
+            <operation>equals</operation>
+            <value>Opportunity</value>
+        </filters>
+        <label>Opportunity</label>
+    </listViews>
+    <nameField>
+        <label>Rule Set Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Rule Sets</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

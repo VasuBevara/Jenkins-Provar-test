@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><QuickAction xmlns="http://soap.sforce.com/2006/04/metadata"
+   >
+ <fullName>Case.Create_Linked_SR_VF</fullName>
+    <height>250</height>
+  <isProtected>false</isProtected>
+ <label>Create Linked SR (VF)</label>
+  <optionsCreateFeedItem>false</optionsCreateFeedItem>
+ <page>Case_CreateLinkedSR_VFPage</page>
+        <type>VisualforcePage</type>
+ <width>-100</width>
+</QuickAction>

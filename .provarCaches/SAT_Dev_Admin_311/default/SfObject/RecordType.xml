@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfObject creatable="true" keyPrefix="012" label="Record Type" labelPlural="Record Types" n="RecordType" queryable="true" retrieveable="true" s="" t="Record Type (012)" updatable="true">
+  <fields>
+    <sfField createable="false" editPermission="false" length="18" n="Id" t="Record Type ID" type="id" updateable="false"/>
+    <sfField length="80" n="Name" nameField="true" required="true"/>
+    <sfField length="80" n="DeveloperName" required="true" t="Record Type Name"/>
+    <sfField createable="false" length="15" n="NamespacePrefix" t="Namespace Prefix" updateable="false"/>
+    <sfField length="255" n="Description"/>
+    <sfField length="18" n="BusinessProcessId" t="Business Process ID" type="reference">
+      <referenceTos>
+        <string>BusinessProcess</string>
+      </referenceTos>
+    </sfField>
+    <sfField length="40" n="SobjectType" required="true" restrictedPicklist="true" t="Sobject Type Name" type="picklist" updateable="false">
+      <picklistEntryIds>1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120,121,122,123,124,125,126,127,128,129,130,131,132,133,134,135,136,137,138,139,140,141,142,143,144,145,146,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,164,165,166,167,168,169,170,171,172,173,174,175,176,177,178,179,180,181,182,183,184,185,186,187,188,189,190,191,192,193,194,195,196,197,198,199,200,201,202,203</picklistEntryIds>
+      <picklistEntries>
+        <sfPLE id="1" n="Account" s=""/>
+        <sfPLE id="2" n="AccountBrand" s=""/>
+        <sfPLE id="3" n="AgentWork" s=""/>
+        <sfPLE id="4" n="Announcement" s=""/>
+        <sfPLE id="5" n="Asset" s=""/>
+        <sfPLE id="6" n="AssetRelationship" s=""/>
+        <sfPLE id="7" n="AssistantProgress" s=""/>
+        <sfPLE id="8" n="Campaign" s=""/>
+        <sfPLE id="9" n="CampaignMember" s=""/>
+        <sfPLE id="10" n="Case" s=""/>
+        <sfPLE id="11" n="CaseExternalDocument" s=""/>
+        <sfPLE id="12" n="ChannelProgram" s=""/>
+        <sfPLE id="13" n="ChannelProgramLevel" s=""/>
+        <sfPLE id="14" n="CollaborationGroup" s=""/>
+        <sfPLE id="15" n="CollaborationGroupRank" s=""/>
+        <sfPLE id="16" n="ComponentResponseCache" s=""/>
+        <sfPLE id="17" n="Contact" s=""/>
+        <sfPLE id="18" n="ContentFolderDistribution" s=""/>
+        <sfPLE id="19" n="ContentVersion" s=""/>
+        <sfPLE id="20" n="Contract" s=""/>
+        <sfPLE id="21" n="ContractLineItem" s=""/>
+        <sfPLE id="22" n="CustomSettingNameIndex" s=""/>
+        <sfPLE id="23" n="DataCategory_Backend__c" s=""/>
+        <sfPLE id="24" n="DeflectionSignal" s=""/>
+        <sfPLE id="25" n="DuplicateErrorLog" s=""/>
+        <sfPLE id="26" n="DuplicateRecordItem" s=""/>
+        <sfPLE id="27" n="DuplicateRecordSet" s=""/>
+        <sfPLE id="28" n="Entitlement" s=""/>
+        <sfPLE id="29" n="EntitlementContact" s=""/>
+        <sfPLE id="30" n="Event" s=""/>
+        <sfPLE id="31" n="FileInspectionResult" s=""/>
+        <sfPLE id="32" n="FileLInk__External_File__c" s=""/>
+        <sfPLE id="33" n="FileLInk__External_File_Relationship__c" s=""/>
+        <sfPLE id="34" n="FileSearchActivity" s=""/>
+        <sfPLE id="35" n="FlowRecordRelation" s=""/>
+        <sfPLE id="36" n="FlowStageRelation" s=""/>
+        <sfPLE id="37" n="Geo_Layer_Assignment__c" s=""/>
+        <sfPLE id="38" n="Geo_Layer_Assignments__c" s=""/>
+        <sfPLE id="39" n="Goal" s=""/>
+        <sfPLE id="40" n="GoalLink" s=""/>
+        <sfPLE id="41" n="Idea" s=""/>
+        <sfPLE id="42" n="InboundSocialPost" s=""/>
+        <sfPLE id="43" n="Incap311__Activity__c" s=""/>
+        <sfPLE id="44" n="Incap311__Activity_Attempt__c" s=""/>
+        <sfPLE id="45" n="Incap311__Activity_Correspondence__c" s=""/>
+        <sfPLE id="46" n="Incap311__Activity_Outcome__c" s=""/>
+        <sfPLE id="47" n="Incap311__Activity_Outcome_Response__c" s=""/>
+        <sfPLE id="48" n="Incap311__Activity_Question__c" s=""/>
+        <sfPLE id="49" n="Incap311__Case_Event__c" s=""/>
+        <sfPLE id="50" n="Incap311__Case_Event_Recipient__c" s=""/>
+        <sfPLE id="51" n="Incap311__Case_Recipient__c" s=""/>
+        <sfPLE id="52" n="Incap311__Category__c" s=""/>
+        <sfPLE id="53" n="Incap311__Correspondence__c" s=""/>
+        <sfPLE id="54" n="Incap311__Decode_Object__c" s=""/>
+        <sfPLE id="55" n="Incap311__Department__c" s=""/>
+        <sfPLE id="56" n="Incap311__Distribution_Member__c" s=""/>
+        <sfPLE id="57" n="Incap311__Distribution_Member_Zone_Type__c" s=""/>
+        <sfPLE id="58" n="Incap311__Distributions__c" s=""/>
+        <sfPLE id="59" n="Incap311__Duplicate_Service_Type_Mapping__c" s=""/>
+        <sfPLE id="60" n="Incap311__External_Service_Request__c" s=""/>
+        <sfPLE id="61" n="Incap311__Outcome__c" s=""/>
+        <sfPLE id="62" n="Incap311__Outcome_Question__c" s=""/>
+        <sfPLE id="63" n="Incap311__Question__c" s=""/>
+        <sfPLE id="64" n="Incap311__Reallocate_Service_Request_Type__c" s=""/>
+        <sfPLE id="65" n="Incap311__Reported_Location__c" s=""/>
+        <sfPLE id="66" n="Incap311__Response__c" s=""/>
+        <sfPLE id="67" n="Incap311__Schedule__c" s=""/>
+        <sfPLE id="68" n="Incap311__Service_Activity__c" s=""/>
+        <sfPLE id="69" n="Incap311__Service_Alert__c" s=""/>
+        <sfPLE id="70" n="Incap311__Service_Category__c" s=""/>
+        <sfPLE id="71" n="Incap311__Service_Department__c" s=""/>
+        <sfPLE id="72" n="Incap311__Service_Question__c" s=""/>
+        <sfPLE id="73" n="Incap311__Service_Queue__c" s=""/>
+        <sfPLE id="74" n="Incap311__Service_Queue_Member__c" s=""/>
+        <sfPLE id="75" n="Incap311__Service_Request_Schedule__c" s=""/>
+        <sfPLE id="76" n="Incap311__Service_Type__c" s=""/>
+        <sfPLE id="77" n="Incap311__Service_Type_Event__c" s=""/>
+        <sfPLE id="78" n="Incap311__Service_Type_Queue_Zone__c" s=""/>
+        <sfPLE id="79" n="Incap311__Service_Type_Version__c" s=""/>
+        <sfPLE id="80" n="Incap311__Service_Type_Version_Activity__c" s=""/>
+        <sfPLE id="81" n="Incap311__Service_Type_Version_Correspondence__c" s=""/>
+        <sfPLE id="82" n="Incap311__Service_Type_Version_Question__c" s=""/>
+        <sfPLE id="83" n="Incap311__Special_Service_Types__c" s=""/>
+        <sfPLE id="84" n="Incap311__Transfer_Service_Request_Type__c" s=""/>
+        <sfPLE id="85" n="Incap311__Zone__c" s=""/>
+        <sfPLE id="86" n="Incap311API__API_Account_Configuration__c" s=""/>
+        <sfPLE id="87" n="Incapfs__Error__c" s=""/>
+        <sfPLE id="88" n="Incapfs__Report__c" s=""/>
+        <sfPLE id="89" n="IncapMessaging__Message_Template__c" s=""/>
+        <sfPLE id="90" n="IncapMessaging__Notification__c" s=""/>
+        <sfPLE id="91" n="IncapTalkBack__Question__c" s=""/>
+        <sfPLE id="92" n="IncapTalkBack__Survey__c" s=""/>
+        <sfPLE id="93" n="IncapTalkBack__Survey_Intake__c" s=""/>
+        <sfPLE id="94" n="IncapTalkBack__Survey_Question__c" s=""/>
+        <sfPLE id="95" n="IncapTalkBack__Survey_Response__c" s=""/>
+        <sfPLE id="96" n="Information__kav" s=""/>
+        <sfPLE id="97" n="INRF__Rule_Action__c" s=""/>
+        <sfPLE id="98" n="INRF__Rule_Criteria__c" s=""/>
+        <sfPLE id="99" n="INRF__Rule_Error__c" s=""/>
+        <sfPLE id="100" n="INRF__Rule_Notification__c" s=""/>
+        <sfPLE id="101" n="INRF__Rule_Set__c" s=""/>
+        <sfPLE id="102" n="INRF__Rule_Set_Log__c" s=""/>
+        <sfPLE id="103" n="Internal__kav" s=""/>
+        <sfPLE id="104" n="IotActivityLog" s=""/>
+        <sfPLE id="105" n="Knowledge__kav" s=""/>
+        <sfPLE id="106" n="Lead" s=""/>
+        <sfPLE id="107" n="LinkedArticle" s=""/>
+        <sfPLE id="108" n="ListEmail" s=""/>
+        <sfPLE id="109" n="ListEmailIndividualRecipient" s=""/>
+        <sfPLE id="110" n="ListEmailRecipientSource" s=""/>
+        <sfPLE id="111" n="ListEmailSentResult" s=""/>
+        <sfPLE id="112" n="LiveAgentSession" s=""/>
+        <sfPLE id="113" n="LiveChatFileToken" s=""/>
+        <sfPLE id="114" n="LiveChatTranscript" s=""/>
+        <sfPLE id="115" n="LiveText__Agent_Status__c" s=""/>
+        <sfPLE id="116" n="LiveText__Associated_Agents__c" s=""/>
+        <sfPLE id="117" n="LiveText__Auto_Linking__c" s=""/>
+        <sfPLE id="118" n="LiveText__Campaign_Send__c" s=""/>
+        <sfPLE id="119" n="LiveText__Campaign_Send_Member__c" s=""/>
+        <sfPLE id="120" n="LiveText__Conversation_Event__c" s=""/>
+        <sfPLE id="121" n="LiveText__Conversation_Header__c" s=""/>
+        <sfPLE id="122" n="LiveText__Conversation_Session__c" s=""/>
+        <sfPLE id="123" n="LiveText__Current_Optin_Status__c" s=""/>
+        <sfPLE id="124" n="LiveText__Exception__c" s=""/>
+        <sfPLE id="125" n="LiveText__ITR_Message__c" s=""/>
+        <sfPLE id="126" n="LiveText__LiveText_Number__c" s=""/>
+        <sfPLE id="127" n="LiveText__OptInStatus__c" s=""/>
+        <sfPLE id="128" n="LiveText__Recent_Campaign_Send_Member__c" s=""/>
+        <sfPLE id="129" n="LiveText__ScreenPopSequence__c" s=""/>
+        <sfPLE id="130" n="LiveText__SMS_Message__c" s=""/>
+        <sfPLE id="131" n="LiveText__SMS_Schedule__c" s=""/>
+        <sfPLE id="132" n="LiveText__SMS_Text__c" s=""/>
+        <sfPLE id="133" n="LiveText__Storage__c" s=""/>
+        <sfPLE id="134" n="LiveText__Structured_Form__c" s=""/>
+        <sfPLE id="135" n="Macro" s=""/>
+        <sfPLE id="136" n="MacroAction" s=""/>
+        <sfPLE id="137" n="MacroInstruction" s=""/>
+        <sfPLE id="138" n="ManagedContent" s=""/>
+        <sfPLE id="139" n="ManagedContentBlock" s=""/>
+        <sfPLE id="140" n="ManagedContentBlockVersion" s=""/>
+        <sfPLE id="141" n="ManagedContentNode" s=""/>
+        <sfPLE id="142" n="ManagedContentNodeRendition" s=""/>
+        <sfPLE id="143" n="ManagedContentSet" s=""/>
+        <sfPLE id="144" n="ManagedContentSetLink" s=""/>
+        <sfPLE id="145" n="ManagedContentVersion" s=""/>
+        <sfPLE id="146" n="Metric" s=""/>
+        <sfPLE id="147" n="MetricDataLink" s=""/>
+        <sfPLE id="148" n="MlIntentUtteranceSuggestion" s=""/>
+        <sfPLE id="149" n="NetworkSearchQueryFrequency" s=""/>
+        <sfPLE id="150" n="NetworkUserHistoryRecent" s=""/>
+        <sfPLE id="151" n="Opportunity" s=""/>
+        <sfPLE id="152" n="OrchestrationContextRuntimeEvent" s=""/>
+        <sfPLE id="153" n="OrchestrationEmailRecord" s=""/>
+        <sfPLE id="154" n="OrchestrationInstance" s=""/>
+        <sfPLE id="155" n="OrchestrationRuntimeLog" s=""/>
+        <sfPLE id="156" n="OrchestrationScheduledTimer" s=""/>
+        <sfPLE id="157" n="OrchestrationStats" s=""/>
+        <sfPLE id="158" n="OrchestrationTracker" s=""/>
+        <sfPLE id="159" n="OrchestrationTransitionCount" s=""/>
+        <sfPLE id="160" n="Order" s=""/>
+        <sfPLE id="161" n="OrgDeleteRequest" s=""/>
+        <sfPLE id="162" n="Participant__c" s=""/>
+        <sfPLE id="163" n="PartnerFundAllocation" s=""/>
+        <sfPLE id="164" n="PartnerFundClaim" s=""/>
+        <sfPLE id="165" n="PartnerFundRequest" s=""/>
+        <sfPLE id="166" n="PartnerMarketingBudget" s=""/>
+        <sfPLE id="167" n="PendingServiceRouting" s=""/>
+        <sfPLE id="168" n="PersonalizationResource" s=""/>
+        <sfPLE id="169" n="Pricebook2" s=""/>
+        <sfPLE id="170" n="Product2" s=""/>
+        <sfPLE id="171" n="QuickText" s=""/>
+        <sfPLE id="172" n="RecordAction" s=""/>
+        <sfPLE id="173" n="RecordOrigin" s=""/>
+        <sfPLE id="174" n="RequestsForAccessSIQ" s=""/>
+        <sfPLE id="175" n="Scorecard" s=""/>
+        <sfPLE id="176" n="ScorecardAssociation" s=""/>
+        <sfPLE id="177" n="ScorecardMetric" s=""/>
+        <sfPLE id="178" n="SearchActivity" s=""/>
+        <sfPLE id="179" n="SearchPromotionRule" s=""/>
+        <sfPLE id="180" n="ServiceContract" s=""/>
+        <sfPLE id="181" n="SetupAssistantAnswer" s=""/>
+        <sfPLE id="182" n="SetupAssistantProgress" s=""/>
+        <sfPLE id="183" n="SetupFlowProgress" s=""/>
+        <sfPLE id="184" n="SiqUserBlacklist" s=""/>
+        <sfPLE id="185" n="Solution" s=""/>
+        <sfPLE id="186" n="SOSSession" s=""/>
+        <sfPLE id="187" n="StreamActivityAccess" s=""/>
+        <sfPLE id="188" n="SyncTransactionLog" s=""/>
+        <sfPLE id="189" n="Task" s=""/>
+        <sfPLE id="190" n="TransactionSecurityAction" s=""/>
+        <sfPLE id="191" n="TransactionSecurityActionEvent" s=""/>
+        <sfPLE id="192" n="UserEmailPreferredPerson" s=""/>
+        <sfPLE id="193" n="UserMetrics" s=""/>
+        <sfPLE id="194" n="UserNavItem" s=""/>
+        <sfPLE id="195" n="UserServicePresence" s=""/>
+        <sfPLE id="196" n="WorkCoaching" s=""/>
+        <sfPLE id="197" n="WorkFeedback" s=""/>
+        <sfPLE id="198" n="WorkFeedbackQuestion" s=""/>
+        <sfPLE id="199" n="WorkFeedbackQuestionSet" s=""/>
+        <sfPLE id="200" n="WorkFeedbackRequest" s=""/>
+        <sfPLE id="201" n="WorkFeedbackTemplate" s=""/>
+        <sfPLE id="202" n="WorkPerformanceCycle" s=""/>
+        <sfPLE id="203" n="X311_Event__kav" s=""/>
+      </picklistEntries>
+    </sfField>
+    <sfField createable="false" editPermission="false" n="IsActive" t="Active" type="_boolean"/>
+    <sfField createable="false" editPermission="false" length="18" n="CreatedById" relationshipName="CreatedBy" t="Created By ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" n="CreatedDate" t="Created Date" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" length="18" n="LastModifiedById" relationshipName="LastModifiedBy" t="Last Modified By ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" n="LastModifiedDate" t="Last Modified Date" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="SystemModstamp" t="System Modstamp" type="datetime" updateable="false"/>
+  </fields>
+  <childRelationships/>
+  <recordTypes/>
+  <standardActions>
+    <sfActionLink modes="ObjectHome" n="List" requiresRow="true"/>
+    <sfActionLink modes="Edit New Clone" n="save" requiresRow="true" t="Save"/>
+    <sfActionLink modes="Edit New Clone" n="save_new" requiresRow="true" t="Save and New"/>
+    <sfActionLink modes="Edit New Clone" n="cancel" requiresRow="true" t="Cancel"/>
+    <sfActionLink afterWaitUrl="ui:wait:timed?seconds=10" modes="View" n="SaveEdit" t="Save"/>
+    <sfActionLink modes="View" n="CancelEdit" t="Cancel"/>
+    <sfActionLink massAction="true" modes="View List" n="ChangeOwnerOne" t="Change Owner"/>
+    <sfActionLink massAction="true" modes="View List" n="ChangeRecordType" t="Change Record Type"/>
+    <sfActionLink modes="View" n="email" t="Send an Email"/>
+    <sfActionLink modes="View" n="Share"/>
+    <sfActionLink modes="QuickAction" n="publishersharebutton" t="Create"/>
+    <sfActionLink modes="ObjectHome List" n="Sort"/>
+    <sfActionLink modes="ObjectHome List" n="Filter"/>
+    <sfActionLink modes="ObjectHome View" n="Search"/>
+    <sfActionLink modes="ObjectHome List" n="Import"/>
+    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
+    <sfActionLink modes="ObjectHome List" n="New"/>
+  </standardActions>
+  <weblinks/>
+</sfObject>

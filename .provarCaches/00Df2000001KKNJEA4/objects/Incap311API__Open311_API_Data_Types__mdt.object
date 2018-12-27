@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Denotes the type of field used for user input. 
+
+string: A string of characters without line breaks. Represented in an HTML form using an &lt;input&gt; tag 
+number: A numeric value. Represented in an HTML form using an &lt;input&gt; tag 
+datetime: The input generated must be able to transform into a valid ISO 8601 date. Represented in an HTML form using &lt;input&gt; tags 
+text: A string of characters that may contain line breaks. Represented in an HTML form using an &lt;textarea&gt; tag 
+singlevaluelist: A set of predefined values (specified in this response) where only one value may be selected. Represented in an HTML form using the &lt;select&gt; and &lt;option&gt; tags 
+multivaluelist: A set of predefined values (specified in this response) where several values may be selected. Represented in an HTML form using the &lt;select multiple=&quot;multiple&quot;&gt; and &lt;option&gt; tags</description>
+    <fields>
+        <fullName>Incap311API__Data_Type_API_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Data Type API Name</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Incap311API__Standard_Types__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Standard Types supported by Open311 API</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <inlineHelpText>Standard Types supported by Open311 API</inlineHelpText>
+        <label>Standard Types</label>
+        <required>true</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>string</fullName>
+                    <default>true</default>
+                    <label>string</label>
+                </value>
+                <value>
+                    <fullName>number</fullName>
+                    <default>false</default>
+                    <label>number</label>
+                </value>
+                <value>
+                    <fullName>datetime</fullName>
+                    <default>false</default>
+                    <label>datetime</label>
+                </value>
+                <value>
+                    <fullName>text</fullName>
+                    <default>false</default>
+                    <label>text</label>
+                </value>
+                <value>
+                    <fullName>singlevaluelist</fullName>
+                    <default>false</default>
+                    <label>singlevaluelist</label>
+                </value>
+                <value>
+                    <fullName>multivaluelist</fullName>
+                    <default>false</default>
+                    <label>multivaluelist</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Open311 API Data Type</label>
+    <pluralLabel>Open311 API Data Types</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

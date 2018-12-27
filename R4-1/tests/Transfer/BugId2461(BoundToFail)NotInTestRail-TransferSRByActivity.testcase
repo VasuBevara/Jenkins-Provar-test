@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="7">
+<testCase id="35">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: QA (Test)">
@@ -3121,7 +3121,7 @@
                 </apiParam>
               </generatedParameters>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="628" title="Set the New Service Type select to Contractor Complaints">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="628" title="Set the New Service Type select to Provar Regression RWH">
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:locator?name=newServiceType"/>
@@ -3130,7 +3130,7 @@
                   <value class="uiInteraction" uri="ui:interaction?name=set"/>
                 </argument>
                 <argument id="value">
-                  <value class="value" valueClass="string">PCONCMPLNT</value>
+                  <value class="value" valueClass="string">Provar Regression</value>
                 </argument>
                 <argument id="blur">
                   <value class="value" valueClass="boolean">false</value>
@@ -3151,7 +3151,7 @@
                   <value class="uiWait" uri="default"/>
                 </argument>
                 <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Set the New Service Type select to Contractor Complaints</value>
+                  <value class="value" valueClass="string">Set the New Service Type select to Provar Regression RWH</value>
                 </argument>
                 <argument id="autoRetry"/>
               </arguments>
@@ -3161,7 +3161,7 @@
                   <type>
                     <choiceType>
                       <constraints>
-                        <valueConstraint name="boundedValues">AIRCRFTDST:Aircraft Noise Disturbance|PCONCMPLNT:Contractor Complaints</valueConstraint>
+                        <valueConstraint name="boundedValues">Provar Regression:Provar Regression RWH|AIRCRFTDST:Aircraft Noise Disturbance|PCONCMPLNT:Contractor Complaints|Provar Regression RWH</valueConstraint>
                       </constraints>
                     </choiceType>
                   </type>

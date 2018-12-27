@@ -1,0 +1,53 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" applyHtmlTag="false" controller="CitizenCommunityPageController">
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8"></meta>
+  <title>Dallas 311</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"></meta>
+  <meta name="format-detection" content="telephone=no"></meta>
+  <meta name="msapplication-tap-highlight" content="no"></meta>
+
+  <link rel="icon" type="image/x-icon" href="{!URLFOR($Resource.CitizenMobileSource, 'assets/icon/favicon.ico')}"></link>
+  <link rel="manifest" href="{!URLFOR($Resource.CitizenMobileSource, 'manifest.json')}"></link>
+  <meta name="theme-color" content="#4e8ef7"></meta>
+
+  <apex:remoteObjects jsNamespace="Citizen">
+    
+    <apex:remoteObjectModel name="User" fields="Id,ContactId,Name,FirstName,LastName,Username,Email,MobilePhone" />
+    
+  </apex:remoteObjects>
+
+  <link href="{!URLFOR($Resource.CitizenMobileSource, 'assets/styles/leaflet.css')}" rel="stylesheet"></link>
+  <link href="{!URLFOR($Resource.CitizenMobileSource, 'assets/styles/animate.min.css')}" rel="stylesheet"></link>
+  <link href="{!URLFOR($Resource.CitizenMobileSource, 'build/main.css')}" rel="stylesheet"></link>
+
+</head>
+
+<body>
+
+  <script>
+    window.SF_ACCESS_TOKEN = '{! $Api.Session_ID }';
+    window.SF_USER_ID = '{! $User.Id }';
+    window.SF_USER_NAME = '{!JSENCODE($User.FirstName)} {!JSENCODE($User.LastName)}';
+    window.SF_USER_IS_GUEST = {!ISPICKVAL($User.UserType,'Guest')};
+    window.SF_IDENTITY = {
+      user_id: '{! $User.Id }',
+      first_name: '{! JSENCODE($User.FirstName)}',
+      last_name: '{! JSENCODE($User.LastName)}',
+      email: '{! $User.Email}',
+      mobile_phone: '{! $User.MobilePhone}',
+      username: '{! $User.Username}',
+      user_type: '{!TEXT($User.UserType)}',
+      user_timezone:'{!User_TimeZone}'
+    };
+  </script>
+
+  <ion-app></ion-app>
+
+  <script src="{!URLFOR($Resource.CitizenMobileLibs, 'polyfills.js')}"></script>
+  <script src="{!URLFOR($Resource.CitizenMobileLibs, 'vendor.js')}"></script>
+  <script src="{!URLFOR($Resource.CitizenMobileSource, 'build/main.js')}"></script>
+
+</body>
+</html>
+</apex:page>

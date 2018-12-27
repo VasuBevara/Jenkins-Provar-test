@@ -1,0 +1,96 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" applyHtmlTag="false" controller="CitizenRegisterController">
+  <html>
+  <head>
+    <title>311 Registration</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif|Roboto" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.8, minimum-scale=0.8, maximum-scale=0.8"></meta>
+    <link rel="stylesheet" href="{!URLFOR($Resource.CitizenResources, 'assets/311-capsule-common.css')}" />
+    <style type="text/css">
+
+      .logo {
+        background: transparent url('{!URLFOR($Resource.CitizenResources, 'assets/logo-color.png')}') 0 0 no-repeat;
+        background-size: 100%;
+      }
+
+      .password-requirements {
+        font-size: 11px;
+        color: #777;
+        display: block;
+        margin-top: 5px;
+      }
+
+      .outer-wrapper {
+        height: 100%;
+      }
+
+    </style>
+     <script type="text/javascript" src="{!URLFOR($Resource.CitizenResources, 'assets/311-capsule-common.js')}" />
+
+  </head>
+  <body>
+
+  <div class="outer-wrapper">
+
+    <span class="logo"></span>
+
+    <h2>Create New Account</h2>
+
+    <div class="inner-wrapper">
+
+      <apex:form id="registerForm" forceSSL="true">
+        <div id="errorWrap" style="display:none">
+            <apex:pageMessages id="error" />
+        </div>
+
+        <div class="field">
+          <label for="username">First Name</label>
+          <apex:inputText id="username"  value="{!firstname}" />
+        </div>
+
+        <div class="field">
+          <label for="nickname">Last Name</label>
+          <apex:inputText id="nickname"  value="{!lastname}" />
+        </div>
+
+        <div class="field">
+          <label for="email">Email Address</label>
+          <apex:inputText id="email"  value="{!email}" />
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <apex:inputSecret id="password"  value="{!password}" />
+          <span class="password-requirements">Passwords need to be alphanumeric and at least 8 characters</span>
+        </div>
+
+        <div class="field">
+          <label for="confirmPassword">Confirm Password</label>
+          <apex:inputSecret id="confirmPassword"  value="{!confirmPassword}" />
+        </div>
+
+        <div class="action-wrapper">
+          <apex:commandButton rerender="registerForm"
+            onclick="disableButton(this)"
+            oncomplete="onSubmitComplete();"
+            action="{!register}"
+            value="Submit"
+            styleClass="submit-button"
+          />
+        </div>
+
+      </apex:form>
+
+    </div>
+
+    <div class="bottom-links">
+      <apex:outputLink value="/CitizenLoginPage">
+        Login with existing account
+      </apex:outputLink>
+    </div>
+
+  </div>
+
+  </body>
+  </html>
+
+</apex:page>

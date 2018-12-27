@@ -1,0 +1,1509 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfObject creatable="true" deleteable="true" keyPrefix="a0g" label="Service Type Version" labelPlural="Service Type Versions" layoutable="true" metadataLabel="Service Type Version" n="Incap311__Service_Type_Version__c" queryable="true" retrieveable="true" s="" searchLayoutable="true" t="Service Type Version (a0g)" updatable="true" urlDetail="https://incapsulate311-sat-dev-ed.my.salesforce.com/{ID}" urlEdit="https://incapsulate311-sat-dev-ed.my.salesforce.com/{ID}/e" urlNew="https://incapsulate311-sat-dev-ed.my.salesforce.com/a0g/e">
+  <fields>
+    <sfField createable="false" editPermission="false" length="18" n="Id" t="Record ID" type="id" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="IsDeleted" t="Deleted" type="_boolean" updateable="false"/>
+    <sfField autoNumberField="true" createable="false" editPermission="false" length="80" n="Name" nameField="true" t="Service Type Version Id" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="CreatedDate" t="Created Date" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" length="18" n="CreatedById" relationshipName="CreatedBy" t="Created By ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" n="LastModifiedDate" t="Last Modified Date" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" length="18" n="LastModifiedById" relationshipName="LastModifiedBy" t="Last Modified By ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" n="SystemModstamp" t="System Modstamp" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="LastViewedDate" t="Last Viewed Date" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="LastReferencedDate" t="Last Referenced Date" type="datetime" updateable="false"/>
+    <sfField length="18" n="Incap311__Service_Type__c" relationshipLabel="Service Type Versions" relationshipName="Incap311__Service_Type__r" required="true" t="Service Type" type="reference">
+      <referenceTos>
+        <string>Incap311__Service_Type__c</string>
+      </referenceTos>
+    </sfField>
+    <sfField extraTypeInfo="plaintextarea" filterable="false" length="32768" n="Incap311__Alert_Validations__c" t="Alert Validations" type="textarea"/>
+    <sfField n="Incap311__Allow_Citizen_Web_Intake__c" t="Allow Citizen Web Intake" type="_boolean"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IF(TEXT(Incap311__Override_Contact_Status__c) != '',\n    TEXT(Incap311__Override_Contact_Status__c),\n    TEXT(Incap311__Service_Type__r.Incap311__Contact_Status__c))" length="1300" n="Incap311__Contact_Status__c" t="Contact Status" updateable="false"/>
+    <sfField length="4099" n="Incap311__Days_Of_Week__c" precision="4" restrictedPicklist="true" t="Days Of Week" type="multipicklist">
+      <picklistEntryIds>1,2,3,4,5,6,7</picklistEntryIds>
+      <picklistEntries>
+        <sfPLE id="1" n="Monday" s=""/>
+        <sfPLE id="2" n="Tuesday" s=""/>
+        <sfPLE id="3" n="Wednesday" s=""/>
+        <sfPLE id="4" n="Thursday" s=""/>
+        <sfPLE id="5" n="Friday" s=""/>
+        <sfPLE id="6" n="Saturday" s=""/>
+        <sfPLE id="7" n="Sunday" s=""/>
+      </picklistEntries>
+    </sfField>
+    <sfField length="255" n="Incap311__Default_Layers__c" t="Default Layers"/>
+    <sfField length="255" n="Incap311__Default_Method__c" restrictedPicklist="true" t="Default Method" type="picklist">
+      <picklistEntryIds>8,9,10,11,12,13,14,15,16,17</picklistEntryIds>
+      <picklistEntries>
+        <sfPLE id="8" n="Phone" s=""/>
+        <sfPLE id="9" n="311-App" s=""/>
+        <sfPLE id="10" n="Web" s=""/>
+        <sfPLE id="11" n="Internal Transfer" s=""/>
+        <sfPLE id="12" n="Internal" s=""/>
+        <sfPLE id="13" n="API" s=""/>
+        <sfPLE id="14" n="Email" s=""/>
+        <sfPLE id="15" n="Mail" s=""/>
+        <sfPLE id="16" n="Proactive" s=""/>
+        <sfPLE id="17" n="Social" s=""/>
+      </picklistEntries>
+    </sfField>
+    <sfField length="255" n="Incap311__Default_Priority__c" restrictedPicklist="true" t="Default Priority" type="picklist">
+      <picklistEntryIds>18,19,20</picklistEntryIds>
+      <picklistEntries>
+        <sfPLE id="18" n="High" s=""/>
+        <sfPLE id="19" n="Low" s=""/>
+        <sfPLE id="20" n="Standard" s=""/>
+      </picklistEntries>
+    </sfField>
+    <sfField length="255" n="Incap311__Default_Status__c" restrictedPicklist="true" t="Default Status" type="picklist">
+      <picklistEntryIds>21,22,23,24</picklistEntryIds>
+      <picklistEntries>
+        <sfPLE id="21" n="Closed" s=""/>
+        <sfPLE id="22" n="In Progress" s=""/>
+        <sfPLE id="23" n="New" s=""/>
+        <sfPLE id="24" n="Open" s=""/>
+      </picklistEntries>
+    </sfField>
+    <sfField extraTypeInfo="plaintextarea" filterable="false" length="32768" n="Incap311__Dependencies__c" t="Dependencies" type="textarea"/>
+    <sfField length="255" n="Incap311__Distribute_On__c" restrictedPicklist="true" t="Distribute On" type="picklist">
+      <picklistEntryIds>25,26,27</picklistEntryIds>
+      <picklistEntries>
+        <sfPLE defaultValue="true" id="25" n="All" s=""/>
+        <sfPLE id="26" n="Create" s=""/>
+        <sfPLE id="27" n="Edit" s=""/>
+      </picklistEntries>
+    </sfField>
+    <sfField extraTypeInfo="plaintextarea" filterable="false" length="131072" n="Incap311__Distribution_Matching_del__c" t="Distribution Matching" type="textarea"/>
+    <sfField length="255" n="Incap311__Duplicate_Detection_Method__c" restrictedPicklist="true" t="Duplicate Detection Method" type="picklist">
+      <picklistEntryIds>20,28</picklistEntryIds>
+      <picklistEntries>
+        <sfPLE id="20" n="Standard" s=""/>
+        <sfPLE id="28" n="Geo Layers" s=""/>
+      </picklistEntries>
+    </sfField>
+    <sfField extraTypeInfo="plaintextarea" filterable="false" length="32768" n="Incap311__Duplicate_Layers_JSON__c" t="Duplicate Layers JSON" type="textarea"/>
+    <sfField n="Incap311__Duplicate_Match_Street__c" t="Duplicate Match Street" type="_boolean"/>
+    <sfField n="Incap311__Duplicate_Oldest_Index__c" summary="Duplicate detection from Oldest SR to Newest SR" t="Duplicate Oldest Index" type="_boolean"/>
+    <sfField n="Incap311__Duplicate_Radius_feet__c" precision="18" t="Duplicate Radius (feet)" type="_double"/>
+    <sfField length="4099" n="Incap311__Duplicate_Statuses__c" precision="4" restrictedPicklist="true" t="Duplicate Statuses" type="multipicklist">
+      <picklistEntryIds>23,21,29,22</picklistEntryIds>
+      <picklistEntries>
+        <sfPLE id="23" n="New" s=""/>
+        <sfPLE id="21" n="Closed" s=""/>
+        <sfPLE id="29" n="Hold" s=""/>
+        <sfPLE id="22" n="In Progress" s=""/>
+      </picklistEntries>
+    </sfField>
+    <sfField n="Incap311__Duplicate_Threshold_Period_days__c" precision="18" t="Duplicate Threshold Period (days)" type="_double"/>
+    <sfField n="Incap311__Duplicate_Threshold_Period_hours__c" precision="2" t="Duplicate Threshold Period (hours)" type="_double"/>
+    <sfField extraTypeInfo="plaintextarea" filterable="false" length="6000" n="Incap311__Email_Body_Close__c" summary="Deprecated in favor of Rich Email Body (Close)" t="DEPRECATED - Email Body (Close)" type="textarea"/>
+    <sfField extraTypeInfo="plaintextarea" filterable="false" length="6000" n="Incap311__Email_Body_Create__c" summary="Deprecated in favor of Rich Email Body (Create)" t="DEPRECATED - Email Body (Create)" type="textarea"/>
+    <sfField extraTypeInfo="plaintextarea" filterable="false" length="4000" n="Incap311__Email_Closing_Close__c" summary="Deprecated in favor of Rich Email Closing (Close)" t="DEPRECATED - Email Closing (Close)" type="textarea"/>
+    <sfField extraTypeInfo="plaintextarea" filterable="false" length="4000" n="Incap311__Email_Closing_Create__c" summary="Deprecated in favor of Rich Email Closing (Create)" t="DEPRECATED - Email Closing (Create)" type="textarea"/>
+    <sfField length="255" n="Incap311__Email_Intro_Close__c" summary="Deprecated in favor of Rich Email Intro (Close)" t="DEPRECATED - Email Intro (Close)"/>
+    <sfField length="255" n="Incap311__Email_Intro_Create__c" summary="Deprecated in favor of Rich Email Intro (Create)" t="DEPRECATED - Email Intro (Create)"/>
+    <sfField length="25" n="Incap311__Email_Template_Id_for_Close__c" t="Email Template Id for Close"/>
+    <sfField length="25" n="Incap311__Email_Template_Id_for_Create__c" t="Email Template Id for Create"/>
+    <sfField length="25" n="Incap311__Email_Template_Id_for_Update__c" t="Email Template Id for Update"/>
+    <sfField n="Incap311__Enable_Business_Hours__c" t="Enable Business Hours" type="_boolean"/>
+    <sfField n="Incap311__Enable_Distribution_Updates__c" t="Enable Distribution Updates" type="_boolean"/>
+    <sfField n="Incap311__Enable_Distribution_del__c" t="Enable Distribution" type="_boolean"/>
+    <sfField n="Incap311__Enable_Operational_SLA__c" summary="To consider operation period for SLA calculations" t="Enable Operational SLA" type="_boolean"/>
+    <sfField n="Incap311__Enable_Sub_Units__c" t="Enable Sub Units" type="_boolean"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IF(\nNOT(ISBLANK(Incap311__Service_Type__r.Incap311__External_Name__c)), \nIncap311__Service_Type__r.Incap311__External_Name__c,\nIncap311__Service_Name__c\n)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Incap311__External_Name__c" t="External Name" updateable="false"/>
+    <sfField n="Incap311__Generate_All_Questions__c" t="Generate All Questions" type="_boolean"/>
+    <sfField extraTypeInfo="plaintextarea" filterable="false" length="32768" n="Incap311__Geo_Validations__c" t="Geo Validations" type="textarea"/>
+    <sfField length="255" n="Incap311__Group__c" t="Group"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="Incap311__Question_Count__c != 0" n="Incap311__Has_Metadata__c" t="Has Metadata" type="_boolean" updateable="false"/>
+    <sfField n="Incap311__Hide_Contact__c" t="Hide Contact" type="_boolean"/>
+    <sfField n="Incap311__Hide_Location__c" t="Hide Location" type="_boolean"/>
+    <sfField n="Incap311__Include_System_Defaults_del__c" t="Include System Defaults" type="_boolean"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="(\n  ( \n   ( (NOT(ISNULL(Incap311__Start__c)) &amp;&amp; (TODAY() &gt;= Incap311__Start__c) ) || ISNULL(Incap311__Start__c)) \n     &amp;&amp; \n   ( ( NOT(ISNULL(Incap311__Stop__c)) &amp;&amp; (TODAY() &lt; Incap311__Stop__c) ) || ISNULL(Incap311__Stop__c) )\n  )\n)\n&amp;&amp;\nNOT(Incap311__Is_Draft__c)" n="Incap311__Is_Activatable__c" t="Is Activatable" type="_boolean" updateable="false"/>
+    <sfField n="Incap311__Is_Contact_Or_Account_Required__c" t="Is Contact Or Account Required" type="_boolean"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="Incap311__Service_Type__r.Incap311__Active_Service_Type_Version__c = Id" n="Incap311__Is_Current_Version__c" t="Is Current Version" type="_boolean" updateable="false"/>
+    <sfField n="Incap311__Is_Draft__c" t="Is Draft" type="_boolean"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="Incap311__Service_Type__r.Incap311__Active_Service_Type_Version__r.Incap311__Version_Number__c &gt;  Incap311__Version_Number__c" n="Incap311__Is_Old_Version__c" t="Is Old Version" type="_boolean" updateable="false"/>
+    <sfField length="255" n="Incap311__Keywords__c" t="Keywords"/>
+    <sfField extraTypeInfo="plaintextarea" filterable="false" length="32768" n="Incap311__Layer_Information__c" t="Layer Information" type="textarea"/>
+    <sfField length="255" n="Incap311__Map_Marker_Icon__c" t="Map Marker Icon" type="url"/>
+    <sfField n="Incap311__Midnight_SLA__c" summary="e.g. SR is created at 1/1/xxxx 3:00 PM and SLA is configured as 1 business day. Then if this flag is checked, SR Expected datetime will be set to 1/2/xxxx 11:59 PM instead of 1/2/xxxx 3:00 PM." t="Midnight SLA" type="_boolean"/>
+    <sfField length="255" n="Incap311__Object__c" restrictedPicklist="true" t="Object" type="picklist">
+      <picklistEntryIds>30</picklistEntryIds>
+      <picklistEntries>
+        <sfPLE defaultValue="true" id="30" n="Case" s=""/>
+      </picklistEntries>
+    </sfField>
+    <sfField length="255" n="Incap311__Override_Contact_Status__c" restrictedPicklist="true" t="Override Contact Status" type="picklist">
+      <picklistEntryIds>31,32,33,34,35</picklistEntryIds>
+      <picklistEntries>
+        <sfPLE id="31" n="Available" s=""/>
+        <sfPLE id="32" n="Not Visible" s=""/>
+        <sfPLE id="33" n="Required (LN, FN, EM)" s=""/>
+        <sfPLE id="34" n="Required (LN, FN, EM or PH)" s=""/>
+        <sfPLE id="35" n="Required (LN, FN, PH)" s=""/>
+      </picklistEntries>
+    </sfField>
+    <sfField extraTypeInfo="plaintextarea" filterable="false" length="32768" n="Incap311__Recommended_Types__c" t="Recommended Types" type="textarea"/>
+    <sfField length="255" n="Incap311__Resolution_Type__c" restrictedPicklist="true" t="Resolution Type" type="picklist">
+      <picklistEntryIds>36</picklistEntryIds>
+      <picklistEntries>
+        <sfPLE defaultValue="true" id="36" n="realtime" s=""/>
+      </picklistEntries>
+    </sfField>
+    <sfField extraTypeInfo="richtextarea" filterable="false" length="6000" n="Incap311__Rich_Email_Body_Close__c" t="Rich Email Body (Close)" type="textarea"/>
+    <sfField extraTypeInfo="richtextarea" filterable="false" length="6000" n="Incap311__Rich_Email_Body_Create__c" t="Rich Email Body (Create)" type="textarea"/>
+    <sfField extraTypeInfo="richtextarea" filterable="false" length="6000" n="Incap311__Rich_Email_Closing_Close__c" t="Rich Email Closing (Close)" type="textarea"/>
+    <sfField extraTypeInfo="richtextarea" filterable="false" length="6000" n="Incap311__Rich_Email_Closing_Create__c" t="Rich Email Closing (Create)" type="textarea"/>
+    <sfField extraTypeInfo="richtextarea" filterable="false" length="6000" n="Incap311__Rich_Email_Intro_Close__c" t="Rich Email Intro (Close)" type="textarea"/>
+    <sfField extraTypeInfo="richtextarea" filterable="false" length="6000" n="Incap311__Rich_Email_Intro_Create__c" t="Rich Email Intro (Create)" type="textarea"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IF(\n    Incap311__SLA__c == 0,\n    &quot;No SLA Defined&quot;,\n    IF(\n       Incap311__SLA__c  == 1,\n       TEXT(Incap311__SLA__c) + &quot; &quot; + LEFT(TEXT(Incap311__SLA_Type__c), LEN(TEXT(Incap311__SLA_Type__c)) - 1),\n       TEXT(Incap311__SLA__c) + &quot; &quot; + TEXT(Incap311__SLA_Type__c))\n)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Incap311__SLA_Detail__c" t="SLA Detail" updateable="false"/>
+    <sfField length="255" n="Incap311__SLA_Type__c" restrictedPicklist="true" t="SLA Type" type="picklist">
+      <picklistEntryIds>37,38,39</picklistEntryIds>
+      <picklistEntries>
+        <sfPLE id="37" n="Business Days" s=""/>
+        <sfPLE id="38" n="Calendar Days" s=""/>
+        <sfPLE id="39" n="Hours" s=""/>
+      </picklistEntries>
+    </sfField>
+    <sfField n="Incap311__SLA__c" precision="18" t="SLA" type="_double"/>
+    <sfField length="255" n="Incap311__SR_Alert_Message__c" t="SR Alert Message"/>
+    <sfField n="Incap311__Send_Email_On_SR_Closed__c" t="Send Email On SR Closed" type="_boolean"/>
+    <sfField n="Incap311__Send_Email_On_SR_Creation__c" t="Send Email On SR Creation" type="_boolean"/>
+    <sfField length="255" n="Incap311__Service_Icon__c" t="Service Icon" type="url"/>
+    <sfField n="Incap311__Service_Location_Required__c" t="Service Location Required" type="_boolean"/>
+    <sfField length="255" n="Incap311__Service_Name__c" required="true" t="Service Name"/>
+    <sfField extraTypeInfo="plaintextarea" filterable="false" length="32768" n="Incap311__Service_Notice__c" t="Service Notice" type="textarea"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="Incap311__Service_Type__r.Incap311__Service_Type_Code__c" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Incap311__Service_Type_Code__c" t="Service Type Code" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="Incap311__Service_Type__r.Name" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Incap311__Service_Type_Name__c" t="Service Type Id" updateable="false"/>
+    <sfField n="Incap311__Start_Date__c" t="SLA: Start Date" type="date"/>
+    <sfField n="Incap311__Start__c" t="Start Date" type="date"/>
+    <sfField n="Incap311__Stop_Date__c" t="SLA: Stop Date" type="date"/>
+    <sfField n="Incap311__Stop__c" t="Stop Date" type="date"/>
+    <sfField n="Incap311__Track_SR_Closure_Email__c" t="Track SR Closure Email" type="_boolean"/>
+    <sfField n="Incap311__Track_SR_Creation_Email__c" t="Track SR Creation Email" type="_boolean"/>
+    <sfField extraTypeInfo="plaintextarea" filterable="false" length="32768" n="Incap311__Validations__c" t="Validations" type="textarea"/>
+    <sfField length="25" n="Incap311__Version_Code__c" required="true" t="Version Code"/>
+    <sfField length="255" n="Incap311__Version_Name__c" required="true" t="Version Name"/>
+    <sfField n="Incap311__Version_Number__c" precision="3" required="true" t="Version Number" type="_double"/>
+    <sfField extraTypeInfo="plaintextarea" length="255" n="Incap311__Visible_Layers__c" t="Visible Layers" type="textarea"/>
+    <sfField calculated="true" createable="false" editPermission="false" n="Incap311__Question_Count__c" precision="18" summaryForeignKey="Incap311__Service_Type_Version_Question__c.Incap311__Service_Type_Version__c" summaryOperation="count" t="Question Count" type="_double" updateable="false"/>
+    <sfField length="18" n="AutorabitExtId__c"/>
+    <sfField n="Incap311__Private_Attachments__c" summary="If checked, all the attachments on service requests are not visible on web or mobile and are hidden from integrators using the API." t="Private Attachments" type="_boolean"/>
+  </fields>
+  <childRelationships>
+    <sfObjectRelationship alias="RelatedFileList" childName="AttachedContentDocument" field="LinkedEntityId" n="AttachedContentDocuments" relationshipName="AttachedContentDocuments" s="2-" t="AttachedContentDocument"/>
+    <sfObjectRelationship alias="RelatedContentNoteList" childName="AttachedContentNote" field="LinkedEntityId" n="AttachedContentNotes" relationshipName="AttachedContentNotes" s="2-" t="AttachedContentNote"/>
+    <sfObjectRelationship alias="RelatedActivityAttachmentList" childName="Attachment" field="ParentId" n="Attachments" relationshipName="Attachments" s="2-" t="Attachment"/>
+    <sfObjectRelationship childName="Case" field="Incap311__Service_Type_Version__c" n="Incap311__Cases__r" relationshipName="Incap311__Cases__r" s="2-" t="Case"/>
+    <sfObjectRelationship alias="RelatedNoteList" childName="CombinedAttachment" field="ParentId" n="CombinedAttachments" relationshipName="CombinedAttachments" s="2-" t="CombinedAttachment"/>
+    <sfObjectRelationship childName="ContentDocumentLink" field="LinkedEntityId" n="ContentDocumentLinks" relationshipName="ContentDocumentLinks" s="2-" t="ContentDocumentLink"/>
+    <sfObjectRelationship childName="DuplicateRecordItem" field="RecordId" n="DuplicateRecordItems" relationshipName="DuplicateRecordItems" s="2-" t="DuplicateRecordItem"/>
+    <sfObjectRelationship childName="EmailMessage" field="RelatedToId" n="Emails" relationshipName="Emails" s="2-" t="EmailMessage"/>
+    <sfObjectRelationship childName="EntitySubscription" field="ParentId" n="FeedSubscriptionsForEntity" relationshipName="FeedSubscriptionsForEntity" s="2-" t="EntitySubscription"/>
+    <sfObjectRelationship childName="Incap311__Duplicate_Service_Type_Mapping__c" field="Incap311__From_Service_Type_Version__c" n="Incap311__Duplicate_Service_Type_Mappings__r" relationshipName="Incap311__Duplicate_Service_Type_Mappings__r" s="2-" t="Incap311__Duplicate_Service_Type_Mapping__c"/>
+    <sfObjectRelationship childName="Incap311__Service_Type_Event__c" field="Incap311__Service_Type_Version__c" n="Incap311__Service_Type_Event__r" relationshipName="Incap311__Service_Type_Event__r" s="2-" t="Incap311__Service_Type_Event__c"/>
+    <sfObjectRelationship childName="Incap311__Service_Type_Version_Activity__c" field="Incap311__Service_Type_Version__c" n="Incap311__Service_Type_Version_Activities__r" relationshipName="Incap311__Service_Type_Version_Activities__r" s="2-" t="Incap311__Service_Type_Version_Activity__c"/>
+    <sfObjectRelationship childName="Incap311__Service_Type_Version_Correspondence__c" field="Incap311__Service_Type_Version__c" n="Incap311__Service_Type_Version_Correspondents__r" relationshipName="Incap311__Service_Type_Version_Correspondents__r" s="2-" t="Incap311__Service_Type_Version_Correspondence__c"/>
+    <sfObjectRelationship childName="Incap311__Service_Type_Version_Question__c" field="Incap311__Service_Type_Version__c" n="Incap311__Service_Type_Version_Questions__r" relationshipName="Incap311__Service_Type_Version_Questions__r" s="2-" t="Incap311__Service_Type_Version_Question__c"/>
+    <sfObjectRelationship alias="RelatedEntityHistoryList" childName="Incap311__Service_Type_Version__History" field="ParentId" n="Histories" relationshipName="Histories" s="2-" t="Incap311__Service_Type_Version__History"/>
+    <sfObjectRelationship childName="Incap311__Service_Type__c" field="Incap311__Active_Service_Type_Version__c" n="Incap311__Service_Types__r" relationshipName="Incap311__Service_Types__r" s="2-" t="Incap311__Service_Type__c"/>
+    <sfObjectRelationship childName="NetworkActivityAudit" field="ParentEntityId" n="ParentEntities" relationshipName="ParentEntities" s="2-" t="NetworkActivityAudit"/>
+    <sfObjectRelationship childName="NetworkUserHistoryRecent" field="RecordId" n="NetworkUserHistoryRecentToRecord" relationshipName="NetworkUserHistoryRecentToRecord" s="2-" t="NetworkUserHistoryRecent"/>
+    <sfObjectRelationship childName="Note" field="ParentId" n="Notes" relationshipName="Notes" s="2-" t="Note"/>
+    <sfObjectRelationship childName="NoteAndAttachment" field="ParentId" n="NotesAndAttachments" relationshipName="NotesAndAttachments" s="2-" t="NoteAndAttachment"/>
+    <sfObjectRelationship alias="RelatedProcessInstanceHistory" childName="ProcessInstance" field="TargetObjectId" n="ProcessInstances" relationshipName="ProcessInstances" s="2-" t="ProcessInstance"/>
+    <sfObjectRelationship alias="RelatedProcessHistoryList" childName="ProcessInstanceHistory" field="TargetObjectId" n="ProcessSteps" relationshipName="ProcessSteps" s="2-" t="ProcessInstanceHistory"/>
+    <sfObjectRelationship childName="RecordAction" field="RecordId" n="RecordActions" relationshipName="RecordActions" s="2-" t="RecordAction"/>
+    <sfObjectRelationship childName="TopicAssignment" field="EntityId" n="TopicAssignments" relationshipName="TopicAssignments" s="2-" t="TopicAssignment"/>
+  </childRelationships>
+  <recordTypes>
+    <sfRecordType n="&lt;default&gt;" t="Web Record Type Mapping">
+      <children>
+        <sfLayout layoutFileName="Incap311__Service_Type_Version__c-Incap311__Service Type Version Layout" n="Primary" profileLayout="false" s="" t="Page Layout">
+          <layoutTypes>
+            <sfLayoutType layoutType="Edit" n="Edit" t="Web Layout Type">
+              <children>
+                <sfLayoutSection customLabel="false" detailHeading="false" editHeading="false" n="Information" s="" seqNum="0" style="TwoColumnsTopToBottom" t="Web Layout Section - false">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Service Type Version Id" n="Service Type Version Id" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Name" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="Keywords" n="Keywords" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Keywords__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI label="AutorabitExtId__c" n="AutorabitExtId__c" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="AutorabitExtId__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                      <children>
+                        <sfLI label="Track SR Creation Email" n="Track SR Creation Email" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Track_SR_Creation_Email__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="3">
+                      <children>
+                        <sfLI label="Version Code" n="Version Code" required="true" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Version_Code__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="4">
+                      <children>
+                        <sfLI label="Send Email On SR Creation" n="Send Email On SR Creation" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Send_Email_On_SR_Creation__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="5">
+                      <children>
+                        <sfLI label="Send Email On SR Closed" n="Send Email On SR Closed" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Send_Email_On_SR_Closed__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="6">
+                      <children>
+                        <sfLI label="Track SR Closure Email" n="Track SR Closure Email" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Track_SR_Closure_Email__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="7">
+                      <children>
+                        <sfLI label="Version Name" n="Version Name" required="true" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Version_Name__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="8">
+                      <children>
+                        <sfLI label="Version Number" n="Version Number" required="true" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Version_Number__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="9">
+                      <children>
+                        <sfLI label="Default Layers" n="Default Layers" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Default_Layers__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="10">
+                      <children>
+                        <sfLI label="Private Attachments" n="Private Attachments" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Private_Attachments__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="true" detailHeading="false" n="Service Request Type" s="" seqNum="1" style="TwoColumnsLeftToRight" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI label="Service Type" n="Service Type" required="true" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Service_Type__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Service Type Code" n="Service Type Code" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Service_Type_Code__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Service Type Id" n="Service Type Id" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Service_Type_Name__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="Service Name" n="Service Name" required="true" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Service_Name__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="true" detailHeading="false" n="Version Status" s="" seqNum="2" style="TwoColumnsLeftToRight" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI label="Is Draft" n="Is Draft" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Is_Draft__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Is Current Version" n="Is Current Version" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Is_Current_Version__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="true" detailHeading="false" n="Settings" s="" seqNum="3" style="TwoColumnsLeftToRight" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Contact Status" n="Contact Status" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Contact_Status__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="Hide Contact" n="Hide Contact" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Hide_Contact__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI label="Override Contact Status" n="Override Contact Status" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Override_Contact_Status__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="Hide Location" n="Hide Location" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Hide_Location__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                      <children>
+                        <sfLI label="Service Location Required" n="Service Location Required" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Service_Location_Required__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="Generate All Questions" n="Generate All Questions" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Generate_All_Questions__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="3">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="emptySpace" s="" seqNum="0" t="Web Layout Field" type="EmptySpace"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="Map Marker Icon" n="Map Marker Icon" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Map_Marker_Icon__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="true" detailHeading="false" n="Defaults Information" s="" seqNum="4" style="OneColumn" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI label="Default Priority" n="Default Priority" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Default_Priority__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI label="Default Method" n="Default Method" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Default_Method__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                      <children>
+                        <sfLI label="Default Status" n="Default Status" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Default_Status__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="3">
+                      <children>
+                        <sfLI label="Duplicate Layers JSON" n="Duplicate Layers JSON" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Duplicate_Layers_JSON__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="true" detailHeading="false" n="Service Availability Information" s="" seqNum="5" style="TwoColumnsLeftToRight" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI label="Start Date" n="Start Date" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Start__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="Enable Business Hours" n="Enable Business Hours" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Enable_Business_Hours__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI label="Stop Date" n="Stop Date" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Stop__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="true" detailHeading="false" n="Service Level Agreement (SLA) Information" s="" seqNum="6" style="TwoColumnsLeftToRight" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI label="SLA Type" n="SLA Type" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__SLA_Type__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="Enable Operational SLA" n="Enable Operational SLA" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Enable_Operational_SLA__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI label="SLA" n="SLA" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__SLA__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="SLA: Start Date" n="SLA: Start Date" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Start_Date__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="SLA Detail" n="SLA Detail" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__SLA_Detail__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="SLA: Stop Date" n="SLA: Stop Date" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Stop_Date__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="3">
+                      <children>
+                        <sfLI label="Midnight SLA" n="Midnight SLA" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Midnight_SLA__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="true" detailHeading="false" n="Duplicate Detection Information" s="" seqNum="7" style="TwoColumnsLeftToRight" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI label="Duplicate Detection Method" n="Duplicate Detection Method" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Duplicate_Detection_Method__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="Duplicate Radius (feet)" n="Duplicate Radius (feet)" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Duplicate_Radius_feet__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI label="Duplicate Threshold Period (days)" n="Duplicate Threshold Period (days)" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Duplicate_Threshold_Period_days__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="Duplicate Match Street" n="Duplicate Match Street" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Duplicate_Match_Street__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                      <children>
+                        <sfLI label="Duplicate Threshold Period (hours)" n="Duplicate Threshold Period (hours)" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Duplicate_Threshold_Period_hours__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="Duplicate Statuses" n="Duplicate Statuses" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Duplicate_Statuses__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="3">
+                      <children>
+                        <sfLI label="Duplicate Oldest Index" n="Duplicate Oldest Index" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Duplicate_Oldest_Index__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="emptySpace" s="" seqNum="0" t="Web Layout Field" type="EmptySpace"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="true" detailHeading="false" n="Service Geo Area Information" s="" seqNum="8" style="OneColumn" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI label="Geo Validations" n="Geo Validations" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Geo_Validations__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI label="Visible Layers" n="Visible Layers" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Visible_Layers__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                      <children>
+                        <sfLI label="Layer Information" n="Layer Information" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Layer_Information__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="true" detailHeading="false" n="External Information" s="" seqNum="9" style="TwoColumnsLeftToRight" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI label="Allow Citizen Web Intake" n="Allow Citizen Web Intake" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Allow_Citizen_Web_Intake__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="Service Icon" n="Service Icon" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Service_Icon__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="External Name" n="External Name" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__External_Name__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="Service Notice" n="Service Notice" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Service_Notice__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="true" detailHeading="false" n="Service Distributions Information" s="" seqNum="10" style="TwoColumnsLeftToRight" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI label="Enable Distribution" n="Enable Distribution" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Enable_Distribution_del__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="Enable Distribution Updates" n="Enable Distribution Updates" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Enable_Distribution_Updates__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI label="Distribute On" n="Distribute On" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Distribute_On__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="Distribution Matching" n="Distribution Matching" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Distribution_Matching_del__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                      <children>
+                        <sfLI label="Include System Defaults" n="Include System Defaults" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Include_System_Defaults_del__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="emptySpace" s="" seqNum="0" t="Web Layout Field" type="EmptySpace"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="false" detailHeading="false" n="System Information" s="" seqNum="11" style="TwoColumnsTopToBottom" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI label="Recommended Types" n="Recommended Types" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Recommended_Types__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI label="Alert Validations" n="Alert Validations" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Alert_Validations__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+              </children>
+            </sfLayoutType>
+            <sfLayoutType layoutType="Detail" n="Detail" s="2-" t="Web Layout Type">
+              <children>
+                <sfLayoutSection customLabel="false" detailHeading="false" editHeading="false" n="Information" s="" seqNum="0" style="TwoColumnsTopToBottom" t="Web Layout Section - false">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Service Type Version Id" n="Service Type Version Id" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Name" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="Keywords" n="Keywords" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Keywords__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI label="AutorabitExtId__c" n="AutorabitExtId__c" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="AutorabitExtId__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                      <children>
+                        <sfLI label="Track SR Creation Email" n="Track SR Creation Email" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Track_SR_Creation_Email__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="3">
+                      <children>
+                        <sfLI label="Version Code" n="Version Code" required="true" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Version_Code__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="4">
+                      <children>
+                        <sfLI label="Send Email On SR Creation" n="Send Email On SR Creation" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Send_Email_On_SR_Creation__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="5">
+                      <children>
+                        <sfLI label="Send Email On SR Closed" n="Send Email On SR Closed" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Send_Email_On_SR_Closed__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="6">
+                      <children>
+                        <sfLI label="Track SR Closure Email" n="Track SR Closure Email" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Track_SR_Closure_Email__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="7">
+                      <children>
+                        <sfLI label="Version Name" n="Version Name" required="true" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Version_Name__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="8">
+                      <children>
+                        <sfLI label="Version Number" n="Version Number" required="true" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Version_Number__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="9">
+                      <children>
+                        <sfLI label="Default Layers" n="Default Layers" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Default_Layers__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="10">
+                      <children>
+                        <sfLI label="Private Attachments" n="Private Attachments" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Private_Attachments__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="true" editHeading="false" n="Service Request Type" s="" seqNum="1" style="TwoColumnsLeftToRight" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI label="Service Type" n="Service Type" required="true" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Service_Type__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Service Type Code" n="Service Type Code" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Service_Type_Code__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Service Type Id" n="Service Type Id" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Service_Type_Name__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="Service Name" n="Service Name" required="true" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Service_Name__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="true" editHeading="false" n="Version Status" s="" seqNum="2" style="TwoColumnsLeftToRight" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI label="Is Draft" n="Is Draft" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Is_Draft__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Is Current Version" n="Is Current Version" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Is_Current_Version__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="true" editHeading="false" n="Settings" s="" seqNum="3" style="TwoColumnsLeftToRight" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Contact Status" n="Contact Status" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Contact_Status__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="Hide Contact" n="Hide Contact" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Hide_Contact__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI label="Override Contact Status" n="Override Contact Status" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Override_Contact_Status__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="Hide Location" n="Hide Location" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Hide_Location__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                      <children>
+                        <sfLI label="Service Location Required" n="Service Location Required" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Service_Location_Required__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="Generate All Questions" n="Generate All Questions" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Generate_All_Questions__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="3">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="emptySpace" s="" seqNum="0" t="Web Layout Field" type="EmptySpace"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="Map Marker Icon" n="Map Marker Icon" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Map_Marker_Icon__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="true" editHeading="false" n="Defaults Information" s="" seqNum="4" style="OneColumn" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI label="Default Priority" n="Default Priority" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Default_Priority__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI label="Default Method" n="Default Method" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Default_Method__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                      <children>
+                        <sfLI label="Default Status" n="Default Status" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Default_Status__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="3">
+                      <children>
+                        <sfLI label="Duplicate Layers JSON" n="Duplicate Layers JSON" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Duplicate_Layers_JSON__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="true" editHeading="false" n="Service Availability Information" s="" seqNum="5" style="TwoColumnsLeftToRight" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI label="Start Date" n="Start Date" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Start__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="Enable Business Hours" n="Enable Business Hours" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Enable_Business_Hours__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI label="Stop Date" n="Stop Date" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Stop__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="true" editHeading="false" n="Service Level Agreement (SLA) Information" s="" seqNum="6" style="TwoColumnsLeftToRight" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI label="SLA Type" n="SLA Type" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__SLA_Type__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="Enable Operational SLA" n="Enable Operational SLA" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Enable_Operational_SLA__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI label="SLA" n="SLA" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__SLA__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="SLA: Start Date" n="SLA: Start Date" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Start_Date__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="SLA Detail" n="SLA Detail" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__SLA_Detail__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="SLA: Stop Date" n="SLA: Stop Date" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Stop_Date__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="3">
+                      <children>
+                        <sfLI label="Midnight SLA" n="Midnight SLA" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Midnight_SLA__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="true" editHeading="false" n="Duplicate Detection Information" s="" seqNum="7" style="TwoColumnsLeftToRight" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI label="Duplicate Detection Method" n="Duplicate Detection Method" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Duplicate_Detection_Method__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="Duplicate Radius (feet)" n="Duplicate Radius (feet)" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Duplicate_Radius_feet__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI label="Duplicate Threshold Period (days)" n="Duplicate Threshold Period (days)" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Duplicate_Threshold_Period_days__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="Duplicate Match Street" n="Duplicate Match Street" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Duplicate_Match_Street__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                      <children>
+                        <sfLI label="Duplicate Threshold Period (hours)" n="Duplicate Threshold Period (hours)" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Duplicate_Threshold_Period_hours__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="Duplicate Statuses" n="Duplicate Statuses" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Duplicate_Statuses__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="3">
+                      <children>
+                        <sfLI label="Duplicate Oldest Index" n="Duplicate Oldest Index" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Duplicate_Oldest_Index__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="emptySpace" s="" seqNum="0" t="Web Layout Field" type="EmptySpace"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="true" editHeading="false" n="Service Geo Area Information" s="" seqNum="8" style="OneColumn" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI label="Geo Validations" n="Geo Validations" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Geo_Validations__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI label="Visible Layers" n="Visible Layers" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Visible_Layers__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                      <children>
+                        <sfLI label="Layer Information" n="Layer Information" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Layer_Information__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="true" editHeading="false" n="External Information" s="" seqNum="9" style="TwoColumnsLeftToRight" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI label="Allow Citizen Web Intake" n="Allow Citizen Web Intake" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Allow_Citizen_Web_Intake__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="Service Icon" n="Service Icon" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Service_Icon__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="External Name" n="External Name" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__External_Name__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="Service Notice" n="Service Notice" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Service_Notice__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="true" editHeading="false" n="Service Distributions Information" s="" seqNum="10" style="TwoColumnsLeftToRight" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI label="Enable Distribution" n="Enable Distribution" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Enable_Distribution_del__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="Enable Distribution Updates" n="Enable Distribution Updates" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Enable_Distribution_Updates__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI label="Distribute On" n="Distribute On" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Distribute_On__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="Distribution Matching" n="Distribution Matching" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Distribution_Matching_del__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                      <children>
+                        <sfLI label="Include System Defaults" n="Include System Defaults" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Include_System_Defaults_del__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="emptySpace" s="" seqNum="0" t="Web Layout Field" type="EmptySpace"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="false" editHeading="false" n="System Information" s="" seqNum="11" style="TwoColumnsTopToBottom" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI label="Recommended Types" n="Recommended Types" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Recommended_Types__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Last Modified By ID" n="Last Modified By ID" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="LastModifiedById" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI label="Alert Validations" n="Alert Validations" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Alert_Validations__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Created By ID" n="Created By ID" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="CreatedById" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+              </children>
+            </sfLayoutType>
+          </layoutTypes>
+          <relatedLists>
+            <sfRelatedList fieldName="Incap311__Service_Type_Version__c" label="Service Type Version Questions" n="Incap311__Service_Type_Version_Questions__r" nameAlias="Incap311__Service_Type_Version_Question__c.Incap311__Service_Type_Version__c" relationshipName="Incap311__Service_Type_Version_Questions__r" s="3-" t="Service Type Version Questions (Incap311__Service_Type_Version__c)">
+              <children>
+                <sfRelatedListColumn alias="Name" n="NAME" s="" seq="0" t="Service Type Question Id"/>
+                <sfRelatedListColumn alias="Incap311__Question__c.Incap311__Flex_Question_Code__c" n="Incap311__Question__c.Incap311__Flex_Question_Code__c" s="" seq="1" t="Flex Question Code"/>
+                <sfRelatedListColumn alias="Incap311__Question__c.Incap311__Question__c" n="Incap311__Question__c.Incap311__Question__c" s="" seq="2" t="Question"/>
+                <sfRelatedListColumn alias="Incap311__Question__c.Incap311__Data_Type__c" n="Incap311__Question__c.Incap311__Data_Type__c" s="" seq="3" t="Data Type"/>
+                <sfRelatedListColumn alias="Incap311__Is_Required__c" n="Incap311__Is_Required__c" s="" seq="4" t="Is Required"/>
+                <sfRelatedListColumn alias="Incap311__Citizen_Web_Intake__c" n="Incap311__Citizen_Web_Intake__c" s="" seq="5" t="Allow Citizen Web Intake"/>
+                <sfRelatedListColumn alias="Incap311__Is_Controlling__c" n="Incap311__Is_Controlling__c" s="" seq="6" t="Is Controlling"/>
+                <sfRelatedListColumn alias="Incap311__Is_Dependent__c" n="Incap311__Is_Dependent__c" s="" seq="7" t="Is Dependent"/>
+                <sfRelatedListColumn alias="Incap311__Override_Order__c" n="Incap311__Override_Order__c" s="" seq="8" t="Override Order"/>
+                <sfRelatedListColumn alias="Incap311__Question__c.Incap311__Active__c" n="Incap311__Question__c.Incap311__Active__c" s="" seq="9" t="Active"/>
+              </children>
+              <customActions/>
+              <excludeButtons/>
+              <customButtons/>
+            </sfRelatedList>
+            <sfRelatedList fieldName="Incap311__Service_Type_Version__c" label="Service Type Version Activities" n="Incap311__Service_Type_Version_Activities__r" nameAlias="Incap311__Service_Type_Version_Activity__c.Incap311__Service_Type_Version__c" relationshipName="Incap311__Service_Type_Version_Activities__r" s="3-" t="Service Type Version Activities (Incap311__Service_Type_Version__c)">
+              <children>
+                <sfRelatedListColumn alias="Name" n="NAME" s="" seq="0" t="Service Type Version Activity Id"/>
+                <sfRelatedListColumn alias="Incap311__Activity__c.Name" n="Incap311__Activity__c.NAME" s="" seq="1" t="Activity Id"/>
+                <sfRelatedListColumn alias="Incap311__Activity__c.Incap311__Activity_Code__c" n="Incap311__Activity__c.Incap311__Activity_Code__c" s="" seq="2" t="Activity Code"/>
+                <sfRelatedListColumn alias="Incap311__Activity__c.Incap311__Activity_Name__c" n="Incap311__Activity__c.Incap311__Activity_Name__c" s="" seq="3" t="Activity Name"/>
+                <sfRelatedListColumn alias="Incap311__Activity__c.Incap311__SLA_Detail__c" n="Incap311__Activity__c.Incap311__SLA_Detail__c" s="" seq="4" t="SLA Detail"/>
+                <sfRelatedListColumn alias="Incap311__Next_Activity__c" n="Incap311__Next_Activity__c" s="" seq="5" t="Next Activity"/>
+                <sfRelatedListColumn alias="Incap311__Is_Required__c" n="Incap311__Is_Required__c" s="" seq="6" t="Is Required"/>
+                <sfRelatedListColumn alias="Incap311__Optional__c" n="Incap311__Optional__c" s="" seq="7" t="Optional"/>
+                <sfRelatedListColumn alias="Incap311__Order__c" n="Incap311__Order__c" s="" seq="8" t="Order"/>
+              </children>
+              <customActions/>
+              <excludeButtons/>
+              <customButtons/>
+            </sfRelatedList>
+            <sfRelatedList fieldName="Incap311__Service_Type_Version__c" label="Service Type Version Correspondents" n="Incap311__Service_Type_Version_Correspondents__r" nameAlias="Incap311__Service_Type_Version_Correspondence__c.Incap311__Service_Type_Version__c" relationshipName="Incap311__Service_Type_Version_Correspondents__r" s="3-" t="Service Type Version Correspondents (Incap311__Service_Type_Version__c)">
+              <children>
+                <sfRelatedListColumn alias="Name" n="NAME" s="" seq="0" t="Service Type Version  Correspondence Nam"/>
+              </children>
+              <customActions/>
+              <excludeButtons/>
+              <customButtons/>
+            </sfRelatedList>
+            <sfRelatedList fieldName="ParentId" label="Service Type Version History" n="Histories" nameAlias="RelatedEntityHistoryList" relationshipName="Histories" s="3-" t="Entity History (ParentId)">
+              <children>
+                <sfRelatedListColumn n="CreatedDate" s="" seq="0" t="Date"/>
+                <sfRelatedListColumn n="User" s="" seq="1"/>
+                <sfRelatedListColumn n="Action" s="" seq="2"/>
+              </children>
+              <customActions/>
+              <excludeButtons/>
+              <customButtons/>
+              <lightningColumns>
+                <sfRelatedListColumn n="CreatedDate" s="" seq="0" t="Date"/>
+                <sfRelatedListColumn n="Field" s="" seq="1"/>
+                <sfRelatedListColumn n="User" s="" seq="2"/>
+                <sfRelatedListColumn n="OldValue" s="" seq="3" t="Original Value"/>
+                <sfRelatedListColumn n="NewValue" s="" seq="4" t="New Value"/>
+              </lightningColumns>
+            </sfRelatedList>
+          </relatedLists>
+          <actionLinks>
+            <sfActionLink n="Incap311__Clone_Version" s=""/>
+            <sfActionLink n="Incap311__Make_Active" s=""/>
+            <sfActionLink n="Incap311__Configure_Duplicate_Types" s=""/>
+            <sfActionLink n="Incap311__Configure_Recommended_Types" s=""/>
+            <sfActionLink n="Incap311__Configure_Geo_Validations" s=""/>
+            <sfActionLink n="Incap311__Configure_Alert_Validations" s=""/>
+            <sfActionLink n="Incap311__Configure_Validation_Messages" s=""/>
+          </actionLinks>
+          <excludeButtons>
+            <string>ChangeOwnerOne</string>
+            <string>ChangeRecordType</string>
+            <string>Clone</string>
+            <string>Submit</string>
+          </excludeButtons>
+          <customTags/>
+          <quickActionNames/>
+          <consoleComponents/>
+          <platformActionNames>
+            <string>FeedItem.TextPost</string>
+            <string>FeedItem.ContentPost</string>
+            <string>FeedItem.LinkPost</string>
+            <string>FeedItem.PollPost</string>
+            <string>Incap311__Service_Type_Version__c.Incap311__Make_Active</string>
+          </platformActionNames>
+        </sfLayout>
+      </children>
+    </sfRecordType>
+  </recordTypes>
+  <standardActions>
+    <sfActionLink n="Accept" s=""/>
+    <sfActionLink modes="View" n="CancelEdit"/>
+    <sfActionLink modes="View" n="Clone" requiresRow="true"/>
+    <sfActionLink modes="View Incap311__Service_Type_Versions__r" n="Delete" requiresRow="true" s="3"/>
+    <sfActionLink modes="View Incap311__Service_Type_Versions__r" n="Edit" requiresRow="true" s="2"/>
+    <sfActionLink modes="ObjectHome" n="List" requiresRow="true"/>
+    <sfActionLink modes="ObjectHome List Incap311__Service_Type_Versions__r" n="New"/>
+    <sfActionLink afterWaitUrl="ui:wait:timed?seconds=10" modes="View" n="SaveEdit"/>
+    <sfActionLink n="Tab" s=""/>
+    <sfActionLink modes="ObjectHome" n="View" requiresRow="true"/>
+    <sfActionLink buttonName="Configured_Rule" n="Configured_Rule" s="" t="Configured Rule"/>
+    <sfActionLink buttonName="Incap311__Clone_Version" n="Incap311__Clone_Version" s="" t="Clone Version"/>
+    <sfActionLink buttonName="Incap311__Configure_Alert_Validations" n="Incap311__Configure_Alert_Validations" s="" t="Configure Alert Validations"/>
+    <sfActionLink buttonName="Incap311__Configure_Duplicate_Types" n="Incap311__Configure_Duplicate_Types" s="" t="Configure Duplicate Types"/>
+    <sfActionLink buttonName="Incap311__Configure_Geo_Validations" n="Incap311__Configure_Geo_Validations" s="" t="Configure Geo Validations"/>
+    <sfActionLink buttonName="Incap311__Configure_Recommended_Types" n="Incap311__Configure_Recommended_Types" s="" t="Configure Recommended Types"/>
+    <sfActionLink buttonName="Incap311__Configure_Validation_Messages" n="Incap311__Configure_Validation_Messages" s="" t="Configure Validation Messages"/>
+    <sfActionLink buttonName="Incap311__Make_Active" n="Incap311__Make_Active" s="" t="Make Version Current"/>
+    <sfActionLink modes="View Submit" n="Submit" requiresRow="true"/>
+    <sfActionLink modes="View Remove" n="Remove"/>
+    <sfActionLink modes="View Unlock" n="Unlock" t="Unlock Record"/>
+    <sfActionLink modes="Edit New Clone" n="save" requiresRow="true" t="Save"/>
+    <sfActionLink modes="Edit New Clone" n="save_new" requiresRow="true" t="Save and New"/>
+    <sfActionLink modes="Edit New Clone" n="cancel" requiresRow="true" t="Cancel"/>
+    <sfActionLink massAction="true" modes="View List all_related_lists" n="ChangeOwnerOne" t="Change Owner"/>
+    <sfActionLink massAction="true" modes="View List" n="ChangeRecordType" t="Change Record Type"/>
+    <sfActionLink modes="View" n="email" t="Send an Email"/>
+    <sfActionLink modes="View" n="Share"/>
+    <sfActionLink modes="QuickAction" n="publishersharebutton" t="Create"/>
+    <sfActionLink modes="ObjectHome List" n="Sort"/>
+    <sfActionLink modes="ObjectHome List" n="Filter"/>
+    <sfActionLink modes="ObjectHome View" n="Search"/>
+    <sfActionLink modes="ObjectHome List" n="Import"/>
+    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
+    <sfActionLink modes="View Incap311__Service_Type_Versions__r" n="ShowMore" t="Show More"/>
+    <sfActionLink modes="View Incap311__Service_Type_Versions__r" n="GoToList" t="Go To List"/>
+    <sfActionLink modes="RelatedList" n="PrevPage" t="Previous Page"/>
+    <sfActionLink modes="RelatedList" n="NextPage" t="Next Page"/>
+  </standardActions>
+  <homeListColumns>
+    <string>INCAP311__SERVICE_TYPE_VERSION__C.NAME</string>
+    <string>Incap311__Service_Type__c</string>
+    <string>Incap311__Service_Type_Code__c</string>
+    <string>Incap311__Service_Name__c</string>
+    <string>Incap311__Version_Number__c</string>
+    <string>Incap311__Is_Current_Version__c</string>
+    <string>Incap311__SLA_Detail__c</string>
+    <string>UPDATEDBY_USER</string>
+  </homeListColumns>
+  <lookupColumns>
+    <string>INCAP311__SERVICE_TYPE_VERSION__C.NAME</string>
+    <string>Incap311__Service_Type__c</string>
+    <string>Incap311__Service_Type_Code__c</string>
+    <string>Incap311__Service_Name__c</string>
+    <string>Incap311__Version_Number__c</string>
+    <string>Incap311__Is_Current_Version__c</string>
+    <string>Incap311__SLA_Detail__c</string>
+  </lookupColumns>
+  <weblinks/>
+  <searchResultColumns>
+    <string>INCAP311__SERVICE_TYPE_VERSION__C.NAME</string>
+    <string>Incap311__Service_Type__c</string>
+    <string>Incap311__Service_Type_Code__c</string>
+    <string>Incap311__Service_Name__c</string>
+    <string>Incap311__Version_Number__c</string>
+    <string>Incap311__Is_Current_Version__c</string>
+    <string>Incap311__SLA_Detail__c</string>
+    <string>UPDATEDBY_USER</string>
+  </searchResultColumns>
+  <listViewActions/>
+</sfObject>

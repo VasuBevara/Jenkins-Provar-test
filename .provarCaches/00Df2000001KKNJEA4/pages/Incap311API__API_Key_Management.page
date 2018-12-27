@@ -1,0 +1,124 @@
+<apex:page standardController="Incap311API__API_Account_Configuration__c" extensions="Incap311API.Rest311_ControllerExtension_ApiKeyCreate">
+  <apex:form id="account-information">
+      <apex:pageBlock >
+          <apex:pageMessages />
+          <apex:pageBlockSection title="Key Information" columns="2" collapsible="false">
+              <apex:inputField value="{! config.Name }" required="true"/>
+              <apex:inputField value="{! config.Usage_Limit_Allocation__c }" />
+              <apex:inputField value="{! config.Disabled__c }" />
+          </apex:pageBlockSection>
+          <apex:pageBlockSection title="Service Type Availability" columns="1" collapsible="false">
+              <apex:pageblockSectionItem helpText="{!$ObjectType.Incap311API__API_Account_Configuration__c.fields.Incap311API__Available_SR_Types__c.inlineHelpText}">
+                  <apex:outputLabel >Service types</apex:outputLabel>
+                  <c:MultiselectPicklist leftLabel="Available Service Types"
+                      leftOption="{! availableVisibleItems }"
+                      rightLabel="Selected Service Types"
+                      rightOption="{! selectedVisibleItems }"
+                      size="5"
+                      width="150px"
+                  />
+              </apex:pageblockSectionItem>
+          </apex:pageBlockSection>
+          <apex:pageBlockSection title="Service Type Access" columns="2" collapsible="false">
+              <apex:pageblockSectionItem helpText="{!$ObjectType.Incap311API__API_Account_Configuration__c.fields.Incap311API__Available_SR_Types_For_GET__c.inlineHelpText}">
+                  <apex:outputLabel >GET service types</apex:outputLabel>
+                  <c:MultiselectPicklist leftLabel="Available Service Types"
+                      leftOption="{! availableGETItems }"
+                      rightLabel="Selected Service Types"
+                      rightOption="{! selectedGetItems }"
+                      size="5"
+                      width="150px"
+                  />
+              </apex:pageblockSectionItem>
+              <apex:pageblockSectionItem helpText="{!$ObjectType.Incap311API__API_Account_Configuration__c.fields.Incap311API__Available_SR_Types_For_POST__c.inlineHelpText}">
+                  <apex:outputLabel >POST service types</apex:outputLabel>
+                  <c:MultiselectPicklist leftLabel="Available Service Types"
+                      leftOption="{! availablePOSTItems }"
+                      rightLabel="Selected Service Types"
+                      rightOption="{! selectedPostItems }"
+                      size="5"
+                      width="150px"
+                  />
+              </apex:pageblockSectionItem>
+              <apex:pageblockSectionItem helpText="{!$ObjectType.Incap311API__API_Account_Configuration__c.fields.Incap311API__Available_SR_Types_For_PUT__c.inlineHelpText}">
+                  <apex:outputLabel >PUT service types</apex:outputLabel>
+                  <c:MultiselectPicklist leftLabel="Available Service Types"
+                      leftOption="{! availablePUTItems }"
+                      rightLabel="Selected Service Types"
+                      rightOption="{! selectedPutItems }"
+                      size="5"
+                      width="150px"
+                  />
+              </apex:pageblockSectionItem>
+              <apex:pageblockSectionItem helpText="{!$ObjectType.Incap311API__API_Account_Configuration__c.fields.Incap311API__Available_SR_Types_For_PATCH__c.inlineHelpText}">
+                  <apex:outputLabel >PATCH service types</apex:outputLabel>
+                  <c:MultiselectPicklist leftLabel="Available Service Types"
+                      leftOption="{! availablePATCHItems }"
+                      rightLabel="Selected Service Types"
+                      rightOption="{! selectedPatchItems }"
+                      size="5"
+                      width="150px"
+                  />
+              </apex:pageblockSectionItem>
+          </apex:pageBlockSection>
+          <apex:pageBlockSection title="Service Type Response" columns="2" collapsible="false">
+              <apex:pageblockSectionItem >
+                <apex:outputLabel >Show all attributes</apex:outputLabel>
+                <apex:inputField value="{!config.Incap311API__Show_All_Attributes__c}" />
+              </apex:pageblockSectionItem>
+              <apex:pageblockSectionItem >
+                <apex:outputLabel >Show external system</apex:outputLabel>
+                <apex:inputField value="{!config.Incap311API__Show_External_System__c}" />
+              </apex:pageblockSectionItem>
+          </apex:pageBlockSection>
+          <apex:pageBlockSection title="Legacy Data Response" columns="2" collapsible="false">
+              <apex:pageblockSectionItem >
+                <apex:outputLabel >Show legacy questions</apex:outputLabel>
+                <apex:inputField value="{!config.Incap311API__Show_Legacy_Questions__c}" />
+              </apex:pageblockSectionItem>
+              <apex:pageblockSectionItem >
+                <apex:outputLabel >Show legacy activities</apex:outputLabel>
+                <apex:inputField value="{!config.Incap311API__Show_Legacy_Activities__c}" />
+              </apex:pageblockSectionItem>
+          </apex:pageBlockSection>
+          <apex:pageBlockSection title="Service Alerts Configuration" columns="2" collapsible="false">
+               <apex:pageblockSectionItem >
+                <apex:outputLabel >Show service alerts</apex:outputLabel>
+                <apex:inputField value="{!config.Incap311API__Show_Service_Alerts__c}" />
+              </apex:pageblockSectionItem>
+          </apex:pageBlockSection>
+          <apex:pageBlockSection title="File Upload" columns="2" collapsible="false">
+              <apex:pageblockSectionItem >
+                <apex:outputLabel >Upload Files</apex:outputLabel>
+                <apex:inputField value="{!config.Incap311API__Upload_Files__c}" />
+              </apex:pageblockSectionItem>
+              <apex:pageblockSectionItem >
+                <apex:outputLabel >Show Private Files</apex:outputLabel>
+                <apex:inputField value="{!config.Incap311API__Show_Private_Files__c}" />
+              </apex:pageblockSectionItem>
+          </apex:pageBlockSection>
+          <apex:pageBlockSection title="Secret Key Management" collapsible="false" columns="2" rendered="{! secret == null }">
+              <apex:commandButton rerender="account-information" action="{! createApiKey }" rendered="{! config.Secret_Key_Id__c == NULL }" value="Create API Key"/>
+              <apex:commandButton rerender="account-information"
+                  onclick="if(!confirm('Are you sure?')){return false};"
+                  rendered="{! config.Secret_Key_Id__c != NULL }" 
+                  action="{! resetApiKey }" 
+                  value="Reset API Key"
+              />
+          </apex:pageBlockSection>
+          <apex:pageBlockSection title="Secret Key Information" collapsible="false" columns="1" rendered="{! secret != null }">
+              <apex:pageMessage title="Please note!"
+                  strength="3" 
+                  severity="warning" 
+                  detail="API Keys cannot be recovered once you have saved. Please copy the value for your records. You will be able to reset this value if you forget it" 
+                  rendered="{! secret != null }"
+              />
+              <apex:outputText rendered="{! secret != null }" label="API Key" value="{! secret.secret  }" /> 
+          </apex:pageBlockSection>
+          <apex:pageBlockButtons >
+              <apex:commandButton rerender="account-information" action="{! save }" value="Save" />
+              <apex:commandButton value="Close" action="{! cancel }" immediate="true" />
+          </apex:pageBlockButtons>
+      </apex:pageBlock>
+  </apex:form>
+</apex:page>

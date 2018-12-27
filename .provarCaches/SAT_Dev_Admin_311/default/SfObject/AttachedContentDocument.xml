@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfObject label="Attached Content Document" labelPlural="Attached Content Documents" n="AttachedContentDocument" s="" standardLabel="Attached Content Document" t="Attached Content Document">
+  <fields>
+    <sfField createable="false" editPermission="false" length="18" n="Id" t="Content Document Link Id" type="id" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="IsDeleted" t="Deleted" type="_boolean" updateable="false"/>
+    <sfField createable="false" length="18" n="LinkedEntityId" relationshipName="LinkedEntity" required="true" t="Parent ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>Account</string>
+        <string>AccountBrand</string>
+        <string>Asset</string>
+        <string>AssetRelationship</string>
+        <string>Campaign</string>
+        <string>Case</string>
+        <string>ChannelProgram</string>
+        <string>ChannelProgramLevel</string>
+        <string>CollaborationGroup</string>
+        <string>Contact</string>
+        <string>ContentWorkspace</string>
+        <string>Contract</string>
+        <string>ContractLineItem</string>
+        <string>ConversationEntry</string>
+        <string>Dashboard</string>
+        <string>DashboardComponent</string>
+        <string>DataCategory_Backend__c</string>
+        <string>EmailMessage</string>
+        <string>EmailTemplate</string>
+        <string>Entitlement</string>
+        <string>Event</string>
+        <string>FileLInk__External_File_Relationship__c</string>
+        <string>FileLInk__External_File__c</string>
+        <string>Geo_Layer_Assignment__c</string>
+        <string>Geo_Layer_Assignments__c</string>
+        <string>INRF__Rule_Action__c</string>
+        <string>INRF__Rule_Conguration__c</string>
+        <string>INRF__Rule_Criteria__c</string>
+        <string>INRF__Rule_Error__c</string>
+        <string>INRF__Rule_Notification__c</string>
+        <string>INRF__Rule_Set_Log__c</string>
+        <string>INRF__Rule_Set__c</string>
+        <string>Incap311API__API_Account_Configuration__c</string>
+        <string>Incap311__Activity_Attempt__c</string>
+        <string>Incap311__Activity_Correspondence__c</string>
+        <string>Incap311__Activity_Outcome_Response__c</string>
+        <string>Incap311__Activity_Outcome__c</string>
+        <string>Incap311__Activity_Question__c</string>
+        <string>Incap311__Activity__c</string>
+        <string>Incap311__Case_Event_Recipient__c</string>
+        <string>Incap311__Case_Event__c</string>
+        <string>Incap311__Case_Recipient__c</string>
+        <string>Incap311__Category__c</string>
+        <string>Incap311__Correspondence__c</string>
+        <string>Incap311__Decode_Object__c</string>
+        <string>Incap311__Department__c</string>
+        <string>Incap311__Distribution_Member_Zone_Type__c</string>
+        <string>Incap311__Distribution_Member__c</string>
+        <string>Incap311__Distributions__c</string>
+        <string>Incap311__Duplicate_Service_Type_Mapping__c</string>
+        <string>Incap311__External_Service_Request__c</string>
+        <string>Incap311__Jurisdiction__c</string>
+        <string>Incap311__Outcome_Question__c</string>
+        <string>Incap311__Outcome__c</string>
+        <string>Incap311__Question__c</string>
+        <string>Incap311__Reallocate_Service_Request_Type__c</string>
+        <string>Incap311__Reported_Location__c</string>
+        <string>Incap311__Response__c</string>
+        <string>Incap311__Schedule__c</string>
+        <string>Incap311__Service_Activity__c</string>
+        <string>Incap311__Service_Alert__c</string>
+        <string>Incap311__Service_Category__c</string>
+        <string>Incap311__Service_Department__c</string>
+        <string>Incap311__Service_Question__c</string>
+        <string>Incap311__Service_Queue_Member__c</string>
+        <string>Incap311__Service_Queue__c</string>
+        <string>Incap311__Service_Request_Schedule__c</string>
+        <string>Incap311__Service_Type_Event__c</string>
+        <string>Incap311__Service_Type_Queue_Zone__c</string>
+        <string>Incap311__Service_Type_Version_Activity__c</string>
+        <string>Incap311__Service_Type_Version_Correspondence__c</string>
+        <string>Incap311__Service_Type_Version_Question__c</string>
+        <string>Incap311__Service_Type_Version__c</string>
+        <string>Incap311__Service_Type__c</string>
+        <string>Incap311__Special_Service_Types__c</string>
+        <string>Incap311__Transfer_Service_Request_Type__c</string>
+        <string>Incap311__X311_Settings__c</string>
+        <string>Incap311__Zone__c</string>
+        <string>IncapMessaging__Message_Template__c</string>
+        <string>IncapMessaging__Notification__c</string>
+        <string>IncapTalkBack__Question__c</string>
+        <string>IncapTalkBack__Survey_Intake__c</string>
+        <string>IncapTalkBack__Survey_Question__c</string>
+        <string>IncapTalkBack__Survey_Response__c</string>
+        <string>IncapTalkBack__Survey__c</string>
+        <string>Incapfs__Error__c</string>
+        <string>Incapfs__Report__c</string>
+        <string>Incapsulate_Log__LogglySettings__c</string>
+        <string>Information__ka</string>
+        <string>Information__kav</string>
+        <string>Internal__ka</string>
+        <string>Internal__kav</string>
+        <string>Knowledge__ka</string>
+        <string>Knowledge__kav</string>
+        <string>Lead</string>
+        <string>LinkedArticle</string>
+        <string>ListEmail</string>
+        <string>Network</string>
+        <string>Opportunity</string>
+        <string>Order</string>
+        <string>OrderItem</string>
+        <string>Organization</string>
+        <string>Participant__c</string>
+        <string>PartnerFundAllocation</string>
+        <string>PartnerFundClaim</string>
+        <string>PartnerFundRequest</string>
+        <string>PartnerMarketingBudget</string>
+        <string>Product2</string>
+        <string>Report</string>
+        <string>SOSSession</string>
+        <string>ServiceContract</string>
+        <string>Site</string>
+        <string>Solution</string>
+        <string>Task</string>
+        <string>User</string>
+        <string>X311_Event__ka</string>
+        <string>X311_Event__kav</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" length="18" n="ContentDocumentId" relationshipName="ContentDocument" t="ContentDocument ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>ContentDocument</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" length="255" n="Title" nameField="true" required="true" updateable="false"/>
+    <sfField createable="false" editPermission="false" length="18" n="CreatedById" relationshipName="CreatedBy" t="Created By ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" n="CreatedDate" t="Created" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" length="18" n="LastModifiedById" relationshipName="LastModifiedBy" t="Last Modified By ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" n="LastModifiedDate" t="Content Modified Date" type="datetime" updateable="false"/>
+    <sfField createable="false" length="20" n="FileType" t="File Type" updateable="false"/>
+    <sfField createable="false" digits="9" n="ContentSize" t="Content Size" type="_int" updateable="false"/>
+    <sfField createable="false" length="40" n="FileExtension" t="File Extension" updateable="false"/>
+    <sfField createable="false" length="255" n="ContentUrl" t="Content URL" type="url" updateable="false"/>
+    <sfField createable="false" length="80" n="ExternalDataSourceName" t="External Data Source" updateable="false"/>
+    <sfField createable="false" length="80" n="ExternalDataSourceType" restrictedPicklist="true" t="Class ID" type="picklist" updateable="false">
+      <picklistEntryIds>1,2,3,4,5,6,7,8,9,10,11</picklistEntryIds>
+      <picklistEntries>
+        <sfPLE id="1" n="Datacloud" s=""/>
+        <sfPLE id="2" n="Datajourney" s=""/>
+        <sfPLE id="3" n="Identity" s=""/>
+        <sfPLE id="4" n="OData" s=""/>
+        <sfPLE id="5" n="OData4" s=""/>
+        <sfPLE id="6" n="OpenSearch" s=""/>
+        <sfPLE id="7" n="outgoingemail" s=""/>
+        <sfPLE id="8" n="recommendation" s=""/>
+        <sfPLE id="9" n="SfdcOrg" s=""/>
+        <sfPLE id="10" n="SimpleURL" s=""/>
+        <sfPLE id="11" n="Wrapper" s=""/>
+      </picklistEntries>
+    </sfField>
+    <sfField createable="false" length="40" n="SharingOption" restrictedPicklist="true" t="Prevent others from sharing and unsharing" type="picklist" updateable="false">
+      <picklistEntryIds>12,13</picklistEntryIds>
+      <picklistEntries>
+        <sfPLE defaultValue="true" id="12" n="A" s="" t="Freeze Sharing Off"/>
+        <sfPLE id="13" n="R" s="" t="Freeze Sharing On"/>
+      </picklistEntries>
+    </sfField>
+  </fields>
+  <childRelationships/>
+  <recordTypes/>
+  <standardActions>
+    <sfActionLink massAction="true" modes="View List all_related_lists" n="ChangeOwnerOne" t="Change Owner"/>
+    <sfActionLink modes="View AttachedContentDocuments" n="ShowMore" t="Show More"/>
+    <sfActionLink modes="View AttachedContentDocuments" n="GoToList" t="Go To List"/>
+    <sfActionLink modes="RelatedList" n="PrevPage" t="Previous Page"/>
+    <sfActionLink modes="RelatedList" n="NextPage" t="Next Page"/>
+    <sfActionLink modes="ObjectHome" n="List" requiresRow="true"/>
+    <sfActionLink modes="Edit New Clone" n="save" requiresRow="true" t="Save"/>
+    <sfActionLink modes="Edit New Clone" n="save_new" requiresRow="true" t="Save and New"/>
+    <sfActionLink modes="Edit New Clone" n="cancel" requiresRow="true" t="Cancel"/>
+    <sfActionLink afterWaitUrl="ui:wait:timed?seconds=10" modes="View" n="SaveEdit" t="Save"/>
+    <sfActionLink modes="View" n="CancelEdit" t="Cancel"/>
+    <sfActionLink massAction="true" modes="View List" n="ChangeRecordType" t="Change Record Type"/>
+    <sfActionLink modes="View" n="email" t="Send an Email"/>
+    <sfActionLink modes="View" n="Share"/>
+    <sfActionLink modes="QuickAction" n="publishersharebutton" t="Create"/>
+    <sfActionLink modes="ObjectHome List" n="Sort"/>
+    <sfActionLink modes="ObjectHome List" n="Filter"/>
+    <sfActionLink modes="ObjectHome View" n="Search"/>
+    <sfActionLink modes="ObjectHome List" n="Import"/>
+    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
+    <sfActionLink lightningActionName="AttachFileFromDevice" lightningLabel="Add File" modes="AttachedContentDocuments" n="NewFile" newAction="true" t="Upload Files"/>
+    <sfActionLink locator="td[contains(@class, 'actionColumn')]/a[contains(@href, 'javascript:OverlayDialogElement.showFilePreview')]" modes="AttachedContentDocuments" n="Preview" requiresRow="true" s="0"/>
+    <sfActionLink locator="td[contains(@class, 'actionColumn')]/a[contains(@href, 'download')]" modes="AttachedContentDocuments" n="View" requiresRow="true" s="1" t="Download"/>
+    <sfActionLink locator="td[contains(@class, 'actionColumn')]/a[contains(@href, 'deleteredirect.jsp')]" modes="AttachedContentDocuments" n="Delete" requiresRow="true" s="2" t="Del"/>
+    <sfActionLink modes="ObjectHome List" n="New"/>
+  </standardActions>
+  <weblinks/>
+</sfObject>

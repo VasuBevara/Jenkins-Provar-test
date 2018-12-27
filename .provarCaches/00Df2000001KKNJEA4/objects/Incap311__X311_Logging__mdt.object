@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Incap311__Enable_Logging__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Enable Logging</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Log_Level__c</fullName>
+        <defaultValue>&apos;Error&apos;</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Log Level</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Fatal</fullName>
+                    <default>false</default>
+                    <label>Fatal</label>
+                </value>
+                <value>
+                    <fullName>Error</fullName>
+                    <default>false</default>
+                    <label>Error</label>
+                </value>
+                <value>
+                    <fullName>Warn</fullName>
+                    <default>false</default>
+                    <label>Warn</label>
+                </value>
+                <value>
+                    <fullName>Info</fullName>
+                    <default>false</default>
+                    <label>Info</label>
+                </value>
+                <value>
+                    <fullName>Debug</fullName>
+                    <default>false</default>
+                    <label>Debug</label>
+                </value>
+                <value>
+                    <fullName>Trace</fullName>
+                    <default>true</default>
+                    <label>Trace</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>311 Logging</label>
+    <pluralLabel>311 Loggings</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

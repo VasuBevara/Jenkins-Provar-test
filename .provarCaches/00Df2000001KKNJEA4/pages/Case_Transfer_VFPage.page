@@ -1,0 +1,32 @@
+<apex:page standardController="Case" lightningStylesheets="true">
+    <apex:includeScript value="/support/console/43.0/integration.js" />
+    
+    <script type="text/javascript">
+        var redirectUrl = '/apex/Incap311SC__AgentConsole#/transfer?requestId={!Case.CaseNumber}&action=transfer';
+
+        var isClosed = '{!Case.Status}';
+        
+        if (isClosed.includes('Closed')) {
+            alert('You cannot transfer a closed case.');
+        } else {
+        
+            if (sforce.console.isInConsole()) {
+                sforce.console.getEnclosingTabId(function (enclosingResult) {
+                    sforce.console.getEnclosingPrimaryTabId(function (primaryResult) {
+        
+                        sforce.console.refreshSubtabByNameAndPrimaryTabId('update-{!Case.CaseNumber}', primaryResult.id, true, function (result) {
+                            if (result.success != true) {
+                                sforce.console.openSubtab(primaryResult.id, (redirectUrl + "&subTabId=" + enclosingResult.id), true, 'Transfer: #{!Case.CaseNumber}', null, undefined, 'transfer-{!Case.CaseNumber}');
+                            }
+                        }, true)
+        
+                    });
+                });
+            } else {
+                window.open(redirectUrl, "_top");
+                //window.location.href = redirectUrl;
+            }
+        }
+    </script>
+    
+</apex:page>

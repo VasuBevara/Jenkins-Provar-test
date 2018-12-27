@@ -1,0 +1,47 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" applyHtmlTag="false" action="{!checkPlatform}" controller="CitizenCommunityPageController">
+<html>
+<head>
+
+  <meta charset="utf-8"></meta>
+  <title>Baltimore 311</title>
+  <base href="/citizen" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet"></link>
+  <link rel="shortcut icon" href="{!URLFOR($Resource.CitizenResources, 'favicon.ico')}"></link>
+
+  <apex:remoteObjects jsNamespace="Citizen">
+    
+    <apex:remoteObjectModel name="User" fields="Id,ContactId,Name,FirstName,LastName,Username,Email,MobilePhone" />
+    
+  </apex:remoteObjects>
+
+  <link href="{!URLFOR($Resource.CitizenResources, 'styles.2cf26d1f2ec16aab6c13.bundle.css')}" rel="stylesheet"></link>
+
+</head>
+
+<body>
+
+  <script>
+    window.SF_ACCESS_TOKEN = '{! $Api.Session_ID }';
+    window.SF_USER_ID = '{! $User.Id }';
+    window.SF_USER_NAME = '{!JSENCODE($User.FirstName)} {!JSENCODE($User.LastName)}';
+    window.SF_USER_IS_GUEST = {!ISPICKVAL($User.UserType,'Guest')};
+    window.SF_IDENTITY = {
+      user_id: '{! $User.Id }',
+      first_name: '{! JSENCODE($User.FirstName)}',
+      last_name: '{! JSENCODE($User.LastName)}',
+      email: '{! $User.Email}',
+      mobile_phone: '{! $User.MobilePhone}',
+      username: '{! $User.Username}',
+      user_type: '{!TEXT($User.UserType)}',
+      user_timezone: '{!User_TimeZone}'
+    };
+  </script>
+
+  <capsule-app></capsule-app>
+
+  <script type="text/javascript" src="{!URLFOR($Resource.CitizenResources, 'inline.3b2d1d92d55b73de4046.bundle.js')}"></script><script type="text/javascript" src="{!URLFOR($Resource.CitizenResources, 'polyfills.2dd88c34f386d983ef8c.bundle.js')}"></script><script type="text/javascript" src="{!URLFOR($Resource.CitizenResources, 'vendor.6f7e0ece7fc8b558872c.bundle.js')}"></script><script type="text/javascript" src="{!URLFOR($Resource.CitizenResources, 'main.35b2cdf9ddb70b8e203e.bundle.js')}"></script>
+
+</body>
+</html>
+</apex:page>

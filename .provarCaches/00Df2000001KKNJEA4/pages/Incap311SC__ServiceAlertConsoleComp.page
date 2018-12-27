@@ -1,0 +1,113 @@
+<apex:page controller="Incap311SC.ServiceAlertConsoleController" showHeader="false" lightningStyleSheets="true">
+    <apex:includeScript value="/support/console/29.0/integration.js"/>
+    <apex:slds >
+        <style>
+            body {
+            padding: 10px;
+            }
+        </style>
+        
+        <style>
+            .classname {
+            -moz-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+            -webkit-box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+            box-shadow:inset 0px 1px 0px 0px #bbdaf7;
+            background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #79bbff), color-stop(1, #378de5) );
+            background:-moz-linear-gradient( center top, #79bbff 5%, #378de5 100% );
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#79bbff', endColorstr='#378de5');
+            background-color:#79bbff;
+            -webkit-border-top-left-radius:10px;
+            -moz-border-radius-topleft:10px;
+            border-top-left-radius:10px;
+            -webkit-border-top-right-radius:10px;
+            -moz-border-radius-topright:10px;
+            border-top-right-radius:10px;
+            -webkit-border-bottom-right-radius:10px;
+            -moz-border-radius-bottomright:10px;
+            border-bottom-right-radius:10px;
+            -webkit-border-bottom-left-radius:10px;
+            -moz-border-radius-bottomleft:10px;
+            border-bottom-left-radius:10px;
+            text-indent:0;
+            border:1px solid #84bbf3;
+            display:inline-block;
+            color:#ffffff;
+            font-family:Arial;
+            font-size:10px;
+            font-weight:bold;
+            font-style:normal;
+            height:30px;
+            line-height:30px;
+            width:50px;
+            text-decoration:none;
+            text-align:center;
+            text-shadow:1px 1px 0px #528ecc;
+            margin-left:10px;
+            }
+            .classname:hover {
+            background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #378de5), color-stop(1, #79bbff) );
+            background:-moz-linear-gradient( center top, #378de5 5%, #79bbff 100% );
+            filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#378de5', endColorstr='#79bbff');
+            background-color:#378de5;
+            }.classname:active {
+            position:relative;
+            top:1px;
+            }
+        </style>
+        <div style="overflow-y: scroll; height:400px;">
+        <apex:repeat value="{!ServiceAlerts}" var="serviceAlert">
+            <div class="slds-feed">
+                <ul class="slds-feed__list">
+                    <li class="slds-feed__item">
+                        <article class="slds-post">
+                            <header class="slds-post__header slds-media">
+                                <div class="slds-media__figure">
+                                    <a href="javascript:void(0);" class="slds-avatar slds-avatar_circle slds-avatar_large">
+                                        <apex:image id="theImage" value="{!$Resource.Incap311SC__Alert}" alt="Description of image here"/>
+
+                                    </a>
+                                </div>
+                                <div class="slds-media__body">
+                                    <div class="slds-grid slds-grid_align-spread slds-has-flexi-truncate">
+                                        <p><a href="javascript:void(0);" title="{!serviceAlert.name}"><b>{!serviceAlert.name}</b></a> 
+                                        </p>
+                                        
+                                    </div>
+                                    <p class="slds-text-body_small"><a href="javascript:void(0);" title="Click for single-item view of this post" class="slds-text-link_reset">
+                                        <apex:outputText value="{0, date, MMMM d','  yyyy}">
+                                            <apex:param value="{!serviceAlert.Incap311__Start_Date__c}" /> 
+                                        </apex:outputText> - <apex:outputText value="{0, date, MMMM d','  yyyy}">
+                                        <apex:param value="{!serviceAlert.Incap311__End_Date__c}" /> 
+                                        </apex:outputText>
+                                        </a></p>
+                                </div>
+                            </header>
+                            <div class="slds-post__content slds-text-longform">
+                                <p><apex:outputText value="{!serviceAlert.Incap311__Message_Body__c}" escape="false" /></p>
+                            </div>
+                            
+                        </article>
+                    </li>
+                </ul>
+            </div>
+        </apex:repeat>
+        
+        </div>
+        <script>
+    console.log('test 123');
+      //setInterval(function(){window.location.href = window.location.href;}, 60000);
+        </script>
+        <script>
+      scrollButtonText();
+      function scrollButtonText() {
+         console.log('{!JSENCODE(scrollText)}');
+             sforce.console.setCustomConsoleComponentButtonText('{!JSENCODE(scrollText)}', function() {
+             sforce.console.scrollCustomConsoleComponentButtonText(300, 5, true, function(result){});
+             });
+         
+      }
+
+   </script>
+    </apex:slds>
+    
+</apex:page>

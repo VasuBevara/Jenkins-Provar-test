@@ -1,0 +1,93 @@
+<apex:page standardController="Case"
+              extensions="Incap311.Base311_Service_Wrapper,Incap311SC.Console_Service_Wrapper,FileLInk.FileLink_Service_Wrapper"
+              showHeader="false"
+              sidebar="false"
+              standardStylesheets="false"
+              applyHtmlTag="false"
+              applyBodyTag="false">
+              <head>
+                
+                  
+                    <apex:stylesheet value="{! URLFOR($Resource.ConsoleBundle, 'vendor.b6bb94cc5c68de353f12.css') }" />
+                  
+                    <apex:stylesheet value="{! URLFOR($Resource.ConsoleBundle, 'main.b6bb94cc5c68de353f12.css') }" />
+                  
+                
+                
+              </head>
+              <body>
+                
+                  <apex:remoteObjects jsNamespace="IncapConsoleNS"
+                      
+                    >
+                    
+                  </apex:remoteObjects>
+                
+                
+                  <div id="app"></div>
+                
+                <script>
+                  window['__STATIC_RESOURCE_ZIP'] = '{! URLFOR($Resource.ConsoleBundle) }';
+                  window['__ACCESS_TOKEN'] = '{!JSENCODE($Api.Session_ID)}';
+                  window['USER_INFO'] = {
+                    display_name: '{! JSENCODE($User.FirstName) } {! JSENCODE($User.LastName) }',
+                    first_name: '{! JSENCODE($User.FirstName) }',
+                    last_name: '{! JSENCODE($User.LastName) }',
+                    nick_name: '{! JSENCODE($User.CommunityNickname) }',
+                    addr_country: '{! JSENCODE($User.Country) }',
+                    email: '{! JSENCODE($User.Email) }',
+                    mobile_phone: '{! JSENCODE($User.MobilePhone) }',
+                    user_id: '{! JSENCODE($User.Id) }'
+                  };
+                  
+              function baseSharedServices(config, cb) {
+                var service = config.service;
+                var method = config.method;
+                var data = config.data;
+
+                Visualforce.remoting.Manager.invokeAction(
+                  '{!$RemoteAction.Base311_Service_Wrapper.handleRemote}',
+                  service, method, data,
+                  cb
+                );
+              }
+
+							function consoleSharedServices(config, cb) {
+                var service = config.service;
+                var method = config.method;
+                var data = config.data;
+
+                Visualforce.remoting.Manager.invokeAction(
+                  '{!$RemoteAction.Console_Service_Wrapper.handleRemote}',
+                  service, method, data,
+                  cb
+                );
+              }
+
+              function fileLinkSharedServices(config, cb) {
+                var service = config.service;
+                var method = config.method;
+                var data = config.data;
+
+                Visualforce.remoting.Manager.invokeAction(
+                  '{!$RemoteAction.FileLink_Service_Wrapper.handleRemote}',
+                  service, method, data,
+                  cb
+                );
+              }
+            
+                </script>
+                
+                  
+                    <script src="{! URLFOR($Resource.ConsoleBundle, 'vendor.js') }"></script>
+                  
+                    <script src="{! URLFOR($Resource.ConsoleBundle, 'main.js') }"></script>
+                  
+                
+                
+                  
+                    <script src="https://c.na1.visual.force.com/support/console/43.0/integration.js" type="text/javascript"></script>
+                  
+                
+              </body>
+            </apex:page>

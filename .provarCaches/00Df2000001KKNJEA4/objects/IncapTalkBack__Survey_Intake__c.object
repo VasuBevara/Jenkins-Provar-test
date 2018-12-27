@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Used to store the response of a survey.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>IncapTalkBack__Case__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Case the survey intake is connected too.</description>
+        <externalId>false</externalId>
+        <label>Case</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipLabel>Survey Intakes</relationshipLabel>
+        <relationshipName>Survey_Intakes</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>IncapTalkBack__Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>The person who filled out the survey</description>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Survey Intakes</relationshipLabel>
+        <relationshipName>Survey_Intakes</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>IncapTalkBack__Survey__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <deprecated>false</deprecated>
+        <description>Survey that was taken</description>
+        <externalId>false</externalId>
+        <label>Survey</label>
+        <referenceTo>IncapTalkBack__Survey__c</referenceTo>
+        <relationshipLabel>Survey Intakes</relationshipLabel>
+        <relationshipName>Survey_Intakes</relationshipName>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Survey Intake</label>
+    <listViews>
+        <fullName>IncapTalkBack__All</fullName>
+        <columns>NAME</columns>
+        <columns>IncapTalkBack__Survey__c</columns>
+        <columns>IncapTalkBack__Case__c</columns>
+        <columns>IncapTalkBack__Contact__c</columns>
+        <columns>CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>SI-{0000}</displayFormat>
+        <label>Survey Intake Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Survey Intakes</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>IncapTalkBack__Survey__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>IncapTalkBack__Case__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>IncapTalkBack__Contact__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>IncapTalkBack__Survey__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>IncapTalkBack__Case__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>IncapTalkBack__Contact__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>IncapTalkBack__Survey__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>IncapTalkBack__Case__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>IncapTalkBack__Contact__c</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>IncapTalkBack__Survey__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>IncapTalkBack__Case__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>IncapTalkBack__Contact__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfObject creatable="true" deleteable="true" keyPrefix="a0f" label="Service Type Version Question" labelPlural="Service Type Version Questions" layoutable="true" metadataLabel="Service Type Version Question" n="Incap311__Service_Type_Version_Question__c" queryable="true" retrieveable="true" s="" searchLayoutable="true" t="Service Type Version Question (a0f)" updatable="true" urlDetail="https://incapsulate311-sat-dev-ed.my.salesforce.com/{ID}" urlEdit="https://incapsulate311-sat-dev-ed.my.salesforce.com/{ID}/e" urlNew="https://incapsulate311-sat-dev-ed.my.salesforce.com/a0f/e">
+  <fields>
+    <sfField createable="false" editPermission="false" length="18" n="Id" t="Record ID" type="id" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="IsDeleted" t="Deleted" type="_boolean" updateable="false"/>
+    <sfField autoNumberField="true" createable="false" editPermission="false" length="80" n="Name" nameField="true" t="Service Type Question Id" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="CreatedDate" t="Created Date" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" length="18" n="CreatedById" relationshipName="CreatedBy" t="Created By ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" n="LastModifiedDate" t="Last Modified Date" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" length="18" n="LastModifiedById" relationshipName="LastModifiedBy" t="Last Modified By ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" n="SystemModstamp" t="System Modstamp" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="LastViewedDate" t="Last Viewed Date" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="LastReferencedDate" t="Last Referenced Date" type="datetime" updateable="false"/>
+    <sfField length="18" n="Incap311__Question__c" relationshipName="Incap311__Question__r" required="true" t="Question" type="reference" updateable="false">
+      <referenceTos>
+        <string>Incap311__Question__c</string>
+      </referenceTos>
+    </sfField>
+    <sfField length="18" n="Incap311__Service_Type_Version__c" relationshipLabel="Service Type Version Questions" relationshipName="Incap311__Service_Type_Version__r" required="true" t="Service Type Version Id" type="reference" updateable="false">
+      <referenceTos>
+        <string>Incap311__Service_Type_Version__c</string>
+      </referenceTos>
+    </sfField>
+    <sfField n="Incap311__Citizen_Web_Intake__c" t="Allow Citizen Web Intake" type="_boolean"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="TEXT(Incap311__Question__r.Incap311__Data_Type__c)" length="1300" n="Incap311__Data_Type__c" t="Data Type" updateable="false"/>
+    <sfField length="255" n="Incap311__Default_Answer__c" t="Default Answer"/>
+    <sfField extraTypeInfo="plaintextarea" filterable="false" length="60000" n="Incap311__Dependencies__c" t="Dependencies" type="textarea"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="Incap311__Question__r.Incap311__Flex_Question_Code__c" length="1300" n="Incap311__Flex_Question_Code__c" t="Flex Question Code" updateable="false"/>
+    <sfField n="Incap311__Force_Upper__c" t="Force Upper" type="_boolean"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="Incap311__Question__r.Incap311__Hint_Text__c" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Incap311__Hint_Text__c" t="Hint Text" updateable="false"/>
+    <sfField n="Incap311__Is_Controlling__c" t="Is Controlling" type="_boolean"/>
+    <sfField n="Incap311__Is_Dependent__c" t="Is Dependent" type="_boolean"/>
+    <sfField n="Incap311__Is_Read_Only__c" t="Is Read Only" type="_boolean"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IF(\n   OR( Incap311__Question__r.Incap311__Required__c,\n       Incap311__Is_Required__c\n   ),\n   TRUE,\n   FALSE\n)" formulaTreatBlanksAs="BlankAsZero" n="Incap311__Is_Required_Question__c" t="Is Required (Question Level)" type="_boolean" updateable="false"/>
+    <sfField n="Incap311__Is_Required__c" t="Is Required" type="_boolean"/>
+    <sfField length="255" n="Incap311__Lower_Limit__c" t="Lower Limit"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IF(\n ISNULL( Incap311__Override_Order__c ),\n Incap311__Question__r.Incap311__Order__c,\n Incap311__Override_Order__c\n)" n="Incap311__Order__c" precision="18" scale="2" t="Order" type="_double" updateable="false"/>
+    <sfField extraTypeInfo="plaintextarea" filterable="false" length="60000" n="Incap311__Override_Answer_Values__c" t="Override Answer Values" type="textarea"/>
+    <sfField n="Incap311__Override_Order__c" precision="6" scale="2" t="Override Order" type="_double"/>
+    <sfField n="Incap311__Override_Start_Date__c" t="Override Start Date" type="datetime"/>
+    <sfField n="Incap311__Override_Stop_Date__c" t="Override Stop Date" type="datetime"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="Incap311__Question__r.Incap311__Question_Alias__c" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Incap311__Question_Text__c" t="Question Alias" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="Incap311__Question__r.Incap311__SR_Junction_Count__c" formulaTreatBlanksAs="BlankAsZero" n="Incap311__SR_Junction_Count__c" precision="18" t="SR Junction Count" type="_double" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="Incap311__Service_Type_Version__r.Incap311__Service_Type_Name__c" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Incap311__Service_Type_Name__c" t="Service Type Id" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="Incap311__Service_Type_Version__r.Incap311__Service_Type__r.Incap311__Service_Name__c" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Incap311__Service_Type__c" t="Service Type" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IF(\n ISNULL( Incap311__Override_Start_Date__c ),\n Incap311__Question__r.Incap311__Start_Date__c,\n Incap311__Override_Start_Date__c \n)" n="Incap311__Start_Date__c" t="Start Date" type="datetime" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IF(\n  ISNULL(Incap311__Override_Stop_Date__c),\n  Incap311__Question__r.Incap311__Stop_Date__c,\n  Incap311__Override_Stop_Date__c\n)" n="Incap311__Stop_Date__c" t="Stop Date" type="datetime" updateable="false"/>
+    <sfField length="255" n="Incap311__Upper_Limit__c" t="Upper Limit"/>
+    <sfField n="Incap311__Used_By_Interface_Only__c" t="Used By Interface Only" type="_boolean"/>
+    <sfField extraTypeInfo="plaintextarea" filterable="false" length="60000" n="Incap311__Validations__c" t="Validations" type="textarea"/>
+    <sfField length="18" n="AutorabitExtId__c"/>
+  </fields>
+  <childRelationships>
+    <sfObjectRelationship alias="RelatedFileList" childName="AttachedContentDocument" field="LinkedEntityId" n="AttachedContentDocuments" relationshipName="AttachedContentDocuments" s="2-" t="AttachedContentDocument"/>
+    <sfObjectRelationship alias="RelatedContentNoteList" childName="AttachedContentNote" field="LinkedEntityId" n="AttachedContentNotes" relationshipName="AttachedContentNotes" s="2-" t="AttachedContentNote"/>
+    <sfObjectRelationship alias="RelatedActivityAttachmentList" childName="Attachment" field="ParentId" n="Attachments" relationshipName="Attachments" s="2-" t="Attachment"/>
+    <sfObjectRelationship alias="RelatedNoteList" childName="CombinedAttachment" field="ParentId" n="CombinedAttachments" relationshipName="CombinedAttachments" s="2-" t="CombinedAttachment"/>
+    <sfObjectRelationship childName="ContentDocumentLink" field="LinkedEntityId" n="ContentDocumentLinks" relationshipName="ContentDocumentLinks" s="2-" t="ContentDocumentLink"/>
+    <sfObjectRelationship childName="DuplicateRecordItem" field="RecordId" n="DuplicateRecordItems" relationshipName="DuplicateRecordItems" s="2-" t="DuplicateRecordItem"/>
+    <sfObjectRelationship childName="EmailMessage" field="RelatedToId" n="Emails" relationshipName="Emails" s="2-" t="EmailMessage"/>
+    <sfObjectRelationship childName="EntitySubscription" field="ParentId" n="FeedSubscriptionsForEntity" relationshipName="FeedSubscriptionsForEntity" s="2-" t="EntitySubscription"/>
+    <sfObjectRelationship childName="Incap311__Activity_Question__c" field="Incap311__Service_Type_Version_Question__c" n="Incap311__Activity_Questions__r" relationshipName="Incap311__Activity_Questions__r" s="2-" t="Incap311__Activity_Question__c"/>
+    <sfObjectRelationship childName="Incap311__Service_Question__c" field="Incap311__Service_Type_Version_Question__c" n="Incap311__Service_Questions__r" relationshipName="Incap311__Service_Questions__r" s="2-" t="Incap311__Service_Question__c"/>
+    <sfObjectRelationship childName="Incap311__Service_Type_Event__c" field="Incap311__Service_Type_Version_Question__c" n="Incap311__Service_Type_Event__r" relationshipName="Incap311__Service_Type_Event__r" s="2-" t="Incap311__Service_Type_Event__c"/>
+    <sfObjectRelationship alias="RelatedEntityHistoryList" childName="Incap311__Service_Type_Version_Question__History" field="ParentId" n="Histories" relationshipName="Histories" s="2-" t="Incap311__Service_Type_Version_Question__History"/>
+    <sfObjectRelationship childName="NetworkActivityAudit" field="ParentEntityId" n="ParentEntities" relationshipName="ParentEntities" s="2-" t="NetworkActivityAudit"/>
+    <sfObjectRelationship childName="NetworkUserHistoryRecent" field="RecordId" n="NetworkUserHistoryRecentToRecord" relationshipName="NetworkUserHistoryRecentToRecord" s="2-" t="NetworkUserHistoryRecent"/>
+    <sfObjectRelationship childName="Note" field="ParentId" n="Notes" relationshipName="Notes" s="2-" t="Note"/>
+    <sfObjectRelationship childName="NoteAndAttachment" field="ParentId" n="NotesAndAttachments" relationshipName="NotesAndAttachments" s="2-" t="NoteAndAttachment"/>
+    <sfObjectRelationship alias="RelatedProcessInstanceHistory" childName="ProcessInstance" field="TargetObjectId" n="ProcessInstances" relationshipName="ProcessInstances" s="2-" t="ProcessInstance"/>
+    <sfObjectRelationship alias="RelatedProcessHistoryList" childName="ProcessInstanceHistory" field="TargetObjectId" n="ProcessSteps" relationshipName="ProcessSteps" s="2-" t="ProcessInstanceHistory"/>
+    <sfObjectRelationship childName="RecordAction" field="RecordId" n="RecordActions" relationshipName="RecordActions" s="2-" t="RecordAction"/>
+    <sfObjectRelationship childName="TopicAssignment" field="EntityId" n="TopicAssignments" relationshipName="TopicAssignments" s="2-" t="TopicAssignment"/>
+  </childRelationships>
+  <recordTypes>
+    <sfRecordType n="&lt;default&gt;" t="Web Record Type Mapping">
+      <children>
+        <sfLayout layoutFileName="Incap311__Service_Type_Version_Question__c-Incap311__Service Type Question Layout" n="Primary" profileLayout="false" s="" t="Page Layout">
+          <layoutTypes>
+            <sfLayoutType layoutType="Edit" n="Edit" t="Web Layout Type">
+              <children>
+                <sfLayoutSection customLabel="false" detailHeading="false" n="Information" s="" seqNum="0" style="TwoColumnsTopToBottom" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Service Type Question Id" n="Service Type Question Id" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Name" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Hint Text" n="Hint Text" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Hint_Text__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="true" detailHeading="false" n="Service Type Information" s="" seqNum="1" style="TwoColumnsLeftToRight" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI label="Service Type Version Id" n="Service Type Version Id" required="true" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Service_Type_Version__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Service Type" n="Service Type" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Service_Type__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="0" t="Web Layout Item"/>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Service Type Id" n="Service Type Id" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Service_Type_Name__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="true" detailHeading="false" n="Flex Question Information" s="" seqNum="2" style="TwoColumnsLeftToRight" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI label="Question" n="Question" required="true" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Question__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Order" n="Order" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Order__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Data Type" n="Data Type" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Data_Type__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Is Required (Question Level)" n="Is Required (Question Level)" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Is_Required_Question__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Flex Question Code" n="Flex Question Code" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Flex_Question_Code__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Start Date" n="Start Date" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Start_Date__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="3">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Question Alias" n="Question Alias" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Question_Text__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Stop Date" n="Stop Date" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Stop_Date__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="true" detailHeading="false" n="Service Type Version Question Configuration" s="" seqNum="3" style="TwoColumnsLeftToRight" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI label="Default Answer" n="Default Answer" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Default_Answer__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="Is Required" n="Is Required" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Is_Required__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="0" t="Web Layout Item"/>
+                        <sfLI label="Allow Citizen Web Intake" n="Allow Citizen Web Intake" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Citizen_Web_Intake__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="true" detailHeading="false" n="Flex Question Override Configuration" s="" seqNum="4" style="TwoColumnsLeftToRight" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI label="Override Answer Values" n="Override Answer Values" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Override_Answer_Values__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="Override Order" n="Override Order" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Override_Order__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="0" t="Web Layout Item"/>
+                        <sfLI label="Override Start Date" n="Override Start Date" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Override_Start_Date__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="0" t="Web Layout Item"/>
+                        <sfLI label="Override Stop Date" n="Override Stop Date" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Override_Stop_Date__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="true" detailHeading="false" n="Dependencies &amp; Validations" s="" seqNum="5" style="TwoColumnsLeftToRight" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI label="Is Controlling" n="Is Controlling" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Is_Controlling__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="Validations" n="Validations" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Validations__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI label="Is Dependent" n="Is Dependent" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Is_Dependent__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="emptySpace" s="" seqNum="0" t="Web Layout Field" type="EmptySpace"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                      <children>
+                        <sfLI label="Dependencies" n="Dependencies" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Dependencies__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="emptySpace" s="" seqNum="0" t="Web Layout Field" type="EmptySpace"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+              </children>
+            </sfLayoutType>
+            <sfLayoutType layoutType="Detail" n="Detail" s="2-" t="Web Layout Type">
+              <children>
+                <sfLayoutSection customLabel="false" detailHeading="false" editHeading="false" n="Information" s="" seqNum="0" style="TwoColumnsTopToBottom" t="Web Layout Section - false">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Service Type Question Id" n="Service Type Question Id" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Name" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Hint Text" n="Hint Text" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Hint_Text__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="true" editHeading="false" n="Service Type Information" s="" seqNum="1" style="TwoColumnsLeftToRight" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI label="Service Type Version Id" n="Service Type Version Id" required="true" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Service_Type_Version__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Service Type" n="Service Type" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Service_Type__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="0" t="Web Layout Item"/>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Service Type Id" n="Service Type Id" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Service_Type_Name__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="true" editHeading="false" n="Flex Question Information" s="" seqNum="2" style="TwoColumnsLeftToRight" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI label="Question" n="Question" required="true" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Question__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Order" n="Order" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Order__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Data Type" n="Data Type" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Data_Type__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Is Required (Question Level)" n="Is Required (Question Level)" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Is_Required_Question__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Flex Question Code" n="Flex Question Code" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Flex_Question_Code__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Start Date" n="Start Date" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Start_Date__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="3">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Question Alias" n="Question Alias" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Question_Text__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Stop Date" n="Stop Date" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Stop_Date__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="true" editHeading="false" n="Service Type Version Question Configuration" s="" seqNum="3" style="TwoColumnsLeftToRight" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI label="Default Answer" n="Default Answer" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Default_Answer__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="Is Required" n="Is Required" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Is_Required__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="0" t="Web Layout Item"/>
+                        <sfLI label="Allow Citizen Web Intake" n="Allow Citizen Web Intake" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Citizen_Web_Intake__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="true" editHeading="false" n="Flex Question Override Configuration" s="" seqNum="4" style="TwoColumnsLeftToRight" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI label="Override Answer Values" n="Override Answer Values" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Override_Answer_Values__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="Override Order" n="Override Order" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Override_Order__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="0" t="Web Layout Item"/>
+                        <sfLI label="Override Start Date" n="Override Start Date" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Override_Start_Date__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="0" t="Web Layout Item"/>
+                        <sfLI label="Override Stop Date" n="Override Stop Date" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Override_Stop_Date__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="true" editHeading="false" n="Dependencies &amp; Validations" s="" seqNum="5" style="TwoColumnsLeftToRight" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI label="Is Controlling" n="Is Controlling" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Is_Controlling__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="Validations" n="Validations" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Validations__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI label="Is Dependent" n="Is Dependent" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Is_Dependent__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="emptySpace" s="" seqNum="0" t="Web Layout Field" type="EmptySpace"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                      <children>
+                        <sfLI label="Dependencies" n="Dependencies" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Dependencies__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="emptySpace" s="" seqNum="0" t="Web Layout Field" type="EmptySpace"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="false" editHeading="false" n="System Information" s="" seqNum="6" style="TwoColumnsTopToBottom" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Created By ID" n="Created By ID" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="CreatedById" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Last Modified By ID" n="Last Modified By ID" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="LastModifiedById" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+              </children>
+            </sfLayoutType>
+          </layoutTypes>
+          <relatedLists>
+            <sfRelatedList fieldName="ParentId" label="Service Type Version Question History" n="Histories" nameAlias="RelatedEntityHistoryList" relationshipName="Histories" s="3-" t="Entity History (ParentId)">
+              <children>
+                <sfRelatedListColumn n="CreatedDate" s="" seq="0" t="Date"/>
+                <sfRelatedListColumn n="User" s="" seq="1"/>
+                <sfRelatedListColumn n="Action" s="" seq="2"/>
+              </children>
+              <customActions/>
+              <excludeButtons/>
+              <customButtons/>
+              <lightningColumns>
+                <sfRelatedListColumn n="CreatedDate" s="" seq="0" t="Date"/>
+                <sfRelatedListColumn n="Field" s="" seq="1"/>
+                <sfRelatedListColumn n="User" s="" seq="2"/>
+                <sfRelatedListColumn n="OldValue" s="" seq="3" t="Original Value"/>
+                <sfRelatedListColumn n="NewValue" s="" seq="4" t="New Value"/>
+              </lightningColumns>
+            </sfRelatedList>
+          </relatedLists>
+          <actionLinks>
+            <sfActionLink n="Incap311__Update_Dependencies" s=""/>
+            <sfActionLink n="Incap311__Update_Dependent_Picklist" s=""/>
+            <sfActionLink n="Incap311__Update_Picklist" s=""/>
+            <sfActionLink n="Incap311__Update_Validations" s=""/>
+          </actionLinks>
+          <excludeButtons>
+            <string>ChangeOwnerOne</string>
+            <string>ChangeRecordType</string>
+            <string>Submit</string>
+          </excludeButtons>
+          <customTags/>
+          <quickActionNames/>
+          <consoleComponents/>
+          <platformActionNames>
+            <string>FeedItem.ContentPost</string>
+            <string>FeedItem.TextPost</string>
+            <string>FeedItem.LinkPost</string>
+            <string>FeedItem.PollPost</string>
+          </platformActionNames>
+        </sfLayout>
+      </children>
+    </sfRecordType>
+  </recordTypes>
+  <standardActions>
+    <sfActionLink modes="ObjectHome Incap311__Service_Type_Version_Questions__r List Incap311__Service_Type_Questions__r" n="New"/>
+    <sfActionLink modes="View Incap311__Service_Type_Version_Questions__r Incap311__Service_Type_Questions__r" n="Edit" requiresRow="true" s="2"/>
+    <sfActionLink modes="View Incap311__Service_Type_Version_Questions__r Incap311__Service_Type_Questions__r" n="Delete" requiresRow="true" s="3"/>
+    <sfActionLink massAction="true" modes="View List all_related_lists" n="ChangeOwnerOne" t="Change Owner"/>
+    <sfActionLink modes="View Incap311__Service_Type_Version_Questions__r Incap311__Service_Type_Questions__r" n="ShowMore" t="Show More"/>
+    <sfActionLink modes="View Incap311__Service_Type_Version_Questions__r Incap311__Service_Type_Questions__r" n="GoToList" t="Go To List"/>
+    <sfActionLink modes="RelatedList" n="PrevPage" t="Previous Page"/>
+    <sfActionLink modes="RelatedList" n="NextPage" t="Next Page"/>
+    <sfActionLink n="Accept" s=""/>
+    <sfActionLink modes="View" n="CancelEdit"/>
+    <sfActionLink modes="View" n="Clone" requiresRow="true"/>
+    <sfActionLink modes="ObjectHome" n="List" requiresRow="true"/>
+    <sfActionLink afterWaitUrl="ui:wait:timed?seconds=10" modes="View" n="SaveEdit"/>
+    <sfActionLink n="Tab" s=""/>
+    <sfActionLink modes="ObjectHome" n="View" requiresRow="true"/>
+    <sfActionLink buttonName="Incap311__Update_Dependencies" n="Incap311__Update_Dependencies" s="" t="Update Dependencies"/>
+    <sfActionLink buttonName="Incap311__Update_Dependent_Picklist" n="Incap311__Update_Dependent_Picklist" s="" t="Update Dependent Picklist"/>
+    <sfActionLink buttonName="Incap311__Update_Picklist" n="Incap311__Update_Picklist" s="" t="Update Picklist"/>
+    <sfActionLink buttonName="Incap311__Update_Validations" n="Incap311__Update_Validations" s="" t="Update Validations"/>
+    <sfActionLink modes="View Submit" n="Submit" requiresRow="true"/>
+    <sfActionLink modes="View Remove" n="Remove"/>
+    <sfActionLink modes="View Unlock" n="Unlock" t="Unlock Record"/>
+    <sfActionLink modes="Edit New Clone" n="save" requiresRow="true" t="Save"/>
+    <sfActionLink modes="Edit New Clone" n="save_new" requiresRow="true" t="Save and New"/>
+    <sfActionLink modes="Edit New Clone" n="cancel" requiresRow="true" t="Cancel"/>
+    <sfActionLink massAction="true" modes="View List" n="ChangeRecordType" t="Change Record Type"/>
+    <sfActionLink modes="View" n="email" t="Send an Email"/>
+    <sfActionLink modes="View" n="Share"/>
+    <sfActionLink modes="QuickAction" n="publishersharebutton" t="Create"/>
+    <sfActionLink modes="ObjectHome List" n="Sort"/>
+    <sfActionLink modes="ObjectHome List" n="Filter"/>
+    <sfActionLink modes="ObjectHome View" n="Search"/>
+    <sfActionLink modes="ObjectHome List" n="Import"/>
+    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
+  </standardActions>
+  <homeListColumns>
+    <string>INCAP311__SERVICE_TYPE_VERSION_QUESTION__C.NAME</string>
+  </homeListColumns>
+  <lookupColumns>
+    <string>INCAP311__SERVICE_TYPE_VERSION_QUESTION__C.NAME</string>
+    <string>Incap311__Question__c</string>
+    <string>Incap311__Service_Type_Version__c</string>
+    <string>Incap311__Service_Type__c</string>
+    <string>Incap311__Service_Type_Name__c</string>
+    <string>Incap311__Data_Type__c</string>
+  </lookupColumns>
+  <weblinks/>
+  <searchResultColumns>
+    <string>INCAP311__SERVICE_TYPE_VERSION_QUESTION__C.NAME</string>
+  </searchResultColumns>
+  <listViewActions/>
+</sfObject>

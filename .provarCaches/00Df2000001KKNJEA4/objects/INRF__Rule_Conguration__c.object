@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Custom Setting to store configuration details of rule engine</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>INRF__Disable_Ruleforce__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Flag to enable/disable rule force for entire org. If this is true, all rules will be skipped</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Set it true if you want to skip configured rules. By default all rules will be executed if active.</inlineHelpText>
+        <label>Disable Ruleforce</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <label>Rule Conguration</label>
+    <visibility>Public</visibility>
+</CustomObject>

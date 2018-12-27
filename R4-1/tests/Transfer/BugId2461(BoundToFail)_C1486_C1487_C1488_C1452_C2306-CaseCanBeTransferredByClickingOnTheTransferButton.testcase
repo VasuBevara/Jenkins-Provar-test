@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="86">
+<testCase id="30">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: QA (Test)">
@@ -2589,10 +2589,8 @@
         </apiParam>
       </generatedParameters>
     </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="221" title="On SF Case View screen">
-      <tags>
-        <string>disabled</string>
-      </tags>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="294" title="On SF Service Request View screen">
+      <tags/>
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">QA</value>
@@ -2604,7 +2602,7 @@
           <value class="value" valueClass="string">Dont</value>
         </argument>
         <argument id="targetDescription">
-          <value class="value" valueClass="string">On SF Case View screen</value>
+          <value class="value" valueClass="string">On SF Service Request View screen</value>
         </argument>
         <argument id="windowSelection">
           <value class="value" valueClass="string">Default</value>
@@ -2619,19 +2617,21 @@
         <argument id="captureAfter">
           <value class="value" valueClass="string">false</value>
         </argument>
-        <argument id="sfUiTargetObjectId">
-          <value class="value" valueClass="string">500f200001KZB3w</value>
-        </argument>
         <argument id="scTabType">
-          <value class="value" valueClass="string">CurrentTab</value>
+          <value class="value" valueClass="string">ExistingTab</value>
         </argument>
-        <argument id="scPrimaryTabName"/>
+        <argument id="sfUiTargetObjectId"/>
+        <argument id="scPrimaryTabName">
+          <value class="value" valueClass="string">Created Case</value>
+        </argument>
         <argument id="scSecondaryTabName"/>
+        <argument id="uiTargetUrl"/>
       </arguments>
       <clauses>
-        <clause name="substeps" testItemId="222">
+        <clause name="substeps" testItemId="541">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="223" title="UI Assert">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="664" title="UI Assert">
+              <tags/>
               <arguments>
                 <argument id="resultName">
                   <value class="value" valueClass="string">Values</value>
@@ -2644,7 +2644,7 @@
                     <uiFieldAssertion resultName="Incap311__Service_Request_Number__c">
                       <fieldLocator uri="ui:locator?name=Incap311__Service_Request_Number__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26field%3DIncap311__Service_Request_Number__c"/>
                       <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" comparisonType="Contains">
+                        <uiAttributeAssertion attributeName="value" comparisonType="None">
                           <value class="value" valueClass="string">18-</value>
                         </uiAttributeAssertion>
                       </attributeAssertions>
@@ -2664,202 +2664,31 @@
                 <argument id="autoRetry"/>
               </arguments>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="255" title="UI Assert">
+            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="668" title="Set Values: OriginalSRNumber">
               <arguments>
-                <argument id="resultName">
-                  <value class="value" valueClass="string">Values</value>
-                </argument>
-                <argument id="resultScope">
-                  <value class="value" valueClass="string">Test</value>
-                </argument>
-                <argument id="fieldAssertions">
+                <argument id="values">
                   <value class="valueList" mutable="Mutable">
-                    <uiFieldAssertion resultName="Incap311__Service_Request_Number__c">
-                      <fieldLocator uri="ui:locator?name=Incap311__Service_Request_Number__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26field%3DIncap311__Service_Request_Number__c"/>
-                      <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" comparisonType="None"/>
-                      </attributeAssertions>
-                    </uiFieldAssertion>
+                    <namedValues mutable="Mutable">
+                      <namedValue name="valuePath">
+                        <value class="value" valueClass="string">OriginalSRNumber</value>
+                      </namedValue>
+                      <namedValue name="value">
+                        <value class="variable">
+                          <path element="Values"/>
+                          <path element="fields"/>
+                          <path element="Incap311__Service_Request_Number__c"/>
+                          <path element="value"/>
+                        </value>
+                      </namedValue>
+                      <namedValue name="valueScope">
+                        <value class="value" valueClass="string">Test</value>
+                      </namedValue>
+                    </namedValues>
                   </value>
                 </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="columnAssertions">
-                  <value class="valueList" mutable="Mutable"/>
-                </argument>
-                <argument id="pageAssertions">
-                  <value class="valueList" mutable="Mutable"/>
-                </argument>
-                <argument id="beforeWait"/>
-                <argument id="autoRetry"/>
               </arguments>
             </apiCall>
-            <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="224" title="Assert: {Values.fields.Incap311__Service_Request_Number__c.value} Contains 18-">
-              <arguments>
-                <argument id="expectedValue">
-                  <value class="variable">
-                    <path element="Values"/>
-                    <path element="fields"/>
-                    <path element="Incap311__Service_Request_Number__c"/>
-                    <path element="value"/>
-                  </value>
-                </argument>
-                <argument id="actualValue">
-                  <value class="value" valueClass="string">18-</value>
-                </argument>
-                <argument id="comparisonType">
-                  <value class="value" valueClass="string">Contains</value>
-                </argument>
-                <argument id="caseSensitive">
-                  <value class="value" valueClass="boolean">true</value>
-                </argument>
-                <argument id="numeric">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="retainDecimals">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="nullGreater">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="matchMultiLine">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="matchDotAll">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="failureMessage"/>
-              </arguments>
-            </apiCall>
-          </steps>
-        </clause>
-      </clauses>
-      <generatedParameters>
-        <apiParam group="target" name="sfUiTargetObjectId" title="Object Id">
-          <summary>The Id of the SF Object to be Viewed or Edited.</summary>
-          <type>
-            <textType/>
-          </type>
-        </apiParam>
-        <apiParam group="target" name="scTabType" seq="1000" title="Tab Type">
-          <summary>The tab type for Scaffolds</summary>
-          <type>
-            <choiceType>
-              <constraints>
-                <valueConstraint name="valuesSource">com.provar.plugins.sf.eclipse.ui:com.provar.plugins.forcedotcom.ui.valuesources.SfEnumChoiceListValuesSource</valueConstraint>
-                <valueConstraint name="valuesSourceDependencies">com.provar.plugins.forcedotcom.core.ui.SfUiTargetUrl$ConsoleTabType</valueConstraint>
-              </constraints>
-            </choiceType>
-          </type>
-        </apiParam>
-      </generatedParameters>
-    </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="261" title="On SF Case View screen">
-      <tags>
-        <string>disabled</string>
-      </tags>
-      <arguments>
-        <argument id="uiConnectionName">
-          <value class="value" valueClass="string">QA</value>
-        </argument>
-        <argument id="target">
-          <value class="uiTarget" uri="sf:ui:target?object=Case&amp;action=View"/>
-        </argument>
-        <argument id="navigate">
-          <value class="value" valueClass="string">Dont</value>
-        </argument>
-        <argument id="targetDescription">
-          <value class="value" valueClass="string">On SF Case View screen</value>
-        </argument>
-        <argument id="windowSelection">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="windowSize">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="closeWindow"/>
-        <argument id="captureBefore">
-          <value class="value" valueClass="string">false</value>
-        </argument>
-        <argument id="captureAfter">
-          <value class="value" valueClass="string">false</value>
-        </argument>
-        <argument id="sfUiTargetObjectId">
-          <value class="value" valueClass="string">500f200001KZB3w</value>
-        </argument>
-        <argument id="scTabType">
-          <value class="value" valueClass="string">CurrentTab</value>
-        </argument>
-        <argument id="scPrimaryTabName"/>
-        <argument id="scSecondaryTabName"/>
-      </arguments>
-      <clauses>
-        <clause name="substeps" testItemId="262">
-          <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="263" title="UI Assert">
-              <arguments>
-                <argument id="resultName">
-                  <value class="value" valueClass="string">Values</value>
-                </argument>
-                <argument id="resultScope">
-                  <value class="value" valueClass="string">Test</value>
-                </argument>
-                <argument id="fieldAssertions">
-                  <value class="valueList" mutable="Mutable">
-                    <uiFieldAssertion resultName="Incap311__Service_Request_Number__c">
-                      <fieldLocator uri="ui:locator?name=Incap311__Service_Request_Number__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26field%3DIncap311__Service_Request_Number__c"/>
-                      <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" comparisonType="None"/>
-                      </attributeAssertions>
-                    </uiFieldAssertion>
-                  </value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="columnAssertions">
-                  <value class="valueList" mutable="Mutable"/>
-                </argument>
-                <argument id="pageAssertions">
-                  <value class="valueList" mutable="Mutable"/>
-                </argument>
-                <argument id="beforeWait"/>
-                <argument id="autoRetry"/>
-              </arguments>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="274" title="UI Assert">
-              <arguments>
-                <argument id="resultName">
-                  <value class="value" valueClass="string">Values</value>
-                </argument>
-                <argument id="resultScope">
-                  <value class="value" valueClass="string">Test</value>
-                </argument>
-                <argument id="fieldAssertions">
-                  <value class="valueList" mutable="Mutable">
-                    <uiFieldAssertion resultName="Incap311__Service_Request_Number__c">
-                      <fieldLocator uri="ui:locator?name=Incap311__Service_Request_Number__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26field%3DIncap311__Service_Request_Number__c"/>
-                      <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" comparisonType="None"/>
-                      </attributeAssertions>
-                    </uiFieldAssertion>
-                  </value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="columnAssertions">
-                  <value class="valueList" mutable="Mutable"/>
-                </argument>
-                <argument id="pageAssertions">
-                  <value class="valueList" mutable="Mutable"/>
-                </argument>
-                <argument id="beforeWait"/>
-                <argument id="autoRetry"/>
-              </arguments>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="264" title="Assert: {Values.fields.Incap311__Service_Request_Number__c.value} Contains 18-">
+            <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="665" title="Assert: {Values.fields.Incap311__Service_Request_Number__c.value} Contains 18-">
               <tags/>
               <arguments>
                 <argument id="expectedValue">
@@ -2918,316 +2747,14 @@
             </choiceType>
           </type>
         </apiParam>
-      </generatedParameters>
-    </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="275" title="On CaseViewScreen page">
-      <tags>
-        <string>disabled</string>
-      </tags>
-      <arguments>
-        <argument id="uiConnectionName">
-          <value class="value" valueClass="string">QA</value>
-        </argument>
-        <argument id="target">
-          <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.CaseViewScreen"/>
-        </argument>
-        <argument id="navigate">
-          <value class="value" valueClass="string">Dont</value>
-        </argument>
-        <argument id="targetDescription">
-          <value class="value" valueClass="string">On CaseViewScreen page</value>
-        </argument>
-        <argument id="windowSelection">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="windowSize">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="closeWindow"/>
-        <argument id="captureBefore">
-          <value class="value" valueClass="string">false</value>
-        </argument>
-        <argument id="captureAfter">
-          <value class="value" valueClass="string">false</value>
-        </argument>
-        <argument id="scTabType">
-          <value class="value" valueClass="string">CurrentTab</value>
-        </argument>
-        <argument id="uiTargetUrl"/>
-      </arguments>
-      <clauses>
-        <clause name="substeps" testItemId="276">
-          <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="277" title="UI Assert">
-              <arguments>
-                <argument id="resultName">
-                  <value class="value" valueClass="string">Values</value>
-                </argument>
-                <argument id="resultScope">
-                  <value class="value" valueClass="string">Test</value>
-                </argument>
-                <argument id="fieldAssertions">
-                  <value class="valueList" mutable="Mutable">
-                    <uiFieldAssertion resultName="Service_Request_ID">
-                      <fieldLocator uri="ui:pageobject:field?field=Service_Request_ID&amp;pageId=pageobjects.CaseViewScreen"/>
-                      <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" comparisonType="None"/>
-                      </attributeAssertions>
-                    </uiFieldAssertion>
-                  </value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="columnAssertions">
-                  <value class="valueList" mutable="Mutable"/>
-                </argument>
-                <argument id="pageAssertions">
-                  <value class="valueList" mutable="Mutable"/>
-                </argument>
-                <argument id="beforeWait"/>
-                <argument id="autoRetry"/>
-              </arguments>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="278" title="Assert: {Values.fields.Service_Request_ID.value} Contains 18-">
-              <arguments>
-                <argument id="expectedValue">
-                  <value class="variable">
-                    <path element="Values"/>
-                    <path element="fields"/>
-                    <path element="Service_Request_ID"/>
-                    <path element="value"/>
-                  </value>
-                </argument>
-                <argument id="actualValue">
-                  <value class="value" valueClass="string">18-</value>
-                </argument>
-                <argument id="comparisonType">
-                  <value class="value" valueClass="string">Contains</value>
-                </argument>
-                <argument id="caseSensitive">
-                  <value class="value" valueClass="boolean">true</value>
-                </argument>
-                <argument id="numeric">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="retainDecimals">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="nullGreater">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="matchMultiLine">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="matchDotAll">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="failureMessage"/>
-              </arguments>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="284" title="UI Assert">
-              <arguments>
-                <argument id="resultName">
-                  <value class="value" valueClass="string">Values</value>
-                </argument>
-                <argument id="resultScope">
-                  <value class="value" valueClass="string">Test</value>
-                </argument>
-                <argument id="fieldAssertions">
-                  <value class="valueList" mutable="Mutable">
-                    <uiFieldAssertion resultName="Service_Request_ID">
-                      <fieldLocator uri="ui:pageobject:field?field=Service_Request_ID&amp;pageId=pageobjects.CaseViewScreen"/>
-                      <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" comparisonType="None"/>
-                      </attributeAssertions>
-                    </uiFieldAssertion>
-                  </value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="columnAssertions">
-                  <value class="valueList" mutable="Mutable"/>
-                </argument>
-                <argument id="pageAssertions">
-                  <value class="valueList" mutable="Mutable"/>
-                </argument>
-                <argument id="beforeWait"/>
-                <argument id="autoRetry"/>
-              </arguments>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="279" title="Set Values: OriginalSRNumber">
-              <arguments>
-                <argument id="values">
-                  <value class="valueList" mutable="Mutable">
-                    <namedValues mutable="Mutable">
-                      <namedValue name="valuePath">
-                        <value class="value" valueClass="string">OriginalSRNumber</value>
-                      </namedValue>
-                      <namedValue name="value">
-                        <value class="variable">
-                          <path element="Values"/>
-                          <path element="fields"/>
-                          <path element="Incap311__Service_Request_Number__c"/>
-                          <path element="value"/>
-                        </value>
-                      </namedValue>
-                      <namedValue name="valueScope">
-                        <value class="value" valueClass="string">Test</value>
-                      </namedValue>
-                    </namedValues>
-                  </value>
-                </argument>
-              </arguments>
-            </apiCall>
-          </steps>
-        </clause>
-      </clauses>
-      <generatedParameters>
-        <apiParam group="target" name="scTabType" seq="1000" title="Tab Type">
-          <summary>The tab type for Scaffolds</summary>
-          <type>
-            <choiceType>
-              <constraints>
-                <valueConstraint name="valuesSource">com.provar.plugins.sf.eclipse.ui:com.provar.plugins.forcedotcom.ui.valuesources.SfEnumChoiceListValuesSource</valueConstraint>
-                <valueConstraint name="valuesSourceDependencies">com.provar.plugins.forcedotcom.core.ui.SfUiTargetUrl$ConsoleTabType</valueConstraint>
-              </constraints>
-            </choiceType>
-          </type>
-        </apiParam>
-        <apiParam group="target" name="uiTargetUrl" title="Web Page">
+        <apiParam group="target" name="scPrimaryTabName" seq="1001" title="Primary Tab Name">
+          <summary>The main tab name</summary>
           <type>
             <textType/>
           </type>
         </apiParam>
-      </generatedParameters>
-    </apiCall>
-    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="285" title="On SF Case View screen">
-      <tags>
-        <string>disabled</string>
-      </tags>
-      <arguments>
-        <argument id="uiConnectionName">
-          <value class="value" valueClass="string">QA</value>
-        </argument>
-        <argument id="target">
-          <value class="uiTarget" uri="sf:ui:target?object=Case&amp;action=View"/>
-        </argument>
-        <argument id="navigate">
-          <value class="value" valueClass="string">Always</value>
-        </argument>
-        <argument id="targetDescription">
-          <value class="value" valueClass="string">On SF Case View screen</value>
-        </argument>
-        <argument id="windowSelection">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="windowSize">
-          <value class="value" valueClass="string">Default</value>
-        </argument>
-        <argument id="closeWindow"/>
-        <argument id="captureBefore">
-          <value class="value" valueClass="string">false</value>
-        </argument>
-        <argument id="captureAfter">
-          <value class="value" valueClass="string">false</value>
-        </argument>
-        <argument id="scTabType">
-          <value class="value" valueClass="string">CurrentTab</value>
-        </argument>
-        <argument id="sfUiTargetObjectId">
-          <value class="value" valueClass="string">500f200001L6t0J</value>
-        </argument>
-      </arguments>
-      <clauses>
-        <clause name="substeps" testItemId="286">
-          <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="287" title="UI Assert">
-              <arguments>
-                <argument id="resultName">
-                  <value class="value" valueClass="string">Values</value>
-                </argument>
-                <argument id="resultScope">
-                  <value class="value" valueClass="string">Test</value>
-                </argument>
-                <argument id="fieldAssertions">
-                  <value class="valueList" mutable="Mutable">
-                    <uiFieldAssertion resultName="Incap311__Service_Request_Number__c">
-                      <fieldLocator uri="ui:locator?name=Incap311__Service_Request_Number__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26field%3DIncap311__Service_Request_Number__c"/>
-                      <attributeAssertions>
-                        <uiAttributeAssertion attributeName="value" comparisonType="None"/>
-                      </attributeAssertions>
-                    </uiFieldAssertion>
-                  </value>
-                </argument>
-                <argument id="captureAfter">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="columnAssertions">
-                  <value class="valueList" mutable="Mutable"/>
-                </argument>
-                <argument id="pageAssertions">
-                  <value class="valueList" mutable="Mutable"/>
-                </argument>
-                <argument id="beforeWait"/>
-                <argument id="autoRetry"/>
-              </arguments>
-            </apiCall>
-            <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="145" title="Assert: {Values.fields.Incap311__Service_Request_Number__c.value} Contains 18-">
-              <arguments>
-                <argument id="expectedValue">
-                  <value class="variable">
-                    <path element="Values"/>
-                    <path element="fields"/>
-                    <path element="Incap311__Service_Request_Number__c"/>
-                    <path element="value"/>
-                  </value>
-                </argument>
-                <argument id="actualValue">
-                  <value class="value" valueClass="string">18-</value>
-                </argument>
-                <argument id="comparisonType">
-                  <value class="value" valueClass="string">Contains</value>
-                </argument>
-                <argument id="caseSensitive">
-                  <value class="value" valueClass="boolean">true</value>
-                </argument>
-                <argument id="numeric">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="retainDecimals">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="nullGreater">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="matchMultiLine">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="matchDotAll">
-                  <value class="value" valueClass="boolean">false</value>
-                </argument>
-                <argument id="failureMessage"/>
-              </arguments>
-            </apiCall>
-          </steps>
-        </clause>
-      </clauses>
-      <generatedParameters>
-        <apiParam group="target" name="scTabType" seq="1000" title="Tab Type">
-          <summary>The tab type for Scaffolds</summary>
-          <type>
-            <choiceType>
-              <constraints>
-                <valueConstraint name="valuesSource">com.provar.plugins.sf.eclipse.ui:com.provar.plugins.forcedotcom.ui.valuesources.SfEnumChoiceListValuesSource</valueConstraint>
-                <valueConstraint name="valuesSourceDependencies">com.provar.plugins.forcedotcom.core.ui.SfUiTargetUrl$ConsoleTabType</valueConstraint>
-              </constraints>
-            </choiceType>
-          </type>
-        </apiParam>
-        <apiParam group="target" name="sfUiTargetObjectId" title="Object Id">
-          <summary>The Id of the SF Object to be Viewed or Edited.</summary>
+        <apiParam group="target" name="scSecondaryTabName" seq="1002" title="Secondary Tab Name">
+          <summary>The sub-tab name</summary>
           <type>
             <textType/>
           </type>
@@ -3235,6 +2762,9 @@
       </generatedParameters>
     </apiCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="290" title="On CaseViewScreen page">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">QA</value>

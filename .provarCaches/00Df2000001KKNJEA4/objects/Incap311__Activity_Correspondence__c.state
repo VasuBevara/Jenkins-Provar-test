@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<retrieveStates class="list">
+  <retrieveState>
+    <problem cause="There was an error extracting your Org's metadata.\n\nRequested metadata file was not returned.  Full Name: SocialPersona" message="Error extracting metadata retrieve results" remedy="RETRY_METADATA_DOWNLOAD" remedyData="CustomObject:Incap311__Activity_Correspondence__c">
+      <stackTrace>com.provar.plugins.forcedotcom.core.model.service.SfOrgMetadataServiceImpl,throwExtractErrors,SfOrgMetadataServiceImpl.java,1960;com.provar.plugins.forcedotcom.core.model.service.SfOrgMetadataServiceImpl,extractRetrieveResults,SfOrgMetadataServiceImpl.java,4398;com.provar.plugins.forcedotcom.core.model.service.SfMetadataPrefetchServiceImpl$ExtractResultsExecutable,run,SfMetadataPrefetchServiceImpl.java,521;java.util.concurrent.ThreadPoolExecutor,runWorker,ThreadPoolExecutor.java,1149;java.util.concurrent.ThreadPoolExecutor$Worker,run,ThreadPoolExecutor.java,624;java.lang.Thread,run,Thread.java,748</stackTrace>
+    </problem>
+  </retrieveState>
+</retrieveStates>

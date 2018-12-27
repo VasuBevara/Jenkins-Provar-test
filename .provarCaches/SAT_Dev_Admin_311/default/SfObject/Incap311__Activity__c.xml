@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfObject creatable="true" deleteable="true" keyPrefix="a07" label="Activity" labelPlural="Activities" layoutable="true" metadataLabel="Activity" n="Incap311__Activity__c" queryable="true" retrieveable="true" s="" searchLayoutable="true" t="Activity (a07)" updatable="true" urlDetail="https://incapsulate311-sat-dev-ed.my.salesforce.com/{ID}" urlEdit="https://incapsulate311-sat-dev-ed.my.salesforce.com/{ID}/e" urlNew="https://incapsulate311-sat-dev-ed.my.salesforce.com/a07/e">
+  <fields>
+    <sfField createable="false" editPermission="false" length="18" n="Id" t="Record ID" type="id" updateable="false"/>
+    <sfField length="18" n="OwnerId" relationshipName="Owner" t="Owner ID" type="reference">
+      <referenceTos>
+        <string>Group</string>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" n="IsDeleted" t="Deleted" type="_boolean" updateable="false"/>
+    <sfField autoNumberField="true" createable="false" editPermission="false" length="80" n="Name" nameField="true" t="Activity Id" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="CreatedDate" t="Created Date" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" length="18" n="CreatedById" relationshipName="CreatedBy" t="Created By ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" n="LastModifiedDate" t="Last Modified Date" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" length="18" n="LastModifiedById" relationshipName="LastModifiedBy" t="Last Modified By ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" n="SystemModstamp" t="System Modstamp" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="LastActivityDate" t="Last Activity Date" type="date" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="LastViewedDate" t="Last Viewed Date" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="LastReferencedDate" t="Last Referenced Date" type="datetime" updateable="false"/>
+    <sfField length="20" n="Incap311__Activity_Code__c" required="true" t="Activity Code"/>
+    <sfField length="255" n="Incap311__Activity_Name__c" t="Activity Name"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IF(\n    Incap311__SLA__c  &lt;&gt; 1,\n    TEXT(Incap311__SLA__c) + &quot; &quot; + TEXT(Incap311__SLA_Type__c),\n    TEXT(Incap311__SLA__c) + &quot; &quot; + LEFT(TEXT(Incap311__SLA_Type__c), LEN(TEXT(Incap311__SLA_Type__c)) - 1)\n)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Incap311__SLA_Detail__c" t="SLA Detail" updateable="false"/>
+    <sfField length="255" n="Incap311__SLA_Type__c" restrictedPicklist="true" t="SLA Type" type="picklist">
+      <picklistEntryIds>1,2,3</picklistEntryIds>
+      <picklistEntries>
+        <sfPLE id="1" n="Business Days" s=""/>
+        <sfPLE id="2" n="Calendar Days" s=""/>
+        <sfPLE id="3" n="Hours" s=""/>
+      </picklistEntries>
+    </sfField>
+    <sfField n="Incap311__SLA__c" precision="18" t="SLA" type="_double"/>
+    <sfField length="18" n="AutorabitExtId__c"/>
+  </fields>
+  <childRelationships>
+    <sfObjectRelationship alias="RelatedHistoryList" childName="ActivityHistory" field="WhatId" n="ActivityHistories" relationshipName="ActivityHistories" s="2-" t="ActivityHistory"/>
+    <sfObjectRelationship alias="RelatedFileList" childName="AttachedContentDocument" field="LinkedEntityId" n="AttachedContentDocuments" relationshipName="AttachedContentDocuments" s="2-" t="AttachedContentDocument"/>
+    <sfObjectRelationship alias="RelatedContentNoteList" childName="AttachedContentNote" field="LinkedEntityId" n="AttachedContentNotes" relationshipName="AttachedContentNotes" s="2-" t="AttachedContentNote"/>
+    <sfObjectRelationship alias="RelatedActivityAttachmentList" childName="Attachment" field="ParentId" n="Attachments" relationshipName="Attachments" s="2-" t="Attachment"/>
+    <sfObjectRelationship alias="RelatedNoteList" childName="CombinedAttachment" field="ParentId" n="CombinedAttachments" relationshipName="CombinedAttachments" s="2-" t="CombinedAttachment"/>
+    <sfObjectRelationship childName="ContentDocumentLink" field="LinkedEntityId" n="ContentDocumentLinks" relationshipName="ContentDocumentLinks" s="2-" t="ContentDocumentLink"/>
+    <sfObjectRelationship childName="DuplicateRecordItem" field="RecordId" n="DuplicateRecordItems" relationshipName="DuplicateRecordItems" s="2-" t="DuplicateRecordItem"/>
+    <sfObjectRelationship childName="EmailMessage" field="RelatedToId" n="Emails" relationshipName="Emails" s="2-" t="EmailMessage"/>
+    <sfObjectRelationship childName="EntitySubscription" field="ParentId" n="FeedSubscriptionsForEntity" relationshipName="FeedSubscriptionsForEntity" s="2-" t="EntitySubscription"/>
+    <sfObjectRelationship childName="Event" field="WhatId" n="Events" relationshipName="Events" s="2-" t="Event"/>
+    <sfObjectRelationship childName="Incap311__Activity_Outcome__c" field="Incap311__Activity__c" n="Incap311__Activity_Outcomes__r" relationshipName="Incap311__Activity_Outcomes__r" s="2-" t="Incap311__Activity_Outcome__c"/>
+    <sfObjectRelationship alias="RelatedEntityHistoryList" childName="Incap311__Activity__History" field="ParentId" n="Histories" relationshipName="Histories" s="2-" t="Incap311__Activity__History"/>
+    <sfObjectRelationship childName="Incap311__Service_Type_Version_Activity__c" field="Incap311__Activity__c" n="Incap311__Service_Type_Activities__r" relationshipName="Incap311__Service_Type_Activities__r" s="2-" t="Incap311__Service_Type_Version_Activity__c"/>
+    <sfObjectRelationship childName="NetworkActivityAudit" field="ParentEntityId" n="ParentEntities" relationshipName="ParentEntities" s="2-" t="NetworkActivityAudit"/>
+    <sfObjectRelationship childName="NetworkUserHistoryRecent" field="RecordId" n="NetworkUserHistoryRecentToRecord" relationshipName="NetworkUserHistoryRecentToRecord" s="2-" t="NetworkUserHistoryRecent"/>
+    <sfObjectRelationship childName="Note" field="ParentId" n="Notes" relationshipName="Notes" s="2-" t="Note"/>
+    <sfObjectRelationship childName="NoteAndAttachment" field="ParentId" n="NotesAndAttachments" relationshipName="NotesAndAttachments" s="2-" t="NoteAndAttachment"/>
+    <sfObjectRelationship alias="RelatedActivityList" childName="OpenActivity" field="WhatId" n="OpenActivities" relationshipName="OpenActivities" s="2-" t="OpenActivity"/>
+    <sfObjectRelationship alias="RelatedProcessInstanceHistory" childName="ProcessInstance" field="TargetObjectId" n="ProcessInstances" relationshipName="ProcessInstances" s="2-" t="ProcessInstance"/>
+    <sfObjectRelationship alias="RelatedProcessHistoryList" childName="ProcessInstanceHistory" field="TargetObjectId" n="ProcessSteps" relationshipName="ProcessSteps" s="2-" t="ProcessInstanceHistory"/>
+    <sfObjectRelationship childName="RecordAction" field="RecordId" n="RecordActions" relationshipName="RecordActions" s="2-" t="RecordAction"/>
+    <sfObjectRelationship childName="Task" field="WhatId" n="Tasks" relationshipName="Tasks" s="2-" t="Task"/>
+    <sfObjectRelationship childName="TopicAssignment" field="EntityId" n="TopicAssignments" relationshipName="TopicAssignments" s="2-" t="TopicAssignment"/>
+  </childRelationships>
+  <recordTypes>
+    <sfRecordType n="&lt;default&gt;" t="Web Record Type Mapping">
+      <children>
+        <sfLayout layoutFileName="Incap311__Activity__c-Incap311__Service Activity Layout" n="Primary" profileLayout="false" s="" t="Page Layout">
+          <layoutTypes>
+            <sfLayoutType layoutType="Edit" n="Edit" t="Web Layout Type">
+              <children>
+                <sfLayoutSection customLabel="false" detailHeading="false" n="Information" s="" seqNum="0" style="TwoColumnsTopToBottom" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Activity Id" n="Activity Id" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Name" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="true" detailHeading="false" n="Activity Configuration" s="" seqNum="1" style="TwoColumnsLeftToRight" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI label="Activity Code" n="Activity Code" required="true" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Activity_Code__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="SLA" n="SLA" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__SLA__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI label="Activity Name" n="Activity Name" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Activity_Name__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="SLA Type" n="SLA Type" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__SLA_Type__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="0" t="Web Layout Item"/>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="SLA Detail" n="SLA Detail" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__SLA_Detail__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+              </children>
+            </sfLayoutType>
+            <sfLayoutType layoutType="Detail" n="Detail" s="2-" t="Web Layout Type">
+              <children>
+                <sfLayoutSection customLabel="false" detailHeading="false" editHeading="false" n="Information" s="" seqNum="0" style="TwoColumnsTopToBottom" t="Web Layout Section - false">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Activity Id" n="Activity Id" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Name" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="1" t="Web Layout Item"/>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="true" editHeading="false" n="Activity Configuration" s="" seqNum="1" style="TwoColumnsLeftToRight" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI label="Activity Code" n="Activity Code" required="true" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Activity_Code__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="SLA" n="SLA" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__SLA__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="1">
+                      <children>
+                        <sfLI label="Activity Name" n="Activity Name" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__Activity_Name__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI label="SLA Type" n="SLA Type" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__SLA_Type__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="2">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="" n="" s="" seqNum="0" t="Web Layout Item"/>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="SLA Detail" n="SLA Detail" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="Incap311__SLA_Detail__c" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+                <sfLayoutSection customLabel="false" editHeading="false" n="System Information" s="" seqNum="2" style="TwoColumnsTopToBottom" t="Web Layout Section - true">
+                  <children>
+                    <sfLayoutRow n="LayoutRow" s="" seqNum="0">
+                      <children>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Created By ID" n="Created By ID" s="" seqNum="0" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="CreatedById" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                        <sfLI editableForNew="false" editableForUpdate="false" label="Last Modified By ID" n="Last Modified By ID" s="" seqNum="1" t="Web Layout Item">
+                          <children>
+                            <sfLIC n="LastModifiedById" s="" seqNum="0" t="Web Layout Field" type="Field"/>
+                          </children>
+                        </sfLI>
+                      </children>
+                    </sfLayoutRow>
+                  </children>
+                </sfLayoutSection>
+              </children>
+            </sfLayoutType>
+          </layoutTypes>
+          <relatedLists>
+            <sfRelatedList fieldName="Incap311__Activity__c" label="Activity Outcomes" n="Incap311__Activity_Outcomes__r" nameAlias="Incap311__Activity_Outcome__c.Incap311__Activity__c" relationshipName="Incap311__Activity_Outcomes__r" s="3-" t="Activity Outcomes (Incap311__Activity__c)">
+              <children>
+                <sfRelatedListColumn alias="Name" n="NAME" s="" seq="0" t="Activity Outcome Name"/>
+                <sfRelatedListColumn alias="Incap311__Service_Type_Version_Activity__c" n="Incap311__Service_Type_Version_Activity__c" s="" seq="1" t="Service Type Version Activity"/>
+                <sfRelatedListColumn alias="Incap311__Outcome__c.Name" n="Incap311__Outcome__c.NAME" s="" seq="2" t="Outcome Id"/>
+                <sfRelatedListColumn alias="Incap311__Outcome__c.Incap311__Outcome_Code__c" n="Incap311__Outcome__c.Incap311__Outcome_Code__c" s="" seq="3" t="Outcome Code"/>
+                <sfRelatedListColumn alias="Incap311__Outcome__c.Incap311__Outcome_Detail__c" n="Incap311__Outcome__c.Incap311__Outcome_Detail__c" s="" seq="4" t="Outcome Detail"/>
+                <sfRelatedListColumn alias="Incap311__Outcome__c.Incap311__Outcome_Action__c" n="Incap311__Outcome__c.Incap311__Outcome_Action__c" s="" seq="5" t="Outcome Action"/>
+                <sfRelatedListColumn alias="Incap311__Is_Default__c" n="Incap311__Is_Default__c" s="" seq="6" t="Is Default"/>
+                <sfRelatedListColumn alias="Incap311__Internal_Comments_Required__c" n="Incap311__Internal_Comments_Required__c" s="" seq="7" t="Internal Comments Required"/>
+                <sfRelatedListColumn alias="Incap311__Additional_Comments_Required__c" n="Incap311__Additional_Comments_Required__c" s="" seq="8" t="Additional Comments Required"/>
+                <sfRelatedListColumn alias="Incap311__Order__c" n="Incap311__Order__c" s="" seq="9" t="Order"/>
+              </children>
+              <customActions/>
+              <excludeButtons/>
+              <customButtons/>
+            </sfRelatedList>
+            <sfRelatedList fieldName="Incap311__Activity__c" label="Service Type Version Activities" n="Incap311__Service_Type_Activities__r" nameAlias="Incap311__Service_Type_Version_Activity__c.Incap311__Activity__c" relationshipName="Incap311__Service_Type_Activities__r" s="3-" t="Service Type Version Activities (Incap311__Activity__c)">
+              <children>
+                <sfRelatedListColumn alias="Name" n="NAME" s="" seq="0" t="Service Type Version Activity Id"/>
+                <sfRelatedListColumn alias="Incap311__Service_Type_Version__c.Incap311__Service_Type__c" n="Incap311__Service_Type_Version__c.Incap311__Service_Type__c" s="" seq="1" t="Service Type"/>
+                <sfRelatedListColumn alias="Incap311__Service_Type_Version__c.Name" n="Incap311__Service_Type_Version__c.NAME" s="" seq="2" t="Service Type Version Id"/>
+                <sfRelatedListColumn alias="Incap311__Service_Type_Version__c.Incap311__Service_Name__c" n="Incap311__Service_Type_Version__c.Incap311__Service_Name__c" s="" seq="3" t="Service Name"/>
+                <sfRelatedListColumn alias="Incap311__Is_Required__c" n="Incap311__Is_Required__c" s="" seq="4" t="Is Required"/>
+                <sfRelatedListColumn alias="Incap311__Optional__c" n="Incap311__Optional__c" s="" seq="5" t="Optional"/>
+                <sfRelatedListColumn alias="Incap311__Next_Activity__c" n="Incap311__Next_Activity__c" s="" seq="6" t="Next Activity"/>
+                <sfRelatedListColumn alias="Incap311__Order__c" n="Incap311__Order__c" s="" seq="7" t="Order"/>
+              </children>
+              <customActions/>
+              <excludeButtons/>
+              <customButtons/>
+            </sfRelatedList>
+            <sfRelatedList fieldName="ParentId" label="Activity History" n="Histories" nameAlias="RelatedEntityHistoryList" relationshipName="Histories" s="3-" t="Entity History (ParentId)">
+              <children>
+                <sfRelatedListColumn n="CreatedDate" s="" seq="0" t="Date"/>
+                <sfRelatedListColumn n="User" s="" seq="1"/>
+                <sfRelatedListColumn n="Action" s="" seq="2"/>
+              </children>
+              <customActions/>
+              <excludeButtons/>
+              <customButtons/>
+              <lightningColumns>
+                <sfRelatedListColumn n="CreatedDate" s="" seq="0" t="Date"/>
+                <sfRelatedListColumn n="Field" s="" seq="1"/>
+                <sfRelatedListColumn n="User" s="" seq="2"/>
+                <sfRelatedListColumn n="OldValue" s="" seq="3" t="Original Value"/>
+                <sfRelatedListColumn n="NewValue" s="" seq="4" t="New Value"/>
+              </lightningColumns>
+            </sfRelatedList>
+          </relatedLists>
+          <actionLinks/>
+          <excludeButtons>
+            <string>ChangeOwnerOne</string>
+            <string>ChangeRecordType</string>
+            <string>Share</string>
+            <string>Submit</string>
+          </excludeButtons>
+          <customTags/>
+          <quickActionNames/>
+          <consoleComponents/>
+          <platformActionNames/>
+        </sfLayout>
+      </children>
+    </sfRecordType>
+  </recordTypes>
+  <standardActions>
+    <sfActionLink n="Accept" s=""/>
+    <sfActionLink modes="View" n="CancelEdit"/>
+    <sfActionLink modes="View" n="Clone" requiresRow="true"/>
+    <sfActionLink modes="View" n="Delete" requiresRow="true" s="3"/>
+    <sfActionLink modes="View" n="Edit" requiresRow="true" s="2"/>
+    <sfActionLink modes="ObjectHome" n="List" requiresRow="true"/>
+    <sfActionLink modes="ObjectHome List" n="New"/>
+    <sfActionLink afterWaitUrl="ui:wait:timed?seconds=10" modes="View" n="SaveEdit"/>
+    <sfActionLink n="Tab" s=""/>
+    <sfActionLink modes="ObjectHome" n="View" requiresRow="true"/>
+    <sfActionLink modes="View Submit" n="Submit" requiresRow="true"/>
+    <sfActionLink modes="View Remove" n="Remove"/>
+    <sfActionLink modes="View Unlock" n="Unlock" t="Unlock Record"/>
+    <sfActionLink modes="Edit New Clone" n="save" requiresRow="true" t="Save"/>
+    <sfActionLink modes="Edit New Clone" n="save_new" requiresRow="true" t="Save and New"/>
+    <sfActionLink modes="Edit New Clone" n="cancel" requiresRow="true" t="Cancel"/>
+    <sfActionLink massAction="true" modes="View List" n="ChangeOwnerOne" t="Change Owner"/>
+    <sfActionLink massAction="true" modes="View List" n="ChangeRecordType" t="Change Record Type"/>
+    <sfActionLink modes="View" n="email" t="Send an Email"/>
+    <sfActionLink modes="View" n="Share"/>
+    <sfActionLink modes="QuickAction" n="publishersharebutton" t="Create"/>
+    <sfActionLink modes="ObjectHome List" n="Sort"/>
+    <sfActionLink modes="ObjectHome List" n="Filter"/>
+    <sfActionLink modes="ObjectHome View" n="Search"/>
+    <sfActionLink modes="ObjectHome List" n="Import"/>
+    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
+  </standardActions>
+  <homeListColumns>
+    <string>INCAP311__ACTIVITY__C.NAME</string>
+    <string>Incap311__Activity_Code__c</string>
+    <string>Incap311__Activity_Name__c</string>
+    <string>Incap311__SLA__c</string>
+    <string>Incap311__SLA_Type__c</string>
+  </homeListColumns>
+  <lookupColumns>
+    <string>INCAP311__ACTIVITY__C.NAME</string>
+    <string>Incap311__Activity_Code__c</string>
+    <string>Incap311__Activity_Name__c</string>
+    <string>Incap311__SLA__c</string>
+    <string>Incap311__SLA_Type__c</string>
+  </lookupColumns>
+  <weblinks/>
+  <searchResultColumns>
+    <string>INCAP311__ACTIVITY__C.NAME</string>
+    <string>Incap311__Activity_Code__c</string>
+    <string>Incap311__Activity_Name__c</string>
+    <string>Incap311__SLA__c</string>
+    <string>Incap311__SLA_Type__c</string>
+  </searchResultColumns>
+  <listViewActions/>
+</sfObject>

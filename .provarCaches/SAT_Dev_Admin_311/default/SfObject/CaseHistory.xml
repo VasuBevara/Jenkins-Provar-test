@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfObject label="Case History" labelPlural="Case History" n="CaseHistory" queryable="true" retrieveable="true" s="" t="Case History">
+  <fields>
+    <sfField createable="false" editPermission="false" length="18" n="Id" t="Case History ID" type="id" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="IsDeleted" t="Deleted" type="_boolean" updateable="false"/>
+    <sfField createable="false" editPermission="false" length="18" n="CaseId" relationshipName="Case" required="true" t="Case ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>Case</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" length="18" n="CreatedById" relationshipName="CreatedBy" t="Created By ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" n="CreatedDate" t="Created Date" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" length="255" n="Field" required="true" restrictedPicklist="true" t="Changed Field" type="picklist" updateable="false">
+      <picklistEntryIds>1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100,101,102,103,104,105,106,107,108,109,110,111,112,113,114,115,116,117,118,119,120</picklistEntryIds>
+      <picklistEntries>
+        <sfPLE id="1" n="X311_Dispatch__c" s="" t="311 Dispatch"/>
+        <sfPLE id="2" n="Account" s="" t="Account Name"/>
+        <sfPLE id="3" n="Incap311__Additional_Comments__c" s="" t="Additional Comments"/>
+        <sfPLE id="4" n="Incap311__Address__c" s="" t="Address"/>
+        <sfPLE id="5" n="Incap311__Address_ID__c" s="" t="Address ID"/>
+        <sfPLE id="6" n="Incap311__Adjusted_Date_Time__c" s="" t="Adjusted Date/Time"/>
+        <sfPLE id="7" n="Asset" s=""/>
+        <sfPLE id="8" n="Incap311__Auto_Close__c" s="" t="Auto Close"/>
+        <sfPLE id="9" n="Incap311__Auto_Close_Date__c" s="" t="Auto Close Date"/>
+        <sfPLE id="10" n="Beats__c" s="" t="Beats"/>
+        <sfPLE id="11" n="BI_District__c" s="" t="BI District"/>
+        <sfPLE id="12" n="Brush_Routes__c" s="" t="Brush Routes"/>
+        <sfPLE id="13" n="BusinessHours" s="" t="Business Hours"/>
+        <sfPLE id="14" n="Origin" s="" t="Case Origin"/>
+        <sfPLE id="15" n="Owner" s="" t="Case Owner"/>
+        <sfPLE id="16" n="Reason" s="" t="Case Reason"/>
+        <sfPLE id="17" n="Source" s="" t="Case Source"/>
+        <sfPLE id="18" n="Census_Tracts__c" s="" t="Census Tracts"/>
+        <sfPLE id="19" n="Incap311__City__c" s="" t="City"/>
+        <sfPLE id="20" n="City_Service_Area__c" s="" t="City Service Area"/>
+        <sfPLE id="21" n="closed" s="" t="Closed."/>
+        <sfPLE id="22" n="IsClosedOnCreate" s="" t="Closed When Created"/>
+        <sfPLE id="23" n="Incap311__Closing_Activity__c" s="" t="Closing Activity"/>
+        <sfPLE id="24" n="Incap311__Closing_Respopnse__c" s="" t="Closing Response"/>
+        <sfPLE id="25" n="Code_Service_District__c" s="" t="Code Service District"/>
+        <sfPLE id="26" n="Code_Sub_Districts__c" s="" t="Code Sub Districts"/>
+        <sfPLE id="27" n="Contact_Phone__c" s="" t="Contact's Phone"/>
+        <sfPLE id="28" n="Contact_Email__c" s="" t="Contact Email"/>
+        <sfPLE id="29" n="Contact" s="" t="Contact Name"/>
+        <sfPLE id="30" n="Council_District__c" s="" t="Council District"/>
+        <sfPLE id="31" n="created" s="" t="Created."/>
+        <sfPLE id="32" n="CSR_Change_Management__c" s="" t="CSR Change Management"/>
+        <sfPLE id="33" n="Customer_Service_Area__c" s="" t="Customer Service Area"/>
+        <sfPLE id="34" n="DaysOfService__c" s="" t="DaysOfService"/>
+        <sfPLE id="35" n="Description" s=""/>
+        <sfPLE id="36" n="Incap311__Distribution__c" s="" t="Distribution"/>
+        <sfPLE id="37" n="Incap311__Duplicate_Parent__c" s="" t="Duplicate Parent"/>
+        <sfPLE id="38" n="EBS_Maintenance_District__c" s="" t="EBS Maintenance District"/>
+        <sfPLE id="39" n="Incap311__Elapsed_SLA_Hours__c" s="" t="Elapsed SLA (Hours)"/>
+        <sfPLE id="40" n="EngineeringReqNumber__c" s="" t="Engineering Req Number"/>
+        <sfPLE id="41" n="Entitlement" s="" t="Entitlement Name"/>
+        <sfPLE id="42" n="SlaStartDate" s="" t="Entitlement Process Start Time"/>
+        <sfPLE id="43" n="IsEscalated" s="" t="Escalated"/>
+        <sfPLE id="44" n="Incap311__Expected_Date_Time__c" s="" t="Expected Date/Time"/>
+        <sfPLE id="45" n="Incap311__Expected_Start_Date__c" s="" t="Expected Start Date"/>
+        <sfPLE id="46" n="Incap311__External_Comments__c" s="" t="External Comments"/>
+        <sfPLE id="47" n="feedEvent" s="" t="Feed event"/>
+        <sfPLE id="48" n="Fire_Prevention_and_Education_FPE__c" s="" t="Fire Prevention and Education (FPE)"/>
+        <sfPLE id="49" n="Hold_Reason__c" s="" t="Hold Reason"/>
+        <sfPLE id="50" n="Hold_Type__c" s="" t="Hold Type"/>
+        <sfPLE id="51" n="Incap311__Is_Private__c" s="" t="Is Private"/>
+        <sfPLE id="52" n="Incap311__Last_Queue_Owner__c" s="" t="Last Queue Owner"/>
+        <sfPLE id="53" n="Incap311__Layer_Information__c" s="" t="Layer Information"/>
+        <sfPLE id="54" n="Incap311__LegacyId__c" s="" t="LegacyId"/>
+        <sfPLE id="55" n="Legacy_Record_Id__c" s="" t="Legacy Record Id"/>
+        <sfPLE id="56" n="Legal_Attorney__c" s="" t="Legal Attorney"/>
+        <sfPLE id="57" n="Incap311__Location__c" s="" t="Location"/>
+        <sfPLE id="58" n="Incap311__Location__Latitude__s" s="" t="Location (Latitude)"/>
+        <sfPLE id="59" n="Incap311__Location__Longitude__s" s="" t="Location (Longitude)"/>
+        <sfPLE id="60" n="Incap311__Location_Details__c" s="" t="Location Details"/>
+        <sfPLE id="61" n="Incap311__Media_URL__c" s="" t="Media URL"/>
+        <sfPLE id="62" n="Incap311__Neighborhood__c" s="" t="Neighborhood"/>
+        <sfPLE id="63" n="Incap311__OldCaseNumber__c" s="" t="OldCaseNumber"/>
+        <sfPLE id="64" n="Incap311__Override_SLA_Calc__c" s="" t="Override SLA Calc"/>
+        <sfPLE id="65" n="ownerAccepted" s="" t="Owner (Accepted)"/>
+        <sfPLE id="66" n="ownerAssignment" s="" t="Owner (Assignment)"/>
+        <sfPLE id="67" n="ownerEscalated" s="" t="Owner (Escalation)"/>
+        <sfPLE id="68" n="Incap311__Parcel__c" s="" t="Parcel"/>
+        <sfPLE id="69" n="Parent" s="" t="Parent Case"/>
+        <sfPLE id="70" n="Parks_Maintenance__c" s="" t="Parks Maintenance"/>
+        <sfPLE id="71" n="Incap311__Place_Address__c" s="" t="Place Address"/>
+        <sfPLE id="72" n="Incap311__Place_Name__c" s="" t="Place Name"/>
+        <sfPLE id="73" n="Police_District__c" s="" t="Police District"/>
+        <sfPLE id="74" n="PotentialLiability__c" s="" t="Potential Liability"/>
+        <sfPLE id="75" n="Incap311__Precinct__c" s="" t="Precinct"/>
+        <sfPLE id="76" n="Priority" s=""/>
+        <sfPLE id="77" n="Product" s=""/>
+        <sfPLE id="78" n="Product__c" s="" t="Product"/>
+        <sfPLE id="79" n="locked" s="" t="Record locked."/>
+        <sfPLE id="80" n="unlocked" s="" t="Record unlocked."/>
+        <sfPLE id="81" n="Incap311__Reported_Address__c" s="" t="Reported Address"/>
+        <sfPLE id="82" n="Incap311__Reported_Address_Id__c" s="" t="Reported Address Id"/>
+        <sfPLE id="83" n="Incap311__Reported_Location__c" s="" t="Reported Location"/>
+        <sfPLE id="84" n="Incap311__Reported_Location__Latitude__s" s="" t="Reported Location (Latitude)"/>
+        <sfPLE id="85" n="Incap311__Reported_Location__Longitude__s" s="" t="Reported Location (Longitude)"/>
+        <sfPLE id="86" n="Reporting_Categories__c" s="" t="Reporting Categories"/>
+        <sfPLE id="87" n="Incap311__Requested_Date_Time__c" s="" t="Requested Date/Time"/>
+        <sfPLE id="88" n="Retention_Number__c" s="" t="Retention Number"/>
+        <sfPLE id="89" n="Sanitation_District__c" s="" t="Sanitation District"/>
+        <sfPLE id="90" n="Incap311__Service_Notice__c" s="" t="Service Notice"/>
+        <sfPLE id="91" n="Escalationlevel1__c" s="" t="Service Queue Member"/>
+        <sfPLE id="92" n="Incap311__Case_Comments__c" s="" t="Service Request Comments"/>
+        <sfPLE id="93" n="Incap311__Service_Request_Created__c" s="" t="Service Request Created"/>
+        <sfPLE id="94" n="Incap311__Service_Request_Source__c" s="" t="Service Request Source"/>
+        <sfPLE id="95" n="Incap311__Service_Type_Version__c" s="" t="Service Type Version"/>
+        <sfPLE id="96" n="Signalized_Intersections__c" s="" t="Signalized Intersections"/>
+        <sfPLE id="97" n="Incap311__SLA__c" s="" t="SLA"/>
+        <sfPLE id="98" n="Incap311__SLA_Type__c" s="" t="SLA Type"/>
+        <sfPLE id="99" n="SLAViolation__c" s="" t="SLA Violation"/>
+        <sfPLE id="100" n="Incap311__SR_Ext_ID__c" s="" t="SR Ext ID"/>
+        <sfPLE id="101" n="Incap311__State__c" s="" t="State"/>
+        <sfPLE id="102" n="Status" s=""/>
+        <sfPLE id="103" n="Incap311__Status_Notes__c" s="" t="Status Notes"/>
+        <sfPLE id="104" n="IsStopped" s="" t="Stopped"/>
+        <sfPLE id="105" n="Incap311__Street_ID__c" s="" t="Street ID"/>
+        <sfPLE id="106" n="Incap311__Street_Name__c" s="" t="Street Name"/>
+        <sfPLE id="107" n="Incap311__Street_Number__c" s="" t="Street Number"/>
+        <sfPLE id="108" n="Streets_Maintenance_Dist__c" s="" t="Streets Maintenance Dist"/>
+        <sfPLE id="109" n="Incap311__Sub_Address_ID__c" s="" t="Sub Address ID"/>
+        <sfPLE id="110" n="Subject" s=""/>
+        <sfPLE id="111" n="Submitter__c" s="" t="Submitter"/>
+        <sfPLE id="112" n="Submitter_Name__c" s="" t="Submitter Name"/>
+        <sfPLE id="113" n="Incap311__Transfer_Parent__c" s="" t="Transfer Parent"/>
+        <sfPLE id="114" n="Type" s=""/>
+        <sfPLE id="115" n="Incap311__Unit__c" s="" t="Unit"/>
+        <sfPLE id="116" n="Incap311__Updated_Date_Time__c" s="" t="Updated Date/Time"/>
+        <sfPLE id="117" n="Incap311__Ward__c" s="" t="Ward"/>
+        <sfPLE id="118" n="Incap311__XCoordinate__c" s="" t="XCoordinate"/>
+        <sfPLE id="119" n="Incap311__YCoordinate__c" s="" t="YCoordinate"/>
+        <sfPLE id="120" n="Incap311__Zipcode__c" s="" t="Zipcode"/>
+      </picklistEntries>
+    </sfField>
+    <sfField createable="false" editPermission="false" filterable="false" length="255" n="OldValue" t="Old Value" type="anyType" updateable="false"/>
+    <sfField createable="false" editPermission="false" filterable="false" length="255" n="NewValue" t="New Value" type="anyType" updateable="false"/>
+  </fields>
+  <childRelationships/>
+  <recordTypes/>
+  <standardActions>
+    <sfActionLink modes="ObjectHome Histories List" n="New"/>
+    <sfActionLink modes="View Histories" n="Edit" requiresRow="true" s="2"/>
+    <sfActionLink modes="View Histories" n="Delete" requiresRow="true" s="3"/>
+    <sfActionLink massAction="true" modes="View List all_related_lists" n="ChangeOwnerOne" t="Change Owner"/>
+    <sfActionLink modes="View Histories" n="ShowMore" t="Show More"/>
+    <sfActionLink modes="View Histories" n="GoToList" t="Go To List"/>
+    <sfActionLink modes="RelatedList" n="PrevPage" t="Previous Page"/>
+    <sfActionLink modes="RelatedList" n="NextPage" t="Next Page"/>
+    <sfActionLink modes="ObjectHome" n="List" requiresRow="true"/>
+    <sfActionLink modes="Edit New Clone" n="save" requiresRow="true" t="Save"/>
+    <sfActionLink modes="Edit New Clone" n="save_new" requiresRow="true" t="Save and New"/>
+    <sfActionLink modes="Edit New Clone" n="cancel" requiresRow="true" t="Cancel"/>
+    <sfActionLink afterWaitUrl="ui:wait:timed?seconds=10" modes="View" n="SaveEdit" t="Save"/>
+    <sfActionLink modes="View" n="CancelEdit" t="Cancel"/>
+    <sfActionLink massAction="true" modes="View List" n="ChangeRecordType" t="Change Record Type"/>
+    <sfActionLink modes="View" n="email" t="Send an Email"/>
+    <sfActionLink modes="View" n="Share"/>
+    <sfActionLink modes="QuickAction" n="publishersharebutton" t="Create"/>
+    <sfActionLink modes="ObjectHome List" n="Sort"/>
+    <sfActionLink modes="ObjectHome List" n="Filter"/>
+    <sfActionLink modes="ObjectHome View" n="Search"/>
+    <sfActionLink modes="ObjectHome List" n="Import"/>
+    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
+  </standardActions>
+  <weblinks/>
+</sfObject>

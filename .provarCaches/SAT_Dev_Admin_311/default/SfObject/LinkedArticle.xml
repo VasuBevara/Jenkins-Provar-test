@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfObject creatable="true" deleteable="true" detailsLoaded="false" editPermission="false" keyPrefix="1WK" label="Linked Article" labelPlural="Linked Articles" layoutable="true" n="LinkedArticle" queryable="true" readPermission="false" retrieveable="true" s="" t="Linked Article (1WK)" updatable="true">
+  <standardActions>
+    <sfActionLink modes="ObjectHome LinkedArticles" n="New"/>
+    <sfActionLink modes="View LinkedArticles" n="Edit" requiresRow="true" s="2"/>
+    <sfActionLink modes="View LinkedArticles" n="Delete" requiresRow="true" s="3"/>
+    <sfActionLink massAction="true" modes="View List all_related_lists" n="ChangeOwnerOne" t="Change Owner"/>
+    <sfActionLink modes="View LinkedArticles" n="ShowMore" t="Show More"/>
+    <sfActionLink modes="View LinkedArticles" n="GoToList" t="Go To List"/>
+    <sfActionLink modes="RelatedList" n="PrevPage" t="Previous Page"/>
+    <sfActionLink modes="RelatedList" n="NextPage" t="Next Page"/>
+  </standardActions>
+</sfObject>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfApp appId="02uf2000001B80MAAS" n="Service_311_Configuration" packageName="Incap311" s="" seqNum="1" t="311 Configuration">
+  <children>
+    <sfTab n="standard-home" pageUrl="https://incapsulate311-sat-dev-ed.my.salesforce.com/home/home.jsp" s="" seqNum="0" t="Home">
+      <children>
+        <sfHome n="standard-home" s="" t="Home"/>
+      </children>
+    </sfTab>
+    <sfTab n="standard-Account" pageUrl="https://incapsulate311-sat-dev-ed.my.salesforce.com/001/o" s="" seqNum="1" t="Accounts">
+      <children>
+        <sfObjectReference n="Account" s=""/>
+      </children>
+    </sfTab>
+    <sfTab n="standard-Contact" pageUrl="https://incapsulate311-sat-dev-ed.my.salesforce.com/003/o" s="" seqNum="2" t="Contacts">
+      <children>
+        <sfObjectReference n="Contact" s=""/>
+      </children>
+    </sfTab>
+    <sfTab n="Incap311__Service_Type__c" pageUrl="https://incapsulate311-sat-dev-ed.my.salesforce.com/a0h/o" s="" seqNum="3" t="Service Types">
+      <children>
+        <sfObjectReference n="Incap311__Service_Type__c" s=""/>
+      </children>
+    </sfTab>
+    <sfTab n="Incap311__Service_Type_Version__c" pageUrl="https://incapsulate311-sat-dev-ed.my.salesforce.com/a0g/o" s="" seqNum="4" t="Service Type Versions">
+      <children>
+        <sfObjectReference n="Incap311__Service_Type_Version__c" s=""/>
+      </children>
+    </sfTab>
+    <sfTab n="Incap311__Question__c" pageUrl="https://incapsulate311-sat-dev-ed.my.salesforce.com/a0O/o" s="" seqNum="5" t="Flex Questions">
+      <children>
+        <sfObjectReference n="Incap311__Question__c" s=""/>
+      </children>
+    </sfTab>
+    <sfTab n="Incap311__Activity__c" pageUrl="https://incapsulate311-sat-dev-ed.my.salesforce.com/a07/o" s="" seqNum="6" t="Activities">
+      <children>
+        <sfObjectReference n="Incap311__Activity__c" s=""/>
+      </children>
+    </sfTab>
+    <sfTab n="Incap311__Outcome__c" pageUrl="https://incapsulate311-sat-dev-ed.my.salesforce.com/a0N/o" s="" seqNum="7" t="Outcomes">
+      <children>
+        <sfObjectReference n="Incap311__Outcome__c" s=""/>
+      </children>
+    </sfTab>
+    <sfTab n="Incap311__Response__c" pageUrl="https://incapsulate311-sat-dev-ed.my.salesforce.com/a0R/o" s="" seqNum="8" t="Responses">
+      <children>
+        <sfObjectReference n="Incap311__Response__c" s=""/>
+      </children>
+    </sfTab>
+    <sfTab n="Incap311__Correspondence__c" pageUrl="https://incapsulate311-sat-dev-ed.my.salesforce.com/a0C/o" s="" seqNum="9" t="Correspondences">
+      <children>
+        <sfObjectReference n="Incap311__Correspondence__c" s=""/>
+      </children>
+    </sfTab>
+    <sfTab n="Incap311__Distributions__c" pageUrl="https://incapsulate311-sat-dev-ed.my.salesforce.com/a0I/o" s="" seqNum="10" t="Distributions">
+      <children>
+        <sfObjectReference n="Incap311__Distributions__c" s=""/>
+      </children>
+    </sfTab>
+    <sfTab n="Incap311__Distribution_Member__c" pageUrl="https://incapsulate311-sat-dev-ed.my.salesforce.com/a0H/o" s="" seqNum="11" t="Distribution Members">
+      <children>
+        <sfObjectReference n="Incap311__Distribution_Member__c" s=""/>
+      </children>
+    </sfTab>
+    <sfTab n="Incap311__Schedule__c" pageUrl="https://incapsulate311-sat-dev-ed.my.salesforce.com/a0S/o" s="" seqNum="12" t="Schedules">
+      <children>
+        <sfObjectReference n="Incap311__Schedule__c" s=""/>
+      </children>
+    </sfTab>
+    <sfTab n="Incap311__Zone__c" pageUrl="https://incapsulate311-sat-dev-ed.my.salesforce.com/a0k/o" s="" seqNum="13" t="Zones">
+      <children>
+        <sfObjectReference n="Incap311__Zone__c" s=""/>
+      </children>
+    </sfTab>
+    <sfTab n="Incap311__Case_Event__c" pageUrl="https://incapsulate311-sat-dev-ed.my.salesforce.com/a09/o" s="" seqNum="14" t="Case Events">
+      <children>
+        <sfObjectReference n="Incap311__Case_Event__c" s=""/>
+      </children>
+    </sfTab>
+    <sfTab n="standard-KnowledgePublishing" pageUrl="https://incapsulate311-sat-dev-ed.my.salesforce.com/knowledge/publishing/knowledgePublishingHome.apexp" s="" seqNum="15" t="Article Management">
+      <children>
+        <sfPage n="knowledge/publishing/knowledgePublishingHome.apexp" pageName="knowledge/publishing/knowledgePublishingHome.apexp" s="">
+          <children/>
+        </sfPage>
+      </children>
+    </sfTab>
+    <sfTab n="standard-Knowledge" pageUrl="https://incapsulate311-sat-dev-ed.my.salesforce.com/_ui/knowledge/ui/KnowledgeHome" s="" seqNum="16" t="Knowledge"/>
+    <sfTab n="Incap311__Special_Service_Types__c" pageUrl="https://incapsulate311-sat-dev-ed.my.salesforce.com/a0i/o" s="" seqNum="17" t="Restricted Service Types">
+      <children>
+        <sfObjectReference n="Incap311__Special_Service_Types__c" s=""/>
+      </children>
+    </sfTab>
+    <sfTab n="Incap311__Service_Activity__c" pageUrl="https://incapsulate311-sat-dev-ed.my.salesforce.com/a0T/o" s="" seqNum="18" t="Service Activities">
+      <children>
+        <sfObjectReference n="Incap311__Service_Activity__c" s=""/>
+      </children>
+    </sfTab>
+    <sfTab n="Create_Service_Request" pageUrl="https://incapsulate311-sat-dev-ed.my.salesforce.com/servlet/servlet.Integration?lid=01rf2000000vhSz&amp;ic=1&amp;linkToken=VmpFPSxNakF4T0MweE1pMHlPVlF4TVRveU9Ub3lOQzQyTWpKYSwyZ3BTaURscGFnSmxIbFlNdWlZSk1KLFlXWmtNR0po" s="" seqNum="19" t="Create Service Request">
+      <children>
+        <sfPage n="AgentConsoleRedirect" pageName="AgentConsoleRedirect" s=""/>
+      </children>
+    </sfTab>
+    <sfTab n="Tasks" pageUrl="https://incapsulate311-sat-dev-ed.my.salesforce.com/servlet/servlet.Integration?lid=01rf2000000vhXd&amp;ic=1&amp;linkToken=VmpFPSxNakF4T0MweE1pMHlPVlF4TVRveU9Ub3lOQzQyTWpKYSwyZ3BTaURscGFnSmxIbFlNdWlZSk1KLFlXWmtNR0po" s="" seqNum="20">
+      <children>
+        <sfPage n="Activity_Standard" pageName="Activity_Standard" s=""/>
+      </children>
+    </sfTab>
+  </children>
+</sfApp>

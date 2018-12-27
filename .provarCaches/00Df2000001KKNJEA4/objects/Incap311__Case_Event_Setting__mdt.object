@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Incap311__Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Active</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Default_Correspondence_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Default Correspondence Code</label>
+        <length>25</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Incap311__Send_Email__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Send Email</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Type</label>
+        <required>true</required>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Service Request Create</fullName>
+                    <default>true</default>
+                    <label>Service Request Create</label>
+                </value>
+                <value>
+                    <fullName>Service Request Update</fullName>
+                    <default>false</default>
+                    <label>Service Request Update</label>
+                </value>
+                <value>
+                    <fullName>Service Request Close</fullName>
+                    <default>false</default>
+                    <label>Service Request Close</label>
+                </value>
+                <value>
+                    <fullName>Service Activity Update</fullName>
+                    <default>false</default>
+                    <label>Service Activity Update</label>
+                </value>
+                <value>
+                    <fullName>Service Activity Complete</fullName>
+                    <default>false</default>
+                    <label>Service Activity Complete</label>
+                </value>
+                <value>
+                    <fullName>Service Request Transfer</fullName>
+                    <default>false</default>
+                    <label>Service Request Transfer</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Case Event Setting</label>
+    <pluralLabel>Case Event Settings</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Incap311SC__Console_Config__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Console Config</label>
+        <referenceTo>Incap311SC__Console_Config__mdt</referenceTo>
+        <relationshipLabel>Console Page Configs</relationshipLabel>
+        <relationshipName>Console_Page_Configs</relationshipName>
+        <required>true</required>
+        <type>MetadataRelationship</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Incap311SC__Settings__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Console Layout Setting</label>
+        <referenceTo>Incap311SC__Console_Layout_Setting__mdt</referenceTo>
+        <relationshipLabel>Console Page Configs</relationshipLabel>
+        <relationshipName>Console_Page_Configs</relationshipName>
+        <required>false</required>
+        <type>MetadataRelationship</type>
+        <unique>false</unique>
+    </fields>
+    <label>Console Page Config</label>
+    <pluralLabel>Console Page Configs</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

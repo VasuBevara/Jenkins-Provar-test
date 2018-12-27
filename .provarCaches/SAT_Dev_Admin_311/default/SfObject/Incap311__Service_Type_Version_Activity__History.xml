@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfObject label="History: Service Type Version Activity" labelPlural="History: Service Type Version Activity" n="Incap311__Service_Type_Version_Activity__History" queryable="true" retrieveable="true" s="" t="History: Service Type Version Activity">
+  <fields>
+    <sfField createable="false" editPermission="false" length="18" n="Id" t="Entity History ID" type="id" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="IsDeleted" t="Deleted" type="_boolean" updateable="false"/>
+    <sfField createable="false" editPermission="false" length="18" n="ParentId" relationshipName="Parent" required="true" t="Parent ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>Incap311__Service_Type_Version_Activity__c</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" length="18" n="CreatedById" relationshipName="CreatedBy" t="Created By ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" n="CreatedDate" t="Created Date" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" length="255" n="Field" required="true" restrictedPicklist="true" t="Changed Field" type="picklist" updateable="false">
+      <picklistEntryIds>1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21</picklistEntryIds>
+      <picklistEntries>
+        <sfPLE id="1" n="Incap311__Activity__c" s="" t="Activity"/>
+        <sfPLE id="2" n="AutorabitExtId__c" s=""/>
+        <sfPLE id="3" n="created" s="" t="Created."/>
+        <sfPLE id="4" n="feedEvent" s="" t="Feed event"/>
+        <sfPLE id="5" n="Incap311__Is_Required__c" s="" t="Is Required"/>
+        <sfPLE id="6" n="Incap311__Next_Activity__c" s="" t="Next Activity"/>
+        <sfPLE id="7" n="Incap311__Optional__c" s="" t="Optional"/>
+        <sfPLE id="8" n="Incap311__Order__c" s="" t="Order"/>
+        <sfPLE id="9" n="Incap311__Override_SLA__c" s="" t="Override SLA"/>
+        <sfPLE id="10" n="Incap311__Override_SLA_Type__c" s="" t="Override SLA Type"/>
+        <sfPLE id="11" n="ownerAccepted" s="" t="Owner (Accepted)"/>
+        <sfPLE id="12" n="ownerAssignment" s="" t="Owner (Assignment)"/>
+        <sfPLE id="13" n="locked" s="" t="Record locked."/>
+        <sfPLE id="14" n="unlocked" s="" t="Record unlocked."/>
+        <sfPLE id="15" n="Incap311__Rich_Email_Body_Close__c" s="" t="Rich Email Body (Close)"/>
+        <sfPLE id="16" n="Incap311__Rich_Email_Closing_Close__c" s="" t="Rich Email Closing (Close)"/>
+        <sfPLE id="17" n="Incap311__Rich_Email_Intro_Close__c" s="" t="Rich Email Intro (Close)"/>
+        <sfPLE id="18" n="Incap311__Service_Type_Version__c" s="" t="Service Type Version"/>
+        <sfPLE id="19" n="Name" s="" t="Service Type Version Activity Id"/>
+        <sfPLE id="20" n="Incap311__Track_Activity_Closure_Email__c" s="" t="Track Activity Closure Email"/>
+        <sfPLE id="21" n="Incap311__Task_Description__c" s="" t="Version Activity Description"/>
+      </picklistEntries>
+    </sfField>
+    <sfField createable="false" editPermission="false" filterable="false" length="255" n="OldValue" t="Old Value" type="anyType" updateable="false"/>
+    <sfField createable="false" editPermission="false" filterable="false" length="255" n="NewValue" t="New Value" type="anyType" updateable="false"/>
+  </fields>
+  <childRelationships/>
+  <recordTypes/>
+  <standardActions>
+    <sfActionLink modes="ObjectHome Histories List" n="New"/>
+    <sfActionLink modes="View Histories" n="Edit" requiresRow="true" s="2"/>
+    <sfActionLink modes="View Histories" n="Delete" requiresRow="true" s="3"/>
+    <sfActionLink massAction="true" modes="View List all_related_lists" n="ChangeOwnerOne" t="Change Owner"/>
+    <sfActionLink modes="View Histories" n="ShowMore" t="Show More"/>
+    <sfActionLink modes="View Histories" n="GoToList" t="Go To List"/>
+    <sfActionLink modes="RelatedList" n="PrevPage" t="Previous Page"/>
+    <sfActionLink modes="RelatedList" n="NextPage" t="Next Page"/>
+    <sfActionLink modes="ObjectHome" n="List" requiresRow="true"/>
+    <sfActionLink modes="Edit New Clone" n="save" requiresRow="true" t="Save"/>
+    <sfActionLink modes="Edit New Clone" n="save_new" requiresRow="true" t="Save and New"/>
+    <sfActionLink modes="Edit New Clone" n="cancel" requiresRow="true" t="Cancel"/>
+    <sfActionLink afterWaitUrl="ui:wait:timed?seconds=10" modes="View" n="SaveEdit" t="Save"/>
+    <sfActionLink modes="View" n="CancelEdit" t="Cancel"/>
+    <sfActionLink massAction="true" modes="View List" n="ChangeRecordType" t="Change Record Type"/>
+    <sfActionLink modes="View" n="email" t="Send an Email"/>
+    <sfActionLink modes="View" n="Share"/>
+    <sfActionLink modes="QuickAction" n="publishersharebutton" t="Create"/>
+    <sfActionLink modes="ObjectHome List" n="Sort"/>
+    <sfActionLink modes="ObjectHome List" n="Filter"/>
+    <sfActionLink modes="ObjectHome View" n="Search"/>
+    <sfActionLink modes="ObjectHome List" n="Import"/>
+    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
+  </standardActions>
+  <weblinks/>
+</sfObject>

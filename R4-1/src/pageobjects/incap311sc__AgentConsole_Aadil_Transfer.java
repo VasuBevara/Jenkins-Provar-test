@@ -17,14 +17,11 @@ import com.provar.core.testapi.annotations.*;
 public class incap311sc__AgentConsole_Aadil_Transfer {
 
 
-	@ChoiceListType(values = { @ChoiceListValue(value = "ABNDBIKE", title = "Abandoned Bicycle"),
-			@ChoiceListValue(value = "NEEDRMVL", title = "Needle Removal"),
-			@ChoiceListValue(value = "PROREGRWH", title = "Provar Regression RWH") })
+	@ChoiceListType(values = { @ChoiceListValue(value = "ABNDBIKE", title = "Abandoned Bicycle"), @ChoiceListValue(value = "NEEDRMVL", title = "Needle Removal"), @ChoiceListValue(value = "PROREGRWH", title = "Provar Regression RWH") })
 	@FindByLabel(label = "New Service Type*", labelType = LabelType.SalesforceLightningDesignSystem)
 	public WebElement ClickOnTransferService;
 	
-	@ChoiceListType(values = { @ChoiceListValue(value = "AIRCRFTDST", title = "Aircraft Noise Disturbance"),
-			@ChoiceListValue(value = "PCONCMPLNT", title = "Contractor Complaints") })
+	@ChoiceListType(values = { @ChoiceListValue(value = "Provar Regression", title = "Provar Regression RWH"), @ChoiceListValue(value = "AIRCRFTDST", title = "Aircraft Noise Disturbance"), @ChoiceListValue(value = "PCONCMPLNT", title = "Contractor Complaints"), @ChoiceListValue(value = "Provar Regression RWH") })
 	@FindBy(xpath = "//div/div[@class=\"slds-form-element\"]/div[@class=\"slds-form-element__control\"]/select[@class=\"slds-select\"]")
 	public WebElement newServiceType;
 	

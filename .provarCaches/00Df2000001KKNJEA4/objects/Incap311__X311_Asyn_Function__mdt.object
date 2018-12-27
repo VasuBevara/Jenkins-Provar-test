@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>For Async upsert and transfer of service request</description>
+    <fields>
+        <fullName>Incap311__Description__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Description</label>
+        <length>55</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Incap311__Enabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Flag to enable or disable the associated feature</description>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Deleted Enabled</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Is_Enabled__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <fieldManageability>SubscriberControlled</fieldManageability>
+        <label>Is Enabled</label>
+        <type>Checkbox</type>
+    </fields>
+    <label>311_Asyn_Function</label>
+    <pluralLabel>311_Asyn_Functions</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

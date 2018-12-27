@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfObject keyPrefix="555" label="Case Milestone" labelPlural="Case Milestones" layoutable="true" n="CaseMilestone" queryable="true" retrieveable="true" s="" t="Case Milestone (555)" updatable="true" urlDetail="https://incapsulate311-sat-dev-ed.my.salesforce.com/{ID}" urlEdit="https://incapsulate311-sat-dev-ed.my.salesforce.com/{ID}/e" urlNew="https://incapsulate311-sat-dev-ed.my.salesforce.com/555/e">
+  <fields>
+    <sfField createable="false" editPermission="false" length="18" n="Id" t="Case Milestone ID" type="id" updateable="false"/>
+    <sfField createable="false" length="18" n="CaseId" relationshipName="Case" required="true" t="Case ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>Case</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" n="StartDate" t="Start Date" type="datetime"/>
+    <sfField createable="false" n="TargetDate" required="true" t="Target Date" type="datetime" updateable="false"/>
+    <sfField createable="false" n="CompletionDate" t="Completion Date" type="datetime"/>
+    <sfField createable="false" length="18" n="MilestoneTypeId" relationshipName="MilestoneType" t="Milestone Type ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>MilestoneType</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" n="IsCompleted" t="Completed" type="_boolean" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="IsViolated" t="Violation" type="_boolean" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="SystemModstamp" t="System Modstamp" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="CreatedDate" t="Created Date" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" length="18" n="CreatedById" relationshipName="CreatedBy" t="Created By ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" n="LastModifiedDate" t="Last Modified Date" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" length="18" n="LastModifiedById" relationshipName="LastModifiedBy" t="Last Modified By ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" n="IsDeleted" t="Deleted" type="_boolean" updateable="false"/>
+    <sfField createable="false" digits="9" n="TargetResponseInMins" t="Target Response (Mins)" type="_int" updateable="false"/>
+    <sfField createable="false" n="TargetResponseInHrs" precision="6" scale="2" t="Target Response (Hours)" type="_double" updateable="false"/>
+    <sfField createable="false" n="TargetResponseInDays" precision="6" scale="2" t="Target Response (Days)" type="_double" updateable="false"/>
+    <sfField createable="false" filterable="false" length="10" n="TimeRemainingInMins" t="Time Remaining (Min:Sec)" updateable="false"/>
+    <sfField createable="false" digits="9" n="ElapsedTimeInMins" t="Elapsed Time (Mins)" type="_int" updateable="false"/>
+    <sfField createable="false" n="ElapsedTimeInHrs" precision="6" scale="2" t="Elapsed Time (Hours)" type="_double" updateable="false"/>
+    <sfField createable="false" n="ElapsedTimeInDays" precision="6" scale="2" t="Elapsed Time (Days)" type="_double" updateable="false"/>
+    <sfField createable="false" filterable="false" length="10" n="TimeSinceTargetInMins" t="Time Since Target (Min:Sec)" updateable="false"/>
+    <sfField createable="false" length="18" n="BusinessHoursId" relationshipName="BusinessHours" t="Business Hours ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>BusinessHours</string>
+      </referenceTos>
+    </sfField>
+    <sfField filterable="false" n="MilestoneId" notVisibleToMetadataUser="true"/>
+    <sfField filterable="false" n="SlaProcessId" notVisibleToMetadataUser="true"/>
+    <sfField filterable="false" n="TimeRemainingInDays" notVisibleToMetadataUser="true"/>
+    <sfField filterable="false" n="TimeRemainingInHrs" notVisibleToMetadataUser="true"/>
+    <sfField filterable="false" n="TimeSinceTargetInDays" notVisibleToMetadataUser="true"/>
+    <sfField filterable="false" n="TimeSinceTargetInHrs" notVisibleToMetadataUser="true"/>
+  </fields>
+  <childRelationships/>
+  <recordTypes>
+    <sfRecordType layoutsLoaded="false" n="&lt;default&gt;" t="Web Record Type Mapping"/>
+  </recordTypes>
+  <standardActions>
+    <sfActionLink modes="ObjectHome CaseMilestones List" n="New"/>
+    <sfActionLink modes="View CaseMilestones" n="Edit" requiresRow="true" s="2"/>
+    <sfActionLink modes="View CaseMilestones" n="Delete" requiresRow="true" s="3"/>
+    <sfActionLink massAction="true" modes="View List all_related_lists" n="ChangeOwnerOne" t="Change Owner"/>
+    <sfActionLink modes="View CaseMilestones" n="ShowMore" t="Show More"/>
+    <sfActionLink modes="View CaseMilestones" n="GoToList" t="Go To List"/>
+    <sfActionLink modes="RelatedList" n="PrevPage" t="Previous Page"/>
+    <sfActionLink modes="RelatedList" n="NextPage" t="Next Page"/>
+    <sfActionLink modes="View" n="CancelEdit"/>
+    <sfActionLink modes="ObjectHome" n="List" requiresRow="true"/>
+    <sfActionLink afterWaitUrl="ui:wait:timed?seconds=10" modes="View" n="SaveEdit"/>
+    <sfActionLink n="Tab" s=""/>
+    <sfActionLink modes="ObjectHome" n="View" requiresRow="true"/>
+    <sfActionLink modes="View" n="Clone" requiresRow="true"/>
+    <sfActionLink modes="View Submit" n="Submit" requiresRow="true"/>
+    <sfActionLink modes="View Remove" n="Remove"/>
+    <sfActionLink modes="View Unlock" n="Unlock" t="Unlock Record"/>
+    <sfActionLink modes="Edit New Clone" n="save" requiresRow="true" t="Save"/>
+    <sfActionLink modes="Edit New Clone" n="save_new" requiresRow="true" t="Save and New"/>
+    <sfActionLink modes="Edit New Clone" n="cancel" requiresRow="true" t="Cancel"/>
+    <sfActionLink massAction="true" modes="View List" n="ChangeRecordType" t="Change Record Type"/>
+    <sfActionLink modes="View" n="email" t="Send an Email"/>
+    <sfActionLink modes="View" n="Share"/>
+    <sfActionLink modes="QuickAction" n="publishersharebutton" t="Create"/>
+    <sfActionLink modes="ObjectHome List" n="Sort"/>
+    <sfActionLink modes="ObjectHome List" n="Filter"/>
+    <sfActionLink modes="ObjectHome View" n="Search"/>
+    <sfActionLink modes="ObjectHome List" n="Import"/>
+    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
+  </standardActions>
+  <homeListColumns>
+    <string>CASEMILESTONE.NAME</string>
+  </homeListColumns>
+  <lookupColumns>
+    <string>CASEMILESTONE.NAME</string>
+  </lookupColumns>
+  <weblinks/>
+  <searchResultColumns>
+    <string>CASEMILESTONE.NAME</string>
+  </searchResultColumns>
+  <listViewActions/>
+</sfObject>

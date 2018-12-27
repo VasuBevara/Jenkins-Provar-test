@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfObject creatable="true" deleteable="true" keyPrefix="a0M" label="Outcome Question" labelPlural="Outcome Questions" layoutable="true" metadataLabel="Outcome Question" n="Incap311__Outcome_Question__c" queryable="true" retrieveable="true" s="" searchLayoutable="true" t="Outcome Question (a0M)" updatable="true" urlDetail="https://incapsulate311-sat-dev-ed.my.salesforce.com/{ID}" urlEdit="https://incapsulate311-sat-dev-ed.my.salesforce.com/{ID}/e" urlNew="https://incapsulate311-sat-dev-ed.my.salesforce.com/a0M/e">
+  <fields>
+    <sfField createable="false" editPermission="false" length="18" n="Id" t="Record ID" type="id" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="IsDeleted" t="Deleted" type="_boolean" updateable="false"/>
+    <sfField autoNumberField="true" createable="false" editPermission="false" length="80" n="Name" nameField="true" t="Activity Outcome Question Name" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="CreatedDate" t="Created Date" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" length="18" n="CreatedById" relationshipName="CreatedBy" t="Created By ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" n="LastModifiedDate" t="Last Modified Date" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" length="18" n="LastModifiedById" relationshipName="LastModifiedBy" t="Last Modified By ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" n="SystemModstamp" t="System Modstamp" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="LastActivityDate" t="Last Activity Date" type="date" updateable="false"/>
+    <sfField length="18" n="Incap311__Activity_Outcome__c" relationshipName="Incap311__Activity_Outcome__r" required="true" t="Activity Outcome" type="reference" updateable="false">
+      <referenceTos>
+        <string>Incap311__Outcome__c</string>
+      </referenceTos>
+    </sfField>
+    <sfField length="18" n="Incap311__Question__c" relationshipName="Incap311__Question__r" required="true" t="Question" type="reference" updateable="false">
+      <referenceTos>
+        <string>Incap311__Question__c</string>
+      </referenceTos>
+    </sfField>
+    <sfField calculated="true" createable="false" editPermission="false" formula="TEXT(Incap311__Question__r.Incap311__Data_Type__c)" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Incap311__Data_Type__c" t="Data Type" updateable="false"/>
+    <sfField length="255" n="Incap311__Default_Answer__c" t="Default Answer"/>
+    <sfField extraTypeInfo="plaintextarea" filterable="false" length="60000" n="Incap311__Dependencies__c" t="Dependencies" type="textarea"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IF(\n   ISNULL(Incap311__Override_Order__c)|| ISblank(Incap311__Override_Order__c), \n    Incap311__Question__r.Incap311__Order__c ,\n   Incap311__Override_Order__c \n)" n="Incap311__Display_Sort_Order__c" precision="18" scale="2" t="Display Sort Order" type="_double" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="Incap311__Question__r.Incap311__Flex_Question_Code__c" length="1300" n="Incap311__Flex_Question_Code__c" t="Flex Question Code" updateable="false"/>
+    <sfField n="Incap311__Force_Upper__c" t="Force Upper" type="_boolean"/>
+    <sfField n="Incap311__Is_Controlling__c" t="Is Controlling" type="_boolean"/>
+    <sfField n="Incap311__Is_Dependent__c" t="Is Dependent" type="_boolean"/>
+    <sfField n="Incap311__Is_Read_Only__c" t="Is Read Only" type="_boolean"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IF(\n   OR(\n      Incap311__Question__r.Incap311__Required__c,\n      Incap311__Is_Required__c\n   ),\n   TRUE,\n   FALSE\n)" formulaTreatBlanksAs="BlankAsZero" n="Incap311__Is_Required_Question__c" t="Is Required Question" type="_boolean" updateable="false"/>
+    <sfField n="Incap311__Is_Required__c" t="Is Required" type="_boolean"/>
+    <sfField length="255" n="Incap311__Lower_Limit__c" t="Lower Limit"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IF( \n   ISNULL(Incap311__Override_Order__c),  \n   Incap311__Question__r.Incap311__Order__c,   \n   Incap311__Override_Order__c \n)" n="Incap311__Order2__c" precision="18" scale="2" t="Order" type="_double" updateable="false"/>
+    <sfField length="255" n="Incap311__Order__c" t="DEPRECATED - Order"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="Incap311__Activity_Outcome__r.Incap311__Outcome_Code__c" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Incap311__Outcome_Code__c" t="Outcome Code" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="Incap311__Activity_Outcome__r.Incap311__Outcome_Junction_Count__c" formulaTreatBlanksAs="BlankAsZero" n="Incap311__Outcome_Junction_Count__c" precision="18" t="Outcome Junction Count" type="_double" updateable="false"/>
+    <sfField extraTypeInfo="plaintextarea" filterable="false" length="60000" n="Incap311__Override_Answer_Values__c" t="Override Answer Values" type="textarea"/>
+    <sfField n="Incap311__Override_Order__c" precision="6" scale="2" t="Override Order" type="_double"/>
+    <sfField n="Incap311__Override_Start_Date__c" t="Override Start Date" type="datetime"/>
+    <sfField n="Incap311__Override_Stop_Date__c" t="Override Stop Date" type="datetime"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="Incap311__Question__r.Incap311__Flex_Question_Code__c" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Incap311__Question_Code__c" t="Question Code" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="Incap311__Question__r.Incap311__Question_Alias__c" formulaTreatBlanksAs="BlankAsZero" length="1300" n="Incap311__Question_Text__c" t="Question Alias" updateable="false"/>
+    <sfField length="18" n="Incap311__Service_Type_Version_Activity_Outcome__c" relationshipLabel="Outcome Questions" relationshipName="Incap311__Service_Type_Version_Activity_Outcome__r" t="Service Type Version Activity Outcome" type="reference">
+      <referenceTos>
+        <string>Incap311__Activity_Outcome__c</string>
+      </referenceTos>
+    </sfField>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IF(\n ISNULL( Incap311__Override_Start_Date__c ),\n Incap311__Question__r.Incap311__Start_Date__c,\n Incap311__Override_Start_Date__c \n)" formulaTreatBlanksAs="BlankAsZero" n="Incap311__Start_Date__c" t="Start Date" type="datetime" updateable="false"/>
+    <sfField calculated="true" createable="false" editPermission="false" formula="IF(\n  ISNULL(Incap311__Override_Stop_Date__c),\n  Incap311__Question__r.Incap311__Stop_Date__c,\n  Incap311__Override_Stop_Date__c\n)" formulaTreatBlanksAs="BlankAsZero" n="Incap311__Stop_Date__c" t="Stop Date" type="datetime" updateable="false"/>
+    <sfField length="255" n="Incap311__Upper_Limit__c" t="Upper Limit"/>
+    <sfField n="Incap311__Used_By_Interface_Only__c" t="Used By Interface Only" type="_boolean"/>
+    <sfField extraTypeInfo="plaintextarea" filterable="false" length="60000" n="Incap311__Validations__c" t="Validations" type="textarea"/>
+    <sfField length="18" n="AutorabitExtId__c"/>
+  </fields>
+  <childRelationships>
+    <sfObjectRelationship alias="RelatedHistoryList" childName="ActivityHistory" field="WhatId" n="ActivityHistories" relationshipName="ActivityHistories" s="2-" t="ActivityHistory"/>
+    <sfObjectRelationship alias="RelatedFileList" childName="AttachedContentDocument" field="LinkedEntityId" n="AttachedContentDocuments" relationshipName="AttachedContentDocuments" s="2-" t="AttachedContentDocument"/>
+    <sfObjectRelationship alias="RelatedContentNoteList" childName="AttachedContentNote" field="LinkedEntityId" n="AttachedContentNotes" relationshipName="AttachedContentNotes" s="2-" t="AttachedContentNote"/>
+    <sfObjectRelationship alias="RelatedActivityAttachmentList" childName="Attachment" field="ParentId" n="Attachments" relationshipName="Attachments" s="2-" t="Attachment"/>
+    <sfObjectRelationship alias="RelatedNoteList" childName="CombinedAttachment" field="ParentId" n="CombinedAttachments" relationshipName="CombinedAttachments" s="2-" t="CombinedAttachment"/>
+    <sfObjectRelationship childName="ContentDocumentLink" field="LinkedEntityId" n="ContentDocumentLinks" relationshipName="ContentDocumentLinks" s="2-" t="ContentDocumentLink"/>
+    <sfObjectRelationship childName="DuplicateRecordItem" field="RecordId" n="DuplicateRecordItems" relationshipName="DuplicateRecordItems" s="2-" t="DuplicateRecordItem"/>
+    <sfObjectRelationship childName="EmailMessage" field="RelatedToId" n="Emails" relationshipName="Emails" s="2-" t="EmailMessage"/>
+    <sfObjectRelationship childName="EntitySubscription" field="ParentId" n="FeedSubscriptionsForEntity" relationshipName="FeedSubscriptionsForEntity" s="2-" t="EntitySubscription"/>
+    <sfObjectRelationship childName="Event" field="WhatId" n="Events" relationshipName="Events" s="2-" t="Event"/>
+    <sfObjectRelationship childName="Incap311__Activity_Question__c" field="Incap311__Outcome_Question__c" n="Incap311__Activity_Questions__r" relationshipName="Incap311__Activity_Questions__r" s="2-" t="Incap311__Activity_Question__c"/>
+    <sfObjectRelationship alias="RelatedEntityHistoryList" childName="Incap311__Outcome_Question__History" field="ParentId" n="Histories" relationshipName="Histories" s="2-" t="Incap311__Outcome_Question__History"/>
+    <sfObjectRelationship childName="Incap311__Service_Question__c" field="Incap311__Outcome_Question__c" n="Incap311__Service_Questions__r" relationshipName="Incap311__Service_Questions__r" s="2-" t="Incap311__Service_Question__c"/>
+    <sfObjectRelationship childName="Incap311__Service_Type_Event__c" field="Incap311__Outcome_Question__c" n="Incap311__Service_Type_Event__r" relationshipName="Incap311__Service_Type_Event__r" s="2-" t="Incap311__Service_Type_Event__c"/>
+    <sfObjectRelationship childName="NetworkActivityAudit" field="ParentEntityId" n="ParentEntities" relationshipName="ParentEntities" s="2-" t="NetworkActivityAudit"/>
+    <sfObjectRelationship childName="NetworkUserHistoryRecent" field="RecordId" n="NetworkUserHistoryRecentToRecord" relationshipName="NetworkUserHistoryRecentToRecord" s="2-" t="NetworkUserHistoryRecent"/>
+    <sfObjectRelationship childName="Note" field="ParentId" n="Notes" relationshipName="Notes" s="2-" t="Note"/>
+    <sfObjectRelationship childName="NoteAndAttachment" field="ParentId" n="NotesAndAttachments" relationshipName="NotesAndAttachments" s="2-" t="NoteAndAttachment"/>
+    <sfObjectRelationship alias="RelatedActivityList" childName="OpenActivity" field="WhatId" n="OpenActivities" relationshipName="OpenActivities" s="2-" t="OpenActivity"/>
+    <sfObjectRelationship alias="RelatedProcessInstanceHistory" childName="ProcessInstance" field="TargetObjectId" n="ProcessInstances" relationshipName="ProcessInstances" s="2-" t="ProcessInstance"/>
+    <sfObjectRelationship alias="RelatedProcessHistoryList" childName="ProcessInstanceHistory" field="TargetObjectId" n="ProcessSteps" relationshipName="ProcessSteps" s="2-" t="ProcessInstanceHistory"/>
+    <sfObjectRelationship childName="RecordAction" field="RecordId" n="RecordActions" relationshipName="RecordActions" s="2-" t="RecordAction"/>
+    <sfObjectRelationship childName="Task" field="WhatId" n="Tasks" relationshipName="Tasks" s="2-" t="Task"/>
+    <sfObjectRelationship childName="TopicAssignment" field="EntityId" n="TopicAssignments" relationshipName="TopicAssignments" s="2-" t="TopicAssignment"/>
+  </childRelationships>
+  <recordTypes>
+    <sfRecordType layoutsLoaded="false" n="&lt;default&gt;" t="Web Record Type Mapping"/>
+  </recordTypes>
+  <standardActions>
+    <sfActionLink modes="ObjectHome Incap311__Outcome_Questions__r Incap311__Activity_Outcome_Questions__r List" n="New"/>
+    <sfActionLink modes="View Incap311__Outcome_Questions__r Incap311__Activity_Outcome_Questions__r" n="Edit" requiresRow="true" s="2"/>
+    <sfActionLink modes="View Incap311__Outcome_Questions__r Incap311__Activity_Outcome_Questions__r" n="Delete" requiresRow="true" s="3"/>
+    <sfActionLink massAction="true" modes="View List all_related_lists" n="ChangeOwnerOne" t="Change Owner"/>
+    <sfActionLink modes="View Incap311__Outcome_Questions__r Incap311__Activity_Outcome_Questions__r" n="ShowMore" t="Show More"/>
+    <sfActionLink modes="View Incap311__Outcome_Questions__r Incap311__Activity_Outcome_Questions__r" n="GoToList" t="Go To List"/>
+    <sfActionLink modes="RelatedList" n="PrevPage" t="Previous Page"/>
+    <sfActionLink modes="RelatedList" n="NextPage" t="Next Page"/>
+    <sfActionLink n="Accept" s=""/>
+    <sfActionLink modes="View" n="CancelEdit"/>
+    <sfActionLink modes="View" n="Clone" requiresRow="true"/>
+    <sfActionLink modes="ObjectHome" n="List" requiresRow="true"/>
+    <sfActionLink afterWaitUrl="ui:wait:timed?seconds=10" modes="View" n="SaveEdit"/>
+    <sfActionLink n="Tab" s=""/>
+    <sfActionLink modes="ObjectHome" n="View" requiresRow="true"/>
+    <sfActionLink buttonName="Incap311__Update_Dependencies" n="Incap311__Update_Dependencies" s="" t="Update Dependencies"/>
+    <sfActionLink buttonName="Incap311__Update_Dependent_Picklist" n="Incap311__Update_Dependent_Picklist" s="" t="Update Dependent Picklist"/>
+    <sfActionLink buttonName="Incap311__Update_Picklist" n="Incap311__Update_Picklist" s="" t="Update Picklist"/>
+    <sfActionLink buttonName="Incap311__Update_Validations" n="Incap311__Update_Validations" s="" t="Update Validations"/>
+    <sfActionLink modes="View Submit" n="Submit" requiresRow="true"/>
+    <sfActionLink modes="View Remove" n="Remove"/>
+    <sfActionLink modes="View Unlock" n="Unlock" t="Unlock Record"/>
+    <sfActionLink modes="Edit New Clone" n="save" requiresRow="true" t="Save"/>
+    <sfActionLink modes="Edit New Clone" n="save_new" requiresRow="true" t="Save and New"/>
+    <sfActionLink modes="Edit New Clone" n="cancel" requiresRow="true" t="Cancel"/>
+    <sfActionLink massAction="true" modes="View List" n="ChangeRecordType" t="Change Record Type"/>
+    <sfActionLink modes="View" n="email" t="Send an Email"/>
+    <sfActionLink modes="View" n="Share"/>
+    <sfActionLink modes="QuickAction" n="publishersharebutton" t="Create"/>
+    <sfActionLink modes="ObjectHome List" n="Sort"/>
+    <sfActionLink modes="ObjectHome List" n="Filter"/>
+    <sfActionLink modes="ObjectHome View" n="Search"/>
+    <sfActionLink modes="ObjectHome List" n="Import"/>
+    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
+  </standardActions>
+  <homeListColumns>
+    <string>INCAP311__OUTCOME_QUESTION__C.NAME</string>
+  </homeListColumns>
+  <lookupColumns>
+    <string>INCAP311__OUTCOME_QUESTION__C.NAME</string>
+    <string>Incap311__Activity_Outcome__c</string>
+    <string>Incap311__Outcome_Code__c</string>
+    <string>Incap311__Question__c</string>
+    <string>Incap311__Question_Code__c</string>
+    <string>Incap311__Question_Text__c</string>
+    <string>Incap311__Data_Type__c</string>
+  </lookupColumns>
+  <weblinks/>
+  <searchResultColumns>
+    <string>INCAP311__OUTCOME_QUESTION__C.NAME</string>
+  </searchResultColumns>
+  <listViewActions/>
+</sfObject>

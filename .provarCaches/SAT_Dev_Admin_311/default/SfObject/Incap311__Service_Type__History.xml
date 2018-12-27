@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfObject label="History: Service Type" labelPlural="History: Service Type" n="Incap311__Service_Type__History" queryable="true" retrieveable="true" s="" t="History: Service Type">
+  <fields>
+    <sfField createable="false" editPermission="false" length="18" n="Id" t="Entity History ID" type="id" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="IsDeleted" t="Deleted" type="_boolean" updateable="false"/>
+    <sfField createable="false" editPermission="false" length="18" n="ParentId" relationshipName="Parent" required="true" t="Parent ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>Incap311__Service_Type__c</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" length="18" n="CreatedById" relationshipName="CreatedBy" t="Created By ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" n="CreatedDate" t="Created Date" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" length="255" n="Field" required="true" restrictedPicklist="true" t="Changed Field" type="picklist" updateable="false">
+      <picklistEntryIds>1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46</picklistEntryIds>
+      <picklistEntries>
+        <sfPLE id="1" n="Incap311__Active_Service_Type_Version__c" s="" t="Active Service Type Version Id"/>
+        <sfPLE id="2" n="Assignment_Type__c" s="" t="Assignment Type"/>
+        <sfPLE id="3" n="Incap311__Auto_Close__c" s="" t="Auto Close"/>
+        <sfPLE id="4" n="Incap311__Auto_Close_Days__c" s="" t="Auto Close Days"/>
+        <sfPLE id="5" n="Incap311__Auto_Close_Reason__c" s="" t="Auto Close Reason"/>
+        <sfPLE id="6" n="AutorabitExtId__c" s=""/>
+        <sfPLE id="7" n="Incap311__Contact_Status__c" s="" t="Contact Status"/>
+        <sfPLE id="8" n="created" s="" t="Created."/>
+        <sfPLE id="9" n="Incap311__Daily_Request_Limit__c" s="" t="Daily Request Limit"/>
+        <sfPLE id="10" n="Default_Queue__c" s="" t="Default Queue"/>
+        <sfPLE id="11" n="Incap311__Enable_Rules__c" s="" t="Enable Rules"/>
+        <sfPLE id="12" n="Incap311__Enable_Scheduling_Hours__c" s="" t="Enable Scheduling Hours"/>
+        <sfPLE id="13" n="Incap311__External_Description__c" s="" t="External Description"/>
+        <sfPLE id="14" n="Incap311__External_Name__c" s="" t="External Name"/>
+        <sfPLE id="15" n="feedEvent" s="" t="Feed event"/>
+        <sfPLE id="16" n="Geo_Layer_Assignments__c" s="" t="Geo Layer Assignments"/>
+        <sfPLE id="17" n="Incap311_ExtId__c" s="" t="Incap311 External ID"/>
+        <sfPLE id="18" n="Incap311__Is_Bulk_Type__c" s="" t="Is Schedule Type"/>
+        <sfPLE id="19" n="Incap311__Item_Limit__c" s="" t="Item Limit"/>
+        <sfPLE id="20" n="Incap311__Number_Of_Schedules__c" s="" t="Number Of Schedules"/>
+        <sfPLE id="21" n="Owner" s=""/>
+        <sfPLE id="22" n="ownerAccepted" s="" t="Owner (Accepted)"/>
+        <sfPLE id="23" n="ownerAssignment" s="" t="Owner (Assignment)"/>
+        <sfPLE id="24" n="Incap311__Private_Attachments__c" s="" t="Private Attachments"/>
+        <sfPLE id="25" n="locked" s="" t="Record locked."/>
+        <sfPLE id="26" n="unlocked" s="" t="Record unlocked."/>
+        <sfPLE id="27" n="Reporting_Categories__c" s="" t="Reporting Categories"/>
+        <sfPLE id="28" n="Incap311__Reset_SLA_on_Transfer__c" s="" t="Reset SLA on Transfer?"/>
+        <sfPLE id="29" n="Incap311__Special_Service_Type__c" s="" t="Restricted Service Type"/>
+        <sfPLE id="30" n="Retention_Number__c" s="" t="Retention Number"/>
+        <sfPLE id="31" n="Incap311__Schedulable_Requests_Limit_Month__c" s="" t="Schedulable Requests Limit/Month"/>
+        <sfPLE id="32" n="Incap311__Schedulable_Requests_Limit_Year__c" s="" t="Schedulable Requests Limit/Year"/>
+        <sfPLE id="33" n="Incap311__Schedule_After_Days__c" s="" t="Schedule After (Days)"/>
+        <sfPLE id="34" n="Incap311__Schedule_Duplicate_Detection__c" s="" t="Schedule Duplicate Detection"/>
+        <sfPLE id="35" n="Incap311__Schedule_Matching__c" s="" t="Schedule Matching"/>
+        <sfPLE id="36" n="Incap311__Schedule_Range__c" s="" t="Schedule Range"/>
+        <sfPLE id="37" n="Incap311__Schedule_Type__c" s="" t="Schedule Type"/>
+        <sfPLE id="38" n="Incap311__Service_Description__c" s="" t="Service Description"/>
+        <sfPLE id="39" n="Incap311__Service_Location_Required__c" s="" t="Service Location Required"/>
+        <sfPLE id="40" n="Incap311__Service_Name__c" s="" t="Service Name"/>
+        <sfPLE id="41" n="Incap311__Service_Type_Code__c" s="" t="Service Type Code"/>
+        <sfPLE id="42" n="Name" s="" t="Service Type Id"/>
+        <sfPLE id="43" n="Incap311__Set_Expected_Date__c" s="" t="Set Expected Date"/>
+        <sfPLE id="44" n="Incap311__Show_Schedule_Calendar__c" s="" t="Show Schedule Calendar"/>
+        <sfPLE id="45" n="Incap311__System_Generated__c" s="" t="System Generated"/>
+        <sfPLE id="46" n="Incap311__Transfer_To_All_Types__c" s="" t="Transfer To All Types"/>
+      </picklistEntries>
+    </sfField>
+    <sfField createable="false" editPermission="false" filterable="false" length="255" n="OldValue" t="Old Value" type="anyType" updateable="false"/>
+    <sfField createable="false" editPermission="false" filterable="false" length="255" n="NewValue" t="New Value" type="anyType" updateable="false"/>
+  </fields>
+  <childRelationships/>
+  <recordTypes/>
+  <standardActions>
+    <sfActionLink modes="ObjectHome Histories List" n="New"/>
+    <sfActionLink modes="View Histories" n="Edit" requiresRow="true" s="2"/>
+    <sfActionLink modes="View Histories" n="Delete" requiresRow="true" s="3"/>
+    <sfActionLink massAction="true" modes="View List all_related_lists" n="ChangeOwnerOne" t="Change Owner"/>
+    <sfActionLink modes="View Histories" n="ShowMore" t="Show More"/>
+    <sfActionLink modes="View Histories" n="GoToList" t="Go To List"/>
+    <sfActionLink modes="RelatedList" n="PrevPage" t="Previous Page"/>
+    <sfActionLink modes="RelatedList" n="NextPage" t="Next Page"/>
+    <sfActionLink modes="ObjectHome" n="List" requiresRow="true"/>
+    <sfActionLink modes="Edit New Clone" n="save" requiresRow="true" t="Save"/>
+    <sfActionLink modes="Edit New Clone" n="save_new" requiresRow="true" t="Save and New"/>
+    <sfActionLink modes="Edit New Clone" n="cancel" requiresRow="true" t="Cancel"/>
+    <sfActionLink afterWaitUrl="ui:wait:timed?seconds=10" modes="View" n="SaveEdit" t="Save"/>
+    <sfActionLink modes="View" n="CancelEdit" t="Cancel"/>
+    <sfActionLink massAction="true" modes="View List" n="ChangeRecordType" t="Change Record Type"/>
+    <sfActionLink modes="View" n="email" t="Send an Email"/>
+    <sfActionLink modes="View" n="Share"/>
+    <sfActionLink modes="QuickAction" n="publishersharebutton" t="Create"/>
+    <sfActionLink modes="ObjectHome List" n="Sort"/>
+    <sfActionLink modes="ObjectHome List" n="Filter"/>
+    <sfActionLink modes="ObjectHome View" n="Search"/>
+    <sfActionLink modes="ObjectHome List" n="Import"/>
+    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
+  </standardActions>
+  <weblinks/>
+</sfObject>

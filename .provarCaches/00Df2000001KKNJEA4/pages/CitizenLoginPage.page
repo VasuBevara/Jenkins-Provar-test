@@ -1,0 +1,152 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" applyHtmlTag="false" controller="CitizenLoginController">
+  <html>
+  <head>
+    <title>311 Login</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif|Roboto" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.8, minimum-scale=0.8, maximum-scale=0.8"></meta>
+    <link rel="stylesheet" href="{!URLFOR($Resource.CitizenResources, 'assets/311-capsule-common.css')}" />
+    <style type="text/css">
+
+      .logo {
+        background: transparent url('{!URLFOR($Resource.CitizenResources, 'assets/logo-color.png')}') 0 0 no-repeat;
+        background-size: 100%;
+      }
+
+      .field a {
+        display: block;
+        margin-top: 5px;
+        font-size: 12px;
+        text-decoration: none;
+        text-align: right;
+        color: #666;
+      }
+
+      .field a:hover {
+        text-decoration: underline;
+      }
+
+      .remember-me-wrapper {
+        margin-right: 1rem;
+        flex-grow: 1;
+      }
+
+      .remember-me-wrapper input {
+        margin: 0 3px 0 0;
+        vertical-align: middle;
+      }
+
+      .remember-me-wrapper label {
+        font-size: 12px;
+        vertical-align: middle;
+      }
+    </style>
+
+    <script type="text/javascript">
+      window.breakout = false;
+      function onLoginClick() {
+        var usernameInput = document.getElementById('{!$Component.loginForm.username}');
+        var rememberMeInput = document.getElementById('remember-me');
+        var passwordInput = document.getElementById('{!$Component.loginForm.password}');
+
+        if (localStorage) {
+          if (rememberMeInput.checked) {
+            localStorage.setItem('community-remembered-username', usernameInput.value);
+            localStorage.setItem('community-remembered-password', passwordInput.value);
+          }
+          else {
+            localStorage.removeItem('community-remembered-username');
+            localStorage.removeItem('community-remembered-password');
+          }
+        }
+      }
+
+      function setInitialUsername() {
+        var usernameInput = document.getElementById('{!$Component.loginForm.username}');
+        var rememberMeInput = document.getElementById('remember-me');
+
+        if (localStorage) {
+          var remembered = localStorage.getItem('community-remembered-username');
+          rememberMeInput.checked = Boolean(remembered);
+
+          if (!usernameInput.value) {
+            usernameInput.value = remembered;
+            setInitialPassword();
+          }
+        }
+      }
+
+      function setInitialPassword() {
+        var passwordInput = document.getElementById('{!$Component.loginForm.password}');
+        var password = localStorage.getItem('community-remembered-password');
+        passwordInput.value = password;
+       }
+
+      function closeAndRedirect(e) {
+        // If an oAuth popup, prevent normal link and close window
+        if (window.location.href.indexOf('RemoteAccessAuthorizationPage') !== -1) {
+          e.preventDefault();
+          window.breakout = true;
+          var evt = document.createEvent('Event');
+          evt.initEvent('continueWithoutLogin');
+          window.dispatchEvent(evt);
+          window.top.close();
+        }
+      }
+    </script>
+    <script type="text/javascript" src="{!URLFOR($Resource.CitizenResources, 'assets/311-capsule-common.js')}" />
+  </head>
+  <body>
+
+  <div class="outer-wrapper">
+
+    <span class="logo"></span>
+    <apex:form id="loginForm" forceSSL="true">
+      <div class="inner-wrapper">
+        <div id="errorWrap" style="display:none">
+            <apex:pageMessages id="error" />
+        </div>
+        <div class="field">
+          <label for="username">Email Address</label>
+          <apex:inputText id="username"  value="{!username}" />
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <apex:inputSecret id="password" value="{!password}" />
+          <apex:outputLink value="/CitizenForgotPasswordPage">
+            Forgot your password?
+          </apex:outputLink>
+        </div>
+
+        <div class="action-wrapper">
+
+          <div class="remember-me-wrapper">
+            <input type="checkbox" id="remember-me" />
+            <label for="remember-me">Remember me</label>
+          </div>
+
+          <apex:commandButton rerender="loginForm" oncomplete="onSubmitComplete();" action="{!login}" value="Login" styleClass="submit-button" onclick="onLoginClick()" />
+
+        </div>
+
+      </div>
+
+
+
+      <div class="bottom-links">
+        <apex:outputLink value="/servicetypes" onclick="closeAndRedirect(event)">
+          Continue without login
+        </apex:outputLink>
+        <apex:commandLink action="{!register}" value="Sign Up" rendered="{!$Site.RegistrationEnabled}"/>
+    </div>
+    </apex:form>
+  </div>
+
+  <script type="text/javascript">
+    setInitialUsername();
+  </script>
+
+  </body>
+  </html>
+
+</apex:page>

@@ -1,0 +1,1673 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Supports versioning of Service Types, allow structure of Service Type (questions, activities, outcomes) to remain in place for open Service Requests, when new versions of a Service Type are rolled out.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>AutorabitExtId__c</fullName>
+        <description>External Id created by AutoRABIT</description>
+        <externalId>true</externalId>
+        <label>AutorabitExtId__c</label>
+        <length>18</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Incap311__Alert_Validations__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Alert Validations</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Incap311__Allow_Citizen_Web_Intake__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Makes the Service Type Version publicly available through the API for public API calls</description>
+        <externalId>false</externalId>
+        <label>Allow Citizen Web Intake</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Contact_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Defines if the Citizen information is required for an SR and if required what Contact info is required.</description>
+        <externalId>false</externalId>
+        <formula>IF(TEXT(Incap311__Override_Contact_Status__c) != &apos;&apos;,
+    TEXT(Incap311__Override_Contact_Status__c),
+    TEXT(Incap311__Service_Type__r.Incap311__Contact_Status__c))</formula>
+        <label>Contact Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Incap311__Days_Of_Week__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Days Of Week</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetName>Incap311__Days_Of_The_Week</valueSetName>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Incap311__Default_Layers__c</fullName>
+        <deprecated>false</deprecated>
+        <description>A comma separated value of layer Ids</description>
+        <externalId>false</externalId>
+        <label>Default Layers</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Incap311__Default_Method__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Defines the default method when the SR Type is created.  The default can be overridden via rules or APIs</description>
+        <externalId>false</externalId>
+        <label>Default Method</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Phone</fullName>
+                    <default>false</default>
+                    <label>Phone</label>
+                </value>
+                <value>
+                    <fullName>311-App</fullName>
+                    <default>false</default>
+                    <label>311-App</label>
+                </value>
+                <value>
+                    <fullName>Web</fullName>
+                    <default>false</default>
+                    <label>Web</label>
+                </value>
+                <value>
+                    <fullName>Internal Transfer</fullName>
+                    <default>false</default>
+                    <label>Internal Transfer</label>
+                </value>
+                <value>
+                    <fullName>Internal</fullName>
+                    <default>false</default>
+                    <label>Internal</label>
+                </value>
+                <value>
+                    <fullName>API</fullName>
+                    <default>false</default>
+                    <label>API</label>
+                </value>
+                <value>
+                    <fullName>Email</fullName>
+                    <default>false</default>
+                    <label>Email</label>
+                </value>
+                <value>
+                    <fullName>Mail</fullName>
+                    <default>false</default>
+                    <label>Mail</label>
+                </value>
+                <value>
+                    <fullName>Proactive</fullName>
+                    <default>false</default>
+                    <label>Proactive</label>
+                </value>
+                <value>
+                    <fullName>Social</fullName>
+                    <default>false</default>
+                    <label>Social</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Incap311__Default_Priority__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Defines the default Priority when the SR Type is created. The default can be overridden via rules or APIs</description>
+        <externalId>false</externalId>
+        <label>Default Priority</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>High</fullName>
+                    <default>false</default>
+                    <label>High</label>
+                </value>
+                <value>
+                    <fullName>Low</fullName>
+                    <default>false</default>
+                    <label>Low</label>
+                </value>
+                <value>
+                    <fullName>Standard</fullName>
+                    <default>false</default>
+                    <label>Standard</label>
+                </value>
+                <value>
+                    <fullName>Emergency</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Emergency</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Incap311__Default_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Defines the default Status when the SR Type is created. The default can be overridden via rules or APIs</description>
+        <externalId>false</externalId>
+        <label>Default Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Closed</fullName>
+                    <default>false</default>
+                    <label>Closed</label>
+                </value>
+                <value>
+                    <fullName>In Progress</fullName>
+                    <default>false</default>
+                    <label>In Progress</label>
+                </value>
+                <value>
+                    <fullName>New</fullName>
+                    <default>false</default>
+                    <label>New</label>
+                </value>
+                <value>
+                    <fullName>Open</fullName>
+                    <default>false</default>
+                    <label>Open</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Incap311__Dependencies__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Dependencies</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Incap311__Distribute_On__c</fullName>
+        <defaultValue>&apos;All&apos;</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Defines when the Distribution functionality will appear on the SR intake form</description>
+        <externalId>false</externalId>
+        <label>Distribute On</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>All</fullName>
+                    <default>true</default>
+                    <label>All</label>
+                </value>
+                <value>
+                    <fullName>Create</fullName>
+                    <default>false</default>
+                    <label>Create</label>
+                </value>
+                <value>
+                    <fullName>Edit</fullName>
+                    <default>false</default>
+                    <label>Edit</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Incap311__Distribution_Matching_del__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Defines any layer data that the distribution should be matched on for the SR.  Must be JSON.</description>
+        <externalId>false</externalId>
+        <label>Distribution Matching</label>
+        <length>131072</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Incap311__Duplicate_Detection_Method__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Defines the duplication method used</description>
+        <externalId>false</externalId>
+        <label>Duplicate Detection Method</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Standard</fullName>
+                    <default>false</default>
+                    <label>Standard</label>
+                </value>
+                <value>
+                    <fullName>Geo Layers</fullName>
+                    <default>false</default>
+                    <label>Geo Layers</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Incap311__Duplicate_Layers_JSON__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Field for storing duplicate layer login in JSON format</description>
+        <externalId>false</externalId>
+        <label>Duplicate Layers JSON</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Incap311__Duplicate_Match_Street__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Duplicate Match Street</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Duplicate_Oldest_Index__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Duplicate detection from Oldest SR to Newest SR</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Duplicate detection from Oldest SR to Newest SR</inlineHelpText>
+        <label>Duplicate Oldest Index</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Duplicate_Radius_feet__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Define how many feet from the address provided that a duplicate should be considered</description>
+        <externalId>false</externalId>
+        <label>Duplicate Radius (feet)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Incap311__Duplicate_Statuses__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Define the Status of SR that a duplicate should be considered</description>
+        <externalId>false</externalId>
+        <label>Duplicate Statuses</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New</fullName>
+                    <default>false</default>
+                    <label>New</label>
+                </value>
+                <value>
+                    <fullName>Closed</fullName>
+                    <default>false</default>
+                    <label>Closed</label>
+                </value>
+                <value>
+                    <fullName>Hold</fullName>
+                    <default>false</default>
+                    <label>Hold</label>
+                </value>
+                <value>
+                    <fullName>In Progress</fullName>
+                    <default>false</default>
+                    <label>In Progress</label>
+                </value>
+                <value>
+                    <fullName>Escalated</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Escalated</label>
+                </value>
+                <value>
+                    <fullName>Open</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Open</label>
+                </value>
+                <value>
+                    <fullName>Working</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Working</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Incap311__Duplicate_Threshold_Period_days__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Define how many days from the create date that a duplicate should be considered</description>
+        <externalId>false</externalId>
+        <label>Duplicate Threshold Period (days)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Incap311__Duplicate_Threshold_Period_hours__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Define how many hours from the create date that a duplicate should be considered</description>
+        <externalId>false</externalId>
+        <label>Duplicate Threshold Period (hours)</label>
+        <precision>2</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Incap311__Email_Body_Close__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Deprecated in favor of Rich Email Body (Close)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Deprecated in favor of Rich Email Body (Close)</inlineHelpText>
+        <label>DEPRECATED - Email Body (Close)</label>
+        <length>6000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Incap311__Email_Body_Create__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Deprecated in favor of Rich Email Body (Create)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Deprecated in favor of Rich Email Body (Create)</inlineHelpText>
+        <label>DEPRECATED - Email Body (Create)</label>
+        <length>6000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Incap311__Email_Closing_Close__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Deprecated in favor of Rich Email Closing (Close)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Deprecated in favor of Rich Email Closing (Close)</inlineHelpText>
+        <label>DEPRECATED - Email Closing (Close)</label>
+        <length>4000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Incap311__Email_Closing_Create__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Deprecated in favor of Rich Email Closing (Create)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Deprecated in favor of Rich Email Closing (Create)</inlineHelpText>
+        <label>DEPRECATED - Email Closing (Create)</label>
+        <length>4000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Incap311__Email_Intro_Close__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Deprecated in favor of Rich Email Intro (Close)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Deprecated in favor of Rich Email Intro (Close)</inlineHelpText>
+        <label>DEPRECATED - Email Intro (Close)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Incap311__Email_Intro_Create__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Deprecated in favor of Rich Email Intro (Create)</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Deprecated in favor of Rich Email Intro (Create)</inlineHelpText>
+        <label>DEPRECATED - Email Intro (Create)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Incap311__Email_Template_Id_for_Close__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Email Template Id for Close</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Incap311__Email_Template_Id_for_Create__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Email Template Id for Create</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Incap311__Email_Template_Id_for_Update__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Email Template Id for Update</label>
+        <length>25</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Incap311__Enable_Business_Hours__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Enables business hours. This checks business hours configuration for the Service Type&apos;s code.</description>
+        <externalId>false</externalId>
+        <label>Enable Business Hours</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Enable_Distribution_Updates__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Defines if the Update field for the Distribution functionality is available</description>
+        <externalId>false</externalId>
+        <label>Enable Distribution Updates</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Enable_Distribution_del__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Defines if the Distribution functionality is used for the SR</description>
+        <externalId>false</externalId>
+        <label>Enable Distribution</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Enable_Operational_SLA__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>To consider operation period for SLA calculations</description>
+        <externalId>false</externalId>
+        <inlineHelpText>To consider operation period for SLA calculations</inlineHelpText>
+        <label>Enable Operational SLA</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Enable_Sub_Units__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Enable Sub Units</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__External_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>SR Name to display for external sources</description>
+        <externalId>false</externalId>
+        <formula>IF(
+NOT(ISBLANK(Incap311__Service_Type__r.Incap311__External_Name__c)), 
+Incap311__Service_Type__r.Incap311__External_Name__c,
+Incap311__Service_Name__c
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>External Name</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Incap311__Generate_All_Questions__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Specifies whether all questions should be included when the service type is submitted; even if they aren&apos;t enabled due to dependencies.</description>
+        <externalId>false</externalId>
+        <label>Generate All Questions</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Geo_Validations__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Geo Validations</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Incap311__Group__c</fullName>
+        <defaultValue>&quot;&quot;</defaultValue>
+        <deprecated>false</deprecated>
+        <description>SR metadata to group SRs.</description>
+        <externalId>false</externalId>
+        <label>Group</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Incap311__Has_Metadata__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Incap311__Question_Count__c != 0</formula>
+        <label>Has Metadata</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Hide_Contact__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Hide Contact</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Hide_Location__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Hide Location</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Include_System_Defaults_del__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Defines if the distribution system defaults are available for the SR</description>
+        <externalId>false</externalId>
+        <label>Include System Defaults</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Is_Activatable__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Determines if the field &quot;Activatable&quot;. Many versions</description>
+        <externalId>false</externalId>
+        <formula>(
+  ( 
+   ( (NOT(ISNULL(Incap311__Start__c)) &amp;&amp; (TODAY() &gt;= Incap311__Start__c) ) || ISNULL(Incap311__Start__c)) 
+     &amp;&amp; 
+   ( ( NOT(ISNULL(Incap311__Stop__c)) &amp;&amp; (TODAY() &lt; Incap311__Stop__c) ) || ISNULL(Incap311__Stop__c) )
+  )
+)
+&amp;&amp;
+NOT(Incap311__Is_Draft__c)</formula>
+        <label>Is Activatable</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Is_Contact_Or_Account_Required__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If selected, the Contact or the Account is required to save the SR</description>
+        <externalId>false</externalId>
+        <label>Is Contact Or Account Required</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Is_Current_Version__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Identifies if the version is the current active version</description>
+        <externalId>false</externalId>
+        <formula>Incap311__Service_Type__r.Incap311__Active_Service_Type_Version__c = Id</formula>
+        <label>Is Current Version</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Is_Draft__c</fullName>
+        <defaultValue>true</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Identifies if the version is in draft</description>
+        <externalId>false</externalId>
+        <label>Is Draft</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Is_Old_Version__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>Incap311__Service_Type__r.Incap311__Active_Service_Type_Version__r.Incap311__Version_Number__c &gt;  Incap311__Version_Number__c</formula>
+        <label>Is Old Version</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Keywords__c</fullName>
+        <deprecated>false</deprecated>
+        <description>manage words that can be used to search for the SR</description>
+        <externalId>false</externalId>
+        <label>Keywords</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Incap311__Layer_Information__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Layer Information</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Incap311__Map_Marker_Icon__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Map Marker Icon</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Midnight_SLA__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <inlineHelpText>e.g. SR is created at 1/1/xxxx 3:00 PM and SLA is configured as 1 business day. Then if this flag is checked, SR Expected datetime will be set to 1/2/xxxx 11:59 PM instead of 1/2/xxxx 3:00 PM.</inlineHelpText>
+        <label>Midnight SLA</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Object__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Object</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Case</fullName>
+                    <default>true</default>
+                    <label>Case</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Incap311__Override_Contact_Status__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Can override the SRT Contact Status if the SRT Contact Status is set to FALSE.  If the SRT Contact Status is set to TRUE, you can not override it to FALSE.</description>
+        <externalId>false</externalId>
+        <label>Override Contact Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Available</fullName>
+                    <default>false</default>
+                    <label>Available</label>
+                </value>
+                <value>
+                    <fullName>Not Visible</fullName>
+                    <default>false</default>
+                    <label>Not Visible</label>
+                </value>
+                <value>
+                    <fullName>Required (LN, FN, EM)</fullName>
+                    <default>false</default>
+                    <label>Required (LN, FN, EM)</label>
+                </value>
+                <value>
+                    <fullName>Required (LN, FN, EM or PH)</fullName>
+                    <default>false</default>
+                    <label>Required (LN, FN, EM or PH)</label>
+                </value>
+                <value>
+                    <fullName>Required (LN, FN, PH)</fullName>
+                    <default>false</default>
+                    <label>Required (LN, FN, PH)</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Incap311__Private_Attachments__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>If checked, all the attachments on service requests are not visible on web or mobile and are hidden from integrators using the API.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>If checked, all the attachments on service requests are not visible on web or mobile and are hidden from integrators using the API.</inlineHelpText>
+        <label>Private Attachments</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Question_Count__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Question Count</label>
+        <summaryForeignKey>Incap311__Service_Type_Version_Question__c.Incap311__Service_Type_Version__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Recommended_Types__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Recommended Types</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Incap311__Resolution_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Resolution Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>realtime</fullName>
+                    <default>true</default>
+                    <label>realtime</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Incap311__Rich_Email_Body_Close__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Used to populate email content for the SR.  Define a template Body for the Close email</description>
+        <externalId>false</externalId>
+        <label>Rich Email Body (Close)</label>
+        <length>6000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Incap311__Rich_Email_Body_Create__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Used to populate email content for the SR.  Define a template Body for the create email</description>
+        <externalId>false</externalId>
+        <label>Rich Email Body (Create)</label>
+        <length>6000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>30</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Incap311__Rich_Email_Closing_Close__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Used to populate email content for the SR.  Define a template closing for the close email</description>
+        <externalId>false</externalId>
+        <label>Rich Email Closing (Close)</label>
+        <length>6000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Incap311__Rich_Email_Closing_Create__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Used to populate email content for the SR.  Define a template closing for the create email</description>
+        <externalId>false</externalId>
+        <label>Rich Email Closing (Create)</label>
+        <length>6000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Incap311__Rich_Email_Intro_Close__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Used to populate email content for the SR.  Define a template intro for the close email</description>
+        <externalId>false</externalId>
+        <label>Rich Email Intro (Close)</label>
+        <length>6000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Incap311__Rich_Email_Intro_Create__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Used to populate email content for the SR.  Define a template intro for the create email</description>
+        <externalId>false</externalId>
+        <label>Rich Email Intro (Create)</label>
+        <length>6000</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Incap311__SLA_Detail__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>IF(
+    Incap311__SLA__c == 0,
+    &quot;No SLA Defined&quot;,
+    IF(
+       Incap311__SLA__c  == 1,
+       TEXT(Incap311__SLA__c) + &quot; &quot; + LEFT(TEXT(Incap311__SLA_Type__c), LEN(TEXT(Incap311__SLA_Type__c)) - 1),
+       TEXT(Incap311__SLA__c) + &quot; &quot; + TEXT(Incap311__SLA_Type__c))
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>SLA Detail</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Incap311__SLA_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Define the unit type to calculate the SLA . Works with the SLA field</description>
+        <externalId>false</externalId>
+        <label>SLA Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Business Days</fullName>
+                    <default>false</default>
+                    <label>Business Days</label>
+                </value>
+                <value>
+                    <fullName>Calendar Days</fullName>
+                    <default>false</default>
+                    <label>Calendar Days</label>
+                </value>
+                <value>
+                    <fullName>Hours</fullName>
+                    <default>false</default>
+                    <label>Hours</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Incap311__SLA__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Defines the number of units for the SLA calculation.  This number works with teh SLA Type to determine the SLA dates</description>
+        <externalId>false</externalId>
+        <label>SLA</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Incap311__SR_Alert_Message__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>SR Alert Message</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Incap311__Send_Email_On_SR_Closed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Defines if Close Case Event will be created when the SR is created.  Track SR Closure Email must be set to True for any Case Event to be created</description>
+        <externalId>false</externalId>
+        <label>Send Email On SR Closed</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Send_Email_On_SR_Creation__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Defines if Create Case Event will be created when the SR is created.  Track SR Create Email must be set to True for any Case Event to be created</description>
+        <externalId>false</externalId>
+        <label>Send Email On SR Creation</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Service_Icon__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Service Icon</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Service_Location_Required__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Define if the Location is required to save the SR</description>
+        <externalId>false</externalId>
+        <label>Service Location Required</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Service_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Name of the SR that will be displayed on the UI</description>
+        <externalId>false</externalId>
+        <label>Service Name</label>
+        <length>255</length>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Incap311__Service_Notice__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Service Notice</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Incap311__Service_Type_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Displays the Service Type Code the version is associated to</description>
+        <externalId>false</externalId>
+        <formula>Incap311__Service_Type__r.Incap311__Service_Type_Code__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Service Type Code</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Incap311__Service_Type_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Displays the Service Type ID that the version is associated to</description>
+        <externalId>false</externalId>
+        <formula>Incap311__Service_Type__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Service Type Id</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Incap311__Service_Type__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The Service Type ID that the version is associated to</description>
+        <externalId>false</externalId>
+        <label>Service Type</label>
+        <referenceTo>Incap311__Service_Type__c</referenceTo>
+        <relationshipLabel>Service Type Versions</relationshipLabel>
+        <relationshipName>Service_Type_Versions</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Incap311__Start_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Defines a date when SLA dates can start calculating.  if the SR is created before the start date .and after the stop date, the SLA will not start until the identified Start Date.  NULL means there is no Start Date and the SLA will calculate immediately when the SR is created.  Used for seasonal SR&apos;s (tree removal)</description>
+        <externalId>false</externalId>
+        <label>SLA: Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Start__c</fullName>
+        <deprecated>false</deprecated>
+        <description>The Date the SR will appear as available to create after the Start Date.  Before the Start Date the SR will not be available to create</description>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Stop_Date__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Defines a date when SLA dates will stop calculating.  If the SR is created after the stop date .and before the stop date, the SLA will not start until the identified Start Date.  NULL means there is no stop date and the SLA will calculate immediately when the SR is created.  Used for seasonal SR&apos;s (tree removal)
+If the SR is created between the start and stop date, the SLA is calculated will not stop or pause on based on the stop date</description>
+        <externalId>false</externalId>
+        <label>SLA: Stop Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Stop__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Define the Date the SR will not be available to select to create an SR
+The Date the SR will no longer appear as available to create.  After the Stop Date the SR will not be available to create</description>
+        <externalId>false</externalId>
+        <label>Stop Date</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Track_SR_Closure_Email__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Defines if Case Events will be created when the Case is closed</description>
+        <externalId>false</externalId>
+        <label>Track SR Closure Email</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Track_SR_Creation_Email__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Defines if Case Events will be created when the Case is created</description>
+        <externalId>false</externalId>
+        <label>Track SR Creation Email</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Incap311__Validations__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Validations</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Incap311__Version_Code__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Unique code manually given to the SR Version</description>
+        <externalId>false</externalId>
+        <label>Version Code</label>
+        <length>25</length>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Incap311__Version_Name__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Unique version name manually given to the SR Verison</description>
+        <externalId>false</externalId>
+        <label>Version Name</label>
+        <length>255</length>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Incap311__Version_Number__c</fullName>
+        <defaultValue>0</defaultValue>
+        <deprecated>false</deprecated>
+        <description>Number auto assigned when a new version is created.  Version numbers are sequential</description>
+        <externalId>false</externalId>
+        <label>Version Number</label>
+        <precision>3</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Incap311__Visible_Layers__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Define the layers that will be visible in the Geo Layers section of the SR UI during intake for the SR.  JSON format used to define the layers</description>
+        <externalId>false</externalId>
+        <label>Visible Layers</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <label>Service Type Version</label>
+    <listViews>
+        <fullName>Incap311__All</fullName>
+        <columns>NAME</columns>
+        <columns>Incap311__Service_Type__c</columns>
+        <columns>Incap311__Version_Code__c</columns>
+        <columns>Incap311__Recommended_Types__c</columns>
+        <columns>Incap311__Default_Priority__c</columns>
+        <columns>Incap311__External_Name__c</columns>
+        <columns>Incap311__Service_Name__c</columns>
+        <columns>Incap311__Version_Number__c</columns>
+        <columns>Incap311__Allow_Citizen_Web_Intake__c</columns>
+        <columns>Incap311__Duplicate_Detection_Method__c</columns>
+        <columns>Incap311__Is_Current_Version__c</columns>
+        <columns>Incap311__Service_Location_Required__c</columns>
+        <columns>Incap311__Default_Method__c</columns>
+        <columns>Incap311__Default_Status__c</columns>
+        <columns>Incap311__SLA_Detail__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>SRTV-{00000000}</displayFormat>
+        <label>Service Type Version Id</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Service Type Versions</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Incap311__Service_Type__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Incap311__Service_Type_Code__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Incap311__Service_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Incap311__Version_Number__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Incap311__Is_Current_Version__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Incap311__SLA_Detail__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>UPDATEDBY_USER</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Incap311__Service_Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Incap311__Service_Type_Code__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Incap311__Service_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Incap311__Version_Number__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Incap311__Is_Current_Version__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Incap311__SLA_Detail__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Incap311__Service_Type_Code__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Incap311__Service_Name__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Incap311__Version_Number__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Incap311__Is_Current_Version__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Incap311__Allow_Citizen_Web_Intake__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>Incap311__Service_Name__c</searchFilterFields>
+        <searchFilterFields>Incap311__Service_Type_Code__c</searchFilterFields>
+        <searchFilterFields>Incap311__Service_Type_Name__c</searchFilterFields>
+        <searchFilterFields>Incap311__Service_Type__c</searchFilterFields>
+        <searchFilterFields>Incap311__Version_Code__c</searchFilterFields>
+        <searchFilterFields>Incap311__Version_Name__c</searchFilterFields>
+        <searchFilterFields>Incap311__Version_Number__c</searchFilterFields>
+        <searchFilterFields>Incap311__Is_Current_Version__c</searchFilterFields>
+        <searchFilterFields>Incap311__Allow_Citizen_Web_Intake__c</searchFilterFields>
+        <searchResultsAdditionalFields>Incap311__Service_Type__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Incap311__Service_Type_Code__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Incap311__Service_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Incap311__Version_Number__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Incap311__Is_Current_Version__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Incap311__SLA_Detail__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>UPDATEDBY_USER</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Incap311__Ensure_SLA_Is_Positive_Value</fullName>
+        <active>true</active>
+        <description>Ensure the value entered for SLA is positive and less than 10 million</description>
+        <errorConditionFormula>AND(
+        NOT(ISBLANK(Incap311__SLA__c)),
+        OR(
+           Incap311__SLA__c &lt;= 0,
+           Incap311__SLA__c &gt; 10000000
+        )
+)</errorConditionFormula>
+        <errorMessage>The value for SLA must be a positive number greater than 0 and not greater than 10 million (10000000)</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Incap311__Ensure_Version_Number_Is_Positive</fullName>
+        <active>true</active>
+        <description>Ensure the value is non-negative</description>
+        <errorConditionFormula>AND(
+       NOT(ISBLANK(Incap311__Version_Number__c)),
+       Incap311__Version_Number__c &lt; 0
+)</errorConditionFormula>
+        <errorDisplayField>Incap311__Version_Number__c</errorDisplayField>
+        <errorMessage>Version number must be a non-negative number</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Incap311__Is_Required</fullName>
+        <active>true</active>
+        <errorConditionFormula>TEXT(Incap311__Resolution_Type__c) == &apos;&apos;</errorConditionFormula>
+        <errorDisplayField>Incap311__Resolution_Type__c</errorDisplayField>
+        <errorMessage>Resolution Type is required.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Incap311__Limit_Value_To_Under_366</fullName>
+        <active>true</active>
+        <description>If present, value should not exceed 365 days</description>
+        <errorConditionFormula>AND(
+       NOT(ISBLANK(Incap311__Duplicate_Threshold_Period_days__c)),
+       OR(
+            Incap311__Duplicate_Threshold_Period_days__c &lt; 0,
+            Incap311__Duplicate_Threshold_Period_days__c &gt; 365
+       )
+)</errorConditionFormula>
+        <errorDisplayField>Incap311__Duplicate_Threshold_Period_days__c</errorDisplayField>
+        <errorMessage>Value must be greater than or equal to 0 and less than or equal to 365</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Incap311__Must_be_between_0_and_23</fullName>
+        <active>true</active>
+        <errorConditionFormula>OR(Incap311__Duplicate_Threshold_Period_hours__c &lt; 0,Incap311__Duplicate_Threshold_Period_hours__c &gt; 23)</errorConditionFormula>
+        <errorDisplayField>Incap311__Duplicate_Threshold_Period_hours__c</errorDisplayField>
+        <errorMessage>Duplicate threshold hours must be between 0 and 23.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Incap311__No_Special_Chars_In_ST_Version_Code</fullName>
+        <active>true</active>
+        <description>Validates for only alphanumeric, hyphen, and underscore in Version Code field</description>
+        <errorConditionFormula>NOT(REGEX(Incap311__Version_Code__c, &quot;[a-zA-Z0-9_-]+&quot;))</errorConditionFormula>
+        <errorDisplayField>Incap311__Version_Code__c</errorDisplayField>
+        <errorMessage>You must only use alphanumeric (a-z, 0-9), hyphen, or underscore in the Version Code field.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Incap311__Validate_Radius_Values</fullName>
+        <active>true</active>
+        <description>Ensure value for duplicate radius is non-negative, if present</description>
+        <errorConditionFormula>AND(
+       NOT(ISBLANK(Incap311__Duplicate_Radius_feet__c)),
+       Incap311__Duplicate_Radius_feet__c &lt; 0
+)</errorConditionFormula>
+        <errorDisplayField>Incap311__Duplicate_Radius_feet__c</errorDisplayField>
+        <errorMessage>Duplicate radius must be greater than or equal to 0, if defined</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Incap311__Validate_SLA_Fields</fullName>
+        <active>true</active>
+        <description>Ensure SLA and SLA Type are either both defined or undefined</description>
+        <errorConditionFormula>OR(
+     AND(
+            NOT(ISBLANK(Incap311__SLA__c)),
+            ISBLANK(TEXT(Incap311__SLA_Type__c))
+      ),
+      AND(
+             ISBLANK(Incap311__SLA__c),
+             NOT(ISBLANK(TEXT(Incap311__SLA_Type__c)))
+      )
+)</errorConditionFormula>
+        <errorMessage>SLA and SLA Type must both be completed or empty</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Incap311__Validate_Start_and_Stop_Date_Order</fullName>
+        <active>true</active>
+        <description>Ensure the chronological order of start and stop dates</description>
+        <errorConditionFormula>AND(
+        NOT(ISBLANK(Incap311__Start_Date__c)),
+        NOT(ISBLANK(Incap311__Stop_Date__c)),
+        Incap311__Stop_Date__c &lt;= Incap311__Start_Date__c
+)</errorConditionFormula>
+        <errorMessage>Stop Date must be after Start Date</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Configured_Rule</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Configured Rule</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/apex/INRF__RuleCrtieriaEvaluatorPage?fieldApiName=Incap311__Service_Type_Code__c&amp;sObjectType=Incap311__Service_Type_Version__c&amp;value={!Incap311__Service_Type_Version__c.Incap311__Service_Type_Code__c}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Incap311__Clone_Version</fullName>
+        <availability>online</availability>
+        <description>Clone a version, its questions and its activities</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Clone Version</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/apex.js&quot;)}
+
+
+var res = confirm(&apos;You are about to clone {!Incap311__Service_Type_Version__c.Name} and its related Questions and Activities&apos;);
+
+if(res) {
+   sforce.apex.execute(
+      &quot;Incap311/Base311_Webservices&quot;,&quot;cloneServiceTypeVersionDynamicV3&quot;, 
+      { stvId: &quot;{!Incap311__Service_Type_Version__c.Id }&quot;,
+relatedList:[&quot;Incap311__Service_Type_Version_Activities__r&quot;,&quot;Incap311__Service_Type_Version_Questions__r&quot;,&quot;Incap311__Service_Type_Version_Correspondents__r&quot;],relatedChildList:[&quot;Incap311__Activity_Correspondents__r&quot;,&quot;Incap311__Service_Type_Version_Activity_Outcomes__r&quot;,], relatedSubChildList: [&quot;Incap311__Activity_Outcome_Responses__r&quot;,&quot;Incap311__Outcome_Questions__r&quot;]}, 
+      function(res) {
+         if(res.length &gt; 0 &amp;&amp; res[0] != null) {
+            window.location.href = res[0];
+            return;
+      }
+
+      alert(&apos;An unexpected error has occurred&apos;);
+   });
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Incap311__Configure_Alert_Validations</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Configure Alert Validations</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/Incap311__Flex_Builder?pid={!CASESAFEID(Incap311__Service_Type_Version__c.Id)}&amp;type=Service_Type_Version__c&amp;field=Alert_Validations__c&amp;oid={!CASESAFEID(Incap311__Service_Type_Version__c.Id)}&amp;retUrl=/{!Incap311__Service_Type_Version__c.Id }</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Incap311__Configure_Duplicate_Types</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Configure Duplicate Types</masterLabel>
+        <openType>sidebar</openType>
+        <page>Incap311__Base311_DupeSTVConfig</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>Incap311__Configure_Geo_Validations</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Configure Geo Validations</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/Incap311__Flex_Builder?&amp;oid={!CASESAFEID(Incap311__Service_Type_Version__c.Id)}&amp;retUrl=/{!Incap311__Service_Type_Version__c.Id }&amp;field=Geo_Validations__c&amp;pid={! CASESAFEID(Incap311__Service_Type_Version__c.Id) }&amp;type=Service_Type_Version__c</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Incap311__Configure_Recommended_Types</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Configure Recommended Types</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/Incap311__Flex_Builder?pid={!CASESAFEID(Incap311__Service_Type_Version__c.Id)}&amp;type=Service_Type_Version__c&amp;field=Recommended_Types__c&amp;oid={!CASESAFEID(Incap311__Service_Type_Version__c.Id)}&amp;retUrl=/{!Incap311__Service_Type_Version__c.Id }</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Incap311__Configure_Validation_Messages</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Configure Validation Messages</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/apex/Incap311__Flex_Builder?pid={!CASESAFEID(Incap311__Service_Type_Version__c.Id)}&amp;type=Service_Type_Version__c&amp;field=Validations__c&amp;oid={!CASESAFEID(Incap311__Service_Type_Version__c.Id)}&amp;retUrl=/{!Incap311__Service_Type_Version__c.Id }</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Incap311__Make_Active</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Make Version Current</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/apex.js&quot;)}
+
+
+var res = confirm(&apos;You are about to make {!Incap311__Service_Type_Version__c.Name} the active Service Type Version. This will close all Service Activities assigned to Open Cases associated to this Service Type, and create new Activities for this version. Do you want to continue?&apos;);
+
+if(res) {
+sforce.apex.execute(
+&quot;Incap311/Base311_Webservices&quot;,&quot;markSTVAsActive&quot;, 
+{ stvId: &quot;{!Incap311__Service_Type_Version__c.Id }&quot;}, 
+function(res) {
+
+if(res.length &gt; 0 &amp;&amp; res[0] != null) {
+ alert(res[0]);
+return;
+}
+
+alert(&apos;An unexpected error has occurred&apos;);
+
+});
+}</url>
+    </webLinks>
+</CustomObject>

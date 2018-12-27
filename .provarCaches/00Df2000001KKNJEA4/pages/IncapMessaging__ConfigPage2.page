@@ -1,0 +1,20 @@
+<apex:page standardController="IncapMessaging__Notification__c" extensions="IncapMessaging.MediaCollectionController" lightningStylesheets="true" >
+    <apex:form >
+           
+
+        <apex:pageBlock title="Notification: {!IncapMessaging__Notification__c.Name}" >
+             <c:MergeFieldCreator />
+            <body style="margin-bottom: 15px;">
+                <apex:repeat value="{!Configs}" var="config" id="theRepeat">
+                    
+                    <c:JSONForm jsonSchema="{!config.setting.IncapMessaging__JSON_Config_Schema__c}"  
+                                uiSchema="{!config.setting.IncapMessaging__UISchema__c}" 
+                                formdata="{!config.setting.IncapMessaging__formData__c}"
+                                saveField="IncapMessaging__JSON_Config__c"
+                                Record="{!config.template}"/>
+                    
+                </apex:repeat>
+            </body>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

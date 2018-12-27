@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfObject creatable="true" deleteable="true" detailsLoaded="false" editPermission="false" keyPrefix="a0s" label="Survey Question" labelPlural="Survey Questions" layoutable="true" n="IncapTalkBack__Survey_Question__c" queryable="true" readPermission="false" retrieveable="true" s="" t="Survey Question (a0s)" updatable="true">
+  <standardActions>
+    <sfActionLink modes="ObjectHome IncapTalkBack__Survey_Questions__r" n="New"/>
+    <sfActionLink modes="View IncapTalkBack__Survey_Questions__r" n="Edit" requiresRow="true" s="2"/>
+    <sfActionLink modes="View IncapTalkBack__Survey_Questions__r" n="Delete" requiresRow="true" s="3"/>
+    <sfActionLink massAction="true" modes="View List all_related_lists" n="ChangeOwnerOne" t="Change Owner"/>
+    <sfActionLink modes="View IncapTalkBack__Survey_Questions__r" n="ShowMore" t="Show More"/>
+    <sfActionLink modes="View IncapTalkBack__Survey_Questions__r" n="GoToList" t="Go To List"/>
+    <sfActionLink modes="RelatedList" n="PrevPage" t="Previous Page"/>
+    <sfActionLink modes="RelatedList" n="NextPage" t="Next Page"/>
+  </standardActions>
+</sfObject>

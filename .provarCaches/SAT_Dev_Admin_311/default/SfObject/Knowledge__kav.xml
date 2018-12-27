@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfObject keyPrefix="ka0" label="Knowledge" labelPlural="Knowledge" layoutable="true" metadataLabel="Knowledge" n="Knowledge__kav" queryable="true" retrieveable="true" s="" searchLayoutable="true" t="Knowledge (ka0)" urlDetail="https://incapsulate311-sat-dev-ed.my.salesforce.com/{ID}" urlEdit="https://incapsulate311-sat-dev-ed.my.salesforce.com/{ID}/e" urlNew="https://incapsulate311-sat-dev-ed.my.salesforce.com/ka0/e">
+  <fields>
+    <sfField createable="false" editPermission="false" length="18" n="Id" t="Knowledge Article Version ID" type="id" updateable="false"/>
+    <sfField createable="false" length="18" n="KnowledgeArticleId" required="true" t="Knowledge Article ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>Knowledge__ka</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" length="18" n="OwnerId" relationshipName="Owner" required="true" t="Owner" type="reference" updateable="false">
+      <referenceTos>
+        <string>Group</string>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" n="IsDeleted" t="Is Deleted" type="_boolean" updateable="false"/>
+    <sfField createable="false" length="40" n="ValidationStatus" t="Validation Status" type="picklist" updateable="false">
+      <picklistEntryIds>1,2</picklistEntryIds>
+      <picklistEntries>
+        <sfPLE defaultValue="true" id="1" n="Not Validated" s=""/>
+        <sfPLE id="2" n="Validated" s=""/>
+      </picklistEntries>
+    </sfField>
+    <sfField createable="false" length="40" n="PublishStatus" restrictedPicklist="true" t="Publication Status" type="picklist" updateable="false">
+      <picklistEntryIds>3,4,5</picklistEntryIds>
+      <picklistEntries>
+        <sfPLE defaultValue="true" id="3" n="Draft" s=""/>
+        <sfPLE id="4" n="Online" s="" t="Published"/>
+        <sfPLE id="5" n="Archived" s=""/>
+      </picklistEntries>
+    </sfField>
+    <sfField createable="false" digits="6" filterable="false" n="VersionNumber" required="true" t="Version Number" type="_int" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="IsLatestVersion" t="Is Latest Version" type="_boolean" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="IsVisibleInApp" t="Visible In Internal App" type="_boolean" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="IsVisibleInPkb" t="Visible In Public Knowledge Base" type="_boolean" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="IsVisibleInCsp" t="Visible to Customer" type="_boolean" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="IsVisibleInPrm" t="Visible to Partner" type="_boolean" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="CreatedDate" t="Created Date" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" length="18" n="CreatedById" relationshipName="CreatedBy" t="Created By ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" n="LastModifiedDate" t="Last Modified Date" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" length="18" n="LastModifiedById" relationshipName="LastModifiedBy" t="Last Modified By ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" n="SystemModstamp" t="System Modstamp" type="datetime" updateable="false"/>
+    <sfField createable="false" length="40" n="Language" required="true" restrictedPicklist="true" type="picklist" updateable="false">
+      <picklistEntryIds>6</picklistEntryIds>
+      <picklistEntries>
+        <sfPLE id="6" n="en_US" s="" t="English"/>
+      </picklistEntries>
+    </sfField>
+    <sfField createable="false" length="255" n="Title" nameField="true" updateable="false"/>
+    <sfField createable="false" length="255" n="UrlName" required="true" t="URL Name" updateable="false"/>
+    <sfField createable="false" n="ArchivedDate" t="Archived Date" type="datetime" updateable="false"/>
+    <sfField createable="false" length="18" n="ArchivedById" relationshipName="ArchivedBy" t="User ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" extraTypeInfo="plaintextarea" length="1000" n="Summary" type="textarea" updateable="false"/>
+    <sfField autoNumberField="true" createable="false" length="30" n="ArticleNumber" t="Article Number" updateable="false"/>
+    <sfField createable="false" n="FirstPublishedDate" t="First Published Date" type="datetime" updateable="false"/>
+    <sfField createable="false" n="LastPublishedDate" t="Last Published Date" type="datetime" updateable="false"/>
+    <sfField createable="false" length="18" n="ArticleArchivedById" relationshipName="ArticleArchivedBy" t="User ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" n="ArticleArchivedDate" t="Article Archived Date" type="datetime" updateable="false"/>
+    <sfField createable="false" digits="9" n="ArticleCaseAttachCount" t="Article Case Association Count" type="_int" updateable="false"/>
+    <sfField createable="false" length="18" n="ArticleCreatedById" relationshipName="ArticleCreatedBy" t="User ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" n="ArticleCreatedDate" t="Article Created Date" type="datetime" updateable="false"/>
+    <sfField createable="false" digits="9" n="ArticleTotalViewCount" t="Article Total View Count" type="_int" updateable="false"/>
+    <sfField createable="false" length="18" n="SourceId" t="Source" type="reference" updateable="false">
+      <referenceTos>
+        <string>Case</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" length="40" n="ArticleType" required="true" restrictedPicklist="true" t="Article Type" type="picklist" updateable="false">
+      <picklistEntryIds>7,8,9,10</picklistEntryIds>
+      <picklistEntries>
+        <sfPLE id="7" n="Knowledge__kav" s=""/>
+        <sfPLE id="8" n="Information__kav" s=""/>
+        <sfPLE id="9" n="Internal__kav" s=""/>
+        <sfPLE id="10" n="X311_Event__kav" s=""/>
+      </picklistEntries>
+    </sfField>
+    <sfField createable="false" length="18" n="AssignedToId" relationshipName="AssignedTo" t="Assigned To" type="reference" updateable="false">
+      <referenceTos>
+        <string>Group</string>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" length="18" n="AssignedById" relationshipName="AssignedBy" t="User ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" n="AssignmentDate" t="Assignment Date" type="datetime" updateable="false"/>
+    <sfField createable="false" n="AssignmentDueDate" t="Assignment Due Date" type="datetime" updateable="false"/>
+    <sfField createable="false" extraTypeInfo="plaintextarea" length="1000" n="AssignmentNote" t="Assignment Note" type="textarea" updateable="false"/>
+    <sfField createable="false" length="15" n="MigratedToFromArticleVersion" t="Mapping info between old Article Version and migrated Article Version" updateable="false"/>
+  </fields>
+  <childRelationships>
+    <sfObjectRelationship alias="RelatedFileList" childName="AttachedContentDocument" field="LinkedEntityId" n="AttachedContentDocuments" relationshipName="AttachedContentDocuments" s="2-" t="AttachedContentDocument"/>
+    <sfObjectRelationship alias="RelatedContentNoteList" childName="AttachedContentNote" field="LinkedEntityId" n="AttachedContentNotes" relationshipName="AttachedContentNotes" s="2-" t="AttachedContentNote"/>
+    <sfObjectRelationship alias="RelatedArticleList" childName="CaseArticle" field="KnowledgeArticleVersionId" n="CaseArticles" relationshipName="CaseArticles" s="2-" t="CaseArticle"/>
+    <sfObjectRelationship alias="RelatedNoteList" childName="CombinedAttachment" field="ParentId" n="CombinedAttachments" relationshipName="CombinedAttachments" s="2-" t="CombinedAttachment"/>
+    <sfObjectRelationship childName="ContentDocumentLink" field="LinkedEntityId" n="ContentDocumentLinks" relationshipName="ContentDocumentLinks" s="2-" t="ContentDocumentLink"/>
+    <sfObjectRelationship childName="Knowledge__DataCategorySelection" field="ParentId" n="DataCategorySelections" relationshipName="DataCategorySelections" s="2-" t="Knowledge__DataCategorySelection"/>
+    <sfObjectRelationship childName="LinkedArticle" field="KnowledgeArticleVersionId" n="LinkedArticles" relationshipName="LinkedArticles" s="2-" t="LinkedArticle"/>
+    <sfObjectRelationship childName="NetworkUserHistoryRecent" field="RecordId" n="NetworkUserHistoryRecentToRecord" relationshipName="NetworkUserHistoryRecentToRecord" s="2-" t="NetworkUserHistoryRecent"/>
+    <sfObjectRelationship alias="RelatedProcessInstanceHistory" childName="ProcessInstance" field="TargetObjectId" n="ProcessInstances" relationshipName="ProcessInstances" s="2-" t="ProcessInstance"/>
+    <sfObjectRelationship alias="RelatedProcessHistoryList" childName="ProcessInstanceHistory" field="TargetObjectId" n="ProcessSteps" relationshipName="ProcessSteps" s="2-" t="ProcessInstanceHistory"/>
+    <sfObjectRelationship childName="SearchPromotionRule" field="PromotedEntityId" n="SearchPromotionRules" relationshipName="SearchPromotionRules" s="2-" t="SearchPromotionRule"/>
+    <sfObjectRelationship childName="TopicAssignment" field="EntityId" n="TopicAssignments" relationshipName="TopicAssignments" s="2-" t="TopicAssignment"/>
+  </childRelationships>
+  <recordTypes>
+    <sfRecordType n="&lt;default&gt;" t="Web Record Type Mapping">
+      <children>
+        <sfLayout layoutFileName="Knowledge__kav-Knowledge Layout" n="Primary" profileLayout="false" s="" t="Page Layout">
+          <layoutTypes>
+            <sfLayoutType layoutType="Edit" n="Edit" t="Web Layout Type"/>
+            <sfLayoutType layoutType="Detail" n="Detail" s="2-" t="Web Layout Type"/>
+          </layoutTypes>
+          <relatedLists/>
+          <actionLinks/>
+          <excludeButtons/>
+          <customTags/>
+          <quickActionNames/>
+          <consoleComponents/>
+          <platformActionNames/>
+        </sfLayout>
+      </children>
+    </sfRecordType>
+  </recordTypes>
+  <standardActions>
+    <sfActionLink modes="View" n="Edit" requiresRow="true" s="2"/>
+    <sfActionLink modes="View" n="Clone" requiresRow="true"/>
+    <sfActionLink modes="View" n="Delete" requiresRow="true" s="3"/>
+    <sfActionLink modes="ObjectHome" n="View" requiresRow="true"/>
+    <sfActionLink modes="View Submit" n="Submit" requiresRow="true"/>
+    <sfActionLink modes="View Remove" n="Remove"/>
+    <sfActionLink modes="View Unlock" n="Unlock" t="Unlock Record"/>
+    <sfActionLink modes="ObjectHome View" n="kaArticle" t="View Knowledge Article"/>
+    <sfActionLink modes="Edit New Clone" n="save" requiresRow="true" t="Save"/>
+    <sfActionLink modes="Edit New Clone" n="save_new" requiresRow="true" t="Save and New"/>
+    <sfActionLink modes="Edit New Clone" n="cancel" requiresRow="true" t="Cancel"/>
+    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
+    <sfActionLink modes="ObjectHome List" n="New"/>
+  </standardActions>
+  <homeListColumns>
+    <string>KNOWLEDGE__KAV.NAME</string>
+  </homeListColumns>
+  <lookupColumns>
+    <string>KNOWLEDGE__KAV.NAME</string>
+  </lookupColumns>
+  <weblinks/>
+  <searchResultColumns>
+    <string>KNOWLEDGE__KAV.NAME</string>
+  </searchResultColumns>
+  <listViewActions/>
+</sfObject>

@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfObject creatable="true" deleteable="true" keyPrefix="02s" label="Email Message" labelPlural="Email Messages" layoutable="true" n="EmailMessage" queryable="true" retrieveable="true" s="" t="Email Message (02s)" updatable="true" urlDetail="https://incapsulate311-sat-dev-ed.my.salesforce.com/{ID}" urlEdit="https://incapsulate311-sat-dev-ed.my.salesforce.com/{ID}/e" urlNew="https://incapsulate311-sat-dev-ed.my.salesforce.com/02s/e">
+  <fields>
+    <sfField createable="false" editPermission="false" length="18" n="Id" t="Email Message ID" type="id" updateable="false"/>
+    <sfField length="18" n="ParentId" relationshipName="Parent" t="Case ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>Case</string>
+      </referenceTos>
+    </sfField>
+    <sfField length="18" n="ActivityId" t="Activity ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>Task</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" length="18" n="CreatedById" relationshipName="CreatedBy" t="Created By ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" n="CreatedDate" t="Created Date" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="LastModifiedDate" t="Last Modified Date" type="datetime" updateable="false"/>
+    <sfField createable="false" editPermission="false" length="18" n="LastModifiedById" relationshipName="LastModifiedBy" t="Last Modified By ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>User</string>
+      </referenceTos>
+    </sfField>
+    <sfField createable="false" editPermission="false" n="SystemModstamp" t="System Modstamp" type="datetime" updateable="false"/>
+    <sfField extraTypeInfo="plaintextarea" filterable="false" length="32000" n="TextBody" t="Text Body" type="textarea"/>
+    <sfField extraTypeInfo="plaintextarea" filterable="false" length="32000" n="HtmlBody" t="HTML Body" type="textarea"/>
+    <sfField extraTypeInfo="plaintextarea" filterable="false" length="32000" n="Headers" type="textarea"/>
+    <sfField length="3000" n="Subject"/>
+    <sfField length="1000" n="FromName" t="From Name"/>
+    <sfField length="1000" n="FromAddress" t="From Address" type="email"/>
+    <sfField length="255" n="ValidatedFromAddress" restrictedPicklist="true" t="From" type="picklist">
+      <picklistEntryIds>1,2</picklistEntryIds>
+      <picklistEntries>
+        <sfPLE id="1" n="pnshah@incapsulate.com" s="" t="311 System Email Address &lt;pnshah@incapsulate.com&gt;"/>
+        <sfPLE id="2" n="vbevara@incapsulate.com" s="" t="Vasu Bevara &lt;vbevara@incapsulate.com&gt;"/>
+      </picklistEntries>
+    </sfField>
+    <sfField length="4000" n="ToAddress" t="To Address"/>
+    <sfField length="4000" n="CcAddress" t="CC Address"/>
+    <sfField length="4000" n="BccAddress" t="BCC Address"/>
+    <sfField n="Incoming" t="Is Incoming" type="_boolean" updateable="false"/>
+    <sfField createable="false" editPermission="false" n="HasAttachment" t="Has Attachment" type="_boolean" updateable="false"/>
+    <sfField length="40" n="Status" required="true" restrictedPicklist="true" type="picklist">
+      <picklistEntryIds>3,4,5,6,7,8</picklistEntryIds>
+      <picklistEntries>
+        <sfPLE id="3" n="0" s="" t="New"/>
+        <sfPLE id="4" n="1" s="" t="Read"/>
+        <sfPLE id="5" n="2" s="" t="Replied"/>
+        <sfPLE id="6" n="3" s="" t="Sent"/>
+        <sfPLE id="7" n="4" s="" t="Forwarded"/>
+        <sfPLE id="8" n="5" s="" t="Draft"/>
+      </picklistEntries>
+    </sfField>
+    <sfField n="MessageDate" t="Message Date" type="datetime"/>
+    <sfField createable="false" editPermission="false" n="IsDeleted" t="Deleted" type="_boolean" updateable="false"/>
+    <sfField length="18" n="ReplyToEmailMessageId" relationshipName="ReplyToEmailMessage" t="Email Message ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>EmailMessage</string>
+      </referenceTos>
+    </sfField>
+    <sfField editPermission="false" n="IsExternallyVisible" t="Is Externally Visible" type="_boolean"/>
+    <sfField length="255" n="MessageIdentifier" t="Message ID"/>
+    <sfField length="255" n="ThreadIdentifier" t="Thread ID"/>
+    <sfField editPermission="false" n="IsClientManaged" t="Is Client Managed" type="_boolean" updateable="false"/>
+    <sfField length="18" n="RelatedToId" relationshipName="RelatedTo" t="Related To ID" type="reference" updateable="false">
+      <referenceTos>
+        <string>Account</string>
+        <string>Asset</string>
+        <string>AssetRelationship</string>
+        <string>Campaign</string>
+        <string>Case</string>
+        <string>ChannelProgram</string>
+        <string>ChannelProgramLevel</string>
+        <string>Contract</string>
+        <string>ContractLineItem</string>
+        <string>DataCategory_Backend__c</string>
+        <string>Entitlement</string>
+        <string>FileLInk__External_File_Relationship__c</string>
+        <string>FileLInk__External_File__c</string>
+        <string>Geo_Layer_Assignment__c</string>
+        <string>Geo_Layer_Assignments__c</string>
+        <string>INRF__Rule_Action__c</string>
+        <string>INRF__Rule_Conguration__c</string>
+        <string>INRF__Rule_Criteria__c</string>
+        <string>INRF__Rule_Error__c</string>
+        <string>INRF__Rule_Notification__c</string>
+        <string>INRF__Rule_Set_Log__c</string>
+        <string>INRF__Rule_Set__c</string>
+        <string>Incap311API__API_Account_Configuration__c</string>
+        <string>Incap311__Activity_Attempt__c</string>
+        <string>Incap311__Activity_Correspondence__c</string>
+        <string>Incap311__Activity_Outcome_Response__c</string>
+        <string>Incap311__Activity_Outcome__c</string>
+        <string>Incap311__Activity_Question__c</string>
+        <string>Incap311__Activity__c</string>
+        <string>Incap311__Case_Event_Recipient__c</string>
+        <string>Incap311__Case_Event__c</string>
+        <string>Incap311__Case_Recipient__c</string>
+        <string>Incap311__Category__c</string>
+        <string>Incap311__Correspondence__c</string>
+        <string>Incap311__Decode_Object__c</string>
+        <string>Incap311__Department__c</string>
+        <string>Incap311__Distribution_Member_Zone_Type__c</string>
+        <string>Incap311__Distribution_Member__c</string>
+        <string>Incap311__Distributions__c</string>
+        <string>Incap311__Duplicate_Service_Type_Mapping__c</string>
+        <string>Incap311__External_Service_Request__c</string>
+        <string>Incap311__Jurisdiction__c</string>
+        <string>Incap311__Outcome_Question__c</string>
+        <string>Incap311__Outcome__c</string>
+        <string>Incap311__Question__c</string>
+        <string>Incap311__Reallocate_Service_Request_Type__c</string>
+        <string>Incap311__Reported_Location__c</string>
+        <string>Incap311__Response__c</string>
+        <string>Incap311__Schedule__c</string>
+        <string>Incap311__Service_Activity__c</string>
+        <string>Incap311__Service_Alert__c</string>
+        <string>Incap311__Service_Category__c</string>
+        <string>Incap311__Service_Department__c</string>
+        <string>Incap311__Service_Question__c</string>
+        <string>Incap311__Service_Queue_Member__c</string>
+        <string>Incap311__Service_Queue__c</string>
+        <string>Incap311__Service_Request_Schedule__c</string>
+        <string>Incap311__Service_Type_Event__c</string>
+        <string>Incap311__Service_Type_Queue_Zone__c</string>
+        <string>Incap311__Service_Type_Version_Activity__c</string>
+        <string>Incap311__Service_Type_Version_Correspondence__c</string>
+        <string>Incap311__Service_Type_Version_Question__c</string>
+        <string>Incap311__Service_Type_Version__c</string>
+        <string>Incap311__Service_Type__c</string>
+        <string>Incap311__Special_Service_Types__c</string>
+        <string>Incap311__Transfer_Service_Request_Type__c</string>
+        <string>Incap311__X311_Settings__c</string>
+        <string>Incap311__Zone__c</string>
+        <string>IncapMessaging__Message_Template__c</string>
+        <string>IncapMessaging__Notification__c</string>
+        <string>IncapTalkBack__Question__c</string>
+        <string>IncapTalkBack__Survey_Intake__c</string>
+        <string>IncapTalkBack__Survey_Question__c</string>
+        <string>IncapTalkBack__Survey_Response__c</string>
+        <string>IncapTalkBack__Survey__c</string>
+        <string>Incapfs__Error__c</string>
+        <string>Incapfs__Report__c</string>
+        <string>Incapsulate_Log__LogglySettings__c</string>
+        <string>ListEmail</string>
+        <string>LiveAgentSession</string>
+        <string>LiveChatTranscript</string>
+        <string>Opportunity</string>
+        <string>Order</string>
+        <string>Participant__c</string>
+        <string>PartnerFundAllocation</string>
+        <string>PartnerFundClaim</string>
+        <string>PartnerFundRequest</string>
+        <string>PartnerMarketingBudget</string>
+        <string>Product2</string>
+        <string>SOSSession</string>
+        <string>ServiceContract</string>
+        <string>Solution</string>
+      </referenceTos>
+    </sfField>
+    <sfField filterable="false" n="FirstOpenedDate" notVisibleToMetadataUser="true"/>
+    <sfField filterable="false" n="IsPrivateDraft" notVisibleToMetadataUser="true"/>
+    <sfField filterable="false" n="LastOpenedDate" notVisibleToMetadataUser="true"/>
+    <sfField filterable="false" n="MessageSize" notVisibleToMetadataUser="true"/>
+  </fields>
+  <childRelationships>
+    <sfObjectRelationship alias="RelatedFileList" childName="AttachedContentDocument" field="LinkedEntityId" n="AttachedContentDocuments" relationshipName="AttachedContentDocuments" s="2-" t="AttachedContentDocument"/>
+    <sfObjectRelationship alias="RelatedContentNoteList" childName="AttachedContentNote" field="LinkedEntityId" n="AttachedContentNotes" relationshipName="AttachedContentNotes" s="2-" t="AttachedContentNote"/>
+    <sfObjectRelationship alias="RelatedActivityAttachmentList" childName="Attachment" field="ParentId" n="Attachments" relationshipName="Attachments" s="2-" t="Attachment"/>
+    <sfObjectRelationship alias="RelatedAttachmentList" childName="CombinedAttachment" field="ParentId" n="CombinedAttachments" relationshipName="CombinedAttachments" s="2-" t="CombinedAttachment"/>
+    <sfObjectRelationship childName="ContentDocumentLink" field="LinkedEntityId" n="ContentDocumentLinks" relationshipName="ContentDocumentLinks" s="2-" t="ContentDocumentLink"/>
+    <sfObjectRelationship childName="EmailMessageRelation" field="EmailMessageId" n="EmailMessageRelations" relationshipName="EmailMessageRelations" s="2-" t="EmailMessageRelation"/>
+    <sfObjectRelationship alias="RelatedProcessInstanceHistory" childName="ProcessInstance" field="TargetObjectId" n="ProcessInstances" relationshipName="ProcessInstances" s="2-" t="ProcessInstance"/>
+    <sfObjectRelationship alias="RelatedProcessHistoryList" childName="ProcessInstanceHistory" field="TargetObjectId" n="ProcessSteps" relationshipName="ProcessSteps" s="2-" t="ProcessInstanceHistory"/>
+  </childRelationships>
+  <recordTypes>
+    <sfRecordType layoutsLoaded="false" n="&lt;default&gt;" t="Web Record Type Mapping"/>
+  </recordTypes>
+  <standardActions>
+    <sfActionLink modes="ObjectHome Emails EmailMessages List" n="New"/>
+    <sfActionLink modes="View Emails EmailMessages" n="Edit" requiresRow="true" s="2"/>
+    <sfActionLink locator="td[contains(@class, 'actionColumn')]/a[contains(@href, 'deleteredirect.jsp')]" modes="View Emails EmailMessages" n="Delete" requiresRow="true" s="3" t="Del"/>
+    <sfActionLink massAction="true" modes="View List all_related_lists" n="ChangeOwnerOne" t="Change Owner"/>
+    <sfActionLink modes="View Emails EmailMessages" n="ShowMore" t="Show More"/>
+    <sfActionLink modes="View Emails EmailMessages" n="GoToList" t="Go To List"/>
+    <sfActionLink modes="RelatedList" n="PrevPage" t="Previous Page"/>
+    <sfActionLink modes="RelatedList" n="NextPage" t="Next Page"/>
+    <sfActionLink modes="View" n="CancelEdit"/>
+    <sfActionLink modes="ObjectHome" n="List" requiresRow="true"/>
+    <sfActionLink afterWaitUrl="ui:wait:timed?seconds=10" modes="View" n="SaveEdit"/>
+    <sfActionLink modes="ObjectHome" n="View" requiresRow="true"/>
+    <sfActionLink modes="View" n="Clone" requiresRow="true"/>
+    <sfActionLink modes="View Submit" n="Submit" requiresRow="true"/>
+    <sfActionLink modes="View Remove" n="Remove"/>
+    <sfActionLink modes="View Unlock" n="Unlock" t="Unlock Record"/>
+    <sfActionLink modes="Edit New Clone" n="save" requiresRow="true" t="Save"/>
+    <sfActionLink modes="Edit New Clone" n="save_new" requiresRow="true" t="Save and New"/>
+    <sfActionLink modes="Edit New Clone" n="cancel" requiresRow="true" t="Cancel"/>
+    <sfActionLink massAction="true" modes="View List" n="ChangeRecordType" t="Change Record Type"/>
+    <sfActionLink modes="View" n="email" t="Send an Email"/>
+    <sfActionLink modes="View" n="Share"/>
+    <sfActionLink modes="QuickAction" n="publishersharebutton" t="Create"/>
+    <sfActionLink modes="ObjectHome List" n="Sort"/>
+    <sfActionLink modes="ObjectHome List" n="Filter"/>
+    <sfActionLink modes="ObjectHome View" n="Search"/>
+    <sfActionLink modes="ObjectHome List" n="Import"/>
+    <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
+    <sfActionLink modes="EmailMessages" n="newEmail" newAction="true" t="Send an Email"/>
+    <sfActionLink locator="td[contains(@class, 'actionColumn')]/a[contains(text(), 'Reply')]" modes="EmailMessages" n="Reply" requiresRow="true" s="0"/>
+    <sfActionLink locator="td[contains(@class, 'actionColumn')]/a[contains(text(), 'To All')]" modes="EmailMessages" n="ReplyAll" requiresRow="true" s="1" t="To All"/>
+  </standardActions>
+  <homeListColumns>
+    <string>EMAILMESSAGE.NAME</string>
+    <string>Status</string>
+    <string>HasAttachment</string>
+    <string>Address</string>
+    <string>Subject</string>
+    <string>MessageDate</string>
+  </homeListColumns>
+  <lookupColumns>
+    <string>EMAILMESSAGE.NAME</string>
+    <string>Status</string>
+    <string>HasAttachment</string>
+    <string>Address</string>
+    <string>Subject</string>
+    <string>MessageDate</string>
+  </lookupColumns>
+  <weblinks/>
+  <searchResultColumns>
+    <string>EMAILMESSAGE.NAME</string>
+    <string>FromName</string>
+    <string>ToAddress</string>
+    <string>Subject</string>
+    <string>MessageDate</string>
+  </searchResultColumns>
+  <compactLayoutFields>
+    <string>FromAddress</string>
+    <string>ToAddress</string>
+    <string>TextBody</string>
+  </compactLayoutFields>
+  <listViewActions/>
+</sfObject>

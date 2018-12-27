@@ -363,6 +363,9 @@
               </arguments>
             </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="197" title="UI Assert">
+              <tags>
+                <string>disabled</string>
+              </tags>
               <arguments>
                 <argument id="resultName">
                   <value class="value" valueClass="string">Values</value>
@@ -372,8 +375,8 @@
                 </argument>
                 <argument id="fieldAssertions">
                   <value class="valueList" mutable="Mutable">
-                    <uiFieldAssertion resultName="Incap311__Last_Queue_Owner__c">
-                      <fieldLocator uri="ui:locator?name=Incap311__Last_Queue_Owner__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26field%3DIncap311__Last_Queue_Owner__c"/>
+                    <uiFieldAssertion resultName="Incap311__Location_Details__c">
+                      <fieldLocator uri="ui:locator?name=Incap311__Location_Details__c&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26field%3DIncap311__Location_Details__c"/>
                       <attributeAssertions>
                         <uiAttributeAssertion attributeName="value" caseInsensitive="true" comparisonType="Contains">
                           <value class="value" valueClass="string">BTDT District 01</value>
@@ -396,6 +399,9 @@
               </arguments>
             </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="186" title="UI Assert">
+              <tags>
+                <string>disabled</string>
+              </tags>
               <arguments>
                 <argument id="resultName">
                   <value class="value" valueClass="string">Values</value>
