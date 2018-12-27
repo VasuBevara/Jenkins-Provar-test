@@ -111,5 +111,11 @@ public class ServiceRequestViewScreen {
 	@LinkType()
 	@FindBy(linkText = "Details")
 	public WebElement details;
+	@TextType()
+	@FindByLabel(label = "This is a Number field")
+	public WebElement thisIsANumberField;
+	@TextType()
+	@FindBy(xpath = "//div[contains(@class, \"slds-form-element\")]/div[2]//input")
+	public WebElement thisIsANumberField_reallocate;
 
 }
