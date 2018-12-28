@@ -34,7 +34,7 @@
 			licensePath="C:\Users\Incapsulate\Provar\.licenses"
 				>
 		
-			<fileset id="testcases" dir="../tests/SRTypeAvailability_SLA"><include name="C1520-2-SLASTARTStop2.testcase"/></fileset>
+			<fileset dir="../tests/ESRI"><include name="c1489(1)StreetAddressLocationCanBeSearchedAsAnAddress.testcase"/></fileset>
 
 			<emailProperties sendEmail="true" primaryRecipients="vbevara@incapsulate.com" ccRecipients="vasu.b009@gmail.com" bccRecipients="" emailSubject="Provar test run report" attachExecutionReport="true" attachZip="false"/>
 			<attachmentProperties includeOnlyFailures="false" includeOnlyBdd="false" includeSkipped="false" includeTestCaseDescription="true" includeScreenshots="true" includeWarningMessages="false" includeInfoMessages="false" includeDebugMessages="false" includeTestStepTime="true" includeTestStepPathHierarchy="true" includeFullScreenShot="false"/>
