@@ -18,7 +18,7 @@
 		<Run-Test-Case provarHome="${provar.home}" 
 				projectPath="${testproject.home}" 
 				resultsPath="${testproject.results}" 
-				resultsPathDisposition="Increment" 
+				resultsPathDisposition="Replace" 
 				testEnvironment="" 
 				webBrowser="Chrome" 
 				webBrowserConfiguration="Full Screen" 
@@ -34,7 +34,7 @@
 			licensePath="C:\Users\Incapsulate\Provar\.licenses"
 				>
 		
-			<fileset dir="../tests/SRTypeAvailability_SLA"><include name="C1520-2-SLASTARTStop2.testcase"/></fileset>
+			<fileset id="testcases" dir="../tests/SRTypeAvailability_SLA"><include name="C1520-2-SLASTARTStop2.testcase"/></fileset>
 
 			<emailProperties sendEmail="true" primaryRecipients="vbevara@incapsulate.com" ccRecipients="vasu.b009@gmail.com" bccRecipients="" emailSubject="Provar test run report" attachExecutionReport="true" attachZip="false"/>
 			<attachmentProperties includeOnlyFailures="false" includeOnlyBdd="false" includeSkipped="false" includeTestCaseDescription="true" includeScreenshots="true" includeWarningMessages="false" includeInfoMessages="false" includeDebugMessages="false" includeTestStepTime="true" includeTestStepPathHierarchy="true" includeFullScreenShot="false"/>
