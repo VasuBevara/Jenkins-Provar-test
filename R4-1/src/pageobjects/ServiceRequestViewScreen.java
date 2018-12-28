@@ -117,5 +117,8 @@ public class ServiceRequestViewScreen {
 	@TextType()
 	@FindBy(xpath = "//div[contains(@class, \"slds-form-element\")]/div[2]//input")
 	public WebElement thisIsANumberField_reallocate;
+	@LinkType()
+	@FindBy(linkText = "Submit Request")
+	public WebElement submitRequest;
 
 }
