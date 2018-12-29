@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<toolingTabInfo>
+  <tabDefinition DurableId="LiveChatVisitor" IsAvailableInAloha="true" IsAvailableInLightning="true" Label="Live Chat Visitors" Name="standard-LiveChatVisitor" SobjectName="LiveChatVisitor" Url="https://incapsulate311-sat-dev-ed.my.salesforce.com/571/o"/>
+</toolingTabInfo>

@@ -17,8 +17,6 @@
       </referenceTos>
     </sfField>
     <sfField createable="false" editPermission="false" n="SystemModstamp" t="System Modstamp" type="datetime" updateable="false"/>
-    <sfField createable="false" editPermission="false" n="LastViewedDate" t="Last Viewed Date" type="datetime" updateable="false"/>
-    <sfField createable="false" editPermission="false" n="LastReferencedDate" t="Last Referenced Date" type="datetime" updateable="false"/>
     <sfField length="18" n="Incap311__Question__c" relationshipName="Incap311__Question__r" required="true" t="Question" type="reference" updateable="false">
       <referenceTos>
         <string>Incap311__Question__c</string>

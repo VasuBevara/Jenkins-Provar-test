@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><QuickAction xmlns="http://soap.sforce.com/2006/04/metadata"
+   >
+ <fullName>Snapins_Contact_PrechatQuickAction_08hf2000000Kzat</fullName>
+  <description>Snapins_Contact_PrechatQuickAction_08hf2000000Kzat</description>
+  <height>0</height>
+  <isProtected>false</isProtected>
+ <label>Snapins_Contact_PrechatQuickAction_08hf2000000Kzat</label>
+  <optionsCreateFeedItem>false</optionsCreateFeedItem>
+  <quickActionLayout>
+  <layoutSectionStyle>TwoColumnsTopToBottom</layoutSectionStyle>
+  <quickActionLayoutColumns>
+   <quickActionLayoutItems>
+    <emptySpace>false</emptySpace>
+    <field>Name</field>
+    <uiBehavior>Required</uiBehavior>
+   </quickActionLayoutItems>
+   <quickActionLayoutItems>
+    <emptySpace>false</emptySpace>
+    <field>Email</field>
+    <uiBehavior>Edit</uiBehavior>
+   </quickActionLayoutItems>
+  </quickActionLayoutColumns>
+  <quickActionLayoutColumns />
+ </quickActionLayout>
+    <targetObject>Contact</targetObject>
+   <type>Create</type>
+ <width>0</width>
+</QuickAction>

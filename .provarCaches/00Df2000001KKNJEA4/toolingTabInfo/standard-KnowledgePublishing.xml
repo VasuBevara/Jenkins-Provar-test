@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<toolingTabInfo>
+  <tabDefinition DurableId="KnowledgePublishing" IsAvailableInAloha="true" Label="Article Management" Name="standard-KnowledgePublishing" SobjectName="KnowledgePublishing" Url="https://incapsulate311-sat-dev-ed.my.salesforce.com/knowledge/publishing/knowledgePublishingHome.apexp"/>
+</toolingTabInfo>

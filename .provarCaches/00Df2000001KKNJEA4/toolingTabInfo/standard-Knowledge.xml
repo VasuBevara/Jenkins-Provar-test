@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<toolingTabInfo>
+  <tabDefinition DurableId="Knowledge" IsAvailableInAloha="true" Label="Knowledge" Name="standard-Knowledge" SobjectName="Knowledge" Url="https://incapsulate311-sat-dev-ed.my.salesforce.com/_ui/knowledge/ui/KnowledgeHome"/>
+</toolingTabInfo>

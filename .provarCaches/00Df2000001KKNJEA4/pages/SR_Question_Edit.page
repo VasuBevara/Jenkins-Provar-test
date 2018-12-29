@@ -1,0 +1,25 @@
+<apex:page standardController="Incap311__Service_Question__c">
+    <apex:includeScript value="/support/console/28.0/integration.js"/>
+    <apex:includescript value="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" />
+    <script>
+    $(document).ready(function(){
+        var redirectUrl = '/apex/Incap311SC__AgentConsole#/services/{!Incap311__Service_Question__c.Incap311__Service_Request__r.Incap311__Service_Type_Version_Code__c}/details?requestId={!Incap311__Service_Question__c.Incap311__Service_Request__r.CaseNumber}';
+        
+        if({! Incap311__Service_Question__c.Incap311__Service_Request__r.IsClosed }) {
+            alert('Cannot update closed cases'); 
+        }
+        else {
+            if (sforce.console.isInConsole()) {
+                sforce.console.getEnclosingTabId(function(enclosingResult){
+                    sforce.console.getEnclosingPrimaryTabId(function(primaryResult){
+                      sforce.console.openSubtab(primaryResult.id, redirectUrl, true, 'Update: #{!Incap311__Service_Question__c.Incap311__Service_Request__r.CaseNumber}', null);  
+                        sforce.console.closeTab(enclosingResult.id);
+                    });
+                });
+            } else {
+                window.location.href = redirectUrl;
+            }
+        }
+    });
+    </script>
+</apex:page>

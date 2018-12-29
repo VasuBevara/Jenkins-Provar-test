@@ -238,14 +238,6 @@
     <sfRecordType layoutsLoaded="false" n="&lt;default&gt;" t="Web Record Type Mapping"/>
   </recordTypes>
   <standardActions>
-    <sfActionLink modes="ObjectHome Contacts Incap311__Contacts__r Incap311__ServiceQueueMemberUser__r detail List" n="New"/>
-    <sfActionLink modes="View Contacts Incap311__Contacts__r Incap311__ServiceQueueMemberUser__r" n="Edit" requiresRow="true"/>
-    <sfActionLink lightningLabel="Delete" modes="View Contacts Incap311__Contacts__r Incap311__ServiceQueueMemberUser__r" n="Delete" requiresRow="true" t="Del"/>
-    <sfActionLink massAction="true" modes="View List all_related_lists" n="ChangeOwnerOne" t="Change Owner"/>
-    <sfActionLink modes="View Contacts Incap311__Contacts__r Incap311__ServiceQueueMemberUser__r" n="ShowMore" t="Show More"/>
-    <sfActionLink modes="View Contacts Incap311__Contacts__r Incap311__ServiceQueueMemberUser__r" n="GoToList" t="Go To List"/>
-    <sfActionLink modes="RelatedList" n="PrevPage" t="Previous Page"/>
-    <sfActionLink modes="RelatedList" n="NextPage" t="Next Page"/>
     <sfActionLink n="Tab" s="" t="Contacts Tab"/>
     <sfActionLink modes="ObjectHome" n="List" requiresRow="true"/>
     <sfActionLink modes="View" n="Clone" requiresRow="true"/>
@@ -260,6 +252,8 @@
     <sfActionLink massAction="true" modes="Contacts List" n="NewContact" newAction="true" t="New Contact"/>
     <sfActionLink modes="View" n="XClean" t="Check Integration Status"/>
     <sfActionLink n="CreateCallList" s="" t="Add to Call List"/>
+    <sfActionLink modes="View Contacts Incap311__Contacts__r Incap311__ServiceQueueMemberUser__r" n="Edit" requiresRow="true" s="2"/>
+    <sfActionLink lightningLabel="Delete" modes="View Contacts Incap311__Contacts__r Incap311__ServiceQueueMemberUser__r" n="Delete" requiresRow="true" s="3" t="Del"/>
     <sfActionLink modes="ObjectHome" n="View" requiresRow="true"/>
     <sfActionLink modes="Contacts List Home" n="MassAddToCampaign" t="Add to Campaign"/>
     <sfActionLink n="ContactHierarchy" s="" t="View Contact Hierarchy"/>
@@ -274,6 +268,7 @@
     <sfActionLink modes="Edit New Clone" n="cancel" requiresRow="true" t="Cancel"/>
     <sfActionLink afterWaitUrl="ui:wait:timed?seconds=10" modes="View" n="SaveEdit" t="Save"/>
     <sfActionLink modes="View" n="CancelEdit" t="Cancel"/>
+    <sfActionLink massAction="true" modes="View List all_related_lists" n="ChangeOwnerOne" t="Change Owner"/>
     <sfActionLink massAction="true" modes="View List" n="ChangeRecordType" t="Change Record Type"/>
     <sfActionLink modes="View" n="email" t="Send an Email"/>
     <sfActionLink modes="View" n="Share"/>
@@ -285,6 +280,7 @@
     <sfActionLink n="ObjectHome" requiresRow="true" t="Home"/>
     <sfActionLink massAction="true" modes="Contacts" n="Merge" t="Merge Contacts"/>
     <sfActionLink modes="List Home" n="SendListEmailAction" t="Send List Email"/>
+    <sfActionLink modes="detail ObjectHome List Contacts Incap311__Contacts__r Incap311__ServiceQueueMemberUser__r" n="New"/>
     <sfActionLink buttonName="mm" modes="detail" n="RequestUpdate" t="Request Update"/>
     <sfActionLink modes="Detail" n="workWithPortal" t="Manage External User"/>
     <sfActionLink buttonName="dcsp" modes="Detail" n="DisableCustomerPortal" parentMenuAction="workWithPortal" t="Disable Customer User"/>
@@ -295,6 +291,10 @@
     <sfActionLink n="ListClean" s=""/>
     <sfActionLink n="SmsHighlightAction" s=""/>
     <sfActionLink n="ViewSelfService" s=""/>
+    <sfActionLink modes="View Contacts Incap311__Contacts__r Incap311__ServiceQueueMemberUser__r" n="ShowMore" t="Show More"/>
+    <sfActionLink modes="View Contacts Incap311__Contacts__r Incap311__ServiceQueueMemberUser__r" n="GoToList" t="Go To List"/>
+    <sfActionLink modes="RelatedList" n="PrevPage" t="Previous Page"/>
+    <sfActionLink modes="RelatedList" n="NextPage" t="Next Page"/>
   </standardActions>
   <homeListColumns>
     <string>FULL_NAME</string>

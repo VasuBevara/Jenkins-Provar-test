@@ -1,0 +1,29 @@
+<apex:page standardController="Incap311__Service_Activity__c">
+    <apex:includeScript value="/support/console/28.0/integration.js"/>
+
+  <script type="text/javascript">
+     var primaryTabId;
+    var openSubtab = function openSubtab(result) {
+         primaryTabId = result.id;
+       sforce.console.getFocusedSubtabId(openinCurrentTab);
+        
+    }
+
+    var openinCurrentTab = function openinCurrentTab(result) {
+       console.log(result);
+      var redirectUrl = '/apex/Incap311SC__AgentConsole#/requests/{!Incap311__Service_Activity__c.Incap311__Service_Request__c}/activities/{!Incap311__Service_Activity__c.Incap311__Service_Type_Version_Activity__r.Incap311__Activity_Code__c}';
+        sforce.console.openSubtab(primaryTabId, redirectUrl, true, '{!Incap311__Service_Activity__c.Incap311__Activity__c}', result.id);
+      if (sforce.console.isInConsole()) {
+        
+      } else {
+          // window.location.href = redirectUrl;
+      }
+        
+    }
+
+
+    sforce.console.getEnclosingPrimaryTabId(openSubtab);
+
+  </script>
+    
+</apex:page>

@@ -94,12 +94,12 @@
         <sfObjectReference n="Incap311__Service_Activity__c" s=""/>
       </children>
     </sfTab>
-    <sfTab n="Create_Service_Request" pageUrl="https://incapsulate311-sat-dev-ed.my.salesforce.com/servlet/servlet.Integration?lid=01rf2000000vhSz&amp;ic=1&amp;linkToken=VmpFPSxNakF4T0MweE1pMHlPVlF4TVRveU9Ub3lOQzQyTWpKYSwyZ3BTaURscGFnSmxIbFlNdWlZSk1KLFlXWmtNR0po" s="" seqNum="19" t="Create Service Request">
+    <sfTab n="Create_Service_Request" pageUrl="https://incapsulate311-sat-dev-ed.my.salesforce.com/servlet/servlet.Integration?lid=01rf2000000vhSz&amp;ic=1&amp;linkToken=VmpFPSxNakF4T1Mwd01TMHdNVlF3TkRvME5qb3lOeTR4TWpCYSx0M092dl94QzR1cm54VmIzLTBtdV9ULFlXWmtNR0po" s="" seqNum="19" t="Create Service Request">
       <children>
         <sfPage n="AgentConsoleRedirect" pageName="AgentConsoleRedirect" s=""/>
       </children>
     </sfTab>
-    <sfTab n="Tasks" pageUrl="https://incapsulate311-sat-dev-ed.my.salesforce.com/servlet/servlet.Integration?lid=01rf2000000vhXd&amp;ic=1&amp;linkToken=VmpFPSxNakF4T0MweE1pMHlPVlF4TVRveU9Ub3lOQzQyTWpKYSwyZ3BTaURscGFnSmxIbFlNdWlZSk1KLFlXWmtNR0po" s="" seqNum="20">
+    <sfTab n="Tasks" pageUrl="https://incapsulate311-sat-dev-ed.my.salesforce.com/servlet/servlet.Integration?lid=01rf2000000vhXd&amp;ic=1&amp;linkToken=VmpFPSxNakF4T1Mwd01TMHdNVlF3TkRvME5qb3lOeTR4TWpCYSx0M092dl94QzR1cm54VmIzLTBtdV9ULFlXWmtNR0po" s="" seqNum="20">
       <children>
         <sfPage n="Activity_Standard" pageName="Activity_Standard" s=""/>
       </children>

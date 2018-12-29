@@ -2728,16 +2728,10 @@
   </recordTypes>
   <standardActions>
     <sfActionLink modes="View Cases" n="Close" requiresRow="true" s="3"/>
-    <sfActionLink modes="ObjectHome Cases Incap311__Cases__r Incap311__Case_Distributions__r List Incap311__Duplicate_Child__r Incap311__Transfer_Children__r" n="New"/>
-    <sfActionLink modes="View Cases Incap311__Cases__r Incap311__Case_Distributions__r Incap311__Duplicate_Child__r Incap311__Transfer_Children__r" n="Edit" requiresRow="true" s="2"/>
-    <sfActionLink massAction="true" modes="View List all_related_lists" n="ChangeOwnerOne" t="Change Owner"/>
-    <sfActionLink modes="View Cases Incap311__Cases__r Incap311__Case_Distributions__r Incap311__Duplicate_Child__r Incap311__Transfer_Children__r" n="ShowMore" t="Show More"/>
-    <sfActionLink modes="View Cases Incap311__Cases__r Incap311__Case_Distributions__r Incap311__Duplicate_Child__r Incap311__Transfer_Children__r" n="GoToList" t="Go To List"/>
-    <sfActionLink modes="RelatedList" n="PrevPage" t="Previous Page"/>
-    <sfActionLink modes="RelatedList" n="NextPage" t="Next Page"/>
-    <sfActionLink modes="View Incap311__Cases__r Incap311__Case_Distributions__r Incap311__Duplicate_Child__r Incap311__Transfer_Children__r" n="Delete" requiresRow="true" s="3"/>
     <sfActionLink n="Tab" s="" t="Cases Tab"/>
     <sfActionLink modes="ObjectHome" n="List" requiresRow="true"/>
+    <sfActionLink modes="View Cases Incap311__Duplicate_Child__r Incap311__Transfer_Children__r Cases__r Incap311__Cases__r Incap311__Case_Distributions__r" n="Edit" requiresRow="true" s="2"/>
+    <sfActionLink modes="View Cases Incap311__Duplicate_Child__r Incap311__Transfer_Children__r Cases__r Incap311__Cases__r Incap311__Case_Distributions__r" n="Delete" requiresRow="true" s="3"/>
     <sfActionLink modes="View" n="Clone" requiresRow="true"/>
     <sfActionLink buttonName="close" n="CloseCase"/>
     <sfActionLink n="Accept" s=""/>
@@ -2758,6 +2752,7 @@
     <sfActionLink modes="Edit New Clone new edit clone CloseCase" n="cancel" requiresRow="true" t="Cancel"/>
     <sfActionLink afterWaitUrl="ui:wait:timed?seconds=10" modes="View" n="SaveEdit" t="Save"/>
     <sfActionLink modes="View" n="CancelEdit" t="Cancel"/>
+    <sfActionLink massAction="true" modes="View List all_related_lists" n="ChangeOwnerOne" t="Change Owner"/>
     <sfActionLink massAction="true" modes="View List" n="ChangeRecordType" t="Change Record Type"/>
     <sfActionLink modes="View" n="email" t="Send an Email"/>
     <sfActionLink modes="View" n="Share"/>
@@ -2778,6 +2773,11 @@
     <sfActionLink modes="new,clone,edit" n="spell" t="Check Spelling"/>
     <sfActionLink n="ChangeStatus"/>
     <sfActionLink n="MassClose" s=""/>
+    <sfActionLink modes="ObjectHome List Cases Incap311__Duplicate_Child__r Incap311__Transfer_Children__r Cases__r Incap311__Cases__r Incap311__Case_Distributions__r" n="New"/>
+    <sfActionLink modes="View Cases Incap311__Duplicate_Child__r Incap311__Transfer_Children__r Cases__r Incap311__Cases__r Incap311__Case_Distributions__r" n="ShowMore" t="Show More"/>
+    <sfActionLink modes="View Cases Incap311__Duplicate_Child__r Incap311__Transfer_Children__r Cases__r Incap311__Cases__r Incap311__Case_Distributions__r" n="GoToList" t="Go To List"/>
+    <sfActionLink modes="RelatedList" n="PrevPage" t="Previous Page"/>
+    <sfActionLink modes="RelatedList" n="NextPage" t="Next Page"/>
   </standardActions>
   <homeListColumns>
     <string>CASES.CASE_NUMBER</string>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<toolingTabInfo>
+  <tabDefinition DurableId="LiveAgentSession" IsAvailableInAloha="true" IsAvailableInLightning="true" Label="Live Agent Sessions" Name="standard-LiveAgentSession" SobjectName="LiveAgentSession" Url="https://incapsulate311-sat-dev-ed.my.salesforce.com/0HK/o"/>
+</toolingTabInfo>

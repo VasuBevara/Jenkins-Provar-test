@@ -180,12 +180,12 @@
     <sfRecordType layoutsLoaded="false" n="&lt;default&gt;" t="Web Record Type Mapping"/>
   </recordTypes>
   <standardActions>
-    <sfActionLink modes="ObjectHome Emails EmailMessages List" n="New"/>
-    <sfActionLink modes="View Emails EmailMessages" n="Edit" requiresRow="true" s="2"/>
-    <sfActionLink locator="td[contains(@class, 'actionColumn')]/a[contains(@href, 'deleteredirect.jsp')]" modes="View Emails EmailMessages" n="Delete" requiresRow="true" s="3" t="Del"/>
+    <sfActionLink modes="ObjectHome EmailMessages Emails List" n="New"/>
+    <sfActionLink modes="View EmailMessages Emails" n="Edit" requiresRow="true" s="2"/>
+    <sfActionLink locator="td[contains(@class, 'actionColumn')]/a[contains(@href, 'deleteredirect.jsp')]" modes="View EmailMessages Emails" n="Delete" requiresRow="true" s="3" t="Del"/>
     <sfActionLink massAction="true" modes="View List all_related_lists" n="ChangeOwnerOne" t="Change Owner"/>
-    <sfActionLink modes="View Emails EmailMessages" n="ShowMore" t="Show More"/>
-    <sfActionLink modes="View Emails EmailMessages" n="GoToList" t="Go To List"/>
+    <sfActionLink modes="View EmailMessages Emails" n="ShowMore" t="Show More"/>
+    <sfActionLink modes="View EmailMessages Emails" n="GoToList" t="Go To List"/>
     <sfActionLink modes="RelatedList" n="PrevPage" t="Previous Page"/>
     <sfActionLink modes="RelatedList" n="NextPage" t="Next Page"/>
     <sfActionLink modes="View" n="CancelEdit"/>

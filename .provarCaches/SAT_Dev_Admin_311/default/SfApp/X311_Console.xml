@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfApp appId="02uf2000001DGljAAG" consoleApp="true" n="X311_Console" s="" seqNum="1" t="311 Console">
+  <children>
+    <sfTab n="Create_Service_Request" pageUrl="https://incapsulate311-sat-dev-ed.my.salesforce.com/servlet/servlet.Integration?lid=01rf2000000vhSz&amp;ic=1&amp;linkToken=VmpFPSxNakF4T0MweE1pMHpNVlF4TkRvek16bzBNaTQ0TkRCYSxTdklBeWljbGJlWlhDRm1jM3N4dDhzLFlXWmtNR0po" s="" seqNum="0" t="Create Service Request">
+      <children>
+        <sfPage n="AgentConsoleRedirect" pageName="AgentConsoleRedirect" s=""/>
+      </children>
+    </sfTab>
+    <sfTab n="standard-Case" pageUrl="https://incapsulate311-sat-dev-ed.my.salesforce.com/500/o" s="" seqNum="1" t="Cases">
+      <children>
+        <sfObjectReference n="Case" s=""/>
+      </children>
+    </sfTab>
+    <sfTab n="Incap311__Service_Activity__c" pageUrl="https://incapsulate311-sat-dev-ed.my.salesforce.com/a0T/o" s="" seqNum="2" t="Service Activities">
+      <children>
+        <sfObjectReference n="Incap311__Service_Activity__c" s=""/>
+      </children>
+    </sfTab>
+    <sfTab n="Tasks" pageUrl="https://incapsulate311-sat-dev-ed.my.salesforce.com/servlet/servlet.Integration?lid=01rf2000000vhXd&amp;ic=1&amp;linkToken=VmpFPSxNakF4T0MweE1pMHpNVlF4TkRvek16bzBNaTQ0TkRCYSxTdklBeWljbGJlWlhDRm1jM3N4dDhzLFlXWmtNR0po" s="" seqNum="3">
+      <children>
+        <sfPage n="Activity_Standard" pageName="Activity_Standard" s=""/>
+      </children>
+    </sfTab>
+    <sfTab n="standard-report" pageUrl="https://incapsulate311-sat-dev-ed.my.salesforce.com/00O/o" s="" seqNum="4" t="Reports">
+      <children>
+        <sfObjectReference n="Report" s=""/>
+      </children>
+    </sfTab>
+  </children>
+</sfApp>

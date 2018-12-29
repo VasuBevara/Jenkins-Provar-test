@@ -684,12 +684,12 @@
     </sfRecordType>
   </recordTypes>
   <standardActions>
-    <sfActionLink modes="ObjectHome Incap311__Service_Activities__r Incap311__Service_Activities1__r Incap311__Service_Activities2__r List" n="New"/>
-    <sfActionLink modes="View Incap311__Service_Activities__r Incap311__Service_Activities1__r Incap311__Service_Activities2__r" n="Edit" requiresRow="true" s="2" target="sf:ui:target?object=Incap311__Service_Activity__c&amp;page=WorkerConsoleRedirect"/>
-    <sfActionLink modes="View Incap311__Service_Activities__r Incap311__Service_Activities1__r Incap311__Service_Activities2__r" n="Delete" requiresRow="true" s="3"/>
+    <sfActionLink modes="ObjectHome Incap311__Service_Activities1__r Incap311__Service_Activities__r Incap311__Service_Activities2__r List" n="New"/>
+    <sfActionLink modes="View Incap311__Service_Activities1__r Incap311__Service_Activities__r Incap311__Service_Activities2__r" n="Edit" requiresRow="true" s="2" target="sf:ui:target?object=Incap311__Service_Activity__c&amp;page=WorkerConsoleRedirect"/>
+    <sfActionLink modes="View Incap311__Service_Activities1__r Incap311__Service_Activities__r Incap311__Service_Activities2__r" n="Delete" requiresRow="true" s="3"/>
     <sfActionLink massAction="true" modes="View List all_related_lists" n="ChangeOwnerOne" t="Change Owner"/>
-    <sfActionLink modes="View Incap311__Service_Activities__r Incap311__Service_Activities1__r Incap311__Service_Activities2__r" n="ShowMore" t="Show More"/>
-    <sfActionLink modes="View Incap311__Service_Activities__r Incap311__Service_Activities1__r Incap311__Service_Activities2__r" n="GoToList" t="Go To List"/>
+    <sfActionLink modes="View Incap311__Service_Activities1__r Incap311__Service_Activities__r Incap311__Service_Activities2__r" n="ShowMore" t="Show More"/>
+    <sfActionLink modes="View Incap311__Service_Activities1__r Incap311__Service_Activities__r Incap311__Service_Activities2__r" n="GoToList" t="Go To List"/>
     <sfActionLink modes="RelatedList" n="PrevPage" t="Previous Page"/>
     <sfActionLink modes="RelatedList" n="NextPage" t="Next Page"/>
     <sfActionLink n="Accept" s=""/>

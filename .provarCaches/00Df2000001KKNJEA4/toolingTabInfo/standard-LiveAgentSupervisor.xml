@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<toolingTabInfo>
+  <tabDefinition DurableId="LiveAgentSupervisor" IsAvailableInAloha="true" Label="Live Agent Supervisor" Name="standard-LiveAgentSupervisor" SobjectName="LiveAgentSupervisor" Url="https://incapsulate311-sat-dev-ed.my.salesforce.com/liveagent/supervisor.apexp"/>
+</toolingTabInfo>
