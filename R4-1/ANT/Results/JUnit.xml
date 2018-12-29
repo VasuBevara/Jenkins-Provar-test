@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="R4-1/tests" tests="13" failures="0" skipped="0" hostname="DESKTOP-FH6FHVE" time="1388.571" timestamp="Sat Dec 29 11:06:16 IST 2018">
+	<properties>
+		<property name="excludeCallableTestCases" value="true"/>
+		<property name="testEnvironment" value=""/>
+		<property name="pluginOutputLevel" value="WARNING"/>
+		<property name="projectPath" value=".."/>
+		<property name="salesforceMetadataCache" value="Reuse"/>
+		<property name="resultsPathDisposition" value="Replace"/>
+		<property name="testOutputLevel" value="WARNING"/>
+		<property name="webBrowserType" value="Google Chrome"/>
+		<property name="resultsPath" value="../ANT/Results"/>
+		<property name="webBrowserConfiguration" value="Full Screen"/>
+		<property name="projectCachePath" value="C:\Users\Incapsulate\git\Jenkins-Provar-test\R4-1\ANT\..\..\.provarCaches"/>
+	</properties>
+	<testcase classname="tests/AgentConsole\C1417_C1431-SRTypeContactAndAddressCanBeSearchedAndSelected.testcase" name="C1417_C1431-SRTypeContactAndAddressCanBeSearchedAndSelected.testcase" time="140.202">
+	</testcase>
+	<testcase classname="tests/AgentConsole\C1418_C1421-SRCreationShowsSRDescriptionSection.testcase" name="C1418_C1421-SRCreationShowsSRDescriptionSection.testcase" time="62.783">
+	</testcase>
+	<testcase classname="tests/AgentConsole\C1420-VerifyThatSRCreationPageHasKnowledgeArticlesSectionHasLinksToArticles.testcase" name="C1420-VerifyThatSRCreationPageHasKnowledgeArticlesSectionHasLinksToArticles.testcase" time="71.415">
+	</testcase>
+	<testcase classname="tests/AgentConsole\C1425-C1426-VerifyThatSRCreationPageHasOrganisationAndContactSection.testcase" name="C1425-C1426-VerifyThatSRCreationPageHasOrganisationAndContactSection.testcase" time="191.629">
+	</testcase>
+	<testcase classname="tests/AgentConsole\C1428-SRCreationShowsKnowledgeArticleSection.testcase" name="C1428-SRCreationShowsKnowledgeArticleSection.testcase" time="66.3">
+	</testcase>
+	<testcase classname="tests/AgentConsole\C1429-VerifyThatSRCreationPageHasKnowledgeArticleCanBeNavigatedTo.testcase" name="C1429-VerifyThatSRCreationPageHasKnowledgeArticleCanBeNavigatedTo.testcase" time="76.652">
+	</testcase>
+	<testcase classname="tests/AgentConsole\C1430-VerifyThatSRCreationPageHasRequestDetailsHaveFieldsToManage.testcase" name="C1430-VerifyThatSRCreationPageHasRequestDetailsHaveFieldsToManage.testcase" time="106.197">
+	</testcase>
+	<testcase classname="tests/AgentConsole\C1432-VerifyThatSRCreationPageHasDefaultServiceRequestOriginPopulated.testcase.testcase" name="C1432-VerifyThatSRCreationPageHasDefaultServiceRequestOriginPopulated.testcase.testcase" time="73.424">
+	</testcase>
+	<testcase classname="tests/AgentConsole\C1433_C1423_C1424_C1438-VerifyThatRequestInformationSectionAndSRDetailsWithQuestionIsDisplayed_ContactCanBeSelected.testcase" name="C1433_C1423_C1424_C1438-VerifyThatRequestInformationSectionAndSRDetailsWithQuestionIsDisplayed_ContactCanBeSelected.testcase" time="84.981">
+	</testcase>
+	<testcase classname="tests/AgentConsole\C1434-QuestionsAppearAccordingToStartAndStopDates.testcase" name="C1434-QuestionsAppearAccordingToStartAndStopDates.testcase" time="234.883">
+	</testcase>
+	<testcase classname="tests/AgentConsole\C1435-QuestionsAppearInRightOrder.testcase" name="C1435-QuestionsAppearInRightOrder.testcase" time="60.503">
+	</testcase>
+	<testcase classname="tests/AgentConsole\C1436-VerifyThatSRCreationPageHasHintsDisplayed.testcase" name="C1436-VerifyThatSRCreationPageHasHintsDisplayed.testcase" time="64.734">
+	</testcase>
+	<testcase classname="tests/AgentConsole\C1437_C2719-VerifyThatSRCreationPageShowsRequiredFieldValidation.testcase" name="C1437_C2719-VerifyThatSRCreationPageShowsRequiredFieldValidation.testcase" time="69.349">
+	</testcase>
+</testsuite>
