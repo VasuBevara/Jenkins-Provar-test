@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite failures="3" hostname="DESKTOP-FH6FHVE" id="0" name="R4-1/tests" package="" skipped="0" tests="5" time="1704.72" timestamp="Sat Dec 29 12:25:06 IST 2018">
+  <testsuite failures="5" hostname="DESKTOP-FH6FHVE" id="0" name="R4-1/tests" package="" skipped="0" tests="41" time="7036.355" timestamp="Mon Dec 31 12:09:23 IST 2018">
 	    <properties>
 		      <property name="excludeCallableTestCases" value="true" />
 
@@ -26,24 +26,136 @@
 
 	    </properties>
 
-	    <testcase classname="tests/CaseOwner\c1493-TestQueueCanBeChangedAndOnSRListScreenCaseIsShownWhenFilteredWithQueue.testcase" name="c1493-TestQueueCanBeChangedAndOnSRListScreenCaseIsShownWhenFilteredWithQueue.testcase" time="120.151">
-		      <failure message="Execution failed"><![CDATA[Field not found on the screen.  Locator: ProvarFindByElementLocator [by=public org.openqa.selenium.WebElement pageobjects.incap311sc__AgentConsole_Aadil_ServiceTypeTab_ContactInfo.SearchContact]]]></failure>
+	    <testcase classname="tests/ActivityConsole\C1410_C1450-AbleToAssociateOutcomeWithActivity.testcase" name="C1410_C1450-AbleToAssociateOutcomeWithActivity.testcase" time="516.721">
+	</testcase>
+
+	    <testcase classname="tests/ActivityConsole\C1448-CheckIfOutcomeReasonSelectionIsDisplayedOutcomeSelection.testcase" name="C1448-CheckIfOutcomeReasonSelectionIsDisplayedOutcomeSelection.testcase" time="194.976">
+	</testcase>
+
+	    <testcase classname="tests/ActivityConsole\C1449-OutcomeReasonCommentSectionIsDisplayedAndOutcomeIsSavedOnlyWhenCommentsAreSuppliedANDSaveIsNotClickableTillAllmedatoryOutcomeQuestionsAreNotAnswered1.testcase" name="C1449-OutcomeReasonCommentSectionIsDisplayedAndOutcomeIsSavedOnlyWhenCommentsAreSuppliedANDSaveIsNotClickableTillAllmedatoryOutcomeQuestionsAreNotAnswered1.testcase" time="181.031">
+	</testcase>
+
+	    <testcase classname="tests/ActivityConsole\C1458-CheckIfFinishDateIsPopulatedAndSavedOnOutomeSelection.testcase" name="C1458-CheckIfFinishDateIsPopulatedAndSavedOnOutomeSelection.testcase" time="188.35">
+		      <failure message="Execution failed"><![CDATA[Assertion failed.  (expected) 1/1/2019 12:26 AM contains 12/31/2018 (actual)]]></failure>
 
 	    </testcase>
 
-	    <testcase classname="tests/Config\C1399-QuestionReusedForDiffSRs.testcase" name="C1399-QuestionReusedForDiffSRs.testcase" time="175.498">
+	    <testcase classname="tests/ActivityConsole\C1459-CheckIfActivitiesHasStatusBasedOnOutCome.testcase" name="C1459-CheckIfActivitiesHasStatusBasedOnOutCome.testcase" time="245.94">
 	</testcase>
 
-	    <testcase classname="tests/Config\C1408_C1516-ActivitiesCanBeAddedToSRTypeVersions.testcase" name="C1408_C1516-ActivitiesCanBeAddedToSRTypeVersions.testcase" time="636.294">
+	    <testcase classname="tests/ActivityConsole\C1462_C1463-CheckIfActivitiesHaveInternalAndExternalComments.testcase" name="C1462_C1463-CheckIfActivitiesHaveInternalAndExternalComments.testcase" time="220.047">
 	</testcase>
 
-	    <testcase classname="tests/Config\C1409_C1410-SameActivityCanBeReUsedOnDifferentSRTypeVersionsOfTheSameSRType.testcase" name="C1409_C1410-SameActivityCanBeReUsedOnDifferentSRTypeVersionsOfTheSameSRType.testcase" time="478.822">
-		      <failure message="Execution failed"><![CDATA[Failed to set value.  Cause: The control is not currently editable.  You can use the Activate inline edit interaction to make it editable.]]></failure>
+	    <testcase classname="tests/ActivityConsole\C1468_C1461-CheckIfProvidingFinishDateEarlierThanCreatedIsNotAccepted.testcase" name="C1468_C1461-CheckIfProvidingFinishDateEarlierThanCreatedIsNotAccepted.testcase" time="200.917">
+	</testcase>
+
+	    <testcase classname="tests/AgentConsole\C1417_C1431-SRTypeContactAndAddressCanBeSearchedAndSelected.testcase" name="C1417_C1431-SRTypeContactAndAddressCanBeSearchedAndSelected.testcase" time="126.069">
+	</testcase>
+
+	    <testcase classname="tests/AgentConsole\C1418_C1421-SRCreationShowsSRDescriptionSection.testcase" name="C1418_C1421-SRCreationShowsSRDescriptionSection.testcase" time="57.85">
+	</testcase>
+
+	    <testcase classname="tests/AgentConsole\C1420-VerifyThatSRCreationPageHasKnowledgeArticlesSectionHasLinksToArticles.testcase" name="C1420-VerifyThatSRCreationPageHasKnowledgeArticlesSectionHasLinksToArticles.testcase" time="69.858">
+	</testcase>
+
+	    <testcase classname="tests/AgentConsole\C1425-C1426-VerifyThatSRCreationPageHasOrganisationAndContactSection.testcase" name="C1425-C1426-VerifyThatSRCreationPageHasOrganisationAndContactSection.testcase" time="185.415">
+	</testcase>
+
+	    <testcase classname="tests/AgentConsole\C1428-SRCreationShowsKnowledgeArticleSection.testcase" name="C1428-SRCreationShowsKnowledgeArticleSection.testcase" time="66.903">
+	</testcase>
+
+	    <testcase classname="tests/AgentConsole\C1429-VerifyThatSRCreationPageHasKnowledgeArticleCanBeNavigatedTo.testcase" name="C1429-VerifyThatSRCreationPageHasKnowledgeArticleCanBeNavigatedTo.testcase" time="70.314">
+	</testcase>
+
+	    <testcase classname="tests/AgentConsole\C1430-VerifyThatSRCreationPageHasRequestDetailsHaveFieldsToManage.testcase" name="C1430-VerifyThatSRCreationPageHasRequestDetailsHaveFieldsToManage.testcase" time="106.394">
+	</testcase>
+
+	    <testcase classname="tests/AgentConsole\C1432-VerifyThatSRCreationPageHasDefaultServiceRequestOriginPopulated.testcase.testcase" name="C1432-VerifyThatSRCreationPageHasDefaultServiceRequestOriginPopulated.testcase.testcase" time="72.695">
+	</testcase>
+
+	    <testcase classname="tests/AgentConsole\C1433_C1423_C1424_C1438-VerifyThatRequestInformationSectionAndSRDetailsWithQuestionIsDisplayed_ContactCanBeSelected.testcase" name="C1433_C1423_C1424_C1438-VerifyThatRequestInformationSectionAndSRDetailsWithQuestionIsDisplayed_ContactCanBeSelected.testcase" time="84.741">
+	</testcase>
+
+	    <testcase classname="tests/AgentConsole\C1434-QuestionsAppearAccordingToStartAndStopDates.testcase" name="C1434-QuestionsAppearAccordingToStartAndStopDates.testcase" time="233.333">
+	</testcase>
+
+	    <testcase classname="tests/AgentConsole\C1435-QuestionsAppearInRightOrder.testcase" name="C1435-QuestionsAppearInRightOrder.testcase" time="60.263">
+	</testcase>
+
+	    <testcase classname="tests/AgentConsole\C1436-VerifyThatSRCreationPageHasHintsDisplayed.testcase" name="C1436-VerifyThatSRCreationPageHasHintsDisplayed.testcase" time="65.325">
+	</testcase>
+
+	    <testcase classname="tests/AgentConsole\C1437_C2719-VerifyThatSRCreationPageShowsRequiredFieldValidation.testcase" name="C1437_C2719-VerifyThatSRCreationPageShowsRequiredFieldValidation.testcase" time="68.36">
+	</testcase>
+
+	    <testcase classname="tests/CaseOwner\c1493-TestQueueCanBeChangedAndOnSRListScreenCaseIsShownWhenFilteredWithQueue.testcase" name="c1493-TestQueueCanBeChangedAndOnSRListScreenCaseIsShownWhenFilteredWithQueue.testcase" time="250.711">
+	</testcase>
+
+	    <testcase classname="tests/Config\C1399-QuestionReusedForDiffSRs.testcase" name="C1399-QuestionReusedForDiffSRs.testcase" time="170.73">
+	</testcase>
+
+	    <testcase classname="tests/Config\C1408_C1516-ActivitiesCanBeAddedToSRTypeVersions.testcase" name="C1408_C1516-ActivitiesCanBeAddedToSRTypeVersions.testcase" time="650.041">
+	</testcase>
+
+	    <testcase classname="tests/Duplicates\C1478_IdentifyByRadius.testcase" name="C1478_IdentifyByRadius.testcase" time="252.451">
+	</testcase>
+
+	    <testcase classname="tests/Duplicates\C1624_C2441-IdentifyByStatus.testcase" name="C1624_C2441-IdentifyByStatus.testcase" time="425.819">
+	</testcase>
+
+	    <testcase classname="tests/ESRI\C1490-GeoAreaValuesWithLayersAreShownOnMap.testcase" name="C1490-GeoAreaValuesWithLayersAreShownOnMap.testcase" time="138.213">
+	</testcase>
+
+	    <testcase classname="tests/ESRI\C1491-1-StreetsAreSerachedByStreetName.testcase" name="C1491-1-StreetsAreSerachedByStreetName.testcase" time="114.906">
+	</testcase>
+
+	    <testcase classname="tests/ESRI\C1491-StreetsAreSerachedByNumber.testcase" name="C1491-StreetsAreSerachedByNumber.testcase" time="121.95">
+	</testcase>
+
+	    <testcase classname="tests/ESRI\C1492-AddressCanBeSearchedWithCityStateAndLocation.testcase" name="C1492-AddressCanBeSearchedWithCityStateAndLocation.testcase" time="55.494">
+		      <failure message="Execution failed"><![CDATA[The containing Screen or Row was not found.]]></failure>
 
 	    </testcase>
 
-	    <testcase classname="tests/Config\C1412-SameActivityCanBeReUsedOnDifferentSRTypes.testcase" name="C1412-SameActivityCanBeReUsedOnDifferentSRTypes.testcase" time="264.739">
-		      <failure message="Execution failed"><![CDATA[Failed to set value.  Cause: The control is not currently editable.  You can use the Activate inline edit interaction to make it editable.]]></failure>
+	    <testcase classname="tests/ESRI\c1489(1)StreetAddressLocationCanBeSearchedAsAnAddress.testcase" name="c1489(1)StreetAddressLocationCanBeSearchedAsAnAddress.testcase" time="112.906">
+	</testcase>
+
+	    <testcase classname="tests/ESRI\c1489(2)PlaceNameCommonLocationCanBeSearchedAsAnAddress.testcase" name="c1489(2)PlaceNameCommonLocationCanBeSearchedAsAnAddress.testcase" time="114.508">
+	</testcase>
+
+	    <testcase classname="tests/ESRI\c1489(3)LocationIntersectionCanBeSearchedAsAnAddress.testcase" name="c1489(3)LocationIntersectionCanBeSearchedAsAnAddress.testcase" time="55.072">
+		      <failure message="Execution failed"><![CDATA[The containing Screen or Row was not found.]]></failure>
+
+	    </testcase>
+
+	    <testcase classname="tests/Reallocation\BoundToFail-BugId2461-CNotInTestRail-ReallocateSRManually.testcase" name="BoundToFail-BugId2461-CNotInTestRail-ReallocateSRManually.testcase" time="133.759">
+	</testcase>
+
+	    <testcase classname="tests/Reallocation\BoundToFail-BugId2461-CNotInTestRail_ReallocationThroughActivities.testcase" name="BoundToFail-BugId2461-CNotInTestRail_ReallocationThroughActivities.testcase" time="57.708">
+		      <failure message="Execution failed"><![CDATA[The containing Screen or Row was not found.]]></failure>
+
+	    </testcase>
+
+	    <testcase classname="tests/Relationships\C2439_SRLinkingWhileCreatingSR.testcase" name="C2439_SRLinkingWhileCreatingSR.testcase" time="267.019">
+	</testcase>
+
+	    <testcase classname="tests/SRStatuses\C1476_C1514-SRStatus.testcase" name="C1476_C1514-SRStatus.testcase" time="232.803">
+	</testcase>
+
+	    <testcase classname="tests/SRTypeAvailability_SLA\C1511-RestrictSRSeason.testcase" name="C1511-RestrictSRSeason.testcase" time="236.112">
+	</testcase>
+
+	    <testcase classname="tests/SRTypeAvailability_SLA\C1513-DefineSLABySrType.testcase" name="C1513-DefineSLABySrType.testcase" time="114.203">
+	</testcase>
+
+	    <testcase classname="tests/SRTypeAvailability_SLA\C1520-1-SLASTARTStop.testcase" name="C1520-1-SLASTARTStop.testcase" time="109.763">
+	</testcase>
+
+	    <testcase classname="tests/SRTypeAvailability_SLA\C1520-2-SLASTARTStop2.testcase" name="C1520-2-SLASTARTStop2.testcase" time="112.459">
+	</testcase>
+
+	    <testcase classname="tests/SRTypeAvailability_SLA\C1522-SysGen.testcase" name="C1522-SysGen.testcase" time="5.264">
+		      <failure message="Execution failed"><![CDATA[Failed to update Object.  Error Messages: Id not specified in an update call]]></failure>
 
 	    </testcase>
 
