@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfTab lightningPageUrl="/one/one.app#/n/Create_Service_Request" n="Create_Service_Request" pageUrl="https://incapsulate311-sat-dev-ed.my.salesforce.com/servlet/servlet.Integration?lid=01rf2000000vhSz&amp;ic=1&amp;linkToken=VmpFPSxNakF4T0MweE1pMHpNVlF4TkRvek16b3pNQzQzTWpSYSxyS0dvb25mYWo1aDdIRWNadGRzaHF3LFlXWmtNR0po" s="" seqNum="0" t="Create Service Request">
+  <children>
+    <sfPage n="AgentConsoleRedirect" pageName="AgentConsoleRedirect" s=""/>
+  </children>
+</sfTab>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<sfTab lightningPageUrl="/one/one.app#/sObject/Incap311__Service_Alert__c/home" n="Incap311__Service_Alert__c" namespacePrefix="Incap311" pageUrl="https://incapsulate311-sat-dev-ed.my.salesforce.com/a0U/o" s="" seqNum="0" t="Service Alerts">
+  <children>
+    <sfObjectReference n="Incap311__Service_Alert__c" s=""/>
+  </children>
+</sfTab>

@@ -918,6 +918,9 @@
                                                         <clause name="substeps" testItemId="111">
                                                           <steps>
                                                             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="112" title="Call the assertDateAndTime method">
+                                                              <tags>
+                                                                <string>disabled</string>
+                                                              </tags>
                                                               <arguments>
                                                                 <argument id="locator">
                                                                   <value class="uiLocator" uri="ui:pageobject:method?pageId=pageobjects.ServiceRequestViewScreen&amp;operation=assertDateAndTime"/>
@@ -939,13 +942,13 @@
                                                                 <argument id="captureAfter">
                                                                   <value class="value" valueClass="string">false</value>
                                                                 </argument>
-                                                                <argument id="param_arg0">
+                                                                <argument id="param_givenDateTimeFromExcel">
                                                                   <value class="variable">
                                                                     <path element="ExcelRow"/>
                                                                     <path element="Input"/>
                                                                   </value>
                                                                 </argument>
-                                                                <argument id="param_arg1">
+                                                                <argument id="param_givenDateTimeFromSRDetails">
                                                                   <value class="variable">
                                                                     <path element="Values"/>
                                                                     <path element="fields"/>
@@ -961,12 +964,12 @@
                                                                 </argument>
                                                               </arguments>
                                                               <generatedParameters>
-                                                                <apiParam group="value" name="param_arg0" title="givenDateTimeFromExcel">
+                                                                <apiParam group="value" name="param_givenDateTimeFromExcel" title="givenDateTimeFromExcel">
                                                                   <type>
                                                                     <textType/>
                                                                   </type>
                                                                 </apiParam>
-                                                                <apiParam group="value" name="param_arg1" seq="1" title="givenDateTimeFromSRDetails">
+                                                                <apiParam group="value" name="param_givenDateTimeFromSRDetails" seq="1" title="givenDateTimeFromSRDetails">
                                                                   <type>
                                                                     <textType/>
                                                                   </type>

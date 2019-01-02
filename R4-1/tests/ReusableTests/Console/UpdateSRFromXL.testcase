@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="16" registryId="268a012e-fdce-49ef-b05e-1d4e1b0a30b1" visibility="Internal">
+<testCase id="94" registryId="268a012e-fdce-49ef-b05e-1d4e1b0a30b1" visibility="Internal">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="146" title="Salesforce Connect: QA (Test)">
       <arguments>
         <argument id="connectionName">
-          <value class="value" valueClass="string">QA</value>
+          <value class="value" valueClass="string">SAT_Dev_Admin_311</value>
         </argument>
         <argument id="resultName">
           <value class="value" valueClass="string">QA</value>
@@ -353,10 +353,10 @@
       <clauses>
         <clause name="substeps" testItemId="11">
           <steps>
-            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="12" title="Click the Update_R4 button">
+            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="12" title="Click the Update button">
               <arguments>
                 <argument id="locator">
-                  <value class="uiLocator" uri="ui:locator?name=Update_R4&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26action%3DUpdate_R4"/>
+                  <value class="uiLocator" uri="ui:locator?name=Update&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26action%3DUpdate"/>
                 </argument>
                 <argument id="interaction">
                   <value class="uiInteraction" uri="ui:interaction?name=action"/>
@@ -377,7 +377,7 @@
                   <value class="uiWait" uri="default"/>
                 </argument>
                 <argument id="interactionDescription">
-                  <value class="value" valueClass="string">Click the Update_R4 button</value>
+                  <value class="value" valueClass="string">Click the Update button</value>
                 </argument>
                 <argument id="autoRetry"/>
                 <argument id="ieClickMethod">
@@ -600,6 +600,103 @@
               <clauses>
                 <clause name="substeps" testItemId="54">
                   <steps>
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="365" title="On Service Request View Screen page">
+                      <tags>
+                        <string>disabled</string>
+                      </tags>
+                      <arguments>
+                        <argument id="uiConnectionName">
+                          <value class="value" valueClass="string">QA</value>
+                        </argument>
+                        <argument id="target">
+                          <value class="uiTarget" uri="ui:pageobject:target?pageId=pageobjects.ServiceRequestViewScreen"/>
+                        </argument>
+                        <argument id="navigate">
+                          <value class="value" valueClass="string">Dont</value>
+                        </argument>
+                        <argument id="targetDescription">
+                          <value class="value" valueClass="string">On Service Request View Screen page</value>
+                        </argument>
+                        <argument id="windowSelection">
+                          <value class="value" valueClass="string">Default</value>
+                        </argument>
+                        <argument id="windowSize">
+                          <value class="value" valueClass="string">Default</value>
+                        </argument>
+                        <argument id="closeWindow"/>
+                        <argument id="captureBefore">
+                          <value class="value" valueClass="string">false</value>
+                        </argument>
+                        <argument id="captureAfter">
+                          <value class="value" valueClass="string">false</value>
+                        </argument>
+                        <argument id="scTabType">
+                          <value class="value" valueClass="string">CurrentTab</value>
+                        </argument>
+                        <argument id="uiTargetUrl"/>
+                      </arguments>
+                      <clauses>
+                        <clause name="substeps" testItemId="366">
+                          <steps>
+                            <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="367" title="Click the Close">
+                              <arguments>
+                                <argument id="locator">
+                                  <value class="uiLocator" uri="ui:pageobject:field?field=close&amp;pageId=pageobjects.ServiceRequestViewScreen"/>
+                                </argument>
+                                <argument id="interaction">
+                                  <value class="uiInteraction" uri="ui:interaction?name=action"/>
+                                </argument>
+                                <argument id="hover">
+                                  <value class="value" valueClass="boolean">false</value>
+                                </argument>
+                                <argument id="captureBefore">
+                                  <value class="value" valueClass="boolean">false</value>
+                                </argument>
+                                <argument id="captureAfter">
+                                  <value class="value" valueClass="boolean">false</value>
+                                </argument>
+                                <argument id="beforeWait">
+                                  <value class="uiWait" uri="default"/>
+                                </argument>
+                                <argument id="afterWait">
+                                  <value class="uiWait" uri="default"/>
+                                </argument>
+                                <argument id="interactionDescription">
+                                  <value class="value" valueClass="string">Click the Close</value>
+                                </argument>
+                                <argument id="autoRetry"/>
+                              </arguments>
+                              <generatedParameters>
+                                <apiParam group="value" name="hover" title="Hover before Clicking">
+                                  <summary>Whether the mouse should hover over the field before it is clicked.</summary>
+                                  <type>
+                                    <booleanType/>
+                                  </type>
+                                </apiParam>
+                              </generatedParameters>
+                            </apiCall>
+                          </steps>
+                        </clause>
+                      </clauses>
+                      <generatedParameters>
+                        <apiParam group="target" name="scTabType" seq="1000" title="Tab Type">
+                          <summary>The tab type for Scaffolds</summary>
+                          <type>
+                            <choiceType>
+                              <constraints>
+                                <valueConstraint name="valuesSource">com.provar.plugins.sf.eclipse.ui:com.provar.plugins.forcedotcom.ui.valuesources.SfEnumChoiceListValuesSource</valueConstraint>
+                                <valueConstraint name="valuesSourceDependencies">com.provar.plugins.forcedotcom.core.ui.SfUiTargetUrl$ConsoleTabType</valueConstraint>
+                              </constraints>
+                            </choiceType>
+                          </type>
+                        </apiParam>
+                        <apiParam group="target" name="uiTargetUrl" title="Web Page">
+                          <type>
+                            <textType/>
+                          </type>
+                        </apiParam>
+                      </generatedParameters>
+                    </apiCall>
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="133" title="UI Assert">
                       <arguments>
                         <argument id="fieldAssertions">
@@ -1069,19 +1166,19 @@
                                 <argument id="captureAfter">
                                   <value class="value" valueClass="string">false</value>
                                 </argument>
-                                <argument id="param_arg0">
+                                <argument id="param_controlType">
                                   <value class="variable">
                                     <path element="ExcelRow"/>
                                     <path element="QuestionType"/>
                                   </value>
                                 </argument>
-                                <argument id="param_arg1">
+                                <argument id="param_label">
                                   <value class="variable">
                                     <path element="ExcelRow"/>
                                     <path element="QuestionLabel"/>
                                   </value>
                                 </argument>
-                                <argument id="param_arg2">
+                                <argument id="param_input">
                                   <value class="variable">
                                     <path element="ExcelRow"/>
                                     <path element="Input"/>
@@ -1089,17 +1186,17 @@
                                 </argument>
                               </arguments>
                               <generatedParameters>
-                                <apiParam group="value" name="param_arg0" title="controlType">
+                                <apiParam group="value" name="param_controlType" title="controlType">
                                   <type>
                                     <textType/>
                                   </type>
                                 </apiParam>
-                                <apiParam group="value" name="param_arg1" seq="1" title="label">
+                                <apiParam group="value" name="param_label" seq="1" title="label">
                                   <type>
                                     <textType/>
                                   </type>
                                 </apiParam>
-                                <apiParam group="value" name="param_arg2" seq="2" title="input">
+                                <apiParam group="value" name="param_input" seq="2" title="input">
                                   <type>
                                     <textType/>
                                   </type>

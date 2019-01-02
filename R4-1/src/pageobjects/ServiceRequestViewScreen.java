@@ -120,5 +120,8 @@ public class ServiceRequestViewScreen {
 	@LinkType()
 	@FindBy(linkText = "Submit Request")
 	public WebElement submitRequest;
+	@ButtonType()
+	@FindByLabel(label = "Close")
+	public WebElement close;
 
 }

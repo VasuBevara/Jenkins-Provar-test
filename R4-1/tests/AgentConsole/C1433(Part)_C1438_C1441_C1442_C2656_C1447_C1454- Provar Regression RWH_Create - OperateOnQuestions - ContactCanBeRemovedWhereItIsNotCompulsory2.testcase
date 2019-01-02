@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="28" registryId="e517cab6-57e8-4fa9-be68-46c77916ab1c">
+<testCase id="2" registryId="e517cab6-57e8-4fa9-be68-46c77916ab1c">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: QA (Test)">
@@ -337,7 +337,7 @@
                               <fieldLocator uri="ui:locator?name=ContactPhone&amp;binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26field%3DContactPhone"/>
                               <attributeAssertions>
                                 <uiAttributeAssertion attributeName="value" comparisonType="Contains">
-                                  <value class="value" valueClass="string">0972</value>
+                                  <value class="value" valueClass="string">(025) 678-9054</value>
                                 </uiAttributeAssertion>
                               </attributeAssertions>
                             </uiFieldAssertion>
@@ -414,7 +414,7 @@
           <value class="value" valueClass="string">ChangeLocation</value>
         </argument>
         <argument id="LocationToBeSelected">
-          <value class="value" valueClass="string">orne</value>
+          <value class="value" valueClass="string">505 MAIN ST</value>
         </argument>
         <argument id="InitialDuplicatesDecisionOnUpdateAndTransfer">
           <value class="value" valueClass="string">NewCase</value>
@@ -471,7 +471,9 @@
       </outputArguments>
     </caseCall>
     <caseCall testCaseId="fdbf26eb-76cd-499b-8d88-26d5a81f6d60" testCasePath="tests/ReusableTests/Console/ValidateSRTVQOrderQuestionAndAnswerOnSRDetails.testcase" testItemId="701">
-      <tags/>
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="reuseConnectionName">
           <value class="value" valueClass="string">QA</value>
