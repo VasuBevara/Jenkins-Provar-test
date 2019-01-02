@@ -31,7 +31,7 @@
 				secretsPassword="${secrets.password}"
 				testEnvironmentSecretsPassword="${testenvironment.secretspassword}"
 				invokeTestRunMonitor="true"
-			licensePath="C:\Users\Incapsulate\Provar\.licenses"
+				licensePath="C:\Users\Incapsulate\Provar\.licenses"
 				>
 		
 			<fileset dir="../tests/ActivityConsole"></fileset>
