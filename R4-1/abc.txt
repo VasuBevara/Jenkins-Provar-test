@@ -1,0 +1,354 @@
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/BrowserMetrics/BrowserMetrics-5C29B9A4-EE98.pma
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_metadata/verified_contents.json
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/03019df3fd85a69a8ebd1facc6da9ba73e469774fe77f579fc5a08b8328c1d6b.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/15970488d7b997a05beb52512adee8d2e8b4a3165264121a9fabfbd5f85ad93f.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/2245450759552456963fa12ff1f76d86e0232663adc04b7f5dc6835c6ee20f02.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/293c519654c83965baaa50fc5807d4b76fbf587a2972dca4c30cf4e54547f478.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/34bb6ad6c3df9c03eea8a499ff7891486c9d5e5cac92d01f7bfd1bce19db48ef.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/41b2dc2e89e63ce4af1ba7bb29bf68c6dee6f9f1cc047e30dffae3b3ba259263.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/4494652eb0eeceafc44007d8a8fe28c0dae682bed8cb31b53fd33396b5b681a8.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/51a3b0f5fd01799c566db837788f0ca47acc1b27cbf79e88429a0dfed48b05e5.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/5581d4c2169036014aea0b9b573c53f0c0e43878702508172fa3aa1d0713d30c.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/5614069a2fd7c2ecd3f5e1bd44b23ec74676b9bc99115cc0ef949855d689d0dd.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/5cdc4392fee6ab4544b15e9ad456e61037fbd5fa47dca17394b25ee6f6c70eca.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/5ea773f9df56c0e7b536487dd049e0327a919a0c84a112128418759681714558.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/63f2dbcde83bcc2ccf0b728427576b33a48d61778fbd75a638b1c768544bd88d.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/68f698f81f6482be3a8ceeb9281d4cfc71515d6793d444d10a67acbb4f4ffbc4.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/6f5376ac31f03119d89900a45115ff77151c11d902c10029068db2089a37d913.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/6ff141b5647e4222f7ef052cefae7c21fd608e27d2af5a6e9f4b8a37d6633ee5.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/7461b4a09cfb3d41d75159575b2e7649a445a8d27709b0cc564a6482b7eb41a3.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/747eda8331ad331091219cce254f4270c2bffd5e422008c6373579e6107bcc56.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/8775bfe7597cf88c43995fbdf36eff568d475636ff4ab560c1b4eaff5ea0830f.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/a4501269055a15545e6211ab37bc103f62ae5576a45e4b1714453e1b22106a25.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/a4b90990b418581487bb13a2cc67700a3c359804f91bdfb8e377cd0ec80ddc10.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/a577ac9ced7548dd8f025b67a241089df86e0f476ec203c2ecbedb185f282638.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/ac3b9aed7fa9674757159e6d7d575672f9d98100941e9bdeffeca1313b75782d.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/b21e05cc8ba2cd8a204e8766f92bb98a2520676bdafa70e7b249532def8b905e.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/bbd9dfbc1f8a71b593942397aa927b473857950aab52e81a909664368e1ed185.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/bc78e1dfc5f63c684649334da10fa15f0979692009c081b4f3f6917f3ed9b8a5.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/c1164ae0a772d2d4392dc80ac10770d4f0c49bde991a4840c1fa075164f63360.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/c652a0ec48ceb3fcab170992c43a87413309e80065a26252401ba3362a17c565.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/cdb5179b7fc1c046feea31136a3f8f002e6182faf8896fecc8b2f5b5ab604900.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/db74afeecb29ecb1feca3e716d2ce5b9aabb36f7847183c75d9d4f37b61fbf64.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/ddeb1d2b7a0d4fa6208b81ad8168707e2e8e9d01d55c888d3d11c4cdb6ecbecc.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/e2694bae26e8e94009e8861bb63b83d43ee7fe7488fba48f2893019dddf1dbfe.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/ee4bbdb775ce60bae142691fabe19e66a30f7e5fb072d88300c47b897aa8fdcb.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/eec095ee8d72640f92e3c3b91bc712a3696a097b4b6a1a1438e647b2cbedc5f9.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/f095a459f200d18240102d2f93888ead4bfe1d47e399e1d034a6b0a8aa8eb273.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/f65c942fd1773022145418083094568ee34d131933bfdf0c2f200bcc4ef164e3.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/_platform_specific/all/sths/fe446108b1d01ab78a62ccfeab6ab2b2babff3abdad80a4d8b30df2d0008830c.sth
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/manifest.fingerprint
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/982/manifest.json
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/Default/000077.log
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/BudgetDatabase/LOG
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/BudgetDatabase/LOG.old
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/CURRENT
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/Cache/data_0
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/Cache/data_1
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/Cache/data_2
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/Cache/data_3
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/Default/Cache/f_00011b
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/Default/Cache/f_00011c
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/Default/Cache/f_00011d
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/Default/Cache/f_00011e
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/Default/Cache/f_000124
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/Default/Cache/f_00012d
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/Default/Cache/f_0001b6
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/Default/Cache/f_0001b7
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/Default/Cache/f_0001ba
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/Default/Cache/f_0001bb
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/Cache/index
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/Cookies
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/Current Session
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/Extension State/LOG
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/Extension State/LOG.old
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/Favicons
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/GPUCache/data_0
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/GPUCache/data_1
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/GPUCache/index
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/History
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/History-journal
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/IndexedDB/https_www.google.com_0.indexeddb.leveldb/000003.log
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/IndexedDB/https_www.google.com_0.indexeddb.leveldb/LOG
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/IndexedDB/https_www.google.com_0.indexeddb.leveldb/LOG.old
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/LOG
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/LOG.old
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/Last Session
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/Local Storage/leveldb/LOG
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/Local Storage/leveldb/LOG.old
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/Login Data
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/Default/MANIFEST-000076
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/Network Action Predictor
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/Preferences
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/QuotaManager
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/Service Worker/CacheStorage/28da9c56fde4021055a681112c092453f74d8dd8/da28dd55-7b61-428b-8cc4-a92672ec5d2c/index-dir/the-real-index
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/Service Worker/Database/000003.log
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/Service Worker/Database/LOG
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/Service Worker/Database/LOG.old
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/Service Worker/ScriptCache/index-dir/the-real-index
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/Session Storage/000003.log
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/Session Storage/LOG
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/Session Storage/LOG.old
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/Thumbnails/LOG
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/Thumbnails/LOG.old
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/Top Sites
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/TransportSecurity
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/Visited Links
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/Default/data_reduction_proxy_leveldb/000077.log
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/data_reduction_proxy_leveldb/CURRENT
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/data_reduction_proxy_leveldb/LOG
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Default/data_reduction_proxy_leveldb/LOG.old
+	deleted:    ../.provarCaches/.chromeProfiles/profile0/Default/data_reduction_proxy_leveldb/MANIFEST-000076
+	modified:   ../.provarCaches/.chromeProfiles/profile0/DevToolsActivePort
+	modified:   ../.provarCaches/.chromeProfiles/profile0/Local State
+	modified:   ../.provarCaches/.chromeProfiles/profile0/ShaderCache/GPUCache/data_0
+	modified:   ../.provarCaches/.chromeProfiles/profile0/ShaderCache/GPUCache/data_1
+	modified:   ../.provarCaches/.chromeProfiles/profile0/ShaderCache/GPUCache/index
+	modified:   ../.provarCaches/.chromeProfiles/profile0/chrome_debug.log
+	deleted:    ../.provarCaches/.chromeProfiles/profile1/BrowserMetrics/BrowserMetrics-5C29C425-A53C.pma
+	deleted:    ../.provarCaches/.chromeProfiles/profile1/Default/000291.log
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/BudgetDatabase/LOG
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/BudgetDatabase/LOG.old
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/CURRENT
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/Cache/data_0
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/Cache/data_1
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/Cache/data_2
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/Cache/data_3
+	deleted:    ../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_000084
+	deleted:    ../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_000085
+	deleted:    ../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_000171
+	deleted:    ../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_000172
+	deleted:    ../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_000175
+	deleted:    ../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_000196
+	deleted:    ../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_000197
+	deleted:    ../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_000198
+	deleted:    ../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_000199
+	deleted:    ../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_00019a
+	deleted:    ../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_000237
+	deleted:    ../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_000285
+	deleted:    ../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_00028f
+	deleted:    ../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_00029a
+	deleted:    ../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_00043e
+	deleted:    ../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_00043f
+	deleted:    ../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_000440
+	deleted:    ../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_000450
+	deleted:    ../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_000465
+	deleted:    ../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_0004a4
+	deleted:    ../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_0004a5
+	deleted:    ../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_0004aa
+	deleted:    ../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_0004ab
+	deleted:    ../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_0004bb
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/Cache/index
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/Cookies
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/Current Session
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/Extension State/LOG
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/Extension State/LOG.old
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/Favicons
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/GPUCache/data_0
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/GPUCache/data_1
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/GPUCache/index
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/History
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/History-journal
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/IndexedDB/https_www.google.com_0.indexeddb.leveldb/000003.log
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/IndexedDB/https_www.google.com_0.indexeddb.leveldb/LOG
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/IndexedDB/https_www.google.com_0.indexeddb.leveldb/LOG.old
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/LOG
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/LOG.old
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/Last Session
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/Local Storage/leveldb/000008.log
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/Local Storage/leveldb/LOG
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/Local Storage/leveldb/LOG.old
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/Login Data
+	deleted:    ../.provarCaches/.chromeProfiles/profile1/Default/MANIFEST-000290
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/Network Action Predictor
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/Preferences
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/QuotaManager
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/Service Worker/CacheStorage/28da9c56fde4021055a681112c092453f74d8dd8/03d9c03c-de18-4758-aea3-d305fa5165b0/index-dir/the-real-index
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/Service Worker/Database/000003.log
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/Service Worker/Database/LOG
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/Service Worker/Database/LOG.old
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/Service Worker/ScriptCache/index-dir/the-real-index
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/Session Storage/000020.log
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/Session Storage/LOG
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/Session Storage/LOG.old
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/Thumbnails/LOG
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/Thumbnails/LOG.old
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/Top Sites
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/TransportSecurity
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/Visited Links
+	deleted:    ../.provarCaches/.chromeProfiles/profile1/Default/data_reduction_proxy_leveldb/000291.log
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/data_reduction_proxy_leveldb/CURRENT
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/data_reduction_proxy_leveldb/LOG
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Default/data_reduction_proxy_leveldb/LOG.old
+	deleted:    ../.provarCaches/.chromeProfiles/profile1/Default/data_reduction_proxy_leveldb/MANIFEST-000290
+	modified:   ../.provarCaches/.chromeProfiles/profile1/DevToolsActivePort
+	modified:   ../.provarCaches/.chromeProfiles/profile1/Local State
+	modified:   ../.provarCaches/.chromeProfiles/profile1/ShaderCache/GPUCache/data_0
+	modified:   ../.provarCaches/.chromeProfiles/profile1/ShaderCache/GPUCache/data_1
+	modified:   ../.provarCaches/.chromeProfiles/profile1/ShaderCache/GPUCache/index
+	modified:   ../.provarCaches/.chromeProfiles/profile1/chrome_debug.log
+	modified:   ../.provarCaches/.chromeProfiles/profile2/Default/Cache/index
+	modified:   ../.provarCaches/.chromeProfiles/profile2/Default/GPUCache/index
+	modified:   ../.provarCaches/.chromeProfiles/profile2/ShaderCache/GPUCache/index
+	modified:   ../.provarCaches/.chromeProfiles/profile3/Default/Cache/index
+	modified:   ../.provarCaches/.chromeProfiles/profile3/Default/GPUCache/index
+	modified:   ../.provarCaches/.chromeProfiles/profile3/ShaderCache/GPUCache/index
+	modified:   ../.provarCaches/.chromeProfiles/profile4/Default/Cache/index
+	modified:   ../.provarCaches/.chromeProfiles/profile4/Default/GPUCache/index
+	modified:   ../.provarCaches/.chromeProfiles/profile4/ShaderCache/GPUCache/index
+	modified:   ../.provarCaches/.chromeProfiles/profile5/Default/Cache/index
+	modified:   ../.provarCaches/.chromeProfiles/profile5/Default/GPUCache/index
+	modified:   ../.provarCaches/.chromeProfiles/profile5/ShaderCache/GPUCache/index
+	modified:   ../.provarCaches/.chromeProfiles/profile6/Default/Cache/index
+	modified:   ../.provarCaches/.chromeProfiles/profile6/Default/GPUCache/index
+	modified:   ../.provarCaches/.chromeProfiles/profile6/ShaderCache/GPUCache/index
+	modified:   ../.provarCaches/.lockState
+	deleted:    ../.provarCaches/configuration/sf/org.eclipse.core.runtime/.manager/.tmp4111429115328061449.instance
+	modified:   ../.provarCaches/configuration/sf/org.eclipse.osgi/.manager/.fileTable.1
+	modified:   ../.provarCaches/configuration/sf/org.eclipse.osgi/.manager/.fileTable.2
+	modified:   ../.provarCaches/configuration/sf/org.eclipse.osgi/framework.info.1
+	modified:   ../.provarCaches/configuration/sf/org.eclipse.update/last.config.stamp
+	modified:   ../.provarCaches/configuration/sf/org.eclipse.update/platform.xml
+	modified:   .gitignore
+	modified:   ANT/Results/Artifacts/ScreenShot1
+	modified:   ANT/Results/Artifacts/ScreenShot10
+	modified:   ANT/Results/Artifacts/ScreenShot11
+	modified:   ANT/Results/Artifacts/ScreenShot12
+	deleted:    ANT/Results/Artifacts/ScreenShot13
+	deleted:    ANT/Results/Artifacts/ScreenShot14
+	deleted:    ANT/Results/Artifacts/ScreenShot15
+	deleted:    ANT/Results/Artifacts/ScreenShot16
+	deleted:    ANT/Results/Artifacts/ScreenShot17
+	modified:   ANT/Results/Artifacts/ScreenShot2
+	modified:   ANT/Results/Artifacts/ScreenShot3
+	modified:   ANT/Results/Artifacts/ScreenShot4
+	modified:   ANT/Results/Artifacts/ScreenShot5
+	modified:   ANT/Results/Artifacts/ScreenShot6
+	modified:   ANT/Results/Artifacts/ScreenShot7
+	modified:   ANT/Results/Artifacts/ScreenShot8
+	modified:   ANT/Results/Artifacts/ScreenShot9
+	modified:   ANT/Results/JUnit html/TESTS-TestSuites.xml
+	modified:   ANT/Results/JUnit html/junit-noframes.html
+	modified:   ANT/Results/JUnit.xml
+	modified:   ANT/Results/Navigator.html
+	modified:   ANT/Results/Overview.html
+	modified:   ANT/Results/Test_Run_Report.pdf
+	modified:   ANT/Results/testrun_chart_600x250.png
+	modified:   ANT/Results/tests/ActivityConsole/C1410_C1450-AbleToAssociateOutcomeWithActivity.testcase.html
+	modified:   ANT/Results/tests/ActivityConsole/C1448-CheckIfOutcomeReasonSelectionIsDisplayedOutcomeSelection.testcase.html
+	deleted:    ANT/Results/tests/ActivityConsole/C1449-OutcomeReasonCommentSectionIsDisplayedAndOutcomeIsSavedOnlyWhenCommentsAreSuppliedANDSaveIsNotClickableTillAllmedatoryOutcomeQuestionsAreNotAnswered1.testcase.html
+	modified:   ANT/Results/tests/ActivityConsole/C1458-CheckIfFinishDateIsPopulatedAndSavedOnOutomeSelection.testcase.html
+	modified:   ANT/Results/tests/ActivityConsole/C1459-CheckIfActivitiesHasStatusBasedOnOutCome.testcase.html
+	modified:   ANT/Results/tests/ActivityConsole/C1462_C1463-CheckIfActivitiesHaveInternalAndExternalComments.testcase.html
+	modified:   ANT/Results/tests/ActivityConsole/C1468_C1461-CheckIfProvidingFinishDateEarlierThanCreatedIsNotAccepted.testcase.html
+	deleted:    ANT/Results/tests/AgentConsole/C1417_C1431-SRTypeContactAndAddressCanBeSearchedAndSelected.testcase.html
+	deleted:    ANT/Results/tests/AgentConsole/C1418_C1421-SRCreationShowsSRDescriptionSection.testcase.html
+	deleted:    ANT/Results/tests/AgentConsole/C1420-VerifyThatSRCreationPageHasKnowledgeArticlesSectionHasLinksToArticles.testcase.html
+	deleted:    ANT/Results/tests/AgentConsole/C1425-C1426-VerifyThatSRCreationPageHasOrganisationAndContactSection.testcase.html
+	deleted:    ANT/Results/tests/AgentConsole/C1428-SRCreationShowsKnowledgeArticleSection.testcase.html
+	deleted:    ANT/Results/tests/AgentConsole/C1429-VerifyThatSRCreationPageHasKnowledgeArticleCanBeNavigatedTo.testcase.html
+	deleted:    ANT/Results/tests/AgentConsole/C1430-VerifyThatSRCreationPageHasRequestDetailsHaveFieldsToManage.testcase.html
+	deleted:    ANT/Results/tests/AgentConsole/C1432-VerifyThatSRCreationPageHasDefaultServiceRequestOriginPopulated.testcase.testcase.html
+	deleted:    ANT/Results/tests/AgentConsole/C1433_C1423_C1424_C1438-VerifyThatRequestInformationSectionAndSRDetailsWithQuestionIsDisplayed_ContactCanBeSelected.testcase.html
+	deleted:    ANT/Results/tests/AgentConsole/C1434-QuestionsAppearAccordingToStartAndStopDates.testcase.html
+	deleted:    ANT/Results/tests/AgentConsole/C1435-QuestionsAppearInRightOrder.testcase.html
+	deleted:    ANT/Results/tests/AgentConsole/C1436-VerifyThatSRCreationPageHasHintsDisplayed.testcase.html
+	deleted:    ANT/Results/tests/AgentConsole/C1437_C2719-VerifyThatSRCreationPageShowsRequiredFieldValidation.testcase.html
+	deleted:    ANT/Results/tests/CaseOwner/c1493-TestQueueCanBeChangedAndOnSRListScreenCaseIsShownWhenFilteredWithQueue.testcase.html
+	deleted:    ANT/Results/tests/Config/C1399-QuestionReusedForDiffSRs.testcase.html
+	deleted:    ANT/Results/tests/Config/C1408_C1516-ActivitiesCanBeAddedToSRTypeVersions.testcase.html
+	deleted:    ANT/Results/tests/Duplicates/C1478_IdentifyByRadius.testcase.html
+	deleted:    ANT/Results/tests/Duplicates/C1624_C2441-IdentifyByStatus.testcase.html
+	deleted:    ANT/Results/tests/ESRI/C1490-GeoAreaValuesWithLayersAreShownOnMap.testcase.html
+	deleted:    ANT/Results/tests/ESRI/C1491-1-StreetsAreSerachedByStreetName.testcase.html
+	deleted:    ANT/Results/tests/ESRI/C1491-StreetsAreSerachedByNumber.testcase.html
+	deleted:    ANT/Results/tests/ESRI/C1492-AddressCanBeSearchedWithCityStateAndLocation.testcase.html
+	deleted:    ANT/Results/tests/ESRI/c1489(1)StreetAddressLocationCanBeSearchedAsAnAddress.testcase.html
+	deleted:    ANT/Results/tests/ESRI/c1489(2)PlaceNameCommonLocationCanBeSearchedAsAnAddress.testcase.html
+	deleted:    ANT/Results/tests/ESRI/c1489(3)LocationIntersectionCanBeSearchedAsAnAddress.testcase.html
+	deleted:    ANT/Results/tests/Reallocation/BoundToFail-BugId2461-CNotInTestRail-ReallocateSRManually.testcase.html
+	deleted:    ANT/Results/tests/Reallocation/BoundToFail-BugId2461-CNotInTestRail_ReallocationThroughActivities.testcase.html
+	deleted:    ANT/Results/tests/Relationships/C2439_SRLinkingWhileCreatingSR.testcase.html
+	deleted:    ANT/Results/tests/SRStatuses/C1476_C1514-SRStatus.testcase.html
+	deleted:    ANT/Results/tests/SRTypeAvailability_SLA/C1511-RestrictSRSeason.testcase.html
+	deleted:    ANT/Results/tests/SRTypeAvailability_SLA/C1513-DefineSLABySrType.testcase.html
+	deleted:    ANT/Results/tests/SRTypeAvailability_SLA/C1520-1-SLASTARTStop.testcase.html
+	deleted:    ANT/Results/tests/SRTypeAvailability_SLA/C1520-2-SLASTARTStop2.testcase.html
+	deleted:    ANT/Results/tests/SRTypeAvailability_SLA/C1522-SysGen.testcase.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	../.provarCaches/.chromeProfiles/profile0/BrowserMetrics/BrowserMetrics-5C2C9920-F37C.pma
+	../.provarCaches/.chromeProfiles/profile0/CertificateTransparency/985/
+	../.provarCaches/.chromeProfiles/profile0/Default/000079.log
+	../.provarCaches/.chromeProfiles/profile0/Default/Cache/f_0001be
+	../.provarCaches/.chromeProfiles/profile0/Default/Cache/f_0001bf
+	../.provarCaches/.chromeProfiles/profile0/Default/Cache/f_0001c0
+	../.provarCaches/.chromeProfiles/profile0/Default/Cache/f_0001c1
+	../.provarCaches/.chromeProfiles/profile0/Default/Cache/f_0001c2
+	../.provarCaches/.chromeProfiles/profile0/Default/Cache/f_0001c3
+	../.provarCaches/.chromeProfiles/profile0/Default/Cache/f_0001c4
+	../.provarCaches/.chromeProfiles/profile0/Default/Cache/f_0001c7
+	../.provarCaches/.chromeProfiles/profile0/Default/Cache/f_0001c8
+	../.provarCaches/.chromeProfiles/profile0/Default/Cache/f_0001c9
+	../.provarCaches/.chromeProfiles/profile0/Default/MANIFEST-000078
+	../.provarCaches/.chromeProfiles/profile0/Default/data_reduction_proxy_leveldb/000079.log
+	../.provarCaches/.chromeProfiles/profile0/Default/data_reduction_proxy_leveldb/MANIFEST-000078
+	../.provarCaches/.chromeProfiles/profile1/BrowserMetrics/BrowserMetrics-5C2C9E24-B454.pma
+	../.provarCaches/.chromeProfiles/profile1/Default/000307.log
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_0004c2
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_0004c3
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_0004c6
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_0004ca
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_0004ce
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_0004cf
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_0004d0
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_0004d1
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_0004d2
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_0004d3
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_0004d4
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_0004d7
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_0004db
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_0004dc
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_0004dd
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_0004de
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_0004e0
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_0004e9
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_0004ea
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_0004eb
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_0004f0
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_0004f1
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_0004f2
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_0004fc
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_0004fd
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_0004fe
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_00050a
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_00050b
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_00050c
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_00050d
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_00050f
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_000510
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_000511
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_000512
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_000513
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_000514
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_000515
+	../.provarCaches/.chromeProfiles/profile1/Default/Cache/f_000516
+	../.provarCaches/.chromeProfiles/profile1/Default/MANIFEST-000306
+	../.provarCaches/.chromeProfiles/profile1/Default/data_reduction_proxy_leveldb/000307.log
+	../.provarCaches/.chromeProfiles/profile1/Default/data_reduction_proxy_leveldb/MANIFEST-000306
+	../.provarCaches/.chromeProfiles/profile1/a5c9596d-2ea9-46eb-b500-5d73d3d0ff9b.tmp
+	../.provarCaches/configuration/sf/org.eclipse.core.runtime/.manager/.tmp8852669660226996420.instance
+	../.provarCaches/configuration/sf/org.eclipse.equinox.app/.manager/.tmp4653649071149811882.instance
+	../.provarCaches/configuration/sf/org.eclipse.update/history/1546238358562.xml
+	abc.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")

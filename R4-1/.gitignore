@@ -1,3 +1,5 @@
 /.lock
 /.lockState
 /bin/
+
+/ANT/Results/tests/*
