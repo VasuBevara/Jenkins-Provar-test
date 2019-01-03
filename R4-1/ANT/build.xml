@@ -31,10 +31,10 @@
 				secretsPassword="${secrets.password}"
 				testEnvironmentSecretsPassword="${testenvironment.secretspassword}"
 				invokeTestRunMonitor="true"
-				licensePath="C:\Users\Incapsulate\Provar\.licenses"
+			licensePath="C:\Users\Incapsulate\Provar\.licenses"
 				>
 		
-			<fileset dir="../tests/ActivityConsole"></fileset>
+			<fileset dir="../tests/Config"><include name="C1409_C1410-SameActivityCanBeReUsedOnDifferentSRTypeVersionsOfTheSameSRType.testcase"/></fileset>
 
 			<emailProperties sendEmail="true" primaryRecipients="sjain@incapsulate.com" ccRecipients="vbevara@incapsulate.com" bccRecipients="" emailSubject="Provar test run report" attachExecutionReport="true" attachZip="false"/>
 			<attachmentProperties includeOnlyFailures="false" includeOnlyBdd="false" includeSkipped="false" includeTestCaseDescription="true" includeScreenshots="true" includeWarningMessages="false" includeInfoMessages="false" includeDebugMessages="false" includeTestStepTime="true" includeTestStepPathHierarchy="true" includeFullScreenShot="false"/>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite failures="7" hostname="DESKTOP-FH6FHVE" id="0" name="R4-1/tests" package="" skipped="0" tests="7" time="1429.015" timestamp="Wed Jan 02 16:27:26 IST 2019">
+  <testsuite failures="1" hostname="DESKTOP-FH6FHVE" id="0" name="R4-1/tests" package="" skipped="0" tests="1" time="737.02" timestamp="Thu Jan 03 18:45:56 IST 2019">
 	    <properties>
 		      <property name="excludeCallableTestCases" value="true" />
 
@@ -26,38 +26,8 @@
 
 	    </properties>
 
-	    <testcase classname="tests/ActivityConsole\C1410_C1450-AbleToAssociateOutcomeWithActivity.testcase" name="C1410_C1450-AbleToAssociateOutcomeWithActivity.testcase" time="513.487">
-		      <failure message="Execution failed"><![CDATA[Failed to resolve control locator. Locator: ui:locator?name=Incap311__Service_Request_Number__c&binding=sf%3Aui%3Abinding%3Aobject%3Fobject%3DCase%26field%3DIncap311__Service_Request_Number__c]]></failure>
-
-	    </testcase>
-
-	    <testcase classname="tests/ActivityConsole\C1448-CheckIfOutcomeReasonSelectionIsDisplayedOutcomeSelection.testcase" name="C1448-CheckIfOutcomeReasonSelectionIsDisplayedOutcomeSelection.testcase" time="161.21">
-		      <failure message="Execution failed"><![CDATA[Assertion failed.  (expected) 19-00004907 contains 18- (actual)]]></failure>
-
-	    </testcase>
-
-	    <testcase classname="tests/ActivityConsole\C1449-OutcomeReasonCommentSectionIsDisplayedAndOutcomeIsSavedOnlyWhenCommentsAreSuppliedANDSave.testcase" name="C1449-OutcomeReasonCommentSectionIsDisplayedAndOutcomeIsSavedOnlyWhenCommentsAreSuppliedANDSave.testcase" time="140.539">
-		      <failure message="Execution failed"><![CDATA[Field not found on the screen.  Locator: ProvarFindByElementLocator [by=public org.openqa.selenium.WebElement pageobjects.incap311sc__AgentConsole_Aadil_ServiceTypeTab_ContactInfo.SearchContact]]]></failure>
-
-	    </testcase>
-
-	    <testcase classname="tests/ActivityConsole\C1458-CheckIfFinishDateIsPopulatedAndSavedOnOutomeSelection.testcase" name="C1458-CheckIfFinishDateIsPopulatedAndSavedOnOutomeSelection.testcase" time="131.811">
-		      <failure message="Execution failed"><![CDATA[Field not found on the screen.  Locator: ProvarFindByElementLocator [by=public org.openqa.selenium.WebElement pageobjects.incap311sc__AgentConsole_Aadil_ServiceTypeTab_ContactInfo.SearchContact]]]></failure>
-
-	    </testcase>
-
-	    <testcase classname="tests/ActivityConsole\C1459-CheckIfActivitiesHasStatusBasedOnOutCome.testcase" name="C1459-CheckIfActivitiesHasStatusBasedOnOutCome.testcase" time="131.389">
-		      <failure message="Execution failed"><![CDATA[Field not found on the screen.  Locator: ProvarFindByElementLocator [by=public org.openqa.selenium.WebElement pageobjects.incap311sc__AgentConsole_Aadil_ServiceTypeTab_ContactInfo.SearchContact]]]></failure>
-
-	    </testcase>
-
-	    <testcase classname="tests/ActivityConsole\C1462_C1463-CheckIfActivitiesHaveInternalAndExternalComments.testcase" name="C1462_C1463-CheckIfActivitiesHaveInternalAndExternalComments.testcase" time="158.232">
-		      <failure message="Execution failed"><![CDATA[Field not found on the screen.  Locator: ProvarFindByElementLocator [by=public org.openqa.selenium.WebElement pageobjects.incap311sc__AgentConsole_Aadil_ServiceTypeTab_ContactInfo.SearchContact]]]></failure>
-
-	    </testcase>
-
-	    <testcase classname="tests/ActivityConsole\C1468_C1461-CheckIfProvidingFinishDateEarlierThanCreatedIsNotAccepted.testcase" name="C1468_C1461-CheckIfProvidingFinishDateEarlierThanCreatedIsNotAccepted.testcase" time="133.411">
-		      <failure message="Execution failed"><![CDATA[Field not found on the screen.  Locator: ProvarFindByElementLocator [by=public org.openqa.selenium.WebElement pageobjects.incap311sc__AgentConsole_Aadil_ServiceTypeTab_ContactInfo.SearchContact]]]></failure>
+	    <testcase classname="tests/Config\C1409_C1410-SameActivityCanBeReUsedOnDifferentSRTypeVersionsOfTheSameSRType.testcase" name="C1409_C1410-SameActivityCanBeReUsedOnDifferentSRTypeVersionsOfTheSameSRType.testcase" time="737.016">
+		      <failure message="Execution failed"><![CDATA[The control was not found.  Locator: By.xpath: ( //div[@id='InlineEditDialogContent']//div[contains(@class, 'inlineEditDiv') or contains(@class, 'inlineEditCompoundDiv')]/table//tr/td[contains(@class,'labelCol') and  ( .//text() = 'Version Code' )]/following-sibling::td[1] | //div[contains(@class,'pbBody') and not(//div[@id='InlineEditDialog' and contains(@style, 'visible')])]//div[contains(@class,'pbSubsection')][1]/table//tr/td[contains(@class,'labelCol') and  ( .//text() = 'Version Code' )]/following-sibling::td[1] )]]></failure>
 
 	    </testcase>
 
