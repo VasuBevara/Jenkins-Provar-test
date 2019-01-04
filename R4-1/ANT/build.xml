@@ -34,9 +34,9 @@
 			licensePath="C:\Users\Incapsulate\Provar\.licenses"
 				>
 		
-			<fileset dir="../tests/Config"><include name="C1409_C1410-SameActivityCanBeReUsedOnDifferentSRTypeVersionsOfTheSameSRType.testcase"/></fileset>
+			<fileset dir="../tests/Schedule"></fileset>
 
-			<emailProperties sendEmail="true" primaryRecipients="sjain@incapsulate.com" ccRecipients="vbevara@incapsulate.com" bccRecipients="" emailSubject="Provar test run report" attachExecutionReport="true" attachZip="false"/>
+			<emailProperties sendEmail="true" primaryRecipients="sjain@incapsulate.com" ccRecipients="vbevara@incapsulate.com" bccRecipients="saurabh.tiwari@provartesting.com" emailSubject="311 Capsule - Console Automation Report(SAT Org)" attachExecutionReport="true" attachZip="false"/>
 			<attachmentProperties includeOnlyFailures="false" includeOnlyBdd="false" includeSkipped="false" includeTestCaseDescription="true" includeScreenshots="true" includeWarningMessages="false" includeInfoMessages="false" includeDebugMessages="false" includeTestStepTime="true" includeTestStepPathHierarchy="true" includeFullScreenShot="false"/>
 		</Run-Test-Case>
 

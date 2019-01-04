@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="25">
+<testCase id="53">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.StepGroup" name="StepGroup" testItemId="709" title="CreateFirstSRAndClose">
@@ -2503,7 +2503,7 @@
                         </argument>
                       </arguments>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="143" title="Assert: {CaseNumber} Contains 18-">
+                    <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="143" title="Assert: {CaseNumber} Contains 19-">
                       <tags/>
                       <arguments>
                         <argument id="expectedValue">
@@ -2512,7 +2512,7 @@
                           </value>
                         </argument>
                         <argument id="actualValue">
-                          <value class="value" valueClass="string">18-</value>
+                          <value class="value" valueClass="string">19-</value>
                         </argument>
                         <argument id="comparisonType">
                           <value class="value" valueClass="string">Contains</value>
@@ -5243,7 +5243,7 @@
                         </argument>
                       </arguments>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="883" title="Assert: {CaseNumber2} Contains 18-">
+                    <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="883" title="Assert: {CaseNumber2} Contains 19-">
                       <tags/>
                       <arguments>
                         <argument id="expectedValue">
@@ -5252,7 +5252,7 @@
                           </value>
                         </argument>
                         <argument id="actualValue">
-                          <value class="value" valueClass="string">18-</value>
+                          <value class="value" valueClass="string">19-</value>
                         </argument>
                         <argument id="comparisonType">
                           <value class="value" valueClass="string">Contains</value>

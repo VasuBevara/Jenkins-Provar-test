@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="12">
+<testCase id="60">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="17" title="Salesforce Connect: InternalQA (Test)">
@@ -876,7 +876,7 @@
                               <fieldLocator uri="ui:locator?name=RequestDetailsSectionWithAllQuestions"/>
                               <attributeAssertions>
                                 <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
-                                  <value class="value" valueClass="string">This is test informational box no.1\r\nChose an animal from this picklist\r\nchimpanzee\r\nEnter your favorite animal\r\nHow many animals you have at your home\r\n* Required\r\nPlease enter your lucky date and time\r\nAdditional Details</value>
+                                  <value class="value" valueClass="string">This is test informational box no.1\r\nChose an animal from this picklist\r\nchimpanzee\r\nEnter your favorite animal\r\nHow many animals you have at your home\r\nPlease enter your lucky date and time\r\nAdditional Details</value>
                                 </uiAttributeAssertion>
                               </attributeAssertions>
                             </uiFieldAssertion>

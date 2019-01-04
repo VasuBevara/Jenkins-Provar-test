@@ -1,0 +1,9 @@
+2019/01/03-18:55:54.367 e14c Reusing MANIFEST C:\Users\Incapsulate\git\Jenkins-Provar-test\.provarCaches\.chromeProfiles\profile1\Default\IndexedDB\https_incapsulate311-sat-dev-ed.lightning.force.com_0.indexeddb.leveldb/MANIFEST-000001
+2019/01/03-18:55:56.971 124f8 Current memtable full; waiting...
+2019/01/03-18:55:56.971 11ab4 Level-0 table #5: started
+2019/01/03-18:55:56.977 11ab4 Level-0 table #5: 201557 bytes OK
+2019/01/03-18:55:56.979 11ab4 Delete type=0 #3
+2019/01/03-18:55:56.981 11ab4 Level-0 table #7: started
+2019/01/03-18:55:56.981 11ab4 Level-0 table #7: 0 bytes OK
+2019/01/03-18:55:56.983 11ab4 Delete type=0 #4
+2019/01/03-18:55:56.984 11ab4 Manual compaction at level-0 from '\x00\x06\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x07\x00\x00\x00' @ 0 : 0; will stop at (end)
