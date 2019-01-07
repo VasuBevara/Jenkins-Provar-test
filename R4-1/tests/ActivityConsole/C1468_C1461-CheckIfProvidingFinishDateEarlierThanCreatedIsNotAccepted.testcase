@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="48">
+<testCase id="3">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.bundled.apis.control.SetValues" name="SetValues" testItemId="656" title="Set Values: FirstName">
@@ -2878,6 +2878,9 @@
                       </arguments>
                     </apiCall>
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="684" title="Double Click the Select Year Of Finish Date field">
+                      <tags>
+                        <string>disabled</string>
+                      </tags>
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=selectYearOfFinishDate"/>
@@ -2929,6 +2932,9 @@
                       </generatedParameters>
                     </apiCall>
                     <apiCall apiId="com.provar.plugins.bundled.apis.control.Sleep" name="Sleep" testItemId="696" title="Sleep for {5} seconds">
+                      <tags>
+                        <string>disabled</string>
+                      </tags>
                       <arguments>
                         <argument id="sleepSecs">
                           <value class="value" valueClass="decimal">5</value>

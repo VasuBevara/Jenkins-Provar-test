@@ -2554,7 +2554,7 @@
               <clauses>
                 <clause name="substeps" testItemId="534">
                   <steps>
-                    <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="536" title="Assert: {SRCode} Contains 18-">
+                    <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="536" title="Assert: {SRCode} Contains 19-">
                       <tags/>
                       <arguments>
                         <argument id="expectedValue">
@@ -2563,7 +2563,7 @@
                           </value>
                         </argument>
                         <argument id="actualValue">
-                          <value class="value" valueClass="string">18-</value>
+                          <value class="value" valueClass="string">19-</value>
                         </argument>
                         <argument id="comparisonType">
                           <value class="value" valueClass="string">Contains</value>

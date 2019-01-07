@@ -847,7 +847,7 @@
                         </argument>
                       </arguments>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="75" title="Set the Search For A Location field to 599 S Lamar st">
+                    <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="75" title="Set the Search For A Location field to 505 MAIN ST">
                       <arguments>
                         <argument id="locator">
                           <value class="uiLocator" uri="ui:locator?name=searchForALocation"/>
@@ -856,7 +856,7 @@
                           <value class="uiInteraction" uri="ui:interaction?name=set"/>
                         </argument>
                         <argument id="value">
-                          <value class="value" valueClass="string">599 S Lamar st</value>
+                          <value class="value" valueClass="string">505 MAIN ST</value>
                         </argument>
                         <argument id="blur">
                           <value class="value" valueClass="boolean">false</value>
@@ -877,7 +877,7 @@
                           <value class="uiWait" uri="default"/>
                         </argument>
                         <argument id="interactionDescription">
-                          <value class="value" valueClass="string">Set the Search For A Location field to 599 S Lamar st</value>
+                          <value class="value" valueClass="string">Set the Search For A Location field to 505 MAIN ST</value>
                         </argument>
                         <argument id="autoRetry"/>
                       </arguments>

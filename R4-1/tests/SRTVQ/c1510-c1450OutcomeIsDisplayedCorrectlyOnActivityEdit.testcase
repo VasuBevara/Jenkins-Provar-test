@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="58">
+<testCase id="40">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="634" title="Salesforce Connect: ConfigInternalQA (Test)">
@@ -885,7 +885,7 @@
                   <value class="uiTarget" uri="sf:ui:target?page=Incap311SC__AgentConsole&amp;pageObject=pageobjects.incap311sc__AgentConsole_Narayan_ServiceTypeTab"/>
                 </argument>
                 <argument id="navigate">
-                  <value class="value" valueClass="string">Dont</value>
+                  <value class="value" valueClass="string">Always</value>
                 </argument>
                 <argument id="targetDescription">
                   <value class="value" valueClass="string">On SF Incap311SC__AgentConsole page with pageobject Incap 311sc__ Agent Console_ Narayan_ Service Type Tab</value>
@@ -1107,7 +1107,7 @@
                         <argument id="autoRetry"/>
                       </arguments>
                     </apiCall>
-                    <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="662" title="Assert: {Values.fields.Incap311__Service_Request_Number__c.value} Contains 18-">
+                    <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="662" title="Assert: {Values.fields.Incap311__Service_Request_Number__c.value} Contains 19-">
                       <tags/>
                       <arguments>
                         <argument id="expectedValue">
@@ -1119,7 +1119,7 @@
                           </value>
                         </argument>
                         <argument id="actualValue">
-                          <value class="value" valueClass="string">18-</value>
+                          <value class="value" valueClass="string">19-</value>
                         </argument>
                         <argument id="comparisonType">
                           <value class="value" valueClass="string">Contains</value>
