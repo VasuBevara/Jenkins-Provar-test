@@ -601,9 +601,7 @@
                 <clause name="substeps" testItemId="54">
                   <steps>
                     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="365" title="On Service Request View Screen page">
-                      <tags>
-                        <string>disabled</string>
-                      </tags>
+                      <tags/>
                       <arguments>
                         <argument id="uiConnectionName">
                           <value class="value" valueClass="string">QA</value>
