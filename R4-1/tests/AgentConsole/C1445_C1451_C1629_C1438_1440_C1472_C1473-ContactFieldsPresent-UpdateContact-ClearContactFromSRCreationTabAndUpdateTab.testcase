@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="8">
+<testCase id="14">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="81" title="Salesforce Connect: QA2 (Test)">
+      <tags/>
       <arguments>
         <argument id="connectionName">
           <value class="value" valueClass="string">SAT_Dev_Admin_311</value>
@@ -179,6 +180,7 @@
               </outputArguments>
             </caseCall>
             <caseCall testCaseId="06e35884-04e5-4b7b-a786-939d99642af3" testCasePath="tests/ReusableTests/Console/doContactOperations.testcase" testItemId="23">
+              <tags/>
               <arguments>
                 <argument id="OperationType">
                   <value class="value" valueClass="string">CreateNew</value>
@@ -410,6 +412,9 @@
               </outputArguments>
             </caseCall>
             <caseCall testCaseId="06e35884-04e5-4b7b-a786-939d99642af3" testCasePath="tests/ReusableTests/Console/doContactOperations.testcase" testItemId="42">
+              <tags>
+                <string>disabled</string>
+              </tags>
               <arguments>
                 <argument id="reuseConnectionName">
                   <value class="value" valueClass="string">QA1</value>
@@ -801,6 +806,9 @@
               </outputArguments>
             </caseCall>
             <caseCall testCaseId="06e35884-04e5-4b7b-a786-939d99642af3" testCasePath="tests/ReusableTests/Console/doContactOperations.testcase" testItemId="45">
+              <tags>
+                <string>disabled</string>
+              </tags>
               <arguments>
                 <argument id="reuseConnectionName">
                   <value class="value" valueClass="string">QA3</value>

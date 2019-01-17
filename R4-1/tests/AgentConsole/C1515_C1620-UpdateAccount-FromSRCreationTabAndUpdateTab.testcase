@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="2">
+<testCase id="21">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="81" title="Salesforce Connect: QA2 (Test)">
@@ -159,12 +159,10 @@
               </arguments>
             </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="150" title="Salesforce Connect: QA (Test)">
-              <tags>
-                <string>disabled</string>
-              </tags>
+              <tags/>
               <arguments>
                 <argument id="connectionName">
-                  <value class="value" valueClass="string">QA</value>
+                  <value class="value" valueClass="string">SAT_Dev_Admin_311</value>
                 </argument>
                 <argument id="resultName">
                   <value class="value" valueClass="string">QA</value>
