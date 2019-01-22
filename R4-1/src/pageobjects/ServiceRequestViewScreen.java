@@ -123,5 +123,29 @@ public class ServiceRequestViewScreen {
 	@ButtonType()
 	@FindByLabel(label = "Close")
 	public WebElement close;
+	@TextType()
+	@FindBy(xpath = "//div[contains(@class, \"slds-form-element__control\")]/div/div/div//div[2]")
+	public WebElement New_Edit_Contact;
+	@TextType()
+	@FindBy(xpath = "//div[contains(@class, \"slds-scrollable--y\")]/div/div/div[2]//*[name()=\"svg\"]")
+	public WebElement contact_Click;
+	@TextType()
+	@FindBy(xpath = "//*[@id=\"FirstName\"]/div//input")
+	public WebElement First_Name_Contact;
+	@TextType()
+	@FindBy(xpath = "//*[@id=\"LastName\"]/div//input")
+	public WebElement Last_Name_Contact;
+	@TextType()
+	@FindBy(xpath = "//div[contains(@class, \"slds-form-element\")]/div/div/input")
+	public WebElement Phone_Contact;
+	@TextType()
+	@FindBy(xpath = "//div[contains(@class, \"slds-grid\")]/div[5]/div//input")
+	public WebElement Email_Contact;
+	@ButtonType()
+	@FindBy(xpath = "//button[contains(@class, \"slds-pill__remove\")]")
+	public WebElement remove;
+	@LinkType()
+	@FindBy(xpath = "//nav[contains(@class, \"left-nav\")]//a[3]")
+	public WebElement contactInformation;
 
 }
