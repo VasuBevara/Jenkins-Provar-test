@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="22" registryId="1ad42a4a-ac86-46aa-bee2-c584692ba821">
+<testCase id="15" registryId="1ad42a4a-ac86-46aa-bee2-c584692ba821">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="105" title="Salesforce Connect: QA (Test)">
@@ -1395,6 +1395,9 @@
                               </arguments>
                             </apiCall>
                             <apiCall apiId="com.provar.plugins.bundled.apis.AssertValues" name="AssertValues" testItemId="400" title="Assert: {NewCase.fields.continueWithoutDuplicate.visible} EqualTo {false}">
+                              <tags>
+                                <string>disabled</string>
+                              </tags>
                               <arguments>
                                 <argument id="expectedValue">
                                   <value class="variable">

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="20">
+<testCase id="23">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="746" title="Salesforce Connect: QA1 (Test)">
@@ -913,6 +913,9 @@
       </arguments>
     </apiCall>
     <caseCall testCaseId="3c92495a-d9a8-460e-8ee9-36012d802e8f" testCasePath="tests/ReusableTests/Console/CloseSRManually.testcase" testItemId="773">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="reuseConnectionName">
           <value class="value" valueClass="string">QA</value>
@@ -931,6 +934,9 @@
       </arguments>
     </caseCall>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiWithScreen" name="UiWithScreen" testItemId="774" title="On SF Service Request View screen">
+      <tags>
+        <string>disabled</string>
+      </tags>
       <arguments>
         <argument id="uiConnectionName">
           <value class="value" valueClass="string">QA</value>

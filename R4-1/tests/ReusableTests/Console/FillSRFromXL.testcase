@@ -74,9 +74,13 @@
             <apiParam name="IsDependent"/>
           </cachedParameters>
           <sourceValue class="excelTarget" namesLocation="FirstRowOfRange" whereComparison="EqualTo">
-            <workbookPath class="value" valueClass="string">templates/Provar Regression RWH/Provar Regression RWH_Test1_Create1.xlsx</workbookPath>
+            <workbookPath class="variable">
+              <path element="XLFileNameAndRelativePath"/>
+            </workbookPath>
             <worksheetName class="value" valueClass="string">TestData</worksheetName>
-            <valuesRange class="value"/>
+            <valuesRange class="variable">
+              <path element="XLValuesRange"/>
+            </valuesRange>
           </sourceValue>
         </parameterValueSource>
       </parameterValueSources>
