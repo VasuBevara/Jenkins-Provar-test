@@ -147,5 +147,17 @@ public class ServiceRequestViewScreen {
 	@LinkType()
 	@FindBy(xpath = "//nav[contains(@class, \"left-nav\")]//a[3]")
 	public WebElement contactInformation;
+	@TextType()
+	@FindBy(xpath = "//*[@id=\"Name\"]/div//input")
+	public WebElement Account_Name;
+	@TextType()
+	@FindBy(xpath = "//*[@id=\"BillingStreet\"]/div//input")
+	public WebElement Account_Street;
+	@TextType()
+	@FindBy(xpath = "//*[@id=\"BillingPostalCode\"]/div//input")
+	public WebElement Account_Zip;
+	@TextType()
+	@FindBy(xpath = "//div[contains(@class, \"slds-form-element__control\")]/div/div[2]/div[4]/div//input")
+	public WebElement Account_Phone;
 
 }

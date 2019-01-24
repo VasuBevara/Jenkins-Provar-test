@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="16">
+<testCase id="38">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: QA (Test)">
@@ -2139,6 +2139,9 @@
               </arguments>
             </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiDoAction" name="UiDoAction" testItemId="141" title="Hover the Question_ Hint_ Box_ 2">
+              <tags>
+                <string>disabled</string>
+              </tags>
               <arguments>
                 <argument id="locator">
                   <value class="uiLocator" uri="ui:pageobject:field?field=Question_Hint_Box_2&amp;pageId=pageobjects.SRDetailsPage"/>
@@ -2165,6 +2168,9 @@
               </arguments>
             </apiCall>
             <apiCall apiId="com.provar.plugins.forcedotcom.core.ui.UiAssert" name="UiAssert" testItemId="142" title="UI Assert">
+              <tags>
+                <string>disabled</string>
+              </tags>
               <arguments>
                 <argument id="resultName">
                   <value class="value" valueClass="string">Values</value>

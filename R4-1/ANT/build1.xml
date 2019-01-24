@@ -34,10 +34,10 @@
 			licensePath="C:\Users\Incapsulate\Provar\.licenses"
 				>
 		
-			<fileset dir="../tests/ActivityConsole"></fileset><fileset dir="../tests/AgentConsole"></fileset><fileset dir="../tests/CaseOwner"></fileset><fileset dir="../tests/Config"></fileset><fileset dir="../tests/Deleleted"></fileset><fileset dir="../tests/Duplicates"></fileset><fileset dir="../tests/ESRI"></fileset><fileset dir="../tests/Reallocation"></fileset><fileset dir="../tests/Recommendation"></fileset><fileset dir="../tests/Relationships"></fileset><fileset dir="../tests/Schedule"></fileset><fileset dir="../tests/SRStatuses"></fileset><fileset dir="../tests/SRTVQ"></fileset><fileset dir="../tests/SRTypeAvailability_SLA"></fileset><fileset dir="../tests/Transfer"></fileset>
+			<fileset dir="../tests/ActivityConsole"><include name="C1410_C1450-AbleToAssociateOutcomeWithActivity.testcase"/></fileset>
 
-			<emailProperties sendEmail="true" primaryRecipients="kakula@incapsulate.com, stalsania@incapsulate.com, bhiggins@incapsulate.com, mprabhakar@incapsulate.com, sjain@incapsulate.com" ccRecipients="vbevara@incapsulate.com" bccRecipients="" emailSubject="311 Capsule - Console Automation Report(SAT Org)" attachExecutionReport="true" attachZip="false"/>
-			<attachmentProperties includeOnlyFailures="false" includeOnlyBdd="false" includeSkipped="false" includeTestCaseDescription="false" includeScreenshots="true" includeWarningMessages="false" includeInfoMessages="false" includeDebugMessages="false" includeTestStepTime="true" includeTestStepPathHierarchy="true" includeFullScreenShot="false"/>
+			<emailProperties sendEmail="true" primaryRecipients="vbevara@incapsulate.com" ccRecipients="" bccRecipients="" emailSubject="311 Capsule - Console Automation Report(SAT Org)" attachExecutionReport="true" attachZip="true"/>
+			<attachmentProperties includeOnlyFailures="false" includeOnlyBdd="false" includeSkipped="false" includeTestCaseDescription="true" includeScreenshots="false" includeWarningMessages="false" includeInfoMessages="false" includeDebugMessages="false" includeTestStepTime="true" includeTestStepPathHierarchy="true" includeFullScreenShot="false"/>
 		</Run-Test-Case>
 
 	</target>

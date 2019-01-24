@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testCase id="13">
+<testCase id="33">
   <summary/>
   <steps>
     <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: QA (Test)">
@@ -708,7 +708,7 @@
                       <fieldLocator uri="ui:locator?name=RequestDetailsText"/>
                       <attributeAssertions>
                         <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
-                          <value class="value" valueClass="string">REQUEST DETAILS\r\nThis is a test picklist\r\nRings\r\nHarry Potter and the Prisoner of Azkaba\r\nBig Hero 6\r\nSuicide Squad\r\nThis is a test dependent Picklist\r\n* Required\r\nThis is a test Text question\r\nThis is a Date/Time field\r\nThis is a test TextArea\r\nThis is a Multipicklist\r\nSelect an Option\r\nThis is a Date field\r\nHelp\r\nThis is a Boolean field\r\nHelp\r\nThis is a Number field\r\nHelp\r\nThis is an informational field\r\nAdditional Details</value>
+                          <value class="value" valueClass="string">REQUEST DETAILS\r\nThis is a test picklist\r\nRings\r\nHarry Potter and the Prisoner of Azkaba\r\nBig Hero 6\r\nSuicide Squad\r\n* Required\r\nThis is a test Text question\r\nThis is a Date/Time field\r\nThis is a test TextArea\r\nThis is a Multipicklist\r\nSelect an Option\r\nThis is a Date field\r\nHelp\r\nThis is a Boolean field\r\nHelp\r\nThis is a Number field\r\nHelp\r\nThis is an informational field\r\nAdditional Details</value>
                         </uiAttributeAssertion>
                         <uiAttributeAssertion attributeName="visible" comparisonType="None">
                           <value class="value" valueClass="boolean">false</value>
@@ -795,7 +795,7 @@
                       <fieldLocator uri="ui:locator?name=DifferentTabsInfo"/>
                       <attributeAssertions>
                         <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
-                          <value class="value" valueClass="string">Service Type\r\nProvar Regression Test SR\r\nLocation\r\nContact Information\r\nDetails\r\n1 of 9 questions answered\r\nFiles\r\nSubmit</value>
+                          <value class="value" valueClass="string">Service Type\r\nProvar Regression Test SR\r\nLocation\r\nContact Information\r\nDetails\r\n1 of 8 questions answered\r\nFiles\r\nSubmit</value>
                         </uiAttributeAssertion>
                       </attributeAssertions>
                     </uiFieldAssertion>
@@ -1643,7 +1643,7 @@
                       <fieldLocator uri="ui:locator?name=DifferentTabsInfo"/>
                       <attributeAssertions>
                         <uiAttributeAssertion attributeName="value" comparisonType="EqualTo">
-                          <value class="value" valueClass="string">Service Type\r\nProvar Regression Test SR\r\nLocation\r\n505 MAIN ST, DALLAS, 75202\r\nContact Information\r\nBrenton Higgins\r\nDetails\r\n1 of 9 questions answered\r\nFiles\r\nSubmit</value>
+                          <value class="value" valueClass="string">Service Type\r\nProvar Regression Test SR\r\nLocation\r\n505 MAIN ST, DALLAS, 75202\r\nContact Information\r\nBrenton Higgins\r\nDetails\r\n1 of 8 questions answered\r\nFiles\r\nSubmit</value>
                         </uiAttributeAssertion>
                       </attributeAssertions>
                     </uiFieldAssertion>
