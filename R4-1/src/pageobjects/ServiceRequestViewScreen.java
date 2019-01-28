@@ -18,7 +18,7 @@ import com.provar.core.testapi.annotations.*;
 
 import junit.framework.Assert;
 
-@Page(title = "Service Request View Screen", summary = "ServiceRequestViewScreen", relativeUrl = "", connection = "QA")
+@Page(connection = "SAT_Dev_Admin_311", summary = "ServiceRequestViewScreen")
 public class ServiceRequestViewScreen {
 
 	WebDriver driver;
@@ -159,5 +159,54 @@ public class ServiceRequestViewScreen {
 	@TextType()
 	@FindBy(xpath = "//div[contains(@class, \"slds-form-element__control\")]/div/div[2]/div[4]/div//input")
 	public WebElement Account_Phone;
+	@TextType()
+	@FindBy(id = "homeSearchFilter")
+	public WebElement exploreCityServices;
+	@TextType()
+	@FindBy(xpath = "//div[contains(@class, \"slds-col\")]/div[2]/div[2]/div/div/div[1]/div[2]/div/div[1]")
+	public WebElement SR_searchResults;
+	@TextType()
+	@FindBy(xpath = "//p[contains(@class, \"empty-message\")]")
+	public WebElement Search_Results;
+	@ButtonType()
+	@FindBy(xpath = "//div[contains(@class, \"search-section\")]/div//button")
+	public WebElement X_Icon_CancelSearch;
+	@TextType()
+	@FindBy(id = "searchServiceTypesFilter")
+	public WebElement search;
+	@ButtonType()
+	@FindBy(xpath = "//div[contains(@class, \"home-search-form\")]/div//button")
+	public WebElement Home_SearchCancel;
+	@TextType()
+	@FindBy(xpath = "//div[contains(@class, \"slds-scrollable--y\")]/div/div[1]/div//div[1]")
+	public WebElement Search_Results1;
+	@TextType()
+	@FindBy(xpath = "//div[contains(@class, \"slds-scrollable--y\")]/div/div[1]")
+	public WebElement Home_SR_SearchResults;
+	@LinkType()
+	@FindBy(xpath = "//a[contains(@class, \"knowledge-article\")]")
+	public WebElement Home_Search_Knowledge;
+	@TextType()
+	@FindBy(xpath = "//div[contains(@class, \"knowledge-section\")]/div//p")
+	public WebElement Search_Results_Knowledge;
+	@LinkType()
+	@FindBy(xpath = "//div[contains(@class, \"slds-scrollable--y\")]/div//a[1]")
+	public WebElement Home_Search_Location;
+	@ButtonType()
+	@FindBy(xpath = "//*[@id=\"esri-toggle-widget\"]/div//button[2]")
+	public WebElement google;
+	@TextType()
+	@FindBy(xpath = "//div[contains(@class, \"esri-ui-top-left\")]/div//span[1]")
+	public WebElement Location_Layers_Icon;
+	@TextType()
+	@FindBy(xpath = "//p[contains(@class, \"slds-p-around--small\")]//b")
+	public WebElement Location_Layers;
+	
+	@TextType()
+	@FindBy(id = "esri-geolayers-widget")
+	public WebElement GeoLayersList;
+	@TextType()
+	@FindBy(xpath = "//div[contains(@class, \"slds-grid\")]/div[2]/p")
+	public WebElement Home_Search_Results_Locations;
 
 }

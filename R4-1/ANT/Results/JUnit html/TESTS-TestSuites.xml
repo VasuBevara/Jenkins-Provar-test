@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites>
-  <testsuite failures="2" hostname="DESKTOP-FH6FHVE" id="0" name="R4-1/tests" package="" skipped="0" tests="6" time="2519.963" timestamp="Fri Jan 04 12:53:15 IST 2019">
+  <testsuite failures="1" hostname="DESKTOP-FH6FHVE" id="0" name="R4-1/tests" package="" skipped="0" tests="1" time="322.618" timestamp="Thu Jan 24 19:10:19 IST 2019">
 	    <properties>
 		      <property name="excludeCallableTestCases" value="true" />
 
@@ -22,33 +22,12 @@
 
 		      <property name="webBrowserConfiguration" value="Full Screen" />
 
-		      <property name="projectCachePath" value="C:\Users\Incapsulate\git\Jenkins-Provar-test\R4-1\ANT\..\..\.provarCaches" />
+		      <property name="projectCachePath" value="C:\Users\Incapsulate\Documents\311_Console_220119\311_Console_220119\R4-1\ANT\..\..\.provarCaches" />
 
 	    </properties>
 
-	    <testcase classname="tests/Schedule\C2511 - Can create SR with schedules verify that schedule is created on SR details and capacity is reduced by one in config-schedule.testcase" name="C2511 - Can create SR with schedules verify that schedule is created on SR details and capacity is reduced by one in config-schedule.testcase" time="377.117">
-	</testcase>
-
-	    <testcase classname="tests/Schedule\C2528 - If multiple schedules are defined user would be able to see multiple buttons, create sr with schedule which is a distant one2.testcase" name="C2528 - If multiple schedules are defined user would be able to see multiple buttons, create sr with schedule which is a distant one2.testcase" time="430.719">
-		      <failure message="Execution failed"><![CDATA[Error doing interaction.  Connection Name: SAT_Dev_Admin_311, cause: [NoSuchElementException: No elements matched the field locator.  Field name: selectScheduleDate
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
-System info: host: 'DESKTOP-FH6FHVE', ip: '10.0.0.119', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_191'
-Driver info: driver.version: ProvarSeleniumDriver]]]></failure>
-
-	    </testcase>
-
-	    <testcase classname="tests/Schedule\C2529 - if the capacity monthly is hit user is not able to create sr schedule on console should not be seen.testcase" name="C2529 - if the capacity monthly is hit user is not able to create sr schedule on console should not be seen.testcase" time="455.898">
-	</testcase>
-
-	    <testcase classname="tests/Schedule\If schedule is not defined, user would not see the buttons.testcase" name="If schedule is not defined, user would not see the buttons.testcase" time="318.029">
-	</testcase>
-
-	    <testcase classname="tests/Schedule\If the item is specified within limit then sr is saved.testcase" name="If the item is specified within limit then sr is saved.testcase" time="571.335">
-	</testcase>
-
-	    <testcase classname="tests/Schedule\If the item limit specified is less specified - error message is shown.testcase" name="If the item limit specified is less specified - error message is shown.testcase" time="258.33">
-		      <failure message="Execution failed"><![CDATA[Failed to switch focus to the enclosing frame.  Frame Selector: resultsFrame]]></failure>
+	    <testcase classname="tests/ActivityConsole\C1448-CheckIfOutcomeReasonSelectionIsDisplayedOutcomeSelection.testcase" name="C1448-CheckIfOutcomeReasonSelectionIsDisplayedOutcomeSelection.testcase" time="321.407">
+		      <failure message="Execution failed"><![CDATA[The control was not found.  Locator: By.xpath: //div[contains(@class,'listButtons') or contains(@class,'listHeader')]//input[@name='newCase' or @name='newcase' or (contains(@name,'__newcase') and not(substring-after(@name,'__newcase')))]]]></failure>
 
 	    </testcase>
 

@@ -31,13 +31,12 @@
 				secretsPassword="${secrets.password}"
 				testEnvironmentSecretsPassword="${testenvironment.secretspassword}"
 				invokeTestRunMonitor="true"
-			licensePath="C:\Users\Incapsulate\Provar\.licenses"
 				>
 		
-			<fileset dir="../tests/ActivityConsole"><include name="C1410_C1450-AbleToAssociateOutcomeWithActivity.testcase"/></fileset>
+			<fileset dir="../tests/ActivityConsole"><include name="C1448-CheckIfOutcomeReasonSelectionIsDisplayedOutcomeSelection.testcase"/></fileset>
 
 			<emailProperties sendEmail="true" primaryRecipients="vbevara@incapsulate.com" ccRecipients="" bccRecipients="" emailSubject="311 Capsule - Console Automation Report(SAT Org)" attachExecutionReport="true" attachZip="true"/>
-			<attachmentProperties includeOnlyFailures="false" includeOnlyBdd="false" includeSkipped="false" includeTestCaseDescription="true" includeScreenshots="false" includeWarningMessages="false" includeInfoMessages="false" includeDebugMessages="false" includeTestStepTime="true" includeTestStepPathHierarchy="true" includeFullScreenShot="false"/>
+			<attachmentProperties includeOnlyFailures="false" includeOnlyBdd="false" includeSkipped="false" includeTestCaseDescription="false" includeScreenshots="false" includeWarningMessages="false" includeInfoMessages="false" includeDebugMessages="false" includeTestStepTime="true" includeTestStepPathHierarchy="true" includeFullScreenShot="false"/>
 		</Run-Test-Case>
 
 	</target>

@@ -26,7 +26,7 @@
         <connection name="SAT_Dev_Admin_311">
           <summary/>
           <connectionUrls>
-            <connectionUrl secureStorageNodeId="dec2becc-647d-44ff-a07c-4f0e422f2681" url="sf:user=vbevara.311.sat@incapsulate.com.capsule;password={password};securityToken={securityToken};environment=PROD_DEV;userLoginUrl=https://incapsulate311-sat-dev-ed.my.salesforce.com/;webBaseUrl=https://incapsulate311-sat-dev-ed.my.salesforce.com/"/>
+            <connectionUrl secureStorageNodeId="dec2becc-647d-44ff-a07c-4f0e422f2681" url="sf:user=vbevara.311.qc@incapsulate.com.capsule;password={password};securityToken={securityToken};environment=PROD_DEV;userLoginUrl=https://incapsulate311-qc-dev-ed.my.salesforce.com;webBaseUrl=https://incapsulate311-qc-dev-ed.my.salesforce.com"/>
             <connectionUrl envName="QA" secureStorageNodeId="4c3059ee-0e6b-4f07-b1c4-68d5b5ba989e" url="sf:user=hantala@incapsulate311.com.qa;password={password};securityToken={securityToken};environment=PROD_DEV;userLoginUrl=https://incapsulate311-sat-dev-ed.my.salesforce.com/;webBaseUrl=https://incapsulate311-sat-dev-ed.my.salesforce.com/"/>
           </connectionUrls>
         </connection>
@@ -76,6 +76,7 @@
       <summary>Fixed 1920x1080</summary>
     </browserConfiguration>
   </browserConfigurations>
+  <antPath>ANT</antPath>
   <browserApplications>
     <browserApplication connectionTypes="sf" name="Salesforce1">
       <properties>
